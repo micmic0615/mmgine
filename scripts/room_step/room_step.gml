@@ -1,0 +1,1 @@
+room_run_scripts("step");

@@ -1,8 +1,8 @@
 {
-    "id": "845a8071-235b-468b-921a-fb8bba219472",
+    "id": "be56c53f-85db-4a7f-aef5-cb49edd744ce",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "room_create",
+    "name": "room_init",
     "IsCompatibility": false,
     "IsDnD": false
 }

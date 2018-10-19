@@ -1,1 +1,1 @@
-room_create();
+room_init();

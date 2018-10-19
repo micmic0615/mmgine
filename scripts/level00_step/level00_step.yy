@@ -1,8 +1,8 @@
 {
-    "id": "845a8071-235b-468b-921a-fb8bba219472",
+    "id": "8f4926b9-5ae2-43a4-8a97-19ba462f0f90",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "room_create",
+    "name": "level00_step",
     "IsCompatibility": false,
     "IsDnD": false
 }

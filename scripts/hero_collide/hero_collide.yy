@@ -1,8 +1,8 @@
 {
-    "id": "845a8071-235b-468b-921a-fb8bba219472",
+    "id": "41e35712-aa9c-4ea4-a637-a15efb423941",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "room_create",
+    "name": "hero_collide",
     "IsCompatibility": false,
     "IsDnD": false
 }

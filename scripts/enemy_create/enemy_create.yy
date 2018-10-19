@@ -1,8 +1,8 @@
 {
-    "id": "845a8071-235b-468b-921a-fb8bba219472",
+    "id": "9f47dedf-56d1-4d50-a7a2-c71b26d7d340",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "room_create",
+    "name": "enemy_create",
     "IsCompatibility": false,
     "IsDnD": false
 }
