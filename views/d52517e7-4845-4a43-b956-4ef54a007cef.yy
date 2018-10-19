@@ -1,0 +1,15 @@
+{
+    "id": "d52517e7-4845-4a43-b956-4ef54a007cef",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "d52517e7-4845-4a43-b956-4ef54a007cef",
+    "children": [
+        "475a16c9-f27d-403c-88ee-03a32dd247b3",
+        "00e83146-d3b0-4d3a-9d2d-4ad2766a7007",
+        "defbb911-2c3a-4970-b64f-a3b878523d10"
+    ],
+    "filterType": "GMScript",
+    "folderName": "Bullet",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}
