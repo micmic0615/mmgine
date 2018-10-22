@@ -1,6 +1,6 @@
 if (mouse_check_button(mb_right)){
 	var angle = radtodeg(arctan2((mouse_y - y), (mouse_x - x)));
-	var move_speed = 200*PPS/5;
+	var move_speed = 400*PPS/5;
 	image_angle = point_direction(mouse_x, mouse_y, x, y);
 
 	var move_x = cos(degtorad(angle))*move_speed;

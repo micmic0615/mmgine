@@ -1,8 +1,7 @@
-ds_list_clear(collision_entities);
 var me = id;
 var check_solid = argument0;
 var collision_count = 0;
-//collision_count = instance_place_list(x,y,ENTITY, collision_entities, true);
+ds_list_clear(collision_entities)
 
 with(ENTITY){
 	if (
@@ -20,7 +19,7 @@ with(ENTITY){
 		}
 		
 		if (can_collide && place_meeting(x,y,me)){
-			collision_count++;
+			collision_count++;			
 			ds_list_add(me.collision_entities, id);
 		}
 	}
