@@ -1,1 +1,1 @@
-entity_run_scripts("damage_deal");
+entity_run_class_scripts("damage_deal");

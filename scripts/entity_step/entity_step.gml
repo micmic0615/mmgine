@@ -88,9 +88,9 @@ if (ACTIVE){
 	#endregion
 
 	#region //SCRIPTS
-		entity_run_scripts("step");
+		entity_run_class_scripts("step");
 
-		if (collision_count > 0){entity_run_scripts("collide")}
+		if (collision_count > 0){entity_run_class_scripts("collide")}
 	#endregion
 } else {
 	ROOM = instance_find(ROOM_OBJECT, 0);

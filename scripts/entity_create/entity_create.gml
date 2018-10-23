@@ -26,4 +26,5 @@ collision_enabled_tiles = true;
 status_health_max = 1;
 status_health_current = status_health_max;
 
-entity_run_scripts("create");
+entity_run_class_scripts("create");
+

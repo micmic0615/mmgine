@@ -1,8 +1,8 @@
 {
-    "id": "0a28a16d-0aab-4763-8c6b-d16e10eb6d00",
+    "id": "7e9c4c80-f284-4d20-8de0-55e3621225cb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "entity_run_scripts",
+    "name": "actor_omnimove_angle",
     "IsCompatibility": false,
     "IsDnD": false
 }
