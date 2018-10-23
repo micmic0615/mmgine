@@ -1,0 +1,1 @@
+entity_run_scripts("damage_deal");

@@ -17,5 +17,5 @@ switch(type){
 		break;
 }
 
-ds_list_add(ds_inventory, ds_item);
+ds_list_add(ds_inventory, [ds_item, type]);
 return ds_item;

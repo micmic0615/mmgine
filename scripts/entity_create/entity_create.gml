@@ -1,4 +1,5 @@
-ds_inventory = ds_list_create()
+ACTIVE = false;
+ds_inventory = ds_list_create();
 
 physics_motion_list = ds_create("list");
 physics_motion_x = 0;
@@ -13,12 +14,16 @@ entity_type = object_get_name(object_index);
 entity_type_lower = string_lower(entity_type);
 
 collision_entities = ds_create("list");
-collision_objects = ds_create("list");
+collision_tiles = ds_create("list");
+collision_compute = true;
 collision_solid = true;
 collision_pushable = true;
-collision_compute = true;
 collision_enabled_actors = true;
 collision_enabled_bullets = true;
 collision_enabled_doodads = true;
+collision_enabled_tiles = true;
+
+status_health_max = 1;
+status_health_current = status_health_max;
 
 entity_run_scripts("create");
