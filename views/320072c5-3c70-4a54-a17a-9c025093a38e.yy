@@ -6,7 +6,8 @@
     "children": [
         "385bb38b-6137-48f3-b184-e624192cf1c0",
         "6feb8910-725a-4e27-aac3-741db8597446",
-        "bdcd8d04-718a-41ea-9e42-f0d3791b90de"
+        "bdcd8d04-718a-41ea-9e42-f0d3791b90de",
+        "6af0d3a4-b67c-418c-a0e1-6516356ca981"
     ],
     "filterType": "GMScript",
     "folderName": "Doodad",

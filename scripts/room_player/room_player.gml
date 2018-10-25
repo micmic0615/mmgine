@@ -8,19 +8,25 @@ if (player_controllable){
 		
 		if (player_faction == me.player_faction){
 			if (keyboard_check(global.key_up)){
-				actor_move_angle(270)
+				entity_move_angle(270)
 			}
 			
 			if (keyboard_check(global.key_down)){
-				actor_move_angle(90)
+				entity_move_angle(90)
 			}
 			
 			if (keyboard_check(global.key_right)){
-				actor_move_angle(0)
+				entity_move_angle(0)
 			}
 			
 			if (keyboard_check(global.key_left)){
-				actor_move_angle(180)
+				entity_move_angle(180)
+			}
+			
+			if (mouse_check_button_pressed(global.mouse_1)){
+				actor_action_point_x = mouse_x;
+				actor_action_point_y = mouse_y;
+				actor_action_attack();
 			}
 		}
 	}

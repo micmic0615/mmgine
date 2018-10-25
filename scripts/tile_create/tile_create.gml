@@ -1,3 +1,4 @@
+ALIVE = true;
 ACTIVE = false;
 ds_inventory = ds_list_create();
 

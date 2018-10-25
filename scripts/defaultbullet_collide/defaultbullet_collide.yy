@@ -1,8 +1,8 @@
 {
-    "id": "7e9c4c80-f284-4d20-8de0-55e3621225cb",
+    "id": "dc722df7-741b-4ca0-aac2-0c96f780cbcf",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "actor_move_angle",
+    "name": "defaultbullet_collide",
     "IsCompatibility": false,
     "IsDnD": false
 }

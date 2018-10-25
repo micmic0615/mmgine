@@ -1,0 +1,1 @@
+entity_run_type_scripts("collide");

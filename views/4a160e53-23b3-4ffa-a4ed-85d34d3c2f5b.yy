@@ -6,7 +6,8 @@
     "children": [
         "3328f79b-6458-48db-a133-07b71f8b3caa",
         "33aa865a-c930-4904-8424-bbf0a40e5c97",
-        "41e35712-aa9c-4ea4-a637-a15efb423941"
+        "41e35712-aa9c-4ea4-a637-a15efb423941",
+        "c88f5ff6-4707-468b-b9fc-cad63a750571"
     ],
     "filterType": "GMScript",
     "folderName": "Hero",

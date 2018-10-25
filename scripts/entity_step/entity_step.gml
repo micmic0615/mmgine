@@ -1,4 +1,4 @@
-if (ACTIVE){
+if (ACTIVE && ALIVE){
 	#region //MOTION
 		physics_motion_x = 0;
 		physics_motion_y = 0;
@@ -101,10 +101,31 @@ if (ACTIVE){
 
 	#region //SCRIPTS
 		entity_run_class_scripts("step");
-
 		if (collision_count > 0){entity_run_class_scripts("collide")}
 	#endregion
+	
+	if (ACTIVE && ALIVE){
+		#region //MOVE
+			status_movesnap_total = status_movesnap_base;
+			status_movespeed_total = status_movespeed_base;
+			var list_length = ds_list_size(status_move_angle_list);
+			for(var i = 0; i < list_length;i++){
+				var angle = ds_list_find_value(status_move_angle_list, i);
+				var rad_angle = degtorad(angle)
+				var speed_factor = (status_movespeed_total/list_length)/status_movesnap_total;
+				var move_x = cos(rad_angle)*speed_factor;
+				var move_y = sin(rad_angle)*speed_factor;
+				entity_add_motion(move_x, move_y, status_movesnap_total);
+			}
+
+			ds_list_clear(status_move_angle_list);
+		#endregion
+	}
 } else {
-	ROOM = instance_find(ROOM_OBJECT, 0);
-	ACTIVE = true;
+	if (ALIVE){
+		ROOM = instance_find(ROOM_OBJECT, 0);
+		ACTIVE = true;
+	} else {
+		instance_destroy(id, false);	
+	}
 }

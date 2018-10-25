@@ -1,8 +1,8 @@
 {
-    "id": "39429cf6-67fd-4eb0-bed3-165d9ee35318",
+    "id": "e2cb1628-4053-459f-bf86-a73918443fa1",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "actor_move_point",
+    "name": "bullet_collision_damage",
     "IsCompatibility": false,
     "IsDnD": false
 }

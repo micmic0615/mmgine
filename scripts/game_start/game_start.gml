@@ -4,6 +4,7 @@
 #macro PPS (1/TIMESPEED)
 #macro SEC TIMESPEED div 1
 #macro ACTIVE active
+#macro ALIVE alive
 #macro ROOM room_object
 
 show_debug_overlay(true);

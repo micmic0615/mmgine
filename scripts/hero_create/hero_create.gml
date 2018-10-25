@@ -1,4 +1,4 @@
-status_base_movespeed = 600*PPS;
-status_base_movesnap = 0.3*SEC;
+status_movespeed_base = 500*PPS;
+status_movesnap_base = 0.4*SEC;
 
 player_faction = 0;

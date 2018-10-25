@@ -1,3 +1,4 @@
+ALIVE = true;
 ACTIVE = false;
 ds_inventory = ds_list_create();
 
@@ -14,6 +15,7 @@ entity_type = object_get_name(object_index);
 entity_type_lower = string_lower(entity_type);
 
 collision_entities = ds_create("list");
+collision_exceptions = ds_create("list");
 collision_tiles = ds_create("list");
 collision_compute = true;
 collision_solid = true;
@@ -22,9 +24,18 @@ collision_enabled_actors = true;
 collision_enabled_bullets = true;
 collision_enabled_doodads = true;
 collision_enabled_tiles = true;
+collision_faction = "all";
 
 status_health_max = 1;
-status_health_current = status_health_max;
+status_movespeed_base = 100*PPS;
+status_movesnap_base = 0.5*SEC;
+status_move_angle_list = ds_create("list");
+
+player_faction = -1;
 
 entity_run_class_scripts("create");
+
+status_health_current = status_health_max;
+status_movesnap_total = status_movesnap_base;
+status_movespeed_total = status_movespeed_base;
 
