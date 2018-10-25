@@ -1,8 +1,8 @@
 if (room_initiate){
 	with(TILE){tile_original = true}
-	
 	room_initiate = false;
 } else {
+	room_player();
 	room_run_scripts("step");
 
 	#region // CAMERA

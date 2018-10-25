@@ -1,8 +1,8 @@
 {
-    "id": "39429cf6-67fd-4eb0-bed3-165d9ee35318",
+    "id": "7e9c4c80-f284-4d20-8de0-55e3621225cb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "actor_omnimove_point",
+    "name": "actor_move_angle",
     "IsCompatibility": false,
     "IsDnD": false
 }

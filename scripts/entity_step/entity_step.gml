@@ -32,16 +32,23 @@ if (ACTIVE){
 	
 			if (motion_lifespan <= 0){
 				ds_list_delete(physics_motion_list, i);
+				i--;
 			}
 		}
 
 		var movement_x = floor(physics_motion_x);
 		var movement_y = floor(physics_motion_y);
+		
+		
 
 		physics_motion_spill_x += (physics_motion_x - movement_x);
 		physics_motion_spill_y += (physics_motion_y - movement_y);
-
-		if (physics_motion_spill_x > 1){ physics_motion_spill_x -= 1; movement_x += 1; };
+		
+		
+		
+		
+		
+		if (abs(physics_motion_spill_x) > 1){ physics_motion_spill_x -= sign(physics_motion_spill_x); movement_x += sign(physics_motion_spill_x)};
 		if (physics_motion_spill_y > 1){ physics_motion_spill_y -= 1; movement_y += 1; };
 	#endregion
 
@@ -49,6 +56,7 @@ if (ACTIVE){
 		var collision_count = 0;
 		var base_x = x;
 		var base_y = y;
+		
 		x = base_x + movement_x;
 		y = base_y + movement_y;
 	
@@ -59,11 +67,15 @@ if (ACTIVE){
 				var final_y_push = 0;
 		
 				if (phase_count > 0){
+					
 					for(var i = 0; i < phase_count;i++){
 						var p = ds_list_find_value(collision_entities, i);
-						if (physics_motion_x != 0 || p.physics_motion_x != 0){
+						if (
+							(physics_motion_x != 0 || physics_motion_y != 0) || 
+							(p.physics_motion_x != 0 || p.physics_motion_y != 0)
+						){
 							var push_replacer = entity_collision_compute_push(p, final_x_push, final_y_push);
-					
+			
 							final_x_push = push_replacer[0];
 							final_y_push = push_replacer[1];
 						}

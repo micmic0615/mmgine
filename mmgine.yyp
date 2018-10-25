@@ -234,7 +234,7 @@
             "Key": "39429cf6-67fd-4eb0-bed3-165d9ee35318",
             "Value": {
                 "id": "5569909a-fd9d-4309-9e26-5e4bfa3e9236",
-                "resourcePath": "scripts\\actor_omnimove_point\\actor_omnimove_point.yy",
+                "resourcePath": "scripts\\actor_move_point\\actor_move_point.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "6e2a8e60-6b42-4b03-bb31-b72a52eb6dd2",
+            "Value": {
+                "id": "ca1a3309-6687-41b0-908d-6beeb6aa8a39",
+                "resourcePath": "scripts\\room_player\\room_player.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6feb8910-725a-4e27-aac3-741db8597446",
             "Value": {
                 "id": "3b11d157-3fc0-4ca8-8f2b-4e3b0b96a828",
@@ -522,7 +530,7 @@
             "Key": "7e9c4c80-f284-4d20-8de0-55e3621225cb",
             "Value": {
                 "id": "93bbc86f-3ac5-4f47-933b-8be82e2c4d71",
-                "resourcePath": "scripts\\actor_omnimove_angle\\actor_omnimove_angle.yy",
+                "resourcePath": "scripts\\actor_move_angle\\actor_move_angle.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -871,6 +879,7 @@
         "845a8071-235b-468b-921a-fb8bba219472",
         "02d32edd-370d-48e2-a306-9cfebb0c85d3",
         "8cfcf6e4-4f93-42fc-8f6b-0fc7a742de6a",
+        "6e2a8e60-6b42-4b03-bb31-b72a52eb6dd2",
         "c6c7633b-dbb9-4b89-87da-76b04c316d56",
         "8f4926b9-5ae2-43a4-8a97-19ba462f0f90",
         "a3bf054a-5a8b-48b0-9da6-1e5f7e5d1af3"

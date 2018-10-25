@@ -1,8 +1,8 @@
 {
-    "id": "7e9c4c80-f284-4d20-8de0-55e3621225cb",
+    "id": "6e2a8e60-6b42-4b03-bb31-b72a52eb6dd2",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "actor_omnimove_angle",
+    "name": "room_player",
     "IsCompatibility": false,
     "IsDnD": false
 }

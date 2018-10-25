@@ -39,14 +39,16 @@ while (!place_meeting(x,(y + y_bias),p)){y_bias += 1}
 top_push = y_bias;
 					
 y_push = abs(bottom_push) > abs(top_push) ? top_push : bottom_push;
-					
+				
 if (abs(x_push) < abs(y_push)){
+	
 	if (sign(final_x_push) == sign(x_push)){
 		final_x_push = abs(x_push) > abs(final_x_push) ? x_push : final_x_push;
 	} else {
 		final_x_push = final_x_push == 0 ? x_push : INFINITY
 	}
 } else {
+	
 	if (sign(final_y_push) == sign(y_push)){
 		final_y_push = abs(y_push) > abs(final_y_push) ? y_push : final_y_push;
 	} else {

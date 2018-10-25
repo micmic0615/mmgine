@@ -12,8 +12,13 @@ camera_target_x = camera_x;
 camera_target_y = camera_y;
 camera_target_speed = 200*PPS;
 camera_target_acceleration_distance = 100;
-
 camera_angle = 0;
+
+player_controllable = true;
+player_faction = 0;
+player_main_actor_type = "hero"
+
+
 
 room_run_scripts("create");
 

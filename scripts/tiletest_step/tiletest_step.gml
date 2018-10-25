@@ -1,1 +1,0 @@
-image_angle += 15*PPS;
