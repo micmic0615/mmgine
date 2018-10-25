@@ -1,8 +1,8 @@
 {
-    "id": "dc722df7-741b-4ca0-aac2-0c96f780cbcf",
+    "id": "11c32f18-307e-4fe4-900d-131af553fa2e",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "defaultbullet_collide",
+    "name": "bullet_damage_deal",
     "IsCompatibility": false,
     "IsDnD": false
 }

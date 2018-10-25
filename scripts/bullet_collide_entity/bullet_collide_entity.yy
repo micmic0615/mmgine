@@ -1,8 +1,8 @@
 {
-    "id": "6af0d3a4-b67c-418c-a0e1-6516356ca981",
+    "id": "193ebc5f-76f7-4d6c-8ed4-0212ff2e2643",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "doodad_collide",
+    "name": "bullet_collide_entity",
     "IsCompatibility": false,
     "IsDnD": false
 }

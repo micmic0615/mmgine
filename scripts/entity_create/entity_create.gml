@@ -14,13 +14,16 @@ entity_class_lower = string_lower(entity_class);
 entity_type = object_get_name(object_index);
 entity_type_lower = string_lower(entity_type);
 
+entity_killer = noone;
+
 collision_entities = ds_create("list");
 collision_exceptions = ds_create("list");
 collision_tiles = ds_create("list");
 collision_contact_x = "none";
 collision_contact_y = "none";
 collision_compute = true;
-collision_solid = true;
+collision_solid_tiles = true;
+collision_solid_entities = true;
 collision_pushable = true;
 collision_enabled_actors = true;
 collision_enabled_bullets = true;

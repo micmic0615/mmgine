@@ -1,7 +1,9 @@
 player_faction = 0;
 
 collision_faction = "enemy";
+collision_solid_entities = false;
 
+status_health_max = 1;
 status_movespeed_base = 800*PPS;
 status_movesnap_base = 0.25*SEC;
 

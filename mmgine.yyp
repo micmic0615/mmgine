@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "11c32f18-307e-4fe4-900d-131af553fa2e",
+            "Value": {
+                "id": "f636d523-d831-4df1-95d6-0ad1f063c6a7",
+                "resourcePath": "scripts\\bullet_damage_deal\\bullet_damage_deal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "12be00d8-3883-48f1-90cc-282b711e95be",
             "Value": {
                 "id": "10249772-3cef-4ba7-8252-392c1f7d0b89",
@@ -130,7 +138,7 @@
             "Key": "193ebc5f-76f7-4d6c-8ed4-0212ff2e2643",
             "Value": {
                 "id": "12cefe1c-2f41-4087-8908-940e51b677ce",
-                "resourcePath": "scripts\\bullet_collide\\bullet_collide.yy",
+                "resourcePath": "scripts\\bullet_collide_entity\\bullet_collide_entity.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -298,7 +306,7 @@
             "Key": "41e35712-aa9c-4ea4-a637-a15efb423941",
             "Value": {
                 "id": "fa9d96da-8375-4799-94f3-edd5f85e92bd",
-                "resourcePath": "scripts\\hero_collide\\hero_collide.yy",
+                "resourcePath": "scripts\\hero_collide_entity\\hero_collide_entity.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -418,7 +426,7 @@
             "Key": "5e823952-7099-48da-9bd4-864355765142",
             "Value": {
                 "id": "09f447a0-3ac3-4468-8bdf-bc531a178566",
-                "resourcePath": "scripts\\actor_collide\\actor_collide.yy",
+                "resourcePath": "scripts\\actor_collide_entity\\actor_collide_entity.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -482,7 +490,7 @@
             "Key": "6af0d3a4-b67c-418c-a0e1-6516356ca981",
             "Value": {
                 "id": "38c9cbc7-4a9a-482e-a6dd-615de08cec29",
-                "resourcePath": "scripts\\doodad_collide\\doodad_collide.yy",
+                "resourcePath": "scripts\\doodad_collide_entity\\doodad_collide_entity.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -890,7 +898,7 @@
             "Key": "dc722df7-741b-4ca0-aac2-0c96f780cbcf",
             "Value": {
                 "id": "022aa9ac-b0f0-4ed0-98ad-4709760c0140",
-                "resourcePath": "scripts\\defaultbullet_collide\\defaultbullet_collide.yy",
+                "resourcePath": "scripts\\defaultbullet_collide_entity\\defaultbullet_collide_entity.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1049,6 +1057,7 @@
         "e2cb1628-4053-459f-bf86-a73918443fa1",
         "ea4d0eaa-96ea-4320-ab09-7c36b66c8dfd",
         "a268fc74-ea08-4f63-80ac-2c066054fd3c",
+        "11c32f18-307e-4fe4-900d-131af553fa2e",
         "385bb38b-6137-48f3-b184-e624192cf1c0",
         "6feb8910-725a-4e27-aac3-741db8597446",
         "bdcd8d04-718a-41ea-9e42-f0d3791b90de",

@@ -11,7 +11,8 @@
         "9be18fea-f154-4867-8525-96df7080b2f1",
         "e2cb1628-4053-459f-bf86-a73918443fa1",
         "ea4d0eaa-96ea-4320-ab09-7c36b66c8dfd",
-        "a268fc74-ea08-4f63-80ac-2c066054fd3c"
+        "a268fc74-ea08-4f63-80ac-2c066054fd3c",
+        "11c32f18-307e-4fe4-900d-131af553fa2e"
     ],
     "filterType": "GMScript",
     "folderName": "Bullet",

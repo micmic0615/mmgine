@@ -12,7 +12,7 @@ with(ENTITY){
 			(me.entity_class == "DOODAD" && me.collision_enabled_doodads && collision_enabled_doodads) 
 		)
 	){
-		var can_collide = (!check_solid || (check_solid && collision_solid && me.collision_solid)) ? true : false;
+		var can_collide = (!check_solid || (check_solid && collision_solid_entities && me.collision_solid_entities)) ? true : false;
 		var valid_faction = false;
 		
 		switch(collision_faction){

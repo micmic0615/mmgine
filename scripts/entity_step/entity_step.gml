@@ -38,15 +38,9 @@ if (ACTIVE && ALIVE){
 
 		var movement_x = floor(physics_motion_x);
 		var movement_y = floor(physics_motion_y);
-		
-		
 
 		physics_motion_spill_x += (physics_motion_x - movement_x);
 		physics_motion_spill_y += (physics_motion_y - movement_y);
-		
-		
-		
-		
 		
 		if (abs(physics_motion_spill_x) > 1){ physics_motion_spill_x -= sign(physics_motion_spill_x); movement_x += sign(physics_motion_spill_x)};
 		if (physics_motion_spill_y > 1){ physics_motion_spill_y -= 1; movement_y += 1; };
@@ -65,7 +59,7 @@ if (ACTIVE && ALIVE){
 		var final_y_push = 0;
 	
 		if (collision_compute){
-			if (collision_solid ){
+			if (collision_solid_entities){
 				if (collision_pushable){
 					var phase_count = entity_collision_check_entity(true);
 					if (phase_count > 0){
@@ -83,8 +77,11 @@ if (ACTIVE && ALIVE){
 						}
 					}
 				}
-				
-				
+			}
+			
+			collision_count_entities = entity_collision_check_entity(false);
+			
+			if (collision_solid_tiles){
 				collision_count_tiles = entity_collision_check_tile(true);
 				for(var i = 0; i < collision_count_tiles;i++){
 					var p = ds_list_find_value(collision_tiles, i);
@@ -98,8 +95,6 @@ if (ACTIVE && ALIVE){
 				x = final_x_push != INFINITY ? x + final_x_push : base_x;
 				y = final_y_push != INFINITY ? y + final_y_push : base_y;
 			}
-	
-			collision_count_entities = entity_collision_check_entity(false);
 		}
 	#endregion
 
@@ -114,7 +109,7 @@ if (ACTIVE && ALIVE){
 			if (sign(final_x_push) < 0){collision_contact_x = "right"}
 			else if (sign(final_x_push) > 0){collision_contact_x = "left"}
 			
-			if (collision_count_entities > 0){entity_run_class_scripts("collide")}
+			if (collision_count_entities > 0){entity_run_class_scripts("collide_entity")}
 			if (collision_count_tiles > 0){entity_run_class_scripts("collide_tile")}
 		}
 		
@@ -135,6 +130,13 @@ if (ACTIVE && ALIVE){
 			}
 
 			ds_list_clear(status_move_angle_list);
+		#endregion
+		
+		#region //HEALTH
+			if (status_health_current <= 0){
+				var me = id;
+				with(entity_killer){entity_kill(me)}
+			}
 		#endregion
 	}
 } else {
