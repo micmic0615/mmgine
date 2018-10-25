@@ -4,8 +4,8 @@ if (ACTIVE && ALIVE){
 		ds_list_add(collision_exceptions, p);
 	}
 	
-	for(var i = 0; i < ds_list_size(bullet_collision_actions);i++){
-		var p = ds_list_find_value(bullet_collision_actions, i);
+	for(var i = 0; i < ds_list_size(bullet_collision_entity_actions);i++){
+		var p = ds_list_find_value(bullet_collision_entity_actions, i);
 		var type = p[0];
 	
 		switch(type){

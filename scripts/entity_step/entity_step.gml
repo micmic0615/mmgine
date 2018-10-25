@@ -53,36 +53,40 @@ if (ACTIVE && ALIVE){
 	#endregion
 
 	#region //COLLISION
-		var collision_count = 0;
+		var collision_count_entities = 0;
+		var collision_count_tiles = 0;
 		var base_x = x;
 		var base_y = y;
 		
 		x = base_x + movement_x;
 		y = base_y + movement_y;
+		
+		var final_x_push = 0;
+		var final_y_push = 0;
 	
 		if (collision_compute){
-			if (collision_solid && collision_pushable){
-				var phase_count = entity_collision_check_entity(true);
-				var final_x_push = 0;
-				var final_y_push = 0;
-		
-				if (phase_count > 0){
-					
-					for(var i = 0; i < phase_count;i++){
-						var p = ds_list_find_value(collision_entities, i);
-						if (
-							(physics_motion_x != 0 || physics_motion_y != 0) || 
-							(p.physics_motion_x != 0 || p.physics_motion_y != 0)
-						){
-							var push_replacer = entity_collision_compute_push(p, final_x_push, final_y_push);
+			if (collision_solid ){
+				if (collision_pushable){
+					var phase_count = entity_collision_check_entity(true);
+					if (phase_count > 0){
+						for(var i = 0; i < phase_count;i++){
+							var p = ds_list_find_value(collision_entities, i);
+							if (
+								(physics_motion_x != 0 || physics_motion_y != 0) || 
+								(p.physics_motion_x != 0 || p.physics_motion_y != 0)
+							){
+								var push_replacer = entity_collision_compute_push(p, final_x_push, final_y_push);
 			
-							final_x_push = push_replacer[0];
-							final_y_push = push_replacer[1];
+								final_x_push = push_replacer[0];
+								final_y_push = push_replacer[1];
+							}
 						}
 					}
 				}
-			
-				for(var i = 0; i < entity_collision_check_tile(true);i++){
+				
+				
+				collision_count_tiles = entity_collision_check_tile(true);
+				for(var i = 0; i < collision_count_tiles;i++){
 					var p = ds_list_find_value(collision_tiles, i);
 					
 					var push_replacer = entity_collision_compute_push(p, final_x_push, final_y_push);
@@ -95,13 +99,25 @@ if (ACTIVE && ALIVE){
 				y = final_y_push != INFINITY ? y + final_y_push : base_y;
 			}
 	
-			collision_count = entity_collision_check_entity(false);
+			collision_count_entities = entity_collision_check_entity(false);
 		}
 	#endregion
 
 	#region //SCRIPTS
 		entity_run_class_scripts("step");
-		if (collision_count > 0){entity_run_class_scripts("collide")}
+		if (collision_count_entities > 0 || collision_count_tiles > 0){			
+			collision_contact_y = "none";
+			if (sign(final_y_push) < 0){collision_contact_y = "top"}
+			else if (sign(final_y_push) > 0){collision_contact_y = "bottom"}	
+			
+			collision_contact_x = "none";
+			if (sign(final_x_push) < 0){collision_contact_x = "right"}
+			else if (sign(final_x_push) > 0){collision_contact_x = "left"}
+			
+			if (collision_count_entities > 0){entity_run_class_scripts("collide")}
+			if (collision_count_tiles > 0){entity_run_class_scripts("collide_tile")}
+		}
+		
 	#endregion
 	
 	if (ACTIVE && ALIVE){
