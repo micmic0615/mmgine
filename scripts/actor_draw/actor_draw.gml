@@ -1,0 +1,24 @@
+#region //DRAW HEALTH BARS
+	var bar_color = make_colour_rgb(90,0,0);
+	var bar_width = sprite_width;
+	var bar_height = 3;
+	var bar_loc_x = x - sprite_width/2;
+	var bar_loc_y = y - ((sprite_height/2) + 20);
+
+	draw_set_colour(bar_color);
+	draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
+	
+	var bar_color = make_colour_rgb(255,255,255);
+	var bar_width = sprite_width*(min(1,(draw_bar_health_damage/status_health_max)));
+
+	draw_set_colour(bar_color);
+	draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
+	
+	var bar_color = make_colour_rgb(255,0,0);
+	var bar_width = sprite_width*(min(1,(status_health_current/status_health_max)));
+
+	draw_set_colour(bar_color);
+	draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
+#endregion
+
+entity_run_type_scripts("draw");
