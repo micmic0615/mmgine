@@ -34,9 +34,41 @@ entity_run_type_scripts("step");
 		}
 	};
 	
+	#region // BUFF COSMETICS
+		var has_speed = 0;
+		for(var i = 0; i < buff_list_length;i++){
+			var p = ds_list_find_value(status_buff_list, i);
+			var type = p[0];
+			var duration = p[1];
+			
+			if (has_speed == 0 && (type == "speed_raw" || type == "speed_percent")){
+				has_speed = duration;
+			}
+		}
+	
+		if (has_speed > 0 && has_speed % (0.1*SEC) == 0){
+			var mirage_push = [
+				sprite_index,
+				image_index,
+				x,
+				y,
+				image_xscale,
+				image_yscale,
+				image_angle,
+				image_blend,
+				0.5,
+				1*SEC,
+				1*SEC
+			];
+		
+			with(ROOM){ds_list_add(draw_mirage_list, mirage_push)}
+		}
+	#endregion	
+	
 	for(var i = 0; i < buff_list_length;i++){
 		var p = ds_list_find_value(status_buff_list, i);
 		var duration = p[1];
 		if (duration <= 0){ds_list_delete(status_buff_list, i)}
 	}
 #endregion
+

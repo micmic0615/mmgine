@@ -1,3 +1,5 @@
+ds_inventory = ds_list_create();
+
 room_loop_x = true;
 room_loop_y = true;
 room_initiate = true;
@@ -16,7 +18,9 @@ camera_angle = 0;
 
 player_controllable = true;
 player_faction = 0;
-player_main_actor_type = "hero"
+player_main_actor_type = "hero";
+
+draw_mirage_list = ds_create("list");
 
 
 

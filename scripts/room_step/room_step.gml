@@ -68,6 +68,24 @@ if (room_initiate){
 							y += (ROOM.camera_y - base_camera_y);
 						}
 					}
+					
+					for (var i = 0; i < ds_list_size(draw_mirage_list); ++i) {
+						var p = ds_list_find_value(draw_mirage_list, i);
+						var duration = p[9]; 
+						if (duration > 0){
+							var loc_x = p[2]; 
+							var loc_y = p[3]; 
+							
+							if (
+								(loc_x > camera_view_x - 100 && loc_x < camera_view_x + camera_size_w + 100) && 
+								(loc_y > camera_view_y - 100 && loc_y < camera_view_y + camera_size_h + 100)
+							){
+								p[2] += (camera_x - base_camera_x);
+								p[3] += (camera_y - base_camera_y);
+								ds_list_replace(draw_mirage_list, i, p);
+							}
+						}
+					}
 				} else {
 					
 					with(ENTITY){
