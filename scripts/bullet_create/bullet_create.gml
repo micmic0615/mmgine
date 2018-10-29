@@ -13,4 +13,6 @@ bullet_origin = noone;
 bullet_collision_entity_actions = ds_create("list");
 bullet_collision_tile_action = "bounce";
 
+
+
 entity_run_type_scripts("create");

@@ -10,6 +10,7 @@ status_poise_max = 25;
 
 
 
+
 entity_run_type_scripts("create");
 
 draw_bar_health_damage = status_health_max;

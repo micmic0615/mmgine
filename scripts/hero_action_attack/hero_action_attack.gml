@@ -8,4 +8,7 @@ bullet.bullet_collision_tile_action = "die";
 
 ds_list_add(bullet.bullet_collision_entity_actions, ["damage", status_damage_total, true]);
 ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", status_damage_total*2]);
-ds_list_add(bullet.bullet_collision_entity_actions, ["push", 100, 1*SEC, bullet.bullet_action_move_angle]);
+ds_list_add(bullet.bullet_collision_entity_actions, ["push", 100, 1*SEC, bullet.bullet_action_move_angle, ["multiply",1.5]]);
+
+
+entity_push_motion(150, 1*SEC, bullet.bullet_action_move_angle - 180, ["multiply",1.25])

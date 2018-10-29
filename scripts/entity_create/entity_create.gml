@@ -22,6 +22,7 @@ collision_tiles = ds_create("list");
 collision_contact_x = "none";
 collision_contact_y = "none";
 collision_compute = true;
+collision_persistent = false;
 collision_solid_tiles = true;
 collision_solid_entities = true;
 collision_pushable = true;
@@ -43,4 +44,3 @@ entity_run_class_scripts("create");
 status_health_current = status_health_max;
 status_movesnap_total = status_movesnap_base;
 status_movespeed_total = status_movespeed_base;
-
