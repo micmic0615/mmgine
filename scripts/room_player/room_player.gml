@@ -24,9 +24,7 @@ if (player_controllable){
 			}
 			
 			if (mouse_check_button_pressed(global.mouse_1)){
-				actor_action_point_x = mouse_x;
-				actor_action_point_y = mouse_y;
-				actor_action_attack();
+				actor_action_attack([mouse_x, mouse_y]);
 			}
 		}
 	}

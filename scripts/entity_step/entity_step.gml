@@ -154,8 +154,7 @@ if (ACTIVE && ALIVE){
 	
 	if (ACTIVE && ALIVE){
 		#region //MOVE
-			status_movesnap_total = max(2, status_movesnap_base);
-			status_movespeed_total = status_movespeed_base;
+			
 			var list_length = ds_list_size(status_move_angle_list);
 			for(var i = 0; i < list_length;i++){
 				var angle = ds_list_find_value(status_move_angle_list, i);
@@ -165,7 +164,10 @@ if (ACTIVE && ALIVE){
 				var move_y = sin(rad_angle)*speed_factor;
 				entity_add_motion(move_x, move_y, status_movesnap_total, ["linear"]);
 			}
-
+			
+			status_movesnap_total = max(2, status_movesnap_base);
+			status_movespeed_total = status_movespeed_base;
+			
 			ds_list_clear(status_move_angle_list);
 		#endregion
 		

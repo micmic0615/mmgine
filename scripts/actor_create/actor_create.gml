@@ -1,15 +1,12 @@
-player_faction = 0;
+draw_bars = true;
 
-actor_action_point_x = 0;
-actor_action_point_y = 0;
-actor_action_angle = 0;
+player_faction = 0;
 
 status_health_max = 100;
 status_damage_base = 25;
 status_poise_max = 25;
 
-
-
+status_buff_list = ds_create("list");
 
 entity_run_type_scripts("create");
 

@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "045b3845-8d0e-4003-9f41-a45ea2e021f3",
+            "Value": {
+                "id": "bccfaef3-8f09-420d-b248-41d825748108",
+                "resourcePath": "scripts\\actor_buff_process\\actor_buff_process.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "06b4ccea-22f9-4d47-a937-c4a7a3ddd55c",
             "Value": {
                 "id": "662a2edd-ff98-4c60-8068-3a027424dafe",
@@ -212,6 +220,14 @@
                 "id": "bff13a02-98a9-4521-abd4-bbbb810ef549",
                 "resourcePath": "rooms\\GameStart\\GameStart.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "2cbaef72-3ec3-4e2f-a9dc-a83493e7181d",
+            "Value": {
+                "id": "907c3980-f13a-44f6-9bea-ff2f23fdddc7",
+                "resourcePath": "scripts\\actor_buff_find\\actor_buff_find.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -695,6 +711,14 @@
             }
         },
         {
+            "Key": "921d292e-1811-4c3a-b1c6-fc75176497d3",
+            "Value": {
+                "id": "36121293-6c05-44d8-bf90-179631a56a65",
+                "resourcePath": "scripts\\actor_buff_apply\\actor_buff_apply.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "968e7591-ef3c-4223-b989-51b3eeaa4b69",
             "Value": {
                 "id": "ab3b55e0-bd34-4b54-be67-f5ef9be02013",
@@ -1092,6 +1116,9 @@
         "b7afeef2-8aea-4091-a9bc-fcd917cceaa2",
         "5e823952-7099-48da-9bd4-864355765142",
         "e086db3f-038d-40dc-9bce-09408689679e",
+        "921d292e-1811-4c3a-b1c6-fc75176497d3",
+        "2cbaef72-3ec3-4e2f-a9dc-a83493e7181d",
+        "045b3845-8d0e-4003-9f41-a45ea2e021f3",
         "475a16c9-f27d-403c-88ee-03a32dd247b3",
         "00e83146-d3b0-4d3a-9d2d-4ad2766a7007",
         "a7a22981-1d1a-4337-a55e-7d6e5fa0d806",
