@@ -1,8 +1,8 @@
 {
-    "id": "045b3845-8d0e-4003-9f41-a45ea2e021f3",
+    "id": "4cc50548-41b8-4f6d-a9f3-e77f580cfcaa",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "actor_buff_process",
+    "name": "entity_mirage_create",
     "IsCompatibility": false,
     "IsDnD": false
 }

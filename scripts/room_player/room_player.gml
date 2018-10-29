@@ -23,7 +23,11 @@ if (player_controllable){
 				entity_move_angle(180)
 			}
 			
-			if (mouse_check_button_pressed(global.mouse_1)){
+			if (mouse_check_button(global.mouse_1)){
+				actor_action_channel([mouse_x, mouse_y]);
+			}
+			
+			if (mouse_check_button_released(global.mouse_1)){
 				actor_action_attack([mouse_x, mouse_y]);
 			}
 		}

@@ -1,3 +1,4 @@
+depth = 60;
 ds_inventory = ds_list_create();
 
 room_loop_x = true;
@@ -21,8 +22,6 @@ player_faction = 0;
 player_main_actor_type = "hero";
 
 draw_mirage_list = ds_create("list");
-
-
 
 room_run_scripts("create");
 

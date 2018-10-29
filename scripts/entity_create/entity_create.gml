@@ -1,5 +1,6 @@
 ALIVE = true;
 ACTIVE = false;
+depth = 50;
 ds_inventory = ds_list_create();
 
 physics_motion_list = ds_create("list");
@@ -38,6 +39,10 @@ status_movesnap_base = 0.5*SEC;
 status_move_angle_list = ds_create("list");
 
 player_faction = -1;
+
+animation_name = "idle";
+animation_direction = 1;
+animation_angle = 0;
 
 entity_run_class_scripts("create");
 

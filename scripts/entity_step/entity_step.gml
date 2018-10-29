@@ -1,10 +1,30 @@
 if (ACTIVE && ALIVE){
-	#region //MOTION
+	#region //MOVE AND MOTION
+		var list_length = ds_list_size(status_move_angle_list);
+		
+		for(var i = 0; i < list_length;i++){
+			var angle = ds_list_find_value(status_move_angle_list, i);
+			var rad_angle = degtorad(angle)
+			var speed_factor = (status_movespeed_total/list_length)/status_movesnap_total;
+			var move_x = cos(rad_angle)*speed_factor;
+			var move_y = sin(rad_angle)*speed_factor;
+			
+			
+			entity_add_motion(move_x, move_y, status_movesnap_total, ["linear"], "move_motion");
+		}
+			
+		status_movesnap_total = max(2, status_movesnap_base);
+		status_movespeed_total = status_movespeed_base;
+			
+		ds_list_clear(status_move_angle_list);
+
 		physics_motion_x = 0;
 		physics_motion_y = 0;
 		
 		var motion_list_length = ds_list_size(physics_motion_list);
-
+		var move_x_total = 0;
+		var move_y_total = 0;
+		
 		for(var i = 0; i < motion_list_length;i++){
 			var p = ds_list_find_value(physics_motion_list, i);
 	
@@ -16,6 +36,11 @@ if (ACTIVE && ALIVE){
 	
 			physics_motion_x += motion_x;
 			physics_motion_y += motion_y;
+			
+			if (motion_id == "move_motion"){
+				move_x_total += motion_x;
+				move_y_total += motion_y;
+			}
 			
 			switch(motion_decay[0]){
 				case "linear":
@@ -62,6 +87,16 @@ if (ACTIVE && ALIVE){
 		
 		if (abs(physics_motion_spill_x) > 1){ physics_motion_spill_x -= sign(physics_motion_spill_x); movement_x += sign(physics_motion_spill_x)};
 		if (physics_motion_spill_y > 1){ physics_motion_spill_y -= 1; movement_y += 1; };
+		
+		if (abs(move_x_total) > 50*PPS || abs(move_y_total) > 50*PPS){
+			animation_name = "walk";
+			animation_direction = move_x_total != 0 ? sign(move_x_total) : animation_direction;
+			animation_angle = point_direction(x,y,x+move_x_total,y+move_y_total);
+			if (animation_direction == -1){animation_angle -= 180}
+		} else {
+			animation_angle = 0;
+			animation_name = "idle";
+		}
 	#endregion
 
 	#region //COLLISION
@@ -132,7 +167,6 @@ if (ACTIVE && ALIVE){
 				move_steps_current = 0;
 			}
 		}
-		
 	#endregion
 
 	#region //SCRIPTS
@@ -149,26 +183,12 @@ if (ACTIVE && ALIVE){
 			if (collision_count_entities > 0){entity_run_class_scripts("collide_entity")}
 			if (collision_count_tiles > 0){entity_run_class_scripts("collide_tile")}
 		}
-		
 	#endregion
 	
 	if (ACTIVE && ALIVE){
-		#region //MOVE
-			
-			var list_length = ds_list_size(status_move_angle_list);
-			for(var i = 0; i < list_length;i++){
-				var angle = ds_list_find_value(status_move_angle_list, i);
-				var rad_angle = degtorad(angle)
-				var speed_factor = (status_movespeed_total/list_length)/status_movesnap_total;
-				var move_x = cos(rad_angle)*speed_factor;
-				var move_y = sin(rad_angle)*speed_factor;
-				entity_add_motion(move_x, move_y, status_movesnap_total, ["linear"]);
-			}
-			
-			status_movesnap_total = max(2, status_movesnap_base);
-			status_movespeed_total = status_movespeed_base;
-			
-			ds_list_clear(status_move_angle_list);
+		#region //ANIMATION
+			var	animation_sprite = asset_get_index(entity_type + "_" + animation_name);
+			sprite_index = (animation_sprite > 0) ? animation_sprite : asset_get_index(entity_type + "_idle");
 		#endregion
 		
 		#region //HEALTH

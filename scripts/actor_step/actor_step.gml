@@ -13,17 +13,20 @@ entity_run_type_scripts("step");
 
 
 #region // BUFF MANAGEMENT
+	actor_actions_enabled = true;
+
 	var buff_list_length = ds_list_size(status_buff_list);
+	for(var i = 0; i < buff_list_length;i++){actor_buff_process_1(ds_list_find_value(status_buff_list, i))};
+	for(var i = 0; i < buff_list_length;i++){actor_buff_process_2(ds_list_find_value(status_buff_list, i))};
+	for(var i = 0; i < buff_list_length;i++){actor_buff_process_3(ds_list_find_value(status_buff_list, i))};
+	for(var i = 0; i < buff_list_length;i++){actor_buff_process_4(ds_list_find_value(status_buff_list, i))};
+	
 	for(var i = 0; i < buff_list_length;i++){
 		var p = ds_list_find_value(status_buff_list, i);
-		
 		var type = p[0];
 		var duration = p[1];
 		var arguments = p[2];
 		var buff_id = p[3];
-		
-		actor_buff_process(p);
-		
 		if (duration < INFINITY){
 			ds_list_replace(status_buff_list, i, [
 				type,
@@ -32,10 +35,11 @@ entity_run_type_scripts("step");
 				buff_id
 			])
 		}
-	};
+	}
 	
 	#region // BUFF COSMETICS
 		var has_speed = 0;
+		var has_stunned = 0;
 		for(var i = 0; i < buff_list_length;i++){
 			var p = ds_list_find_value(status_buff_list, i);
 			var type = p[0];
@@ -44,31 +48,27 @@ entity_run_type_scripts("step");
 			if (has_speed == 0 && (type == "speed_raw" || type == "speed_percent")){
 				has_speed = duration;
 			}
+			
+			if (has_stunned == 0 && type == "stunned"){
+				animation_name = "stunned";
+				animation_angle = 0;
+				animation_direction = 1;
+			}
 		}
 	
-		if (has_speed > 0 && has_speed % (0.1*SEC) == 0){
-			var mirage_push = [
-				sprite_index,
-				image_index,
-				x,
-				y,
-				image_xscale,
-				image_yscale,
-				image_angle,
-				image_blend,
-				0.5,
-				1*SEC,
-				1*SEC
-			];
-		
-			with(ROOM){ds_list_add(draw_mirage_list, mirage_push)}
+		if (has_speed > 0){
+			if (animation_name == "walk"){animation_name = "dash"};
+			if (has_speed % (0.2*SEC) == 0){entity_mirage_create(1*SEC)};
 		}
 	#endregion	
 	
 	for(var i = 0; i < buff_list_length;i++){
 		var p = ds_list_find_value(status_buff_list, i);
-		var duration = p[1];
-		if (duration <= 0){ds_list_delete(status_buff_list, i)}
+		if (p != undefined){
+			var duration = p[1];
+			if (duration <= 0){ds_list_delete(status_buff_list, i)}
+		}
+		
 	}
 #endregion
 
