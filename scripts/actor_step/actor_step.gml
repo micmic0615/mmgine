@@ -13,29 +13,31 @@ entity_run_type_scripts("step");
 
 
 #region // BUFF MANAGEMENT
-	actor_actions_enabled = true;
+	#region //BUFF CALCULATE STATS
+		actor_actions_enabled = true;
 
-	var buff_list_length = ds_list_size(status_buff_list);
-	for(var i = 0; i < buff_list_length;i++){actor_buff_process_1(ds_list_find_value(status_buff_list, i))};
-	for(var i = 0; i < buff_list_length;i++){actor_buff_process_2(ds_list_find_value(status_buff_list, i))};
-	for(var i = 0; i < buff_list_length;i++){actor_buff_process_3(ds_list_find_value(status_buff_list, i))};
-	for(var i = 0; i < buff_list_length;i++){actor_buff_process_4(ds_list_find_value(status_buff_list, i))};
+		var buff_list_length = ds_list_size(status_buff_list);
+		for(var i = 0; i < buff_list_length;i++){actor_buff_process_1(ds_list_find_value(status_buff_list, i))};
+		for(var i = 0; i < buff_list_length;i++){actor_buff_process_2(ds_list_find_value(status_buff_list, i))};
+		for(var i = 0; i < buff_list_length;i++){actor_buff_process_3(ds_list_find_value(status_buff_list, i))};
+		for(var i = 0; i < buff_list_length;i++){actor_buff_process_4(ds_list_find_value(status_buff_list, i))};
 	
-	for(var i = 0; i < buff_list_length;i++){
-		var p = ds_list_find_value(status_buff_list, i);
-		var type = p[0];
-		var duration = p[1];
-		var arguments = p[2];
-		var buff_id = p[3];
-		if (duration < INFINITY){
-			ds_list_replace(status_buff_list, i, [
-				type,
-				duration - 1,
-				arguments,
-				buff_id
-			])
+		for(var i = 0; i < buff_list_length;i++){
+			var p = ds_list_find_value(status_buff_list, i);
+			var type = p[0];
+			var duration = p[1];
+			var arguments = p[2];
+			var buff_id = p[3];
+			if (duration < INFINITY){
+				ds_list_replace(status_buff_list, i, [
+					type,
+					duration - TIMESPEED,
+					arguments,
+					buff_id
+				])
+			}
 		}
-	}
+	#endregion
 	
 	#region // BUFF COSMETICS
 		var has_speed = 0;
@@ -58,17 +60,19 @@ entity_run_type_scripts("step");
 	
 		if (has_speed > 0){
 			if (animation_name == "walk"){animation_name = "dash"};
-			if (has_speed % (0.2*SEC) == 0){entity_mirage_create(1*SEC)};
+			if (floor(entity_age) % (0.15*SEC) == 0){entity_mirage_create(1*SEC, 0, 0, make_color_rgb(0,255,255))};
 		}
 	#endregion	
 	
-	for(var i = 0; i < buff_list_length;i++){
-		var p = ds_list_find_value(status_buff_list, i);
-		if (p != undefined){
-			var duration = p[1];
-			if (duration <= 0){ds_list_delete(status_buff_list, i)}
+	#region // BUFF REMOVE
+		for(var i = 0; i < buff_list_length;i++){
+			var p = ds_list_find_value(status_buff_list, i);
+			if (p != undefined){
+				var duration = p[1];
+				show_debug_message(duration)
+				if (duration <= 0){ds_list_delete(status_buff_list, i)}
+			}
 		}
-		
-	}
+	#endregion
 #endregion
 

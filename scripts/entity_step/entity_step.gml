@@ -1,5 +1,6 @@
 if (ACTIVE && ALIVE){
 	#region //MOVE AND MOTION
+		entity_age += 1;
 		var list_length = ds_list_size(status_move_angle_list);
 		
 		for(var i = 0; i < list_length;i++){
@@ -33,6 +34,8 @@ if (ACTIVE && ALIVE){
 			var motion_lifespan = p[2];
 			var motion_decay = p[3];
 			var motion_id = p[4];
+			
+			var next_lifespan = motion_lifespan - TIMESPEED;
 	
 			physics_motion_x += motion_x;
 			physics_motion_y += motion_y;
@@ -42,27 +45,32 @@ if (ACTIVE && ALIVE){
 				move_y_total += motion_y;
 			}
 			
-			switch(motion_decay[0]){
-				case "linear":
-					motion_x = (motion_x/motion_lifespan)*(motion_lifespan - 1);
-					motion_y = (motion_y/motion_lifespan)*(motion_lifespan - 1);
-					break
+			if (floor(motion_lifespan) > floor(next_lifespan)){
+				switch(motion_decay[0]){
+					case "linear":
+				
+						motion_x = (motion_x/motion_lifespan)*(motion_lifespan - 1);
+						motion_y = (motion_y/motion_lifespan)*(motion_lifespan - 1);
+						break
 						
-				case "multiply":
-					motion_x /= motion_decay[1];
-					motion_y /= motion_decay[1];
-					break
+					case "multiply":
+						motion_x /= motion_decay[1];
+						motion_y /= motion_decay[1];
+						break
 					
-				case "none":
-				default:
-					break;
+					case "none":
+					default:
+						break;
+				}
 			}
+			
+			
 	
 			if (motion_lifespan < INFINITY){
 				ds_list_replace(physics_motion_list, i, [
 					motion_x,
 					motion_y,
-					motion_lifespan - 1,
+					next_lifespan,
 					motion_decay,
 					motion_id
 				])
@@ -77,17 +85,19 @@ if (ACTIVE && ALIVE){
 				ds_list_delete(physics_motion_list, i);
 				i--;
 			}
-		}
+		}		
+		
+		var time_x = physics_motion_x*TIMESPEED;
+		var time_y = physics_motion_y*TIMESPEED
 
-		var movement_x = floor(physics_motion_x);
-		var movement_y = floor(physics_motion_y);
+		var movement_x = floor(time_x);
+		var movement_y = floor(time_y);
 
-		physics_motion_spill_x += (physics_motion_x - movement_x);
-		physics_motion_spill_y += (physics_motion_y - movement_y);
+		physics_motion_spill_x += (time_x - movement_x);
+		physics_motion_spill_y += (time_y - movement_y);
 		
 		if (abs(physics_motion_spill_x) > 1){ physics_motion_spill_x -= sign(physics_motion_spill_x); movement_x += sign(physics_motion_spill_x)};
 		if (physics_motion_spill_y > 1){ physics_motion_spill_y -= 1; movement_y += 1; };
-		
 		if (abs(move_x_total) > 50*PPS || abs(move_y_total) > 50*PPS){
 			animation_name = "walk";
 			animation_direction = move_x_total != 0 ? sign(move_x_total) : animation_direction;
@@ -168,6 +178,21 @@ if (ACTIVE && ALIVE){
 			}
 		}
 	#endregion
+	
+	#region //CAMERA
+		var camera_view_x = camera_get_view_x(view_camera[0]);
+		var camera_view_y = camera_get_view_y(view_camera[0]);
+		var camera_size_w = camera_get_view_width(view_camera[0]);
+		var camera_size_h = camera_get_view_height(view_camera[0]);
+
+		var camera_padding_x = sprite_width/2;
+		var camera_padding_y = sprite_height/2;
+		
+		var inside_x = (x > camera_view_x - camera_padding_x && x < camera_view_x + camera_size_w + camera_padding_x);
+		var inside_y = (y > camera_view_y - camera_padding_y && y < camera_view_y + camera_size_h + camera_padding_y);
+
+		camera_inside_view = (inside_x && inside_y) ? true : false;
+	#endregion
 
 	#region //SCRIPTS
 		entity_run_class_scripts("step");
@@ -199,10 +224,12 @@ if (ACTIVE && ALIVE){
 		#endregion
 	}
 } else {
-	if (ALIVE){
-		ROOM = instance_find(ROOM_OBJECT, 0);
-		ACTIVE = true;
-	} else {
-		instance_destroy(id, false);	
-	}
+	#region //DEATH
+		if (ALIVE){
+			ROOM = instance_find(ROOM_OBJECT, 0);
+			ACTIVE = true;
+		} else {
+			instance_destroy(id, false);	
+		}
+	#endregion
 }

@@ -9,6 +9,8 @@ physics_motion_y = 0;
 physics_motion_spill_x = 0;
 physics_motion_spill_y = 0;
 
+entity_age = 0
+
 entity_class = object_get_name(object_get_parent(object_index));
 entity_class_lower = string_lower(entity_class);
 
@@ -37,6 +39,8 @@ status_health_max = 1;
 status_movespeed_base = 100*PPS;
 status_movesnap_base = 0.5*SEC;
 status_move_angle_list = ds_create("list");
+
+camera_inside_view = false;
 
 player_faction = -1;
 

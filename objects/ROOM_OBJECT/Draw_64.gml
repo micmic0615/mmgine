@@ -1,0 +1,1 @@
+room_draw_gui();

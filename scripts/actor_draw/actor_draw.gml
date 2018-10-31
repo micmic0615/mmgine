@@ -1,5 +1,5 @@
 #region //DRAW HEALTH BARS
-	if (draw_bars == true){
+	if (draw_bars){
 		var bar_color = make_colour_rgb(90,0,0);
 		var bar_width = sprite_width*draw_bar_health_xscale;
 		var bar_height = 3;

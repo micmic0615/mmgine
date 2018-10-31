@@ -30,6 +30,11 @@ if (player_controllable){
 			if (mouse_check_button_released(global.mouse_1)){
 				actor_action_attack([mouse_x, mouse_y]);
 			}
+			
+			if (keyboard_check_pressed(global.key_action_1)){
+				global.time_speed = global.time_speed == 1 ? 0.25 : 1;
+				with(all){image_speed = TIMESPEED}
+			}
 		}
 	}
 }

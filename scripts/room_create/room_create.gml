@@ -21,6 +21,14 @@ player_controllable = true;
 player_faction = 0;
 player_main_actor_type = "hero";
 
+var me = id;
+with(ENTITY){
+	if (entity_type_lower == me.player_main_actor_type){
+		me.camera_x = x;
+		me.camera_y = y;
+	}
+}
+
 draw_mirage_list = ds_create("list");
 
 room_run_scripts("create");

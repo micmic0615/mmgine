@@ -1,4 +1,4 @@
-if (my_attack_cooldown_timer == 0){
+if (my_attack_cooldown_timer <= 0){
 	var target_point = argument0;
 	
 	var channel_multiplier_bullet = 1 + ((my_attack_channel_power_current/my_attack_channel_power_max)*1);

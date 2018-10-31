@@ -5,7 +5,7 @@ if (bullet_lifespan > 0){
 		entity_move_angle(bullet_action_move_angle)
 	}
 	
-	bullet_lifespan = bullet_lifespan == INFINITY ? bullet_lifespan : (bullet_lifespan - 1);
+	bullet_lifespan = bullet_lifespan == INFINITY ? bullet_lifespan : (bullet_lifespan - TIMESPEED);
 } else {
 	entity_kill(id);
 }

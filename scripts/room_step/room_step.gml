@@ -59,11 +59,7 @@ if (room_initiate){
 		
 				if (camera_loop_snap){
 					with(ENTITY){
-						if (
-							ACTIVE &&
-							(x > camera_view_x - 100 && x < camera_view_x + camera_size_w + 100) && 
-							(y > camera_view_y - 100 && y < camera_view_y + camera_size_h + 100)
-						){
+						if (ACTIVE && camera_inside_view){
 							x += (ROOM.camera_x - base_camera_x);
 							y += (ROOM.camera_y - base_camera_y);
 						}
@@ -76,9 +72,12 @@ if (room_initiate){
 							var loc_x = p[2]; 
 							var loc_y = p[3]; 
 							
+							var half_width = (sprite_width/2);
+							var half_height = (sprite_height/2);
+							
 							if (
-								(loc_x > camera_view_x - 100 && loc_x < camera_view_x + camera_size_w + 100) && 
-								(loc_y > camera_view_y - 100 && loc_y < camera_view_y + camera_size_h + 100)
+								(loc_x > camera_view_x - half_width && loc_x < camera_view_x + camera_size_w + half_width) && 
+								(loc_y > camera_view_y - half_height && loc_y < camera_view_y + camera_size_h + half_height)
 							){
 								p[2] += (camera_x - base_camera_x);
 								p[3] += (camera_y - base_camera_y);
@@ -89,13 +88,7 @@ if (room_initiate){
 				} else {
 					
 					with(ENTITY){
-						if (
-							ACTIVE &&
-							!(
-								(x > camera_view_x - 100 && x < camera_view_x + camera_size_w + 100) && 
-								(y > camera_view_y - 100 && y < camera_view_y + camera_size_h + 100)
-							)
-						) {
+						if (ACTIVE && !camera_inside_view) {
 							var x_camera_center = camera_view_x + camera_size_w*0.5;
 							var x_camera_distance = abs(x - x_camera_center);
 							if (x_camera_distance > room_width*0.5){
