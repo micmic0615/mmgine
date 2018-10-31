@@ -47,7 +47,7 @@ entity_run_type_scripts("step");
 			var type = p[0];
 			var duration = p[1];
 			
-			if (has_speed == 0 && (type == "speed_raw" || type == "speed_percent")){
+			if (has_speed == 0 && (type == "speed_bonus_raw" || type == "speed_bonus_percent")){
 				has_speed = duration;
 			}
 			
@@ -60,7 +60,11 @@ entity_run_type_scripts("step");
 	
 		if (has_speed > 0){
 			if (animation_name == "walk"){animation_name = "dash"};
-			if (floor(entity_age) % (0.15*SEC) == 0){entity_mirage_create(1*SEC, 0, 0, make_color_rgb(0,255,255))};
+			var floor_age = floor(ROOM.room_age_game);
+			var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
+			if (floor_age % (0.15*SEC) == 0 && floor_age != next_floor_age){
+				entity_mirage_create(1*SEC, 0, 0, make_color_rgb(0,255,255))
+			};
 		}
 	#endregion	
 	
@@ -69,7 +73,6 @@ entity_run_type_scripts("step");
 			var p = ds_list_find_value(status_buff_list, i);
 			if (p != undefined){
 				var duration = p[1];
-				show_debug_message(duration)
 				if (duration <= 0){ds_list_delete(status_buff_list, i)}
 			}
 		}

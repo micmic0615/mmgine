@@ -22,3 +22,5 @@ my_attack_channel_power_max = 2*SEC;
 
 my_attack_cooldown_value = 0.25*SEC;
 my_attack_cooldown_timer = 0;
+
+my_attack_queue = undefined;

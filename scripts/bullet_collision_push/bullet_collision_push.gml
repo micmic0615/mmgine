@@ -13,6 +13,6 @@ for(var i = 0; i < ds_list_size(collision_entities);i++){
 	var y_move = sin(rad_angle)*value_push_distance/value_push_duration;
 	
 	with(p){
-		entity_add_motion(x_move, y_move, value_push_duration, value_push_decay)
+		entity_motion_add(x_move, y_move, value_push_duration, value_push_decay)
 	}
 }

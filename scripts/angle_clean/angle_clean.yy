@@ -1,8 +1,8 @@
 {
-    "id": "76ea29ce-4cf7-49b1-9c9f-15b926665c79",
+    "id": "1f8f6e31-8f44-4578-9178-7a19f636f189",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "entity_add_motion",
+    "name": "angle_clean",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -32,8 +32,13 @@ if (player_controllable){
 			}
 			
 			if (keyboard_check_pressed(global.key_action_1)){
-				global.time_speed = global.time_speed == 1 ? 0.25 : 1;
-				with(all){image_speed = TIMESPEED}
+				TIMESPEED = 0.25;
+				with(ENTITY){image_speed = TIMESPEED}
+			}
+			
+			if (keyboard_check_released(global.key_action_1)){
+				TIMESPEED = 1;
+				with(ENTITY){image_speed = TIMESPEED}
 			}
 		}
 	}

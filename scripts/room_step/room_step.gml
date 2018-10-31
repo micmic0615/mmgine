@@ -1,3 +1,9 @@
+room_age_real += 1;
+room_age_game += TIMESPEED;
+
+//GRAVITY_ANGLE += 30*PPS;
+//with(ENTITY){physics_gravity_angle = GRAVITY_ANGLE}
+
 if (room_initiate){
 	with(TILE){tile_original = true}
 	room_initiate = false;

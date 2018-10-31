@@ -8,4 +8,4 @@ var rad_angle = degtorad(value_push_angle);
 var x_move = cos(rad_angle)*value_push_distance/value_push_duration;
 var y_move = sin(rad_angle)*value_push_distance/value_push_duration;
 	
-entity_add_motion(x_move, y_move, value_push_duration, value_push_decay, value_push_id)
+entity_motion_add(x_move, y_move, value_push_duration, value_push_decay, value_push_id)

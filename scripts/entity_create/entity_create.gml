@@ -9,6 +9,13 @@ physics_motion_y = 0;
 physics_motion_spill_x = 0;
 physics_motion_spill_y = 0;
 
+physics_gravity_on = false;
+physics_gravity_angle = GRAVITY_ANGLE;
+physics_gravity_force = GRAVITY_FORCE;
+physics_gravity_max = GRAVITY_MAX;
+physics_gravity_current = 0;
+physics_gravity_turnrate = 30*PPS;
+
 entity_age = 0
 
 entity_class = object_get_name(object_get_parent(object_index));

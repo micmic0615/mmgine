@@ -1,26 +1,42 @@
 if (ACTIVE && ALIVE){
-	#region //MOVE AND MOTION
-		entity_age += 1;
-		var list_length = ds_list_size(status_move_angle_list);
-		
-		for(var i = 0; i < list_length;i++){
-			var angle = ds_list_find_value(status_move_angle_list, i);
-			var rad_angle = degtorad(angle)
-			var speed_factor = (status_movespeed_total/list_length)/status_movesnap_total;
-			var move_x = cos(rad_angle)*speed_factor;
-			var move_y = sin(rad_angle)*speed_factor;
-			
-			
-			entity_add_motion(move_x, move_y, status_movesnap_total, ["linear"], "move_motion");
-		}
-			
-		status_movesnap_total = max(2, status_movesnap_base);
-		status_movespeed_total = status_movespeed_base;
-			
-		ds_list_clear(status_move_angle_list);
-
+	#region //GRAVITY
+		entity_age += TIMESPEED;
 		physics_motion_x = 0;
 		physics_motion_y = 0;
+		
+		var gravity_x = 0;
+		var gravity_y = 0;
+		
+		if (physics_gravity_on){
+			physics_gravity_current = min(physics_gravity_current + physics_gravity_force, physics_gravity_max);
+			gravity_x = cos(degtorad(physics_gravity_angle))*physics_gravity_current
+			gravity_y = sin(degtorad(physics_gravity_angle))*physics_gravity_current
+			physics_motion_x += gravity_x;
+			physics_motion_y += gravity_y;	
+		}
+	#endregion
+	
+	#region //MOVE AND MOTION
+		var next_entity_age = entity_age + TIMESPEED;
+		if (floor(entity_age) != floor(next_entity_age)){
+			var list_length = ds_list_size(status_move_angle_list);
+		
+			for(var i = 0; i < list_length;i++){
+				var angle = ds_list_find_value(status_move_angle_list, i);
+				var rad_angle = degtorad(angle)
+				var speed_factor = (status_movespeed_total/list_length)/status_movesnap_total;
+				var move_x = cos(rad_angle)*speed_factor;
+				var move_y = sin(rad_angle)*speed_factor;
+			
+			
+				entity_motion_add(move_x, move_y, status_movesnap_total, ["linear"], "move_motion");
+			}	
+			
+			ds_list_clear(status_move_angle_list);
+			
+			status_movesnap_total = max(2, status_movesnap_base);
+			status_movespeed_total = status_movespeed_base;
+		}	
 		
 		var motion_list_length = ds_list_size(physics_motion_list);
 		var move_x_total = 0;
@@ -45,7 +61,7 @@ if (ACTIVE && ALIVE){
 				move_y_total += motion_y;
 			}
 			
-			if (floor(motion_lifespan) > floor(next_lifespan)){
+			if (round(motion_lifespan) > round(next_lifespan)){
 				switch(motion_decay[0]){
 					case "linear":
 				
@@ -63,8 +79,6 @@ if (ACTIVE && ALIVE){
 						break;
 				}
 			}
-			
-			
 	
 			if (motion_lifespan < INFINITY){
 				ds_list_replace(physics_motion_list, i, [
@@ -104,8 +118,30 @@ if (ACTIVE && ALIVE){
 			animation_angle = point_direction(x,y,x+move_x_total,y+move_y_total);
 			if (animation_direction == -1){animation_angle -= 180}
 		} else {
-			animation_angle = 0;
-			animation_name = "idle";
+			var target_gravity = angle_clean(point_direction(x,y,x+gravity_x,y+gravity_y) + 90);	
+			if (physics_gravity_on){
+				if (physics_gravity_current > physics_gravity_max*0.25){
+					animation_name = "fall";
+				} else {
+					animation_name = "rise";
+				}
+				
+				if (
+					(physics_gravity_angle > 45 && physics_gravity_angle <= 135 && collision_contact_y == "bottom") ||
+					(physics_gravity_angle > 135 && physics_gravity_angle <= 225 && collision_contact_x == "left") ||
+					(physics_gravity_angle > 225 && physics_gravity_angle <= 315 && collision_contact_y == "top") ||
+					(physics_gravity_angle > 315 && physics_gravity_angle <= 45 && collision_contact_x == "right")
+				) {
+					physics_gravity_current = 0;
+					animation_name = "idle";
+					animation_angle = target_gravity
+				} else {
+					animation_angle = angle_shift(animation_angle, target_gravity, physics_gravity_turnrate)
+				}
+			} else {
+				animation_name = "idle";
+				animation_angle = target_gravity
+			}
 		}
 	#endregion
 
@@ -196,18 +232,20 @@ if (ACTIVE && ALIVE){
 
 	#region //SCRIPTS
 		entity_run_class_scripts("step");
-		if (collision_count_entities > 0 || collision_count_tiles > 0){			
-			collision_contact_y = "none";
+		
+		collision_contact_y = "none";
+		collision_contact_x = "none";
+		
+		if (collision_count_entities > 0 || collision_count_tiles > 0){	
 			if (sign(final_y_push) < 0){collision_contact_y = "bottom"}
 			else if (sign(final_y_push) > 0){collision_contact_y = "top"}	
 			
-			collision_contact_x = "none";
 			if (sign(final_x_push) < 0){collision_contact_x = "right"}
 			else if (sign(final_x_push) > 0){collision_contact_x = "left"}
 			
 			if (collision_count_entities > 0){entity_run_class_scripts("collide_entity")}
 			if (collision_count_tiles > 0){entity_run_class_scripts("collide_tile")}
-		}
+		} 
 	#endregion
 	
 	if (ACTIVE && ALIVE){
