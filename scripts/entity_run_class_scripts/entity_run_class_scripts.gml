@@ -8,7 +8,11 @@ if (script_class > -1){
 	} else {
 		return script_execute(script_class)
 	}
-};
+} else {
+	if (argument_count > 1){
+		return argument[1];
+	}
+}
 
 
 

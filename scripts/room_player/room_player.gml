@@ -28,7 +28,11 @@ if (player_controllable){
 			}
 			
 			if (mouse_check_button_released(global.mouse_1)){
-				actor_action_attack([mouse_x, mouse_y]);
+				actor_action_attack_1([mouse_x, mouse_y]);
+			}
+			
+			if (mouse_check_button_pressed(global.mouse_2)){
+				actor_action_attack_2([mouse_x, mouse_y]);
 			}
 			
 			if (keyboard_check_pressed(global.key_action_1)){

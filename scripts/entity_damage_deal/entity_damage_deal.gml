@@ -14,7 +14,7 @@ var adjusted_lethal = is_array(adjusted_args) ? adjusted_args[1] : base_lethal;
 
 if (adjusted_value > 0){
 	with(adjusted_target){
-		if (ACTIVE && ALIVE){
+		if (ACTIVE && ALIVE && !status_immortal){
 			var min_health = adjusted_lethal ? 0 : 1;
 			status_health_current = max(min_health, status_health_current - adjusted_value);
 			if (status_health_current <= 0){entity_killer = me};

@@ -34,17 +34,17 @@ if (ACTIVE && ALIVE){
 					])
 				}
 				
-				for(var i = 0; i < ds_list_size(bullet_collision_entity_actions);i++){
-					var p = ds_list_find_value(bullet_collision_entity_actions, i);
-					if (p[0] == "push"){
-						ds_list_replace(bullet_collision_entity_actions, i, [
-							p[0],
-							p[1],
-							p[2],
-							bullet_action_move_angle
-						])
-					}
-				}
+				//for(var i = 0; i < ds_list_size(bullet_collision_entity_actions);i++){
+				//	var p = ds_list_find_value(bullet_collision_entity_actions, i);
+				//	if (p[0] == "push"){
+				//		ds_list_replace(bullet_collision_entity_actions, i, [
+				//			p[0],
+				//			p[1],
+				//			p[2],
+				//			bullet_action_move_angle
+				//		])
+				//	}
+				//}
 			}
 			break
 	}

@@ -4,20 +4,26 @@ if (ACTIVE && ALIVE){
 		physics_motion_x = 0;
 		physics_motion_y = 0;
 		
+		var next_entity_age = entity_age + TIMESPEED;
+		
 		var gravity_x = 0;
 		var gravity_y = 0;
+		if (floor(entity_age) != floor(next_entity_age)){
+			if (physics_gravity_on){
+				physics_gravity_falling = physics_gravity_current == 0 ? 0 : physics_gravity_falling;
+				physics_gravity_falling += physics_gravity_current;
+				physics_gravity_current = min(physics_gravity_current + physics_gravity_force, physics_gravity_max);
+				gravity_x = cos(degtorad(physics_gravity_angle))*physics_gravity_current*physics_gravity_factor;
+				gravity_y = sin(degtorad(physics_gravity_angle))*physics_gravity_current*physics_gravity_factor;
 		
-		if (physics_gravity_on){
-			physics_gravity_current = min(physics_gravity_current + physics_gravity_force, physics_gravity_max);
-			gravity_x = cos(degtorad(physics_gravity_angle))*physics_gravity_current
-			gravity_y = sin(degtorad(physics_gravity_angle))*physics_gravity_current
-			physics_motion_x += gravity_x;
-			physics_motion_y += gravity_y;	
+				var gravity_slide = 0.5*SEC;
+				entity_motion_add(gravity_x/gravity_slide, gravity_y/gravity_slide, gravity_slide, ["none"], "gravity");
+			}
 		}
 	#endregion
 	
 	#region //MOVE AND MOTION
-		var next_entity_age = entity_age + TIMESPEED;
+		
 		if (floor(entity_age) != floor(next_entity_age)){
 			var list_length = ds_list_size(status_move_angle_list);
 		
@@ -114,33 +120,44 @@ if (ACTIVE && ALIVE){
 		if (physics_motion_spill_y > 1){ physics_motion_spill_y -= 1; movement_y += 1; };
 		if (abs(move_x_total) > 50*PPS || abs(move_y_total) > 50*PPS){
 			animation_name = "walk";
-			animation_direction = move_x_total != 0 ? sign(move_x_total) : animation_direction;
 			animation_angle = point_direction(x,y,x+move_x_total,y+move_y_total);
-			if (animation_direction == -1){animation_angle -= 180}
-		} else {
-			var target_gravity = angle_clean(point_direction(x,y,x+gravity_x,y+gravity_y) + 90);	
-			if (physics_gravity_on){
-				if (physics_gravity_current > physics_gravity_max*0.25){
-					animation_name = "fall";
-				} else {
-					animation_name = "rise";
+			
+			if (physics_gravity_on == true){
+				if (physics_gravity_angle > 45 && physics_gravity_angle <= 135){
+					animation_direction = move_x_total != 0 ? sign(move_x_total) : animation_direction;
+				} else if (physics_gravity_angle > 135 && physics_gravity_angle <= 225){
+					animation_direction = move_y_total != 0 ? sign(move_y_total) : animation_direction;
+				} else if (physics_gravity_angle > 225 && physics_gravity_angle <= 315){
+					animation_direction = move_x_total != 0 ? sign(move_x_total)*-1 : animation_direction;
+				} else if ((physics_gravity_angle > 315 || physics_gravity_angle <= 45) ){
+					animation_direction = move_y_total != 0 ? sign(move_y_total)*-1 : animation_direction;
 				}
-				
+			} else {
+				animation_direction = move_x_total != 0 ? sign(move_x_total) : animation_direction;
+			}
+			
+			if (animation_direction == -1){animation_angle -= 180}
+			
+			
+		} else {
+			
+			if (physics_gravity_on){
+				var target_gravity = angle_clean(point_direction(x,y,x+gravity_x,y+gravity_y) + 90);	
 				if (
 					(physics_gravity_angle > 45 && physics_gravity_angle <= 135 && collision_contact_y == "bottom") ||
 					(physics_gravity_angle > 135 && physics_gravity_angle <= 225 && collision_contact_x == "left") ||
 					(physics_gravity_angle > 225 && physics_gravity_angle <= 315 && collision_contact_y == "top") ||
-					(physics_gravity_angle > 315 && physics_gravity_angle <= 45 && collision_contact_x == "right")
+					((physics_gravity_angle > 315 || physics_gravity_angle <= 45) && collision_contact_x == "right")
 				) {
 					physics_gravity_current = 0;
 					animation_name = "idle";
-					animation_angle = target_gravity
+					animation_angle = target_gravity;
 				} else {
+					animation_name = physics_gravity_falling >= 1 ? ((physics_gravity_current > physics_gravity_max*0.25) ? "fall" : "rise") : "idle";
 					animation_angle = angle_shift(animation_angle, target_gravity, physics_gravity_turnrate)
 				}
 			} else {
 				animation_name = "idle";
-				animation_angle = target_gravity
 			}
 		}
 	#endregion

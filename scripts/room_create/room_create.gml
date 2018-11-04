@@ -1,6 +1,6 @@
 GRAVITY_ANGLE = 90;
-GRAVITY_FORCE = 120*PPS / (1*SEC);
-GRAVITY_MAX = 240*PPS;
+GRAVITY_FORCE = 40*PPS / (1*SEC);
+GRAVITY_MAX = 120*PPS;
 depth = 60;
 ds_inventory = ds_list_create();
 
@@ -14,7 +14,7 @@ room_age_game = 0;
 
 camera_x = 0;
 camera_y = 0;
-camera_zoom = 1;
+camera_zoom = 1/1.5;
 camera_width = window_get_width();
 camera_height = window_get_height();
 camera_target_x = camera_x;

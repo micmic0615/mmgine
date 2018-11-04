@@ -14,7 +14,9 @@ physics_gravity_angle = GRAVITY_ANGLE;
 physics_gravity_force = GRAVITY_FORCE;
 physics_gravity_max = GRAVITY_MAX;
 physics_gravity_current = 0;
-physics_gravity_turnrate = 30*PPS;
+physics_gravity_turnrate = 45*PPS;
+physics_gravity_falling = 0;
+physics_gravity_factor = 1;
 
 entity_age = 0
 
@@ -42,10 +44,12 @@ collision_enabled_doodads = true;
 collision_enabled_tiles = true;
 collision_faction = "all";
 
+
 status_health_max = 1;
 status_movespeed_base = 100*PPS;
 status_movesnap_base = 0.5*SEC;
 status_move_angle_list = ds_create("list");
+status_immortal = false;
 
 camera_inside_view = false;
 

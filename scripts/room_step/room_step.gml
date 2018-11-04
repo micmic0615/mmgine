@@ -1,8 +1,6 @@
 room_age_real += 1;
 room_age_game += TIMESPEED;
 
-//GRAVITY_ANGLE += 30*PPS;
-//with(ENTITY){physics_gravity_angle = GRAVITY_ANGLE}
 
 if (room_initiate){
 	with(TILE){tile_original = true}
@@ -19,7 +17,7 @@ if (room_initiate){
 			var speed_y = sin(angle)*camera_target_speed;
 	
 			if (camera_target_acceleration_distance > 0){
-				var distance_ratio = (distance/camera_target_acceleration_distance);
+				var distance_ratio = power((distance/camera_target_acceleration_distance), 1.5);
 				speed_x = speed_x*distance_ratio;
 				speed_y = speed_y*distance_ratio;
 			} 

@@ -31,4 +31,7 @@ global.key_action_1 = vk_space;
 global.key_pause = vk_enter;
 
 
+global.next_room = Level00;
+
+
 room_goto(room_next(room));
