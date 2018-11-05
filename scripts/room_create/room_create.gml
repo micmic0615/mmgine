@@ -46,3 +46,8 @@ var center_x = camera_x - camera_width*0.5/camera_zoom;
 var center_y = camera_y - camera_height*0.5/camera_zoom;
 
 view_camera[0] = camera_create_view(center_x, center_y, camera_width/camera_zoom, camera_height/camera_zoom, camera_angle);
+
+if (global.replay_mode == "record"){
+	ds_list_destroy(global.replay_data);
+	global.replay_data = ds_list_create();
+}

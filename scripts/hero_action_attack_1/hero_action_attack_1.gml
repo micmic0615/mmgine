@@ -48,7 +48,6 @@ if (my_attack_cooldown_timer <= 0){
 			bullet_life_factor = 0.67;
 			bullet_speed_factor = 1.5;
 			break
-			
 		
 		//case 3: 
 		//	bullet_max = 7;

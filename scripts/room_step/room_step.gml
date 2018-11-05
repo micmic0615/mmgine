@@ -1,11 +1,10 @@
-room_age_real += 1;
-room_age_game += TIMESPEED;
-
-
 if (room_initiate){
 	with(TILE){tile_original = true}
 	room_initiate = false;
 } else {
+	room_age_real += 1;
+	room_age_game += TIMESPEED;
+
 	room_player();
 	room_run_scripts("step");
 
@@ -118,5 +117,43 @@ if (room_initiate){
 		camera_set_view_size(view_camera[0], camera_size_w, camera_size_h);
 		camera_set_view_angle(view_camera[0], camera_angle);
 	#endregion
+	
+	#region // REPLAY
+		if (global.replay_mode == "play"){
+			for (var i = 0; i < ds_list_size(global.replay_data); ++i) {
+				var p = ds_list_find_value(global.replay_data, i);
+				
+				var timestamp = p[0];
+				var instance = p[1];
+				var action_name = p[2];
+				var action_argument = p[3];
+				
+			
+				
+				if (timestamp == room_age_real){
+					var me = id;
+					switch(action_name){
+						case "move_angle":
+							with(instance){entity_move_angle(action_argument)};
+							break;
+								
+						case "move_point":
+							with(instance){entity_move_point(action_argument)};
+							break;
+								
+						case "time_speed":
+							room_change_timespeed(action_argument)
+							break;
+							
+						default:
+							with(instance){entity_run_class_scripts(action_name, action_argument)};
+					}
+				}
+			}
+			
+			if (room_age_real >= global.replay_duration + 1*SEC){
+				room_goto(global.next_room);
+			}
+		}
+	#endregion
 }
-

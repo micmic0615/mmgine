@@ -20,7 +20,8 @@
         "f730f493-7d4d-40fd-9da3-f7b6ab9161b2",
         "cf03b340-b262-48cd-9829-e23e9417a79a",
         "182bae24-1157-4524-b06c-726b650c1fa8",
-        "71f61e30-bcd8-4230-9ec0-68a1543cc633"
+        "71f61e30-bcd8-4230-9ec0-68a1543cc633",
+        "20cfefa5-c429-4ac2-add0-2c4158dc9107"
     ],
     "filterType": "GMScript",
     "folderName": "Actor",

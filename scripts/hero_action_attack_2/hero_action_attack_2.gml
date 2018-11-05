@@ -65,7 +65,7 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 	entity_motion_push(dash_range, ((my_attack_dash_speed)/(my_attack_dash_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
 	
 	my_attack_combo = 1;
-	my_attack_combo_window_timer = my_attack_combo_window_value;
+	my_attack_combo_window_timer = my_attack_combo_window_value*1.5;
 } else {
 	my_attack_queue_2 = angle_between(target_point[0],target_point[1],x,y )  
 }

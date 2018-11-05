@@ -1,11 +1,13 @@
-if (player_controllable){
-	var me = id;
+var me = id;
+with(ACTOR){
+	if (entity_type_lower == me.player_main_actor_type){
+		me.camera_target_x = x;
+		me.camera_target_y = y;
+	}
+}
+
+if (player_controllable && global.replay_mode == "record"){
 	with(ACTOR){
-		if (entity_type_lower == me.player_main_actor_type){
-			me.camera_target_x = x;
-			me.camera_target_y = y;
-		}
-		
 		if (player_faction == me.player_faction){
 			if (keyboard_check(global.key_up)){
 				entity_move_angle(270)
@@ -36,14 +38,28 @@ if (player_controllable){
 			}
 			
 			if (keyboard_check_pressed(global.key_action_1)){
-				TIMESPEED = 0.25;
-				with(ENTITY){image_speed = TIMESPEED}
+				with(me){room_change_timespeed(0.25)};
 			}
 			
 			if (keyboard_check_released(global.key_action_1)){
-				TIMESPEED = 1;
-				with(ENTITY){image_speed = TIMESPEED}
+				with(me){room_change_timespeed(1)};
+			}
+			
+			if (keyboard_check_pressed(global.key_replay_load)){
+				global.replay_mode = "play";
+				global.replay_duration = me.room_age_real;
+				room_goto(global.next_room);
 			}
 		}
+	}
+} else {
+	if (keyboard_check_pressed(global.key_replay_load)){
+		global.replay_mode = "record";
+		room_goto(global.next_room);
+	}
+	
+	if (keyboard_check_pressed(global.key_pause)){
+		global.replay_mode = "play";
+		room_goto(global.next_room);
 	}
 }

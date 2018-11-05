@@ -29,9 +29,13 @@ global.key_right = ord("D");
 global.key_action_1 = vk_space;
 
 global.key_pause = vk_enter;
-
+global.key_replay_load = vk_escape;
 
 global.next_room = Level00;
+
+global.replay_data = ds_list_create();
+global.replay_mode = "record";
+global.replay_duration = 0;
 
 
 room_goto(room_next(room));

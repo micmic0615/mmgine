@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "20cfefa5-c429-4ac2-add0-2c4158dc9107",
+            "Value": {
+                "id": "1a0cc112-c9c6-42ae-b150-e4922585168c",
+                "resourcePath": "scripts\\actor_record_replay_data\\actor_record_replay_data.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "21a2d951-be35-4c15-84f1-743f0d0effdc",
             "Value": {
                 "id": "c88579d6-63c6-4d32-8a56-0a20715aa2be",
@@ -1127,6 +1135,14 @@
             }
         },
         {
+            "Key": "c8503200-213e-45d2-baed-2499761d8df0",
+            "Value": {
+                "id": "6a18f2a5-ca19-4774-82c8-a43c0e7cf6f1",
+                "resourcePath": "scripts\\room_change_timespeed\\room_change_timespeed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c88f5ff6-4707-468b-b9fc-cad63a750571",
             "Value": {
                 "id": "7a2384f1-910d-4c00-8d2b-721dc43a4581",
@@ -1418,6 +1434,7 @@
         "cf03b340-b262-48cd-9829-e23e9417a79a",
         "182bae24-1157-4524-b06c-726b650c1fa8",
         "71f61e30-bcd8-4230-9ec0-68a1543cc633",
+        "20cfefa5-c429-4ac2-add0-2c4158dc9107",
         "475a16c9-f27d-403c-88ee-03a32dd247b3",
         "00e83146-d3b0-4d3a-9d2d-4ad2766a7007",
         "a7a22981-1d1a-4337-a55e-7d6e5fa0d806",
@@ -1462,6 +1479,7 @@
         "35afca5f-2254-44f7-ac99-464849d40783",
         "8cfcf6e4-4f93-42fc-8f6b-0fc7a742de6a",
         "6e2a8e60-6b42-4b03-bb31-b72a52eb6dd2",
+        "c8503200-213e-45d2-baed-2499761d8df0",
         "c6c7633b-dbb9-4b89-87da-76b04c316d56",
         "8f4926b9-5ae2-43a4-8a97-19ba462f0f90",
         "f67aa4f7-29b7-4461-9741-2775ba2aa1f1",
