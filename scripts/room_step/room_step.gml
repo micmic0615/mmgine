@@ -2,8 +2,7 @@ if (room_initiate){
 	with(TILE){tile_original = true}
 	room_initiate = false;
 } else {
-	room_age_real += 1;
-	room_age_game += TIMESPEED;
+	
 
 	room_player();
 	room_run_scripts("step");
@@ -128,17 +127,15 @@ if (room_initiate){
 				var action_name = p[2];
 				var action_argument = p[3];
 				
-			
-				
 				if (timestamp == room_age_real){
 					var me = id;
 					switch(action_name){
 						case "move_angle":
-							with(instance){entity_move_angle(action_argument)};
+							if (instance_exists(instance)){with(instance){entity_move_angle(action_argument)}};
 							break;
 								
 						case "move_point":
-							with(instance){entity_move_point(action_argument)};
+							if (instance_exists(instance)){with(instance){entity_move_point(action_argument)}};
 							break;
 								
 						case "time_speed":
@@ -146,7 +143,7 @@ if (room_initiate){
 							break;
 							
 						default:
-							with(instance){entity_run_class_scripts(action_name, action_argument)};
+							if (instance_exists(instance)){with(instance){entity_run_class_scripts(action_name, action_argument)}};
 					}
 				}
 			}
@@ -156,4 +153,7 @@ if (room_initiate){
 			}
 		}
 	#endregion
+	
+	room_age_real += 1;
+	room_age_game += TIMESPEED;
 }

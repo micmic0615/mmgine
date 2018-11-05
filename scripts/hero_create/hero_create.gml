@@ -1,7 +1,7 @@
 status_movespeed_base = 200*PPS;
 status_movesnap_base = 0.6*SEC;
 
-status_damage_base = 10;
+status_damage_base = 20;
 
 draw_bar_health_xscale = 0.5;
 draw_bar_health_y = 30;
@@ -35,3 +35,5 @@ my_attack_combo_window_timer = 0;
 my_attack_queue_1 = undefined;
 my_attack_queue_2 = undefined;
 my_attack_combo = 0;
+
+ai_enabled = false;

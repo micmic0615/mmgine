@@ -52,7 +52,7 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 		bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
 
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", status_damage_total*channel_multiplier_bullet*bullet_damage_factor, true]);
-		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", status_damage_total*bullet_damage_factor*2]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", status_damage_total*bullet_damage_factor]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["push", 100*channel_multiplier_bullet*bullet_push_factor , 0.75*SEC, "movement", ["multiply",1.5]]);
 		
 		bullet_count --;

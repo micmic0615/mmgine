@@ -120,7 +120,12 @@ if (ACTIVE && ALIVE){
 		if (physics_motion_spill_y > 1){ physics_motion_spill_y -= 1; movement_y += 1; };
 		if (abs(move_x_total) > 50*PPS || abs(move_y_total) > 50*PPS){
 			animation_name = "walk";
-			animation_angle = point_direction(x,y,x+move_x_total,y+move_y_total);
+			
+			if (animation_rotatable){
+				animation_angle = point_direction(x,y,x+move_x_total,y+move_y_total);
+			} else {
+				animation_angle = 0
+			}
 			
 			if (physics_gravity_on == true){
 				if (physics_gravity_angle > 45 && physics_gravity_angle <= 135){
@@ -136,9 +141,7 @@ if (ACTIVE && ALIVE){
 				animation_direction = move_x_total != 0 ? sign(move_x_total) : animation_direction;
 			}
 			
-			if (animation_direction == -1){animation_angle -= 180}
-			
-			
+			if (animation_direction == -1 && animation_rotatable){animation_angle -= 180}
 		} else {
 			
 			if (physics_gravity_on){

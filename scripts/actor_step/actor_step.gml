@@ -77,5 +77,9 @@ entity_run_type_scripts("step");
 			}
 		}
 	#endregion
+	
+	#region // AI
+		if (ai_enabled && global.replay_mode == "record"){entity_run_type_scripts("ai_step")}
+	#endregion
 #endregion
 

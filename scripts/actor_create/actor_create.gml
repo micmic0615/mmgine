@@ -13,9 +13,12 @@ status_poise_max = 25;
 status_buff_list = ds_create("list");
 
 actor_actions_enabled = true;
+ai_enabled = true;
 
 entity_run_type_scripts("create");
 
 draw_bar_health_damage = status_health_max;
 status_damage_total = status_damage_base;
 status_poise_current = status_poise_max;
+
+if (ai_enabled && global.replay_mode == "record"){entity_run_type_scripts("ai_create")}

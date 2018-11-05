@@ -1,0 +1,45 @@
+var target_point = argument0;
+var my_attack_combo_max = 4;
+
+if (my_attack_cooldown_timer <= 0){	
+	my_attack_direction = 1;
+	my_attack_queue_1 = undefined;
+	image_index = 0;
+	my_attack_channel_angle_target = point_direction(x,y,target_point[0],target_point[1]);
+	
+	var channel_multiplier_bullet = 0.5 + ((my_attack_channel_power_current/my_attack_channel_power_max)*1);
+	var bullet_angle = angle_between(target_point[0], target_point[1], x,y);
+	var bullet_spawn_offset = 0;
+	
+	var bullet_x = cos(degtorad(bullet_angle))*bullet_spawn_offset + x;
+	var bullet_y = sin(degtorad(bullet_angle))*bullet_spawn_offset + y;
+	
+	var bullet = actor_spawn_bullet(target_point[0], target_point[1], bullet_x,bullet_y,DefaultBullet);
+
+	bullet.status_movespeed_base = my_attack_bullet_speed;
+	bullet.status_movesnap_base = 0.2*SEC;
+	bullet.bullet_action_move_angle = bullet_angle;
+	
+	bullet.physics_gravity_on = false;
+	
+	bullet.image_xscale = channel_multiplier_bullet;
+	bullet.image_yscale = channel_multiplier_bullet;
+		
+	bullet.bullet_seek_range = 300;
+	bullet.bullet_seek_turn_rate = 60*PPS;
+	bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*channel_multiplier_bullet*SEC);
+	bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
+
+	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", status_damage_total*channel_multiplier_bullet, true]);
+	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", status_damage_total]);
+	ds_list_add(bullet.bullet_collision_entity_actions, ["push", 100*channel_multiplier_bullet , 0.75*SEC, "movement", ["multiply",1.5]]);
+	
+	entity_motion_push((my_attack_dash_range), (my_attack_dash_speed/(my_attack_dash_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
+	
+	actor_buff_apply("move_set_raw", my_attack_cast_value, [0], "mana_speed_lock");
+	
+	my_attack_channel_power_current = 0;
+	my_attack_cooldown_timer = my_attack_cooldown_value;	
+	
+	my_attack_cast_timer = my_attack_cast_value;
+}

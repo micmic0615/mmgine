@@ -33,6 +33,8 @@ global.key_replay_load = vk_escape;
 
 global.next_room = Level00;
 
+global.random_seed = ds_list_create();
+
 global.replay_data = ds_list_create();
 global.replay_mode = "record";
 global.replay_duration = 0;

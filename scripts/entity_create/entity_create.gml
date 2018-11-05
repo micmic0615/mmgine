@@ -58,6 +58,7 @@ player_faction = -1;
 animation_name = "idle";
 animation_direction = 1;
 animation_angle = 0;
+animation_rotatable = true;
 
 entity_run_class_scripts("create");
 

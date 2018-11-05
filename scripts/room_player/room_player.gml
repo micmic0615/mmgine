@@ -8,7 +8,7 @@ with(ACTOR){
 
 if (player_controllable && global.replay_mode == "record"){
 	with(ACTOR){
-		if (player_faction == me.player_faction){
+		if (ACTIVE && ALIVE && player_faction == me.player_faction){
 			if (keyboard_check(global.key_up)){
 				entity_move_angle(270)
 			}
@@ -44,22 +44,25 @@ if (player_controllable && global.replay_mode == "record"){
 			if (keyboard_check_released(global.key_action_1)){
 				with(me){room_change_timespeed(1)};
 			}
-			
-			if (keyboard_check_pressed(global.key_replay_load)){
-				global.replay_mode = "play";
-				global.replay_duration = me.room_age_real;
-				room_goto(global.next_room);
-			}
 		}
 	}
+	
+	if (keyboard_check_pressed(global.key_replay_load)){
+		global.replay_mode = "play";
+		global.replay_duration = me.room_age_real;
+		global.random_index = 0;
+		room_goto(global.next_room);
+	}	
 } else {
 	if (keyboard_check_pressed(global.key_replay_load)){
 		global.replay_mode = "record";
+		global.random_index = 0;
 		room_goto(global.next_room);
 	}
 	
 	if (keyboard_check_pressed(global.key_pause)){
 		global.replay_mode = "play";
+		global.random_index = 0;
 		room_goto(global.next_room);
 	}
 }
