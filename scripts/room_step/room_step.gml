@@ -123,32 +123,50 @@ if (room_initiate){
 				var p = ds_list_find_value(global.replay_data, i);
 				
 				var timestamp = p[0];
-				var instance = p[1];
-				var action_name = p[2];
-				var action_argument = p[3];
-				
 				if (timestamp == room_age_real){
+					var entity_replay_id = p[1];
+					var position = p[2];
+					var action_name = p[3];
+					var action_argument = p[4];
+				
+					var instance = noone;
+					
+					with(ACTOR){ if (entity_replay_id[0] = replay_id){instance = id}}
+				
 					var me = id;
 					switch(action_name){
+						case "spawn_entity":
+							var new_entity = instance_create_depth(position[0], position[1], depth, action_argument[0]);
+							new_entity.replay_id = entity_replay_id[0];
+							break;
+							
 						case "move_angle":
-							if (instance_exists(instance)){with(instance){entity_move_angle(action_argument)}};
+							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_move_angle(action_argument)}};
 							break;
 								
 						case "move_point":
-							if (instance_exists(instance)){with(instance){entity_move_point(action_argument)}};
-							break;
-								
+							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_move_point(action_argument)}};
+							break;						
+							
+						case "damage_deal":
+							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_damage_play(action_argument)}};
+							break
+							
 						case "time_speed":
 							room_change_timespeed(action_argument)
 							break;
 							
 						default:
-							if (instance_exists(instance)){with(instance){entity_run_class_scripts(action_name, action_argument)}};
+							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_run_class_scripts(action_name, action_argument)}};
+							break
 					}
 				}
 			}
 			
 			if (room_age_real >= global.replay_duration + 1*SEC){
+				global.replay_mode = "play";
+				global.random_index = 0;
+				global.replay_id_sequence = 0;
 				room_goto(global.next_room);
 			}
 		}

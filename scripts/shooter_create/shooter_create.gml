@@ -3,8 +3,8 @@ status_movesnap_base = 2*SEC;
 
 status_damage_base = 15;
 
-draw_bar_health_xscale = 0.65;
-draw_bar_health_y = 20;
+draw_bar_health_xscale = 0.4;
+draw_bar_health_y = 45;
 
 collision_persistent = true;
 collision_solid_entities = false;

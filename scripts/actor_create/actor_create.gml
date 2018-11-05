@@ -15,6 +15,14 @@ status_buff_list = ds_create("list");
 actor_actions_enabled = true;
 ai_enabled = true;
 
+if (global.replay_mode == "record"){
+	replay_spawn_x = x;
+	replay_spawn_y = y;
+	replay_object_index = object_index;
+	replay_id = global.replay_id_sequence;
+	global.replay_id_sequence++;
+}
+
 entity_run_type_scripts("create");
 
 draw_bar_health_damage = status_health_max;

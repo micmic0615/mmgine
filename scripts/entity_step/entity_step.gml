@@ -286,6 +286,10 @@ if (ACTIVE && ALIVE){
 		if (ALIVE){
 			ROOM = instance_find(ROOM_OBJECT, 0);
 			ACTIVE = true;
+			
+			if (global.replay_mode == "record" && entity_class_lower == "actor"){
+				ds_list_add(global.replay_data, [ROOM.room_age_real, [replay_id], [replay_spawn_x,replay_spawn_y], "spawn_entity", [replay_object_index]]);
+			}
 		} else {
 			instance_destroy(id, false);	
 		}

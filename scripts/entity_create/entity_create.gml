@@ -18,6 +18,8 @@ physics_gravity_turnrate = 45*PPS;
 physics_gravity_falling = 0;
 physics_gravity_factor = 1;
 
+
+
 entity_age = 0
 
 entity_class = object_get_name(object_get_parent(object_index));
@@ -25,6 +27,8 @@ entity_class_lower = string_lower(entity_class);
 
 entity_type = object_get_name(object_index);
 entity_type_lower = string_lower(entity_type);
+
+
 
 entity_killer = noone;
 
@@ -65,3 +69,4 @@ entity_run_class_scripts("create");
 status_health_current = status_health_max;
 status_movesnap_total = status_movesnap_base;
 status_movespeed_total = status_movespeed_base;
+

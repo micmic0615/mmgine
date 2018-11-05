@@ -1,7 +1,7 @@
 ai_target_move_cooldown_timer -= TIMESPEED;
 if (ai_target_move_cooldown_timer <= 0){
-	ai_target_move_cooldown_timer = round(random_seed_get(ai_target_move_cooldown_value));
-	ai_target_move_point = ai_target == noone ? [round(random_seed_get(room_width)), round(random_seed_get(room_height))] : [ai_target.x, ai_target.y];
+	ai_target_move_cooldown_timer = round(random(ai_target_move_cooldown_value));
+	ai_target_move_point = ai_target == noone ? [round(random(room_width)), round(random(room_height))] : [ai_target.x, ai_target.y];
 }
 
 if (ai_target == noone){

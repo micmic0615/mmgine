@@ -51,18 +51,21 @@ if (player_controllable && global.replay_mode == "record"){
 		global.replay_mode = "play";
 		global.replay_duration = me.room_age_real;
 		global.random_index = 0;
+		global.replay_id_sequence = 0;
 		room_goto(global.next_room);
 	}	
 } else {
 	if (keyboard_check_pressed(global.key_replay_load)){
 		global.replay_mode = "record";
 		global.random_index = 0;
+		global.replay_id_sequence = 0;
 		room_goto(global.next_room);
 	}
 	
 	if (keyboard_check_pressed(global.key_pause)){
 		global.replay_mode = "play";
 		global.random_index = 0;
+		global.replay_id_sequence = 0;
 		room_goto(global.next_room);
 	}
 }

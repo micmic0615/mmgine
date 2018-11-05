@@ -57,4 +57,6 @@ if (global.replay_mode == "record" && room_get_name(room) != ROOM_BASE){
 	global.random_seed = ds_list_create();
 	
 	random_seed_populate();
+} else if (global.replay_mode == "play"){
+	with(ENTITY){instance_destroy(id, false)}
 }
