@@ -36,11 +36,11 @@ if (player_controllable && global.replay_mode == "record"){
 	}
 	
 	if (keyboard_check_pressed(global.key_action_1)){
-		room_change_timespeed(0.25);
+		room_timespeed_set(0.25);
 	}
 			
 	if (keyboard_check_released(global.key_action_1)){
-		room_change_timespeed(1);
+		room_timespeed_set(1);
 	}
 	
 	if (keyboard_check_pressed(global.key_replay_load)){

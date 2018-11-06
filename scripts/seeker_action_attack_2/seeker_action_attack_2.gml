@@ -29,12 +29,12 @@ if (my_attack_cooldown_timer <= 0){
 	
 	bullet.animation_sprite = "SeekerBullet2";
 		
-	bullet.bullet_seek_range = 2000;
+	bullet.bullet_seek_range = 240;
 	bullet.bullet_seek_turn_rate = 360*PPS;
-	bullet.bullet_lifespan = ((((bullet.bullet_seek_range*PPS)/TIMESPEED)/bullet.status_movespeed_base)*SEC);
+	bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/bullet.status_movespeed_base)*SEC);
 	bullet.bullet_collision_tile_action = "die";
 
-	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*5, true]);
+	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*6, true]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 500, 0.75*SEC, "movement", ["multiply",1.5]]);
 	
 	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", INFINITY, true]);

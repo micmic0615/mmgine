@@ -2,12 +2,27 @@ if (room_initiate){
 	with(TILE){tile_original = true}
 	room_initiate = false;
 } else {
+	#region //TIME
+		if (global.time_change_duration > 0){
+			if(global.time_change_gradient){
+				var time_diff = (global.time_base - global.time_change_value);
+				var time_delta = sqr(time_diff/global.time_change_duration);
+				
+				global.time_change_value += time_delta;
+			}
+			
+			room_timespeed_set(global.time_change_value);
+			global.time_change_duration -= 1;
+		} else {
+			room_timespeed_set(global.time_base);
+		}
+	#endregion
 	
 	room_player_setup();
 	room_player_controls();
 	room_run_scripts("step");
 
-	#region // CAMERA
+	#region //CAMERA
 		var distance = distance_between(camera_x, camera_y, camera_target_x, camera_target_y);
 		if (distance > camera_target_speed*2){
 			var angle = arctan2(camera_target_y - camera_y, camera_target_x - camera_x);
@@ -121,7 +136,7 @@ if (room_initiate){
 		camera_set_view_angle(view_camera[0], camera_angle);
 	#endregion
 	
-	#region // REPLAY
+	#region //REPLAY
 		if (global.replay_mode == "play"){
 			var replay_actions = ds_map_find_value(global.replay_data, room_age_real);
 			
@@ -162,7 +177,7 @@ if (room_initiate){
 							break
 							
 						case "time_speed":
-							room_change_timespeed(action_argument)
+							room_timespeed_set(action_argument)
 							break;
 							
 						default:
@@ -172,13 +187,10 @@ if (room_initiate){
 				}
 			}
 			
-			
-			
 			if (room_age_real >= global.replay_duration){
 				global.replay_mode = "play";
 				global.random_index = 0;
 				global.actor_id_sequence = 0;
-				room_change_timespeed(1)
 				room_goto(global.next_room);
 			}
 		}

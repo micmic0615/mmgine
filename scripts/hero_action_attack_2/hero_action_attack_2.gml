@@ -51,7 +51,7 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 		bullet.animation_sprite = "HeroBullet2";
 		
 		bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*channel_multiplier_bullet*SEC) * bullet_life_factor;
-		bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
+		bullet.bullet_collision_tile_action = "die";
 
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*channel_multiplier_bullet*bullet_damage_factor, true]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*bullet_damage_factor]);

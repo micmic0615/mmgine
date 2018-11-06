@@ -31,11 +31,15 @@ player_controllable = true;
 player_faction = 0;
 player_main_actor = noone;
 player_main_actor_type = "hero";
-player_hit_slowmo = 0;
+
+time_base = 1;
+time_change = 1;
+time_change_duration = 0;
 
 var me = id;
 
 draw_mirage_list = ds_create("list");
+draw_text_list = ds_create("list"); 
 
 room_run_scripts("create");
 

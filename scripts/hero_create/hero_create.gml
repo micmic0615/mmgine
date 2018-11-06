@@ -3,8 +3,8 @@ status_movesnap_base = 0.6*SEC;
 
 status_health_max = 300;
 status_damage_base = 20;
-status_poise_max = 40;
-status_poise_regen = 4*PPS;
+status_poise_max = 30;
+status_poise_regen = 1.5*PPS;
 status_flinch_duration = 2*SEC;
 
 draw_bar_health_xscale = 0.5;
@@ -35,6 +35,9 @@ my_attack_cooldown_timer = 0;
 
 my_attack_combo_window_value = 0.6*SEC;
 my_attack_combo_window_timer = 0;
+
+my_attack_super_duration = 0;
+my_attack_super_target_angle = [0,0];
 
 my_attack_queue_1 = undefined;
 my_attack_queue_2 = undefined;

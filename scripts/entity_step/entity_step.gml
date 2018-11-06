@@ -249,7 +249,25 @@ if (ACTIVE && ALIVE){
 
 		camera_inside_view = (inside_x && inside_y) ? true : false;
 	#endregion
-
+	
+	#region //TINT
+		if (draw_blend_temporary_duration >= 0){
+			draw_blend_temporary_duration--;
+			switch(draw_blend_temporary_style){
+				case "solid":
+					image_blend = draw_blend_temporary_color;
+					break;
+					
+				case "flicker":
+					image_blend = (ROOM.room_age_real % 2 == 1) ? draw_blend_temporary_color : c_white;
+					break;
+			}
+			
+		} else {
+			image_blend = c_white;
+		}
+	#endregion
+	
 	#region //SCRIPTS
 		entity_run_class_scripts("step");
 		

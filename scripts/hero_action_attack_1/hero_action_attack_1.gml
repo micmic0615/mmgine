@@ -69,6 +69,8 @@ if (my_attack_cooldown_timer <= 0){
 	
 	var bullet_spread_angle = my_attack_channel_power_current == my_attack_channel_power_max ? 30 : 8;
 	
+	
+		
 		
 	
 	while(bullet_count > 0){
@@ -77,6 +79,10 @@ if (my_attack_cooldown_timer <= 0){
 		bullet.status_movespeed_base = my_attack_bullet_speed * bullet_speed_factor;
 		bullet.status_movesnap_base = 0.2*SEC;
 		bullet.bullet_action_move_angle = bullet_angle + ((bullet_count-1)*bullet_spread_angle) - ((bullet_max-1)*(bullet_spread_angle/2));
+		
+		var rad_bullet_angle = degtorad(bullet.bullet_action_move_angle);
+		
+		bullet.animation_angle = point_direction(x,y,cos(rad_bullet_angle)*10 + x, sin(rad_bullet_angle)*10 + y)
 	
 		bullet.physics_gravity_on = false;
 		//bullet.physics_gravity_factor = 10;
@@ -88,11 +94,13 @@ if (my_attack_cooldown_timer <= 0){
 		bullet.bullet_seek_range = 240;
 		bullet.bullet_seek_turn_rate = 160*PPS;
 		bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*channel_multiplier_bullet*SEC) * bullet_life_factor;
-		bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
+		bullet.bullet_collision_tile_action = "die";
 		
 		bullet.animation_sprite = channel_multiplier_bullet == 2 ? "HeroBullet3" : "HeroBullet1";
+		
+		var bullet_damage_value = channel_multiplier_bullet < 1.25 ? status_damage_total : status_damage_total*channel_multiplier_bullet;
 	
-		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*channel_multiplier_bullet*bullet_damage_factor, true]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", bullet_damage_value*bullet_damage_factor, true]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*bullet_damage_factor]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet*bullet_push_factor , 0.75*SEC, "movement", ["multiply",1.5]]);
 		
@@ -108,9 +116,14 @@ if (my_attack_cooldown_timer <= 0){
 	actor_buff_apply("move_set_raw", my_attack_cooldown_value_1, [0], "mana_speed_lock");
 	
 	
-	my_attack_channel_power_current = 0;
+	if (my_attack_channel_power_current >= my_attack_channel_power_max){
+		if (ROOM.player_main_actor == id){room_timespeed_temp(0.05, 0.3*SEC, true)};
+	}
+	
 	my_attack_cooldown_timer = my_attack_cooldown_value_1;	
 	my_attack_combo += 1;
+	
+	
 	
 	if (my_attack_combo <= 1){
 		actor_buff_apply("speed_bonus_raw", 1.5*SEC, [my_attack_mana_speed], "mana_speed_boost");
@@ -119,6 +132,13 @@ if (my_attack_cooldown_timer <= 0){
 		actor_buff_apply("speed_bonus_raw", 0.1*SEC, [my_attack_mana_speed], "mana_speed_boost");
 		entity_motion_push((my_attack_dash_range*channel_multiplier_dash) * 0.25, (my_attack_dash_speed/(my_attack_dash_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
 	}
+	
+	if (my_attack_channel_power_current == my_attack_channel_power_max){
+		my_attack_super_duration = 1*SEC;
+		my_attack_super_target_angle = bullet_angle;
+	}
+	
+	my_attack_channel_power_current = 0;
 	
 	if (my_attack_combo >= my_attack_combo_max){
 		my_attack_combo_window_timer = 0;

@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "32fdd065-b427-4f54-a941-ee3a3e95a77c",
+            "Value": {
+                "id": "5899ca4f-a640-4c52-a875-c2d11985aa2e",
+                "resourcePath": "scripts\\room_timespeed_temp\\room_timespeed_temp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "330e0d6e-b1fb-4f15-b91c-6831e0c1f3a3",
             "Value": {
                 "id": "edeee920-fe9e-4fa7-9260-55d36dae9d43",
@@ -1111,6 +1119,14 @@
             }
         },
         {
+            "Key": "94d60282-ffe9-4ad7-b3b8-87e9239a0565",
+            "Value": {
+                "id": "870c2937-d95d-4d1c-874f-4edc7fc4d2a9",
+                "resourcePath": "scripts\\entity_draw_text_following\\entity_draw_text_following.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "96398700-078c-4d21-a5f7-1b824b925ae9",
             "Value": {
                 "id": "f3516350-6eb1-45b5-afbd-353e2d0a47a2",
@@ -1466,7 +1482,7 @@
             "Key": "c8503200-213e-45d2-baed-2499761d8df0",
             "Value": {
                 "id": "6a18f2a5-ca19-4774-82c8-a43c0e7cf6f1",
-                "resourcePath": "scripts\\room_change_timespeed\\room_change_timespeed.yy",
+                "resourcePath": "scripts\\room_timespeed_set\\room_timespeed_set.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1883,6 +1899,7 @@
         "2dd2b27f-90be-40d6-8591-11680a9a9365",
         "82b55ea0-aede-4615-910a-0aaebe3b98f6",
         "4cc50548-41b8-4f6d-a9f3-e77f580cfcaa",
+        "94d60282-ffe9-4ad7-b3b8-87e9239a0565",
         "c5c6f700-c14f-42eb-9b1d-834ef9c2b383",
         "673e77b0-4a10-47e1-85f1-172d0bbb1294",
         "498230da-7a49-4d97-ae77-78c64bbe9a80",
@@ -1968,6 +1985,7 @@
         "6e2a8e60-6b42-4b03-bb31-b72a52eb6dd2",
         "bd23e043-dd9a-457e-8c26-b9df3d86b2ba",
         "c8503200-213e-45d2-baed-2499761d8df0",
+        "32fdd065-b427-4f54-a941-ee3a3e95a77c",
         "c6c7633b-dbb9-4b89-87da-76b04c316d56",
         "8f4926b9-5ae2-43a4-8a97-19ba462f0f90",
         "f67aa4f7-29b7-4461-9741-2775ba2aa1f1",

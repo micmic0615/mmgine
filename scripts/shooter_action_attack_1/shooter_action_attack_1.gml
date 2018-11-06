@@ -32,10 +32,10 @@ if (my_attack_cooldown_timer <= 0){
 	bullet.bullet_seek_range = 300;
 	bullet.bullet_seek_turn_rate = 90*PPS;
 	bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*SEC);
-	bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
+	bullet.bullet_collision_tile_action = "die";
 
-	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*channel_multiplier_bullet, true]);
-	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total]);
+	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total, true]);
+	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*0.5]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet , 0.75*SEC, "movement", ["multiply",1.5]]);
 	
 	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", INFINITY, true]);

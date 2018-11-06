@@ -17,6 +17,11 @@ room_speed = 60;
 show_debug_overlay(true);
 
 global.time_speed = 1;
+global.time_base = 1;
+global.time_change_value = 1;
+global.time_change_duration = 0;
+global.time_change_gradient = false;
+
 global.mouse_1 = mb_left;
 global.mouse_2 = mb_right;
 global.mouse_3 = mb_middle;

@@ -24,7 +24,13 @@ if (actor_actions_enabled){
 			animation_direction = action_direction;
 			my_attack_cast_timer -= TIMESPEED;
 			physics_gravity_current = 0;
-			entity_mirage_create(0.4*SEC, 0, 0, make_color_rgb(100,100,100))
+			
+			var floor_age = floor(ROOM.room_age_game);
+			var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
+			if (floor_age != next_floor_age){
+				entity_mirage_create(0.4*SEC, 0, 0, make_color_rgb(125,125,125));
+			}
+			
 		}
 	}
 
