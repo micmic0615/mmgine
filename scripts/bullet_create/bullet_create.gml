@@ -16,5 +16,6 @@ bullet_collision_tile_action = "bounce";
 bullet_seek_range = 0;
 bullet_seek_target = noone;
 bullet_seek_turn_rate = 0;
+bullet_seek_angle_limit = 60;
 
 entity_run_type_scripts("create");

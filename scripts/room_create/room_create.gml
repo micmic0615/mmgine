@@ -1,4 +1,6 @@
 ROOM = id;
+ACTIVE = true;
+ALIVE = true;
 
 GRAVITY_ANGLE = 90;
 GRAVITY_FORCE = 40*PPS / (1*SEC);
@@ -29,6 +31,7 @@ player_controllable = true;
 player_faction = 0;
 player_main_actor = noone;
 player_main_actor_type = "hero";
+player_hit_slowmo = 0;
 
 var me = id;
 

@@ -20,10 +20,17 @@ if (bullet_lifespan > 0){
 		} else {
 			if (instance_exists(bullet_seek_target)){
 				var can_angle = angle_difference(bullet_action_move_angle, angle_between(bullet_seek_target.x,bullet_seek_target.y, x, y));
-				if (abs(can_angle) < 60 && distance_between(x,y, bullet_seek_target.x,bullet_seek_target.y) <= bullet_seek_range){
+				if (abs(can_angle) < bullet_seek_angle_limit && distance_between(x,y, bullet_seek_target.x,bullet_seek_target.y) <= bullet_seek_range){
 					var target_angle = angle_between(bullet_seek_target.x,bullet_seek_target.y, x, y)
 					bullet_action_move_angle = angle_shift(bullet_action_move_angle, target_angle, bullet_seek_turn_rate);
 					bullet_lifespan += TIMESPEED;
+					
+					var floor_age = floor(ROOM.room_age_game);
+					var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
+					
+					if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
+						entity_mirage_create(0.35*SEC, 0,0, make_color_rgb(100,100,100))
+					};
 				} else {
 					bullet_seek_target = noone;
 				}

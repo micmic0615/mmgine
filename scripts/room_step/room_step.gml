@@ -50,13 +50,14 @@ if (room_initiate){
 					}
 				}
 		
-				var camera_size_w = camera_width/camera_zoom;
-				var camera_size_h = camera_height/camera_zoom;
+			
 			
 				var camera_view_x = camera_get_view_x(view_camera[0]);
 				var camera_view_y = camera_get_view_y(view_camera[0]);
 				var camera_size_w = camera_get_view_width(view_camera[0]);
 				var camera_size_h = camera_get_view_height(view_camera[0]);
+				
+				
 			
 		
 				if (camera_loop_snap){
@@ -111,9 +112,12 @@ if (room_initiate){
 
 		var center_x = camera_x - camera_size_w*0.5;
 		var center_y = camera_y - camera_size_h*0.5;
+		
+		var camera_resize_w = camera_width/camera_zoom;
+		var camera_resize_h = camera_height/camera_zoom;
 
 		camera_set_view_pos(view_camera[0], center_x, center_y);
-		camera_set_view_size(view_camera[0], camera_size_w, camera_size_h);
+		camera_set_view_size(view_camera[0], camera_resize_w, camera_resize_h);
 		camera_set_view_angle(view_camera[0], camera_angle);
 	#endregion
 	
@@ -150,7 +154,11 @@ if (room_initiate){
 							break;						
 							
 						case "damage_deal":
-							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_damage_play(action_argument)}};
+							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_damage_deal(action_argument, true)}};
+							break
+							
+						case "flinch_deal":
+							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; actor_flinch_deal(action_argument, true)}};
 							break
 							
 						case "time_speed":
@@ -164,10 +172,13 @@ if (room_initiate){
 				}
 			}
 			
-			if (room_age_real >= global.replay_duration + 1*SEC){
+			
+			
+			if (room_age_real >= global.replay_duration){
 				global.replay_mode = "play";
 				global.random_index = 0;
 				global.actor_id_sequence = 0;
+				room_change_timespeed(1)
 				room_goto(global.next_room);
 			}
 		}

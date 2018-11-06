@@ -30,5 +30,7 @@ if (actor_actions_enabled){
 
 	my_attack_channel_ongoing -= 1;
 } else {
+	my_attack_channel_power_current = 0;
+	my_attack_cooldown_timer = 0;
 	my_attack_channel_ongoing = 0;
 }

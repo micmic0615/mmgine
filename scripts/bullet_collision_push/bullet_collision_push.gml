@@ -7,6 +7,7 @@ if (ACTIVE && ALIVE){
 	var value_push_angle = args[4];
 	var value_push_decay = (array_length_1d(args) >= 6) ? args[5] : ["none"];
 	var rad_angle = 0;
+	
 	if (value_push_angle == "movement"){
 		rad_angle = degtorad(bullet_action_move_angle);
 	} else if (is_real(value_push_angle)){
@@ -24,6 +25,5 @@ if (ACTIVE && ALIVE){
 				entity_motion_add(x_move, y_move, value_push_duration, value_push_decay)
 			}
 		}
-		
 	}
 }

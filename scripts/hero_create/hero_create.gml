@@ -5,7 +5,7 @@ status_health_max = 300;
 status_damage_base = 20;
 status_poise_max = 40;
 status_poise_regen = 4*PPS;
-status_flinch_duration = 1.5*SEC;
+status_flinch_duration = 2*SEC;
 
 draw_bar_health_xscale = 0.5;
 draw_bar_health_y = 30;

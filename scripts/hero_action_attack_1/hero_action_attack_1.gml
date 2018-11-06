@@ -91,13 +91,16 @@ if (my_attack_cooldown_timer <= 0){
 		bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
 		
 		bullet.animation_sprite = channel_multiplier_bullet == 2 ? "HeroBullet3" : "HeroBullet1";
-
+	
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*channel_multiplier_bullet*bullet_damage_factor, true]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*bullet_damage_factor]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet*bullet_push_factor , 0.75*SEC, "movement", ["multiply",1.5]]);
 		
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", channel_multiplier_bullet == 2 ? INFINITY : 1, true]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "bullet", 1]);
+		
+		
 		
 		bullet_count --;
 	}
