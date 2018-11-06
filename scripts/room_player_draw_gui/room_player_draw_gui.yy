@@ -1,8 +1,8 @@
 {
-    "id": "6e2a8e60-6b42-4b03-bb31-b72a52eb6dd2",
+    "id": "bd23e043-dd9a-457e-8c26-b9df3d86b2ba",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "room_player",
+    "name": "room_player_draw_gui",
     "IsCompatibility": false,
     "IsDnD": false
 }

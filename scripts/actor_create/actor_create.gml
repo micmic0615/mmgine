@@ -8,7 +8,9 @@ physics_gravity_on = true;
 
 status_health_max = 100;
 status_damage_base = 25;
-status_poise_max = 25;
+status_poise_max = 20;
+status_poise_regen = 2*PPS;
+status_flinch_duration = 2*SEC;
 
 status_buff_list = ds_create("list");
 

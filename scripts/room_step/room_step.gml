@@ -3,8 +3,8 @@ if (room_initiate){
 	room_initiate = false;
 } else {
 	
-
-	room_player();
+	room_player_setup();
+	room_player_controls();
 	room_run_scripts("step");
 
 	#region // CAMERA
@@ -142,11 +142,11 @@ if (room_initiate){
 							break;
 							
 						case "move_angle":
-							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_move_angle(action_argument)}};
+							if (instance_exists(instance)){with(instance){ entity_move_angle(action_argument)}};
 							break;
 								
 						case "move_point":
-							if (instance_exists(instance)){with(instance){x = position[0]; y = position[1]; entity_move_point(action_argument)}};
+							if (instance_exists(instance)){with(instance){ entity_move_point(action_argument)}};
 							break;						
 							
 						case "damage_deal":

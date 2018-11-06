@@ -29,9 +29,9 @@ if (my_attack_cooldown_timer <= 0){
 	
 	bullet.animation_sprite = "ShooterBullet1";
 		
-	bullet.bullet_seek_range = 600;
-	bullet.bullet_seek_turn_rate = 45*PPS;
-	bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*channel_multiplier_bullet*SEC);
+	bullet.bullet_seek_range = 300;
+	bullet.bullet_seek_turn_rate = 90*PPS;
+	bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*SEC);
 	bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
 
 	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*channel_multiplier_bullet, true]);

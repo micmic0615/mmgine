@@ -27,15 +27,10 @@ camera_angle = 0;
 
 player_controllable = true;
 player_faction = 0;
+player_main_actor = noone;
 player_main_actor_type = "hero";
 
 var me = id;
-with(ENTITY){
-	if (entity_type_lower == me.player_main_actor_type){
-		me.camera_x = x;
-		me.camera_y = y;
-	}
-}
 
 draw_mirage_list = ds_create("list");
 
@@ -67,5 +62,13 @@ with(ACTOR){
 	if (!variable_instance_exists(id, "actor_id")){
 		if (global.replay_mode == "record"){actor_spawn(x,y,object_index)};
 		instance_destroy(id, false);
+	}
+}
+
+with(ENTITY){
+	if (entity_type_lower == me.player_main_actor_type){
+		me.player_main_actor = id;
+		me.camera_x = x;
+		me.camera_y = y;
 	}
 }

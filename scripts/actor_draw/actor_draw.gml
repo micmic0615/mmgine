@@ -9,17 +9,39 @@
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
 	
-		var bar_color = make_colour_rgb(255,255,255);
-		var bar_width = sprite_width*draw_bar_health_xscale*(min(1,(draw_bar_health_damage/status_health_max)));
+		bar_color = make_colour_rgb(255,255,255);
+		bar_width = sprite_width*draw_bar_health_xscale*(min(1,(draw_bar_health_damage/status_health_max)));
 
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
 	
-		var bar_color = make_colour_rgb(255,0,0);
-		var bar_width = sprite_width*draw_bar_health_xscale*(min(1,(status_health_current/status_health_max)));
+		bar_color = make_colour_rgb(255,0,0);
+		bar_width = sprite_width*draw_bar_health_xscale*(min(1,(status_health_current/status_health_max)));
 
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
+		
+		bar_loc_y += 6;
+		bar_height = 2;
+		bar_color = make_colour_rgb(50,50,50);
+		bar_width = sprite_width*draw_bar_health_xscale;
+		
+		draw_set_colour(bar_color);
+		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
+		
+		var flinch_buff = actor_buff_find("flinched");
+		if (flinch_buff == undefined){
+			bar_color = make_colour_rgb(255,255,255);
+			bar_width = sprite_width*draw_bar_health_xscale*(min(1,(status_poise_current/status_poise_max)));
+		} else {
+			var random_yellow = random(200);
+			bar_color = make_colour_rgb(200,200,random_yellow);
+			bar_width = sprite_width*draw_bar_health_xscale*(min(1,(flinch_buff[1]/status_flinch_duration)));
+		}
+
+		draw_set_colour(bar_color);
+		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
+		
 	}
 #endregion
 

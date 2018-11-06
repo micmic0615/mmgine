@@ -37,11 +37,14 @@ entity_run_type_scripts("step");
 				])
 			}
 		}
+		
+		status_poise_current = min(status_poise_max, status_poise_current + status_poise_regen);
 	#endregion
 	
 	#region // BUFF COSMETICS
 		var has_speed = 0;
 		var has_stunned = 0;
+		var has_flinched = 0;
 		for(var i = 0; i < buff_list_length;i++){
 			var p = ds_list_find_value(status_buff_list, i);
 			var type = p[0];
@@ -54,16 +57,31 @@ entity_run_type_scripts("step");
 			if (has_stunned == 0 && type == "stunned"){
 				animation_name = "stunned";
 				animation_angle = 0;
-				animation_direction = 1;
+				has_stunned = duration;
+				has_flinched = 0;
+			}
+			
+			if (has_flinched == 0 && has_stunned == 0 && type == "flinched"){
+				animation_name = "flinched";
+				animation_angle = 0;
+				has_flinched =  duration;			
 			}
 		}
 	
+		var floor_age = floor(ROOM.room_age_game);
+		var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
+			
 		if (has_speed > 0){
 			if (animation_name == "walk"){animation_name = "dash"};
-			var floor_age = floor(ROOM.room_age_game);
-			var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
+			
 			if (floor_age % (0.15*SEC) == 0 && floor_age != next_floor_age){
 				entity_mirage_create(1*SEC, 0, 0, make_color_rgb(0,255,255))
+			};
+		}
+		
+		if (has_flinched > 0){
+			if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
+				entity_mirage_create(0.5*SEC, random(30) - 15, random(30) - 15, make_color_rgb(255,255,0))
 			};
 		}
 	#endregion	
