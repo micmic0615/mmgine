@@ -27,5 +27,5 @@ my_attack_cooldown_timer = 0;
 my_attack_cast_value = 0.5*SEC;
 my_attack_cast_timer = 0;
 
-my_attack_bullet_speed = 1200*PPS;
-my_attack_bullet_range = 800;
+my_attack_bullet_speed = 1000*PPS;
+my_attack_bullet_range = 1000;

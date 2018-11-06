@@ -270,8 +270,8 @@ if (ACTIVE && ALIVE){
 	
 	if (ACTIVE && ALIVE){
 		#region //ANIMATION
-			var	animation_sprite = asset_get_index(entity_type + "_" + animation_name);
-			sprite_index = (animation_sprite > 0) ? animation_sprite : asset_get_index(entity_type + "_idle");
+			var	animation_sprite_name = asset_get_index(animation_sprite + "_" + animation_name);
+			sprite_index = (animation_sprite_name > 0) ? animation_sprite_name : asset_get_index(animation_sprite + "_idle");
 		#endregion
 		
 		#region //HEALTH
@@ -286,10 +286,6 @@ if (ACTIVE && ALIVE){
 		if (ALIVE){
 			ROOM = instance_find(ROOM_OBJECT, 0);
 			ACTIVE = true;
-			
-			if (global.replay_mode == "record" && entity_class_lower == "actor"){
-				ds_list_add(global.replay_data, [ROOM.room_age_real, [replay_id], [replay_spawn_x,replay_spawn_y], "spawn_entity", [replay_object_index]]);
-			}
 		} else {
 			instance_destroy(id, false);	
 		}

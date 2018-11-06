@@ -119,25 +119,26 @@ if (room_initiate){
 	
 	#region // REPLAY
 		if (global.replay_mode == "play"){
-			for (var i = 0; i < ds_list_size(global.replay_data); ++i) {
-				var p = ds_list_find_value(global.replay_data, i);
+			var replay_actions = ds_map_find_value(global.replay_data, room_age_real);
+			
+			if (replay_actions != undefined){
 				
-				var timestamp = p[0];
-				if (timestamp == room_age_real){
-					var entity_replay_id = p[1];
-					var position = p[2];
-					var action_name = p[3];
-					var action_argument = p[4];
+				for (var i = 0; i < ds_list_size(replay_actions); ++i) {
+					var p = ds_list_find_value(replay_actions, i);
+					
+					var actor_spawn_id = p[0];
+					var position = p[1];
+					var action_name = p[2];
+					var action_argument = p[3];
 				
 					var instance = noone;
 					
-					with(ACTOR){ if (entity_replay_id[0] = replay_id){instance = id}}
-				
+					with(ACTOR){ if (actor_spawn_id = actor_id){instance = id}}
+					
 					var me = id;
 					switch(action_name){
-						case "spawn_entity":
-							var new_entity = instance_create_depth(position[0], position[1], depth, action_argument[0]);
-							new_entity.replay_id = entity_replay_id[0];
+						case "spawn_actor":	
+							actor_spawn(position[0], position[1], action_argument[0], actor_spawn_id);
 							break;
 							
 						case "move_angle":
@@ -166,7 +167,7 @@ if (room_initiate){
 			if (room_age_real >= global.replay_duration + 1*SEC){
 				global.replay_mode = "play";
 				global.random_index = 0;
-				global.replay_id_sequence = 0;
+				global.actor_id_sequence = 0;
 				room_goto(global.next_room);
 			}
 		}

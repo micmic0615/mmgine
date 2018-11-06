@@ -3,12 +3,17 @@ var check_solid = argument1;
 var can_collide = false;
 var valid_faction = false;
 
+
+
 if (
 	ACTIVE && ALIVE &&
 	(
 		(me.entity_class == "ACTOR" && me.collision_enabled_actors && collision_enabled_actors) ||
 		(me.entity_class == "BULLET" && me.collision_enabled_bullets && collision_enabled_bullets) ||
-		(me.entity_class == "DOODAD" && me.collision_enabled_doodads && collision_enabled_doodads) 
+		(me.entity_class == "DOODAD" && me.collision_enabled_doodads && collision_enabled_doodads) ||
+		(entity_class == "ACTOR" && me.collision_enabled_actors && collision_enabled_actors) ||
+		(entity_class == "BULLET" && me.collision_enabled_bullets && collision_enabled_bullets) ||
+		(entity_class == "DOODAD" && me.collision_enabled_doodads && collision_enabled_doodads)
 	)
 ){
 	can_collide = (!check_solid || (check_solid && collision_solid_entities && me.collision_solid_entities)) ? true : false;

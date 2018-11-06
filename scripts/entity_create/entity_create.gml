@@ -28,8 +28,6 @@ entity_class_lower = string_lower(entity_class);
 entity_type = object_get_name(object_index);
 entity_type_lower = string_lower(entity_type);
 
-
-
 entity_killer = noone;
 
 collision_entities = ds_create("list");
@@ -59,6 +57,7 @@ camera_inside_view = false;
 
 player_faction = -1;
 
+animation_sprite = entity_type;
 animation_name = "idle";
 animation_direction = 1;
 animation_angle = 0;

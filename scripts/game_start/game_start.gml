@@ -35,10 +35,10 @@ global.next_room = Level00;
 
 global.random_seed = ds_list_create();
 
-global.replay_data = ds_list_create();
+global.replay_data = ds_map_create();
 global.replay_mode = "record";
 global.replay_duration = 0;
-global.replay_id_sequence = 0;
+global.actor_id_sequence = 0;
 
 
 room_goto(room_next(room));

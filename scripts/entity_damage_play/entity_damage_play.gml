@@ -3,11 +3,11 @@ if (ACTIVE && ALIVE && global.replay_mode == "play"){
 	var me = id;
 
 	var base_target = noone;
-	var base_replay_id = args[0];
+	var base_actor_id = args[0];
 	var base_value = args[1];
 	var base_lethal = args[2];
 	
-	with(ACTOR){if (base_replay_id == replay_id){base_target = id}}
+	with(ACTOR){if (base_actor_id == actor_id){base_target = id}}
 
 	var adjusted_args = entity_run_class_scripts("damage_deal", [base_target, base_value, base_lethal]);
 

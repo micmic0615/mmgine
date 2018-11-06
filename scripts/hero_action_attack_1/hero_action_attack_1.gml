@@ -39,7 +39,7 @@ if (my_attack_cooldown_timer <= 0){
 			bullet_speed_factor = 1.25;
 			break
 		
-		default: 
+		 
 		case 2: 
 			bullet_max = 5;
 			bullet_damage_factor = 0.35;
@@ -49,14 +49,15 @@ if (my_attack_cooldown_timer <= 0){
 			bullet_speed_factor = 1.5;
 			break
 		
-		//case 3: 
-		//	bullet_max = 7;
-		//	bullet_damage_factor = 0.3;
-		//	bullet_push_factor = 0.15;
-		//	bullet_size_factor = 0.4;
-		//	bullet_life_factor = 0.5;
-		//	bullet_speed_factor = 2;
-		//	break
+		case 3: 
+		default:
+			bullet_max = 7;
+			bullet_damage_factor = 0.3;
+			bullet_push_factor = 0.15;
+			bullet_size_factor = 0.4;
+			bullet_life_factor = 0.5;
+			bullet_speed_factor = 2;
+			break
 			
 		
 	}
@@ -88,10 +89,15 @@ if (my_attack_cooldown_timer <= 0){
 		bullet.bullet_seek_turn_rate = 160*PPS;
 		bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*channel_multiplier_bullet*SEC) * bullet_life_factor;
 		bullet.bullet_collision_tile_action = my_attack_channel_power_current/my_attack_channel_power_max > 0.95 ? "bounce" : "die";
+		
+		bullet.animation_sprite = channel_multiplier_bullet == 2 ? "HeroBullet3" : "HeroBullet1";
 
-		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", status_damage_total*channel_multiplier_bullet*bullet_damage_factor, true]);
-		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", status_damage_total*bullet_damage_factor]);
-		ds_list_add(bullet.bullet_collision_entity_actions, ["push", 100*channel_multiplier_bullet*bullet_push_factor , 0.75*SEC, "movement", ["multiply",1.5]]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*channel_multiplier_bullet*bullet_damage_factor, true]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*bullet_damage_factor]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet*bullet_push_factor , 0.75*SEC, "movement", ["multiply",1.5]]);
+		
+		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", channel_multiplier_bullet == 2 ? INFINITY : 1, true]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
 		
 		bullet_count --;
 	}

@@ -11,7 +11,7 @@ if (ACTIVE && ALIVE &&
 	var base_lethal = args[2];
 	
 	if (entity_class_lower == "actor" && base_target.entity_class_lower == "actor"){
-		ds_list_add(global.replay_data, [ROOM.room_age_real, [replay_id], [x,y], "damage_deal", [base_target.replay_id, base_value, base_lethal]]);
+		actor_record_replay_data("damage_deal", [base_target.actor_id, base_value, base_lethal])
 	}
 
 	var adjusted_args = entity_run_class_scripts("damage_deal", args);

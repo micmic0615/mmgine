@@ -1,3 +1,5 @@
+ROOM = id;
+
 GRAVITY_ANGLE = 90;
 GRAVITY_FORCE = 40*PPS / (1*SEC);
 GRAVITY_MAX = 120*PPS;
@@ -50,13 +52,20 @@ view_camera[0] = camera_create_view(center_x, center_y, camera_width/camera_zoom
 global.random_index = 0;
 
 if (global.replay_mode == "record" && room_get_name(room) != ROOM_BASE){
-	ds_list_destroy(global.replay_data);
-	global.replay_data = ds_list_create();
+	ds_map_destroy(global.replay_data);
+	global.replay_data = ds_map_create();
 	
 	ds_list_destroy(global.random_seed);
 	global.random_seed = ds_list_create();
 	
 	random_seed_populate();
 } else if (global.replay_mode == "play"){
-	with(ENTITY){instance_destroy(id, false)}
+	
+}
+
+with(ACTOR){
+	if (!variable_instance_exists(id, "actor_id")){
+		if (global.replay_mode == "record"){actor_spawn(x,y,object_index)};
+		instance_destroy(id, false);
+	}
 }

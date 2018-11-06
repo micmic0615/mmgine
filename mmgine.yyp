@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "0cc70cf9-8eb9-4494-9892-9efb01387f77",
+            "Value": {
+                "id": "6d9401d7-f464-46d6-aeeb-3e30b3cf487a",
+                "resourcePath": "views\\0cc70cf9-8eb9-4494-9892-9efb01387f77.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0ff7d386-9d68-46db-9f51-aaeddd4b1471",
             "Value": {
                 "id": "b4070481-3e12-4f17-a1c2-5caf8cba45b4",
@@ -284,6 +292,14 @@
                 "id": "c88579d6-63c6-4d32-8a56-0a20715aa2be",
                 "resourcePath": "rooms\\Level00\\Level00.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "261f98f6-97bf-426a-a911-afb35ad71cb7",
+            "Value": {
+                "id": "3f24dcf6-2978-4c5d-a95e-79cd02daf266",
+                "resourcePath": "sprites\\HeroBullet3_idle\\HeroBullet3_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -532,6 +548,14 @@
                 "id": "60413667-9780-4e14-a7be-f498821116aa",
                 "resourcePath": "scripts\\ds_create\\ds_create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4b33227a-c240-450c-8d3a-844460b663b0",
+            "Value": {
+                "id": "ef8cf747-36d6-470a-8aac-867e66010509",
+                "resourcePath": "sprites\\HeroBullet1_idle\\HeroBullet1_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1031,6 +1055,14 @@
             }
         },
         {
+            "Key": "a2ec3a4d-5225-44a0-818f-ea0a9f2012f4",
+            "Value": {
+                "id": "efa49803-5545-4535-9133-6b104bd8a469",
+                "resourcePath": "sprites\\HeroBullet2_idle\\HeroBullet2_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a3bf054a-5a8b-48b0-9da6-1e5f7e5d1af3",
             "Value": {
                 "id": "82982ea7-3beb-4dec-9f9c-86afd1dacbef",
@@ -1100,6 +1132,14 @@
                 "id": "cfc1c194-5ae3-4470-a1d6-c8cbaf09c1cb",
                 "resourcePath": "scripts\\tile_step\\tile_step.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b19fd239-9d71-4842-a3dd-8fa641d72225",
+            "Value": {
+                "id": "05a98822-5982-4256-ba3e-5bdca4e00299",
+                "resourcePath": "sprites\\ShooterBullet1_idle\\ShooterBullet1_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1335,6 +1375,14 @@
             }
         },
         {
+            "Key": "d76cf07c-2764-47ff-9a88-84e796586802",
+            "Value": {
+                "id": "4e0e014a-0e45-421e-8a88-6ea901bf74c0",
+                "resourcePath": "views\\d76cf07c-2764-47ff-9a88-84e796586802.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d9c306f4-012b-4461-82c4-07168d523ede",
             "Value": {
                 "id": "aa3d1ca1-9b11-45a4-9250-8ac8712c8470",
@@ -1396,6 +1444,14 @@
                 "id": "b7165869-fc0b-472a-85e3-e7e451f4033c",
                 "resourcePath": "views\\e390b6cf-e37c-4e6e-9f19-d282b46c770a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e5e78c0d-f5e4-47f2-84b5-88c5b826e492",
+            "Value": {
+                "id": "d41f1ae2-b90f-4edd-a350-0280084fd7d3",
+                "resourcePath": "scripts\\actor_spawn\\actor_spawn.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1580,6 +1636,7 @@
         "7d73d3ea-4d64-4c76-9e26-08fe77ba01f6",
         "82b55ea0-aede-4615-910a-0aaebe3b98f6",
         "4cc50548-41b8-4f6d-a9f3-e77f580cfcaa",
+        "e5e78c0d-f5e4-47f2-84b5-88c5b826e492",
         "c5c6f700-c14f-42eb-9b1d-834ef9c2b383",
         "673e77b0-4a10-47e1-85f1-172d0bbb1294",
         "498230da-7a49-4d97-ae77-78c64bbe9a80",
