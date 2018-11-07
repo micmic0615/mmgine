@@ -68,7 +68,7 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 	}
 
 	actor_buff_apply("move_set_raw", my_attack_cooldown_value_1, [0], "mana_speed_lock");
-	actor_buff_apply("speed_bonus_raw", 1*SEC, [my_attack_mana_speed/2], "mana_speed_boost");
+	actor_buff_apply("speed_bonus_raw", 1.5*SEC, [my_attack_mana_speed], "mana_speed_boost");
 	my_attack_cooldown_timer = my_attack_cooldown_value_2;	
 	
 	entity_motion_push(dash_range, ((my_attack_dash_speed)/(my_attack_dash_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");

@@ -1,4 +1,4 @@
-if (instance_exists(id)){
+if (instance_exists(id) && ds_exists(ds_inventory, ds_type_list)){
 	for(var i = 0; i < ds_list_size(ds_inventory);i++){
 		var p = ds_list_find_value(ds_inventory, i);
 		var item = p[0];

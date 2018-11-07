@@ -129,10 +129,7 @@ if (my_attack_cooldown_timer <= 0){
 		if (ROOM.player_main_actor == id){room_timespeed_temp(0.05, 0.3*SEC, true)};
 	}
 	
-	my_attack_cooldown_timer = my_attack_cooldown_value_1;	
 	my_attack_combo += 1;
-	
-	
 	
 	if (my_attack_combo <= 1){
 		actor_buff_apply("speed_bonus_raw", 1.5*SEC, [my_attack_mana_speed], "mana_speed_boost");
@@ -150,9 +147,10 @@ if (my_attack_cooldown_timer <= 0){
 	my_attack_channel_power_current = 0;
 	
 	if (my_attack_combo >= my_attack_combo_max){
-		my_attack_combo_window_timer = 0;
-		actor_buff_apply("silenced", my_attack_combo_window_value, [0], "mana_silence");
+		my_attack_combo_window_timer = (my_attack_combo_window_value*1.5) - 1;
+		my_attack_cooldown_timer = my_attack_combo_window_value*1.5;
 	} else {
+		my_attack_cooldown_timer = my_attack_cooldown_value_1;	
 		my_attack_combo_window_timer = my_attack_combo_window_value;
 	}
 } else {

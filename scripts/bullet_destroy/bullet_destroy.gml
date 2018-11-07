@@ -1,5 +1,5 @@
 if (instance_exists(id)){
-	if (ds_map_exists(bullet_death_spawn, "type")  ){
+	if (ds_exists(bullet_death_spawn, ds_type_map) && ds_map_exists(bullet_death_spawn, "type")  ){
 		var can_spawn = false;
 	
 		switch(bullet_death_spawn_trigger){

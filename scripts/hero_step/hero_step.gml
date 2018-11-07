@@ -36,7 +36,14 @@ if (actor_actions_enabled){
 		var power_ratio = (my_attack_channel_power_current/my_attack_channel_power_max);
 		
 		if (floor_age % (0.05*SEC) == 0 && floor_age != next_floor_age){
-			entity_mirage_create(0.35*SEC, -25*power_ratio + random(50*power_ratio), -25*power_ratio + random(50*power_ratio), make_color_hsv(power_ratio >= 0.95 ? random(255) : 230,255,255))
+			
+			if (power_ratio >= 0.99){
+				var mirage_color = make_color_hsv(random(255),255,255)
+			} else {
+				var mirage_color = make_color_rgb(0,255,0)
+			}
+			
+			entity_mirage_create(0.35*SEC, -25*power_ratio + random(50*power_ratio), -25*power_ratio + random(50*power_ratio), mirage_color)
 		};
 	}
 
@@ -118,9 +125,9 @@ if (actor_actions_enabled){
 					bullet.bullet_seek_range = 420;
 					bullet.bullet_seek_turn_rate = 280*PPS;
 					bullet.bullet_seek_angle_limit = 75
-					bullet_damage_value = status_damage_total * 0.3;
-					bullet.image_xscale = 0.65;
-					bullet.image_yscale = 0.65;
+					bullet_damage_value = status_damage_total * 0.2;
+					bullet.image_xscale = 0.55;
+					bullet.image_yscale = 0.55;
 				}
 				
 				ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", bullet_damage_value]);

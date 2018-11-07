@@ -1,4 +1,5 @@
 var target_point = argument0;
+var target_point = argument0;
 var my_attack_combo_max = 4;
 
 if (my_attack_cooldown_timer <= 0){	
@@ -7,7 +8,7 @@ if (my_attack_cooldown_timer <= 0){
 	image_index = 0;
 	my_attack_channel_angle_target = point_direction(x,y,target_point[0],target_point[1]);
 	
-	var channel_multiplier_bullet = 0.5 + ((my_attack_channel_power_current/my_attack_channel_power_max)*1);
+	var channel_multiplier_bulletchannel_multiplier_bullet = 1;
 	var bullet_angle = angle_between(target_point[0], target_point[1], x,y);
 	var bullet_spawn_offset = 0;
 	
@@ -41,7 +42,7 @@ if (my_attack_cooldown_timer <= 0){
 
 	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total, true]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*0.5]);
-	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet , 0.75*SEC, "movement", ["multiply",1.5]]);
+	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100 , 0.75*SEC, "movement", ["multiply",1.5]]);
 	
 	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", INFINITY, true]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);

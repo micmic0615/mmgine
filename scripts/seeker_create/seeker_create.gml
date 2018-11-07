@@ -1,4 +1,5 @@
 shooter_create();
+status_movespeed_base  = 240*PPS;
 
 status_health_max = 150;
 status_poise_max = 50;
@@ -9,7 +10,7 @@ my_attack_channel_power_max = 1.5*SEC;
 my_attack_dash_range = 200;
 my_attack_dash_speed = 320*PPS;
 
-my_attack_cooldown_value = 4*SEC;
+my_attack_cooldown_value = 5*SEC;
 my_attack_cooldown_timer = 0;
 
 my_attack_cast_value = 0.5*SEC;

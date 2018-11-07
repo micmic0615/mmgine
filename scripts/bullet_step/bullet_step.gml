@@ -27,7 +27,7 @@ if (bullet_lifespan > 0){
 				var can_angle = angle_difference(bullet_action_move_angle, angle_between(bullet_seek_target.x,bullet_seek_target.y, x, y));
 				if (abs(can_angle) < bullet_seek_angle_limit && distance_between(x,y, bullet_seek_target.x,bullet_seek_target.y) <= bullet_seek_range){
 					var target_angle = angle_between(bullet_seek_target.x,bullet_seek_target.y, x, y)
-					bullet_action_move_angle = angle_shift(bullet_action_move_angle, target_angle, bullet_seek_turn_rate);
+					bullet_action_move_angle = angle_shift(bullet_action_move_angle, target_angle, bullet_seek_turn_rate*TIMESPEED);
 					bullet_lifespan += TIMESPEED;
 					
 					var floor_age = floor(ROOM.room_age_game);
