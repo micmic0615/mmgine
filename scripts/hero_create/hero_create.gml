@@ -10,7 +10,7 @@ status_flinch_duration = 2*SEC;
 draw_bar_health_xscale = 0.5;
 draw_bar_health_y = 30;
 
-collision_persistent = true;
+collision_persistent = true; 
 
 player_faction = 0;
 
@@ -30,7 +30,7 @@ my_attack_channel_power_max = 2*SEC;
 
 
 my_attack_cooldown_value_1 = 0.2*SEC;
-my_attack_cooldown_value_2 = 0.5*SEC;
+my_attack_cooldown_value_2 = 0.4*SEC;
 my_attack_cooldown_timer = 0;
 
 my_attack_combo_window_value = 0.6*SEC;

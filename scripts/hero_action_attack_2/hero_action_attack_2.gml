@@ -8,7 +8,7 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 	my_attack_channel_angle_target = point_direction(x,y,target_point[0],target_point[1]);
 	
 	var channel_multiplier_bullet = 1;
-	var channel_multiplier_dash =  1.25 - (0.75*(my_attack_channel_power_current/my_attack_channel_power_max));
+	var channel_multiplier_dash =  1.35 - (0.75*(my_attack_channel_power_current/my_attack_channel_power_max));
 	
 	var dash_range = my_attack_dash_range*channel_multiplier_dash;
 	
@@ -59,6 +59,10 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 		
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", 1, true]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
+		
+		bullet.bullet_death_spawn[?"explosion_radius_max"] = 90;
+		bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = make_color_rgb(0,255,255)
+		bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
 		
 		bullet_count --;
 	}

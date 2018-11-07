@@ -6,8 +6,10 @@ if (seekingbullet_hit_take_cooldown_timer <= 0){
 	status_movespeed_base *= 1.15;
 	bullet_seek_turn_rate *= 1.1;
 	
+	
+	
 	if (seekingbullet_hit_take_current == 0){
-		bullet_lifespan = 0;
+		status_health_current = 0;
 	}
 }
 return args;

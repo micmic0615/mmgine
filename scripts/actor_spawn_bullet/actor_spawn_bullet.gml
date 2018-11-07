@@ -11,4 +11,6 @@ bullet.player_faction = player_faction;
 bullet.bullet_action_move_angle = angle;
 bullet.bullet_origin = id;
 
+bullet.bullet_death_spawn[?"type"] = ExplosionBullet;
+
 return bullet;

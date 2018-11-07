@@ -63,7 +63,8 @@
 				text_y += text_entity[2];
 			}
 		}
-	
+		
+		draw_set_font(fontArial)
 		draw_text_transformed_colour(
 			text_x, 
 			text_y, 

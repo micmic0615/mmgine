@@ -16,5 +16,4 @@ if (me.collision_enabled_tiles){
 	}
 }
 
-
 return collision_count;

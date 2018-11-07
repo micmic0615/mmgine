@@ -109,6 +109,15 @@ if (my_attack_cooldown_timer <= 0){
 		ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "bullet", 1]);
 		
 		
+		bullet.bullet_death_spawn[?"explosion_radius_max"] = round(160*(bullet_damage_value*bullet_damage_factor / status_damage_total));
+		bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = my_attack_channel_power_current == my_attack_channel_power_max ? make_color_rgb(0,255,0) : make_color_rgb(255,125,0)
+		bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
+	
+		
+		bullet.bullet_death_spawn[?"bullet_collision_entity_actions"] = [
+			["damage", "actor", bullet_damage_value*bullet_damage_factor*0.25, true]
+		]
+		
 		
 		bullet_count --;
 	}

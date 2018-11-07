@@ -8,13 +8,18 @@ if (bullet_lifespan > 0){
 	var me = id;
 	if (bullet_seek_range > 0){
 		if (bullet_seek_target == noone){
-			with(ENTITY){
-				if (entity_collision_validate_entity(me, false)){
-					var can_angle = angle_difference(me.bullet_action_move_angle, angle_between(x, y, me.x, me.y))				
-					if (abs(can_angle) < 60){
-						if (distance_between(me.x,me.y, x,y) <= me.bullet_seek_range){me.bullet_seek_target = id}
+			var lowest_distance = INFINITY;
+			for(var i = 0; i < ds_list_size(collision_entities_valid);i++){
+				var p = ds_list_find_value(collision_entities_valid, i);
+				if (instance_exists(p)){
+					var can_angle = angle_difference(bullet_action_move_angle, angle_between(p.x, p.y, x, y))				
+					if (abs(can_angle) < bullet_seek_angle_limit){
+						var current_distance = distance_between(x,y, p.x,p.y);
+						if (current_distance <= bullet_seek_range && current_distance < lowest_distance){
+							lowest_distance  = current_distance;
+							bullet_seek_target = p
+						}
 					}
-					
 				}
 			}
 		} else {
@@ -39,10 +44,6 @@ if (bullet_lifespan > 0){
 			}
 		}
 	}
-	
-	
-	
-	
 	
 	bullet_lifespan = bullet_lifespan == INFINITY ? bullet_lifespan : (bullet_lifespan - TIMESPEED);
 } else {

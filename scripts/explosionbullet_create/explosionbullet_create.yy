@@ -1,8 +1,8 @@
 {
-    "id": "ff37efde-b8c0-416d-96c6-c7b9be67e273",
+    "id": "1cfae1b0-9b62-4c06-8175-63b67422ca5c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "entity_collision_check_entity",
+    "name": "explosionbullet_create",
     "IsCompatibility": false,
     "IsDnD": false
 }

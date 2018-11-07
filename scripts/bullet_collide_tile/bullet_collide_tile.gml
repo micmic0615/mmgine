@@ -1,7 +1,7 @@
 if (ACTIVE && ALIVE){
 	switch(bullet_collision_tile_action){
 		case "die": 
-			entity_kill(id);
+			status_health_current = 0;
 			break;
 			
 		case "bounce":

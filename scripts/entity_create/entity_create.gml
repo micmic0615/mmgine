@@ -1,5 +1,7 @@
 ALIVE = true;
-ACTIVE = false;
+ACTIVE = true;
+ROOM = instance_find(ROOM_OBJECT, 0);
+
 depth = 50;
 ds_inventory = ds_list_create();
 
@@ -18,8 +20,6 @@ physics_gravity_turnrate = 45*PPS;
 physics_gravity_falling = 0;
 physics_gravity_factor = 1;
 
-
-
 entity_age = 0
 
 entity_class = object_get_name(object_get_parent(object_index));
@@ -30,8 +30,10 @@ entity_type_lower = string_lower(entity_type);
 
 entity_killer = noone;
 
-collision_entities = ds_create("list");
-collision_exceptions = ds_create("list");
+collision_entities_valid = ds_create("list");
+collision_entities_connect = ds_create("list");
+collision_entities_exceptions = ds_create("list");
+collision_count = [0,0]
 collision_tiles = ds_create("list");
 collision_contact_x = "none";
 collision_contact_y = "none";

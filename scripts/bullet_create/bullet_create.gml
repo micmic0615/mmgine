@@ -18,4 +18,8 @@ bullet_seek_target = noone;
 bullet_seek_turn_rate = 0;
 bullet_seek_angle_limit = 60;
 
+
+bullet_death_spawn = ds_create("map");
+bullet_death_spawn_trigger = "death"
+
 entity_run_type_scripts("create");

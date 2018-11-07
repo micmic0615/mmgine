@@ -46,7 +46,6 @@ if (ACTIVE && ALIVE){
 					var min_health = final_lethal ? 0 : 1;
 					status_health_current = max(min_health, status_health_current - final_value);
 					if (status_health_current <= 0){entity_killer = me};
-					
 				}
 			}
 		}

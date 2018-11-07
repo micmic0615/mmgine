@@ -41,6 +41,11 @@ if (my_attack_cooldown_timer <= 0 && count < my_attack_bullets_max){
 	bullet.bullet_lifespan = INFINITY;
 	bullet.bullet_collision_tile_action = "die";
 	
+	bullet.bullet_death_spawn[?"explosion_radius_min"] = 60;
+	bullet.bullet_death_spawn[?"explosion_radius_max"] = 220;
+	bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = make_color_rgb(125,0,255);
+	bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
+	
 	with(bullet){
 		entity_motion_push((me.my_attack_dash_range), (me.my_attack_dash_speed/(me.my_attack_dash_range*PPS))*SEC, bullet_angle, ["multiply",1.25], "move_motion");
 	}

@@ -6,7 +6,8 @@
     "children": [
         "4b33227a-c240-450c-8d3a-844460b663b0",
         "a2ec3a4d-5225-44a0-818f-ea0a9f2012f4",
-        "261f98f6-97bf-426a-a911-afb35ad71cb7"
+        "261f98f6-97bf-426a-a911-afb35ad71cb7",
+        "75659d1c-bc83-4b49-8249-31f8e1ebf9b9"
     ],
     "filterType": "GMSprite",
     "folderName": "HeroBullet",

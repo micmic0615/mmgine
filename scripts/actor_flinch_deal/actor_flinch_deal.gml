@@ -18,13 +18,15 @@ if (valid){
 	var adjusted_target = is_array(adjusted_args) ? adjusted_args[0] : base_target;
 	var adjusted_value = is_array(adjusted_args) ? adjusted_args[1] : base_value;
 	
-	with(adjusted_target){
-		if (actor_buff_find("flinched") == undefined){
-			status_poise_current -= adjusted_value;
-			if (status_poise_current <= 0){
-				actor_buff_apply("flinched", status_flinch_duration, [], "flinched");		
-				status_poise_current = status_poise_max;
-			}
+	var can_flinch = false;
+	with(adjusted_target){if (actor_buff_find("flinched") == undefined){can_flinch = true}}
+	
+	if (can_flinch){
+		adjusted_target.status_poise_current -= adjusted_value
+		entity_run_type_scripts("flinch_deal", [adjusted_target, adjusted_value]);
+		if (adjusted_target.status_poise_current <= 0){
+			with(adjusted_target){actor_buff_apply("flinched", status_flinch_duration, [], "flinched")};	
+			adjusted_target.status_poise_current = adjusted_target.status_poise_max;
 		}
 	}
 }

@@ -14,8 +14,8 @@ if (ACTIVE && ALIVE){
 		rad_angle = degtorad(value_push_angle);
 	}
 
-	for(var i = 0; i < ds_list_size(collision_entities);i++){
-		var p = ds_list_find_value(collision_entities, i);
+	for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
+		var p = ds_list_find_value(collision_entities_connect, i);
 		
 		if (p.entity_class_lower == target_class){
 			var x_move = cos(rad_angle)*value_push_distance/value_push_duration;
