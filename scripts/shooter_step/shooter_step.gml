@@ -10,7 +10,6 @@ if (actor_actions_enabled){
 			animation_angle = action_angle;
 			animation_direction = action_direction;
 			my_attack_channel_power_current = min(my_attack_channel_power_current + TIMESPEED, my_attack_channel_power_max);
-		
 			var power_ratio = (my_attack_channel_power_current/my_attack_channel_power_max);
 			var power_quadroot = sqrt(sqrt(power_ratio));
 			actor_buff_apply("move_set_percent", 0.1*SEC, [100 - (power_quadroot*100)], "channel_slow");
@@ -19,10 +18,11 @@ if (actor_actions_enabled){
 		my_attack_cooldown_timer -= TIMESPEED;
 	
 		if (my_attack_cast_timer > 0){
+			my_attack_cast_timer -= TIMESPEED;
+			
 			animation_name = "attack";
 			animation_angle = action_angle;
 			animation_direction = action_direction;
-			my_attack_cast_timer -= TIMESPEED;
 			physics_gravity_current = 0;
 			
 			var floor_age = floor(ROOM.room_age_game);
@@ -33,10 +33,11 @@ if (actor_actions_enabled){
 			
 		}
 	}
-
+	
 	my_attack_channel_ongoing -= 1;
 } else {
-	my_attack_channel_power_current = 0;
 	my_attack_cooldown_timer = 0;
+	my_attack_channel_power_current = 0;
 	my_attack_channel_ongoing = 0;
+	my_attack_cast_timer = 0;
 }

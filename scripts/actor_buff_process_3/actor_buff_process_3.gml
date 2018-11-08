@@ -8,4 +8,9 @@ switch(type){
 		var value = arguments[0];
 		status_movespeed_total = value;
 		break
+		
+	case "movesnap_set_raw":
+		var value = arguments[0];
+		status_movesnap_total = value;
+		break
 }

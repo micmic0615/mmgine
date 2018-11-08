@@ -15,6 +15,9 @@ entity_run_type_scripts("step");
 #region // BUFF MANAGEMENT
 	#region //BUFF CALCULATE STATS
 		actor_actions_enabled = true;
+		status_armor_health = 0;
+		status_armor_poise = 0;
+		status_immortal = false;
 
 		var buff_list_length = ds_list_size(status_buff_list);
 		for(var i = 0; i < buff_list_length;i++){actor_buff_process_1(ds_list_find_value(status_buff_list, i))};
@@ -82,6 +85,34 @@ entity_run_type_scripts("step");
 		if (has_flinched > 0){
 			if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
 				entity_mirage_create(0.5*SEC, random(30) - 15, random(30) - 15, make_color_rgb(255,255,0))
+			};
+		}
+		
+		if (status_immortal){
+			if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
+				var bullet = actor_spawn_bullet(x, y, x,y,ExplosionBullet);
+				
+				bullet.animation_sprite = "ExplosionBulletAlt"
+
+				bullet.status_movespeed_base = 0;
+				bullet.status_movesnap_base = 0.2*SEC;
+							
+				bullet.status_health_max = INFINITY;
+				bullet.status_health_current = bullet.status_health_max;
+				bullet.bullet_action_move_angle = 0;
+	
+				bullet.physics_gravity_on = false;
+				bullet.explosion_lifespan_base = 0.75*SEC;			
+				bullet.explosion_lifespan_current = bullet.explosion_lifespan_base;			
+				bullet.explosion_radius_min = 80;
+				bullet.explosion_radius_max = 100;
+				
+				bullet.bullet_death_spawn[?"type"] = noone;
+				
+				bullet.collision_compute = false;
+				bullet.collision_enabled_actors = false;
+				bullet.collision_enabled_bullets = false;
+				bullet.collision_enabled_doodads = false;
 			};
 		}
 	#endregion	

@@ -10,6 +10,8 @@ if (ACTIVE && ALIVE){
 	
 	if (value_push_angle == "movement"){
 		rad_angle = degtorad(bullet_action_move_angle);
+	} else if (value_push_angle == "center"){
+		rad_angle = 0
 	} else if (is_real(value_push_angle)){
 		rad_angle = degtorad(value_push_angle);
 	}
@@ -18,6 +20,10 @@ if (ACTIVE && ALIVE){
 		var p = ds_list_find_value(collision_entities_connect, i);
 		
 		if (p.entity_class_lower == target_class){
+			if (value_push_angle == "center"){
+				rad_angle = degtorad(angle_between(p.x, p.y, x, y));
+			}
+			
 			var x_move = cos(rad_angle)*value_push_distance/value_push_duration;
 			var y_move = sin(rad_angle)*value_push_distance/value_push_duration;
 	

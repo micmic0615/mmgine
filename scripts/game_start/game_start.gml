@@ -14,8 +14,6 @@ room_speed = 60;
 #macro GRAVITY_FORCE global.gravity_force
 #macro GRAVITY_MAX global.gravity_max
 
-show_debug_overlay(true);
-
 global.time_speed = 1;
 global.time_base = 1;
 global.time_change_value = 1;

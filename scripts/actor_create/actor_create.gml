@@ -12,10 +12,16 @@ status_poise_max = 20;
 status_poise_regen = 2*PPS;
 status_flinch_duration = 2*SEC;
 
+status_armor_health = 0;
+status_armor_poise = 0;
+
 status_buff_list = ds_create("list");
 
 actor_actions_enabled = true;
 ai_enabled = true;
+
+player_boss = false;
+player_boss_name = "actor";
 
 entity_run_type_scripts("create");
 

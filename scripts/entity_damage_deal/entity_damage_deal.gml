@@ -20,20 +20,21 @@ if (ACTIVE && ALIVE){
 	
 	if (base_target != noone && base_target.entity_class_lower != "actor"){valid = true}
 	
-	if (valid){
+	if (valid && !base_target.status_immortal){
 		var adjusted_args = entity_run_class_scripts("damage_deal", [base_target, base_value, base_lethal]);
 
 		var adjusted_target = is_array(adjusted_args) ? adjusted_args[0] : base_target;
 		var adjusted_value = is_array(adjusted_args) ? adjusted_args[1] : base_value;
-		var adjusted_lethal = is_array(adjusted_args) ? adjusted_args[1] : base_lethal;
+		var adjusted_lethal = is_array(adjusted_args) ? adjusted_args[2] : base_lethal;
 		
 		var final_args = adjusted_args;
-		with(adjusted_target){final_args = entity_damage_take([adjusted_target, adjusted_value, adjusted_lethal])};
+		with(adjusted_target){final_args = entity_damage_take([me, adjusted_value, adjusted_lethal])};
 		
-		var final_target = is_array(final_args) ? final_args[0] : adjusted_target;
-		var final_value = is_array(final_args) ? final_args[1] : round(adjusted_value);
-		var final_lethal = is_array(final_args) ? final_args[1] : adjusted_lethal;
+		var final_target = adjusted_target;
+		var final_value = is_array(final_args) ? final_args[1] : adjusted_value;
+		var final_lethal = is_array(final_args) ? final_args[2] : adjusted_lethal;
 		
+		final_value = max(1, ceil(final_value));
 	
 		if (final_value > 0){
 			with(final_target){

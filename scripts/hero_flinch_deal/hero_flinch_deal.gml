@@ -43,7 +43,7 @@ if (base_target.status_poise_current <= 0 && base_target.status_health_current >
 		bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
 		bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = make_color_rgb(255,125,0);
 				
-		var bullet_damage_value = status_damage_total * 0.2;
+		var bullet_damage_value = status_damage_total * 0.25;
 		bullet.bullet_seek_range = INFINITY;
 		bullet.bullet_seek_turn_rate = 360*PPS;
 		bullet.bullet_seek_angle_limit = 360;

@@ -1,6 +1,4 @@
 var target_point = argument0;
-var target_point = argument0;
-var my_attack_combo_max = 4;
 
 if (my_attack_cooldown_timer <= 0){	
 	my_attack_direction = 1;

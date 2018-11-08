@@ -22,7 +22,6 @@ while(move_steps_current > 0){
 	move_steps_current--;
 			
 	if (collision_compute){
-		ds_list_clear(collision_entities_connect);
 				
 		var me = id;
 		ds_list_clear(collision_entities_connect)
@@ -70,10 +69,8 @@ while(move_steps_current > 0){
 						
 				if (valid_faction){
 					var not_exception = true;
-					if (me.entity_class_lower == "bullet"){
-						var is_exception = ds_list_find_index(me.collision_entities_exceptions, id);
-						if (is_exception >= 0){not_exception = false}
-					}
+					var is_exception = ds_list_find_index(me.collision_entities_exceptions, id);
+					if (is_exception >= 0){not_exception = false}
 					
 					if (not_exception){
 						var checked_entity = id;

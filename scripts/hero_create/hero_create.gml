@@ -44,3 +44,11 @@ my_attack_queue_2 = undefined;
 my_attack_combo = 0;
 
 ai_enabled = false;
+
+
+my_shield_damage_accumulated = 0;
+my_shield_damage_treshold = status_health_max*0.2;
+my_shield_damage_regen = (my_shield_damage_treshold/20)*PPS;
+
+my_grit_cooldown_timer = 0;
+my_grit_cooldown_value = 60*SEC;

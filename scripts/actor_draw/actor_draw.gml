@@ -31,8 +31,15 @@
 		
 		var flinch_buff = actor_buff_find("flinched");
 		if (flinch_buff == undefined){
-			bar_color = make_colour_rgb(255,255,255);
+			if (status_armor_poise >= 100){
+				var random_teal = random(255);
+				bar_color = make_colour_rgb(random_teal,random_teal,255);
+			} else {
+				bar_color = make_colour_rgb(255,255,255);
+			}
+			
 			bar_width = sprite_width*draw_bar_health_xscale*(min(1,(status_poise_current/status_poise_max)));
+			
 		} else {
 			var random_yellow = random(200);
 			bar_color = make_colour_rgb(200,200,random_yellow);

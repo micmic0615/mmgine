@@ -11,7 +11,7 @@
         "12be00d8-3883-48f1-90cc-282b711e95be"
     ],
     "filterType": "GMScript",
-    "folderName": "ObjectClasses",
+    "folderName": "Classes",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

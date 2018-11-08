@@ -44,10 +44,18 @@ if (player_controllable && global.replay_mode == "record"){
 	}
 	
 	if (keyboard_check_pressed(global.key_replay_load)){
-		global.replay_mode = "play";
-		global.replay_duration = me.room_age_real;
+		//global.replay_mode = "play";
+		//global.replay_duration = me.room_age_real;
+		//global.random_index = 0;
+		//global.actor_id_sequence = 0;
+		global.time_base = 1;
+		//room_goto(global.next_room);
+		
+		global.replay_mode = "record";
 		global.random_index = 0;
 		global.actor_id_sequence = 0;
+		global.time_base = 1;
+		ds_clear();
 		room_goto(global.next_room);
 	}	
 } else {
@@ -55,6 +63,7 @@ if (player_controllable && global.replay_mode == "record"){
 		global.replay_mode = "record";
 		global.random_index = 0;
 		global.actor_id_sequence = 0;
+		global.time_base = 1;
 		ds_clear();
 		room_goto(global.next_room);
 	}
@@ -63,6 +72,7 @@ if (player_controllable && global.replay_mode == "record"){
 		global.replay_mode = "play";
 		global.random_index = 0;
 		global.actor_id_sequence = 0;
+		global.time_base = 1;
 		room_goto(global.next_room);
 	}
 }

@@ -21,4 +21,8 @@ switch(type){
 	case "silenced":
 		actor_actions_enabled = false;
 		break
+		
+	case "immortal":
+		status_immortal = true;
+		break
 }

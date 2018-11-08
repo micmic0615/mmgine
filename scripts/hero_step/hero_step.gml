@@ -115,7 +115,7 @@ if (actor_actions_enabled){
 					bullet.bullet_seek_range = 900;
 					bullet.bullet_seek_angle_limit = 360;
 					bullet.bullet_seek_turn_rate = 540*PPS;
-					bullet_damage_value = status_damage_total * 0.1;
+					bullet_damage_value = status_damage_total * 0.2;
 					bullet.image_xscale = 0.5;
 					bullet.image_yscale = 0.5;
 				} else {
@@ -125,7 +125,7 @@ if (actor_actions_enabled){
 					bullet.bullet_seek_range = 420;
 					bullet.bullet_seek_turn_rate = 280*PPS;
 					bullet.bullet_seek_angle_limit = 75
-					bullet_damage_value = status_damage_total * 0.2;
+					bullet_damage_value = status_damage_total * 0.3;
 					bullet.image_xscale = 0.55;
 					bullet.image_yscale = 0.55;
 				}
@@ -139,6 +139,14 @@ if (actor_actions_enabled){
 			}
 			
 		}
+	}
+	
+	my_grit_cooldown_timer -= TIMESPEED;
+	
+	if (!status_immortal){
+		my_shield_damage_accumulated = min(my_shield_damage_treshold - 1, my_shield_damage_accumulated + my_shield_damage_regen * TIMESPEED);
+	} else {
+		status_poise_current = status_poise_max;
 	}
 } else {
 	my_attack_channel_power_current = 0;
