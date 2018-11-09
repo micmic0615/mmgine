@@ -14,17 +14,16 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 	
 	var bullet_angle = angle_between(x,y, target_point[0], target_point[1]);
 	
-	var bullet_max = 4;
-	var bullet_damage_factor = 0.2;
+	var bullet_max = 5;
+	var bullet_damage_factor = 0.25;
 	var bullet_size_factor = 0.65;
 	var bullet_life_factor = 0.5;
 	var bullet_speed_factor = 1;
-	var bullet_push_factor = 0.1;
 	var bullet_spawn_offset = 0;
 	
 	if (my_attack_channel_power_current == my_attack_channel_power_max){
-		bullet_max = 8
-		bullet_size_factor = 0.4;
+		bullet_max = 9
+		bullet_size_factor = 0.5;
 		bullet_life_factor = 0.35
 	}
 	
@@ -39,7 +38,10 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 
 		bullet.status_movespeed_base = my_attack_bullet_speed * bullet_speed_factor;
 		bullet.status_movesnap_base = 0.2*SEC;
-		bullet.bullet_action_move_angle = bullet_angle + ((bullet_count-1)*30) - ((bullet_max-1)*15);
+		bullet.bullet_action_move_angle = bullet_angle + ((bullet_count-1)*20) - ((bullet_max-1)*10);
+		
+		bullet.bullet_seek_range = 320;
+		bullet.bullet_seek_turn_rate = 140*PPS;
 	
 		bullet.physics_gravity_on = false;
 		//bullet.physics_gravity_factor = 10;
@@ -54,8 +56,8 @@ if (my_attack_cooldown_timer <= 0 && my_attack_combo <= 1){
 		bullet.bullet_collision_tile_action = "die";
 
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*channel_multiplier_bullet*bullet_damage_factor, true]);
-		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*bullet_damage_factor]);
-		ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet*bullet_push_factor , 0.75*SEC, "movement", ["multiply",1.5]]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*bullet_damage_factor*2]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 120*channel_multiplier_bullet, 0.75*SEC, "movement", ["multiply",1.5]]);
 		
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", 1, true]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);

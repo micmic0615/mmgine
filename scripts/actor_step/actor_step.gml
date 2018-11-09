@@ -89,7 +89,7 @@ entity_run_type_scripts("step");
 		}
 		
 		if (status_immortal){
-			if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
+			if (floor_age % (0.2*SEC) == 0 && floor_age != next_floor_age){
 				var bullet = actor_spawn_bullet(x, y, x,y,ExplosionBullet);
 				
 				bullet.animation_sprite = "ExplosionBulletAlt"
@@ -102,7 +102,7 @@ entity_run_type_scripts("step");
 				bullet.bullet_action_move_angle = 0;
 	
 				bullet.physics_gravity_on = false;
-				bullet.explosion_lifespan_base = 0.75*SEC;			
+				bullet.explosion_lifespan_base = 0.8*SEC;			
 				bullet.explosion_lifespan_current = bullet.explosion_lifespan_base;			
 				bullet.explosion_radius_min = 80;
 				bullet.explosion_radius_max = 100;

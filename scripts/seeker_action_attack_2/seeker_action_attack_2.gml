@@ -27,11 +27,13 @@ if (my_attack_cooldown_timer <= 0){
 	bullet.image_xscale = 1.5;
 	bullet.image_yscale = 1.5;
 	
+	var burst_range = my_attack_bullet_range*3
+	
 	bullet.animation_sprite = "SeekerBullet2";
 		
-	bullet.bullet_seek_range = 240;
-	bullet.bullet_seek_turn_rate = 360*PPS;
-	bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/bullet.status_movespeed_base)*SEC);
+	bullet.bullet_seek_range = 480;
+	bullet.bullet_seek_turn_rate = 240*PPS;
+	bullet.bullet_lifespan = ((((burst_range*PPS)/TIMESPEED)/bullet.status_movespeed_base)*SEC);
 	bullet.bullet_collision_tile_action = "die";
 	
 	bullet.bullet_death_spawn[?"explosion_radius_min"] = 40;

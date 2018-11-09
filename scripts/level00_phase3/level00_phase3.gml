@@ -4,7 +4,7 @@ if (stage_trigger){
 	
 	var me = id;
 	
-	var spawn_count = 2;
+	var spawn_count = 3;
 	while(spawn_count > 0){
 		var spawned_actor = room_spawn_random_from_main_actor(Shooter);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
@@ -12,9 +12,9 @@ if (stage_trigger){
 		spawn_count--
 	}
 	
-	var spawn_count = 1;
+	var spawn_count = 2;
 	while(spawn_count > 0){
-		var spawned_actor = room_spawn_random_from_main_actor(Charger);
+		var spawned_actor = room_spawn_random_from_main_actor(Seeker);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
 		if (spawned_actor != noone){ds_list_add(stage_actors_list, spawned_actor) };
 		spawn_count--

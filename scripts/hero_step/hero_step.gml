@@ -130,7 +130,7 @@ if (actor_actions_enabled){
 					bullet.image_yscale = 0.55;
 				}
 				
-				ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", bullet_damage_value]);
+				ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", bullet_damage_value*0.35]);
 				ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", bullet_damage_value, true]);
 				ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
 				
@@ -145,8 +145,6 @@ if (actor_actions_enabled){
 	
 	if (!status_immortal){
 		my_shield_damage_accumulated = min(my_shield_damage_treshold - 1, my_shield_damage_accumulated + my_shield_damage_regen * TIMESPEED);
-	} else {
-		status_poise_current = status_poise_max;
 	}
 } else {
 	my_attack_channel_power_current = 0;

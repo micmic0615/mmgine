@@ -1,9 +1,9 @@
 status_movespeed_base = 320*PPS;
 status_movesnap_base = 2*SEC;
 
-status_health_max = 180;
+status_health_max = 220;
 status_damage_base = 30;
-status_poise_max = 30;
+status_poise_max = 40;
 status_flinch_duration = 4*SEC;
 
 draw_bar_health_xscale = 0.4;

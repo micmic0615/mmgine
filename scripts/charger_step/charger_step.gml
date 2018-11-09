@@ -29,7 +29,7 @@ if (actor_actions_enabled){
 		}
 	}
 	
-	if (my_attack_channel_ongoing > 0 || my_attack_cast_timer > 0){
+	if (my_attack_channel_ongoing > 0){
 		if (floor_age != next_floor_age && floor_age % (my_attack_channel_ongoing > 0 ? (0.25*SEC) : (0.05*SEC)) == 0){
 			var bullet = actor_spawn_bullet(x, y, x,y,ExplosionBullet);
 
@@ -44,7 +44,7 @@ if (actor_actions_enabled){
 			bullet.explosion_lifespan_base = my_attack_channel_ongoing > 0 ? (0.75*SEC) : (0.25*SEC);			
 			bullet.explosion_lifespan_current = bullet.explosion_lifespan_base;			
 			bullet.explosion_radius_min = 10;
-			bullet.explosion_radius_max = my_attack_channel_ongoing > 0 ? 180 : 60;
+			bullet.explosion_radius_max = my_attack_channel_ongoing > 0 ? 180 : 30;
 			
 			
 			bullet.draw_blend_temporary_color = animation_sprite == "Charger" ? make_color_rgb(255,0,0) : make_color_rgb(255,255,0);

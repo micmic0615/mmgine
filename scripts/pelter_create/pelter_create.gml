@@ -2,7 +2,7 @@ shooter_create();
 
 status_movespeed_base = 160*PPS;
 
-status_health_max = 150;
+status_health_max = 180;
 status_poise_max = 50;
 status_flinch_duration = 5*SEC;
 status_damage_base = 10;

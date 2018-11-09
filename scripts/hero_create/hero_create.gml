@@ -1,7 +1,7 @@
 status_movespeed_base = 200*PPS;
 status_movesnap_base = 0.6*SEC;
 
-status_health_max = 300;
+status_health_max = 250;
 status_damage_base = 20;
 status_poise_max = 30;
 status_poise_regen = 1.5*PPS;

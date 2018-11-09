@@ -2,6 +2,8 @@ ROOM = id;
 ACTIVE = true;
 ALIVE = true;
 
+random_set_seed(random(INFINITY))
+
 GRAVITY_ANGLE = 90;
 GRAVITY_FORCE = 40*PPS / (1*SEC);
 GRAVITY_MAX = 120*PPS;
@@ -38,6 +40,7 @@ time_change_duration = 0;
 
 screen_cover_alpha = 0;
 screen_cover_color = c_white;
+screen_cover_text = undefined;
 
 
 var me = id;
