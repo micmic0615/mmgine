@@ -19,6 +19,7 @@ status_buff_list = ds_create("list");
 
 actor_actions_enabled = true;
 ai_enabled = true;
+ai_delay = 1*SEC;
 
 player_boss = false;
 player_boss_name = "actor";

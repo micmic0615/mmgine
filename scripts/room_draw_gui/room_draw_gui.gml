@@ -1,8 +1,10 @@
 room_run_scripts("draw_gui");
 
+var screen_width = window_get_width()
+var screen_height = window_get_height()
+	
 if (global.replay_mode == "play"){
-	var screen_width = window_get_width()
-	var screen_height = window_get_height()
+	
 	
 	draw_set_colour(make_color_rgb(100,100,100));
 	draw_rectangle(0, screen_height - 3, screen_width, screen_height, false);
@@ -13,4 +15,11 @@ if (global.replay_mode == "play"){
 	draw_rectangle(0, screen_height - 4, screen_width*duration, screen_height, false);
 }
 
-room_player_draw_gui()
+room_player_draw_gui();
+
+if (screen_cover_alpha > 0){
+	draw_set_alpha(min(1, screen_cover_alpha));
+	draw_set_color(screen_cover_color);
+	draw_rectangle(0, 0, screen_width, screen_height, false);
+	draw_set_alpha(1)
+}

@@ -11,7 +11,7 @@ draw_bar_health_y = 45;
 
 collision_persistent = true;
 collision_solid_entities = false;
-collision_enabled_actors = false;
+collision_enabled_actors = true;
 collision_enabled_bullets = true;
 collision_enabled_doodads = false;
 

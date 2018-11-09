@@ -36,6 +36,10 @@ time_base = 1;
 time_change = 1;
 time_change_duration = 0;
 
+screen_cover_alpha = 0;
+screen_cover_color = c_white;
+
+
 var me = id;
 
 draw_mirage_list = ds_create("list");
@@ -69,13 +73,5 @@ with(ACTOR){
 	if (!variable_instance_exists(id, "actor_id")){
 		if (global.replay_mode == "record"){actor_spawn(x,y,object_index)};
 		instance_destroy(id, false);
-	}
-}
-
-with(ENTITY){
-	if (entity_type_lower == me.player_main_actor_type){
-		me.player_main_actor = id;
-		me.camera_x = x;
-		me.camera_y = y;
 	}
 }
