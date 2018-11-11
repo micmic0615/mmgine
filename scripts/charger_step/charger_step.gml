@@ -11,7 +11,7 @@ if (actor_actions_enabled){
 			var power_quadroot = sqrt(sqrt(power_ratio));
 			actor_buff_apply("move_set_percent", 0.1*SEC, [100 - (power_quadroot*100)], "channel_slow");
 			
-			actor_buff_apply("armor_health", 0.1*SEC, [100], "mana_armor_health_2");
+			actor_buff_apply("armor_health", 0.1*SEC, [75], "mana_armor_health_2");
 			actor_buff_apply("armor_poise", 0.1*SEC, [50], "mana_armor_poise_2");
 		}
 	} else {

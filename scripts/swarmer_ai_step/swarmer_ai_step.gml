@@ -14,13 +14,13 @@ if (my_clone_original == true){
 		ai_boss_phase = 3;
 		my_attack_cast_armor_health = 70;
 		my_attack_cooldown_value = 15*SEC;
-		my_attack_cast_value = 11*SEC;
+		my_attack_cast_value = 9*SEC;
 		my_attack_cast_movespeed = 1200*PPS;
 	} else if (status_health_current*100/status_health_max <= 70){
 		ai_boss_phase = 2;
 		my_attack_cast_armor_health = 35;
 		my_attack_cooldown_value = 14*SEC;
-		my_attack_cast_value = 8*SEC;
+		my_attack_cast_value = 7*SEC;
 		my_attack_cast_movespeed = 900*PPS;
 	} else {
 		ai_boss_phase = 1;
@@ -49,17 +49,17 @@ if (my_clone_original == true){
 			var charger_spawn = actor_spawn(x ,y , Charger);
 			charger_spawn.image_xscale = 1.75;
 			charger_spawn.image_yscale = 1.75;
-			charger_spawn.status_health_max = charger_spawn.status_health_max*5;
+			charger_spawn.status_health_max = charger_spawn.status_health_max*3;
 			charger_spawn.status_health_current = charger_spawn.status_health_max;
-			charger_spawn.status_poise_max = charger_spawn.status_poise_max*2;
+			charger_spawn.status_poise_max = charger_spawn.status_poise_max*1.5;
 			charger_spawn.status_poise_current = charger_spawn.status_poise_max;
 			
 			var charger_spawn = actor_spawn(x ,y , Charger);
 			charger_spawn.image_xscale = 1.75;
 			charger_spawn.image_yscale = 1.75;
-			charger_spawn.status_health_max = charger_spawn.status_health_max*5;
+			charger_spawn.status_health_max = charger_spawn.status_health_max*3;
 			charger_spawn.status_health_current = charger_spawn.status_health_max;
-			charger_spawn.status_poise_max = charger_spawn.status_poise_max*2;
+			charger_spawn.status_poise_max = charger_spawn.status_poise_max*1.5;
 			charger_spawn.status_poise_current = charger_spawn.status_poise_max;
 		
 		}
@@ -79,7 +79,7 @@ if (my_clone_original == true){
 		if (current_count < spawn_max){
 			ai_spawn_cooldown_timer = ai_spawn_cooldown_value;
 			var charger_spawn = actor_spawn(x ,y , Charger);
-			charger_spawn.status_health_max = charger_spawn.status_health_max*(0.2 + (0.15*ai_boss_phase));
+			charger_spawn.status_health_max = charger_spawn.status_health_max*(0.2 + (0.1*ai_boss_phase));
 			charger_spawn.status_health_current = charger_spawn.status_health_max;
 			charger_spawn.status_poise_max = INFINITY;
 			charger_spawn.status_poise_current = INFINITY;

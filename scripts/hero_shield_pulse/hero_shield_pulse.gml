@@ -22,3 +22,4 @@ ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_d
 ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", pulse_push , 2*SEC, "center", ["multiply",1.5]]);
 							
 bullet.bullet_death_spawn[?"type"] = noone;
+

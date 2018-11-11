@@ -1,1 +1,1 @@
-with(Charger){if (animation_sprite == "Chargeling"){status_health_current = 0}}
+with(Charger){status_health_current = 0}

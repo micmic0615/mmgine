@@ -4,9 +4,34 @@ var me = id;
 var base_target = args[0];
 var base_value = args[1];
 if (base_target.status_poise_current <= 0 && base_target.status_health_current > 0){
+	var bullet = actor_spawn_bullet(x, y, x,y,ExplosionBullet);
+	
+	bullet.animation_sprite = "ExplosionBulletAlt";
+	bullet.status_movespeed_base = 0;
+	bullet.bullet_origin_anchor = true;
+							
+	bullet.status_health_max = INFINITY;
+	bullet.status_health_current = bullet.status_health_max;
+	bullet.bullet_action_move_angle = 0;
+	
+	bullet.physics_gravity_on = false;
+	bullet.explosion_lifespan_base = 0.3*SEC;			
+	bullet.explosion_lifespan_current = bullet.explosion_lifespan_base;			
+	bullet.explosion_radius_min = 30;
+	bullet.explosion_radius_max = 120;
+	bullet.collision_compute = false;
+	bullet.collision_enabled_actors = false;
+	bullet.collision_enabled_bullets = false;
+	bullet.collision_enabled_doodads = false;
+		
+	bullet.draw_blend_temporary_color = make_color_rgb(255,125,0);
+	bullet.draw_blend_temporary_duration = INFINITY;
+							
+	bullet.bullet_death_spawn[?"type"] = noone;
+	
 	if (ROOM.player_main_actor == id){room_timespeed_temp(0.05, 0.2*SEC, true)}
 	var bullet_count = 0;
-	var bullet_max = 5;
+	var bullet_max = my_attack_beatdown_bullet_count;
 			
 	while(bullet_count < bullet_max){
 		var super_angle = angle_between(x,y,base_target.x,base_target.y) + random(120) - 60;
@@ -43,7 +68,7 @@ if (base_target.status_poise_current <= 0 && base_target.status_health_current >
 		bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
 		bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = make_color_rgb(255,125,0);
 				
-		var bullet_damage_value = status_damage_total * 0.25;
+		var bullet_damage_value = status_damage_total * my_attack_beatdown_bullet_damage_factor;
 		bullet.bullet_seek_range = INFINITY;
 		bullet.bullet_seek_turn_rate = 360*PPS;
 		bullet.bullet_seek_angle_limit = 360;

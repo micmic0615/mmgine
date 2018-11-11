@@ -4,8 +4,6 @@ var screen_width = window_get_width()
 var screen_height = window_get_height()
 	
 if (global.replay_mode == "play"){
-	
-	
 	draw_set_colour(make_color_rgb(100,100,100));
 	draw_rectangle(0, screen_height - 3, screen_width, screen_height, false);
 	

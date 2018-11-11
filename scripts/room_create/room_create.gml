@@ -34,6 +34,12 @@ player_faction = 0;
 player_main_actor = noone;
 player_main_actor_type = "hero";
 
+player_controls_move_dash_timer_right = 0;
+player_controls_move_dash_timer_left = 0;
+player_controls_move_dash_timer_up = 0;
+player_controls_move_dash_timer_down = 0;
+player_controls_move_dash_timer_value = 0.4*SEC;
+
 time_base = 1;
 time_change = 1;
 time_change_duration = 0;

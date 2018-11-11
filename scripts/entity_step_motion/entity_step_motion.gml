@@ -48,6 +48,9 @@ for(var i = 0; i < list_length;i++){
 ds_list_clear(status_move_angle_list);
 status_movesnap_total = max(2, status_movesnap_base);
 status_movespeed_total = status_movespeed_base;
+
+var angle_find_x = x;
+var angle_find_y = y;
 		
 for(var i = 0; i < ds_list_size(physics_motion_list);i++){
 	var p = ds_list_find_value(physics_motion_list, i);
@@ -66,6 +69,8 @@ for(var i = 0; i < ds_list_size(physics_motion_list);i++){
 	if (motion_id == "move_motion"){
 		move_x_total += motion_x;
 		move_y_total += motion_y;
+		angle_find_x += motion_x;
+		angle_find_y += motion_y;
 	}
 			
 	if (round(motion_lifespan) > round(next_lifespan)){
@@ -102,6 +107,8 @@ for(var i = 0; i < ds_list_size(physics_motion_list);i++){
 		}
 	} 
 }
+
+physics_motion_angle = angle_between(angle_find_x, angle_find_y, x, y);
 		
 var time_x = physics_motion_x*TIMESPEED;
 var time_y = physics_motion_y*TIMESPEED

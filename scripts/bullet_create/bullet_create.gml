@@ -10,6 +10,7 @@ status_movesnap_base = 0.25*SEC;
 bullet_action_move_angle = 0;
 bullet_lifespan = 1*SEC;
 bullet_origin = noone;
+bullet_origin_anchor = false;
 bullet_collision_entity_actions = ds_create("list");
 bullet_collision_tile_action = "bounce";
 

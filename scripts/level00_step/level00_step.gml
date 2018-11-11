@@ -12,5 +12,13 @@ if (ds_exists(stage_actors_list, ds_type_list)){
 	}
 
 	if (screen_cover_alpha > 0){screen_cover_alpha -= 1*PPS*TIMESPEED}
+	
+	
 }
 
+if (stage_restore_health_timer > 0){
+	stage_restore_health_timer -= TIMESPEED
+	if (instance_exists(player_main_actor)){
+		player_main_actor.my_rally_limit = player_main_actor.status_health_max;
+	}
+}

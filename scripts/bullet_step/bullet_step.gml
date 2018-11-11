@@ -5,6 +5,11 @@ if (bullet_lifespan > 0){
 		entity_move_angle(bullet_action_move_angle)
 	}
 	
+	if (bullet_origin_anchor == true && instance_exists(bullet_origin)){
+		x = bullet_origin.x;
+		y = bullet_origin.y;
+	}
+	
 	var me = id;
 	if (bullet_seek_range > 0){
 		if (bullet_seek_target == noone){
