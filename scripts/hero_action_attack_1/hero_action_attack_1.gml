@@ -1,7 +1,7 @@
 var target_point = argument0;
 var my_attack_combo_1_max = 4;
 
-if (actor_actions_enabled && my_attack_cooldown_timer_1 <= 0 && my_attack_cast_timer_1 <= 0 && my_attack_cast_timer_2 <= 0 && my_attack_cast_timer_3 <= 0){	
+if (my_attack_cooldown_timer_1 <= 0 && hero_can_act()){	
 	
 	my_attack_direction = 1;
 	my_attack_queue_1 = undefined;
@@ -77,10 +77,6 @@ if (actor_actions_enabled && my_attack_cooldown_timer_1 <= 0 && my_attack_cast_t
 	
 	var bullet_spread_angle = my_attack_channel_power_current == my_attack_channel_power_max ? 30 : 6;
 	
-	
-		
-		
-	
 	while(bullet_count > 0){
 		var bullet = actor_spawn_bullet(target_point[0], target_point[1], bullet_x,bullet_y,DefaultBullet);
 
@@ -138,21 +134,29 @@ if (actor_actions_enabled && my_attack_cooldown_timer_1 <= 0 && my_attack_cast_t
 	}	
 	
 	
+	if (my_time_stop_channel){
+		entity_damage_deal([id, my_time_stop_attack_cost, true]);
+		my_time_stop_attack_mirage = true
+		my_attack_combo_1 = 0;
+	} else {
+		my_attack_combo_1 += 1;
+	}
 	
-	my_attack_combo_1 += 1;
-	if (my_attack_combo_1 == 1){
+	
+	if (my_attack_combo_1 == 1 && my_time_stop_channel == false){
 		actor_buff_apply("speed_bonus_raw", my_attack_mana_speed_duration, [my_attack_mana_speed], "mana_speed_boost");
 	}
 	
-	if (my_attack_combo_1 <= 1){
-		entity_motion_push((my_attack_recoil_range*channel_multiplier_dash), (my_attack_recoil_speed/(my_attack_recoil_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
-	} else {
-		entity_motion_push((my_attack_recoil_range*channel_multiplier_dash) * 0.25, (my_attack_recoil_speed/(my_attack_recoil_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
+	if (!my_time_stop_channel){
+		if (my_attack_combo_1 <= 1){
+			entity_motion_push((my_attack_recoil_range*channel_multiplier_dash), (my_attack_recoil_speed/(my_attack_recoil_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
+		} else {
+			entity_motion_push((my_attack_recoil_range*channel_multiplier_dash) * 0.25, (my_attack_recoil_speed/(my_attack_recoil_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
+		}
 	}
 	
-	//if (my_attack_channel_power_current >= my_attack_channel_power_max){
-		
-	//}
+	
+	
 	
 	my_attack_channel_power_current = 0;
 	

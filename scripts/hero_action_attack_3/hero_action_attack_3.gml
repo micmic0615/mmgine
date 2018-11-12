@@ -2,7 +2,7 @@ var target_point = argument0;
 var my_attack_combo_2_max = 3;
 
 
-if (actor_actions_enabled && status_poise_current/status_poise_max >= 0.5 && my_attack_cast_timer_1 <= 0 && my_attack_cast_timer_2 <= 0 && my_attack_cast_timer_3 <= 0){	
+if (hero_can_act() && status_poise_current/status_poise_max >= 0.5){	
 	
 	var charge_power_ratio = my_attack_channel_power_current/my_attack_channel_power_max;
 	
@@ -51,9 +51,6 @@ if (actor_actions_enabled && status_poise_current/status_poise_max >= 0.5 && my_
 	
 	my_attack_cast_timer_3 = my_attack_cast_value_3;
 	my_attack_channel_power_current = 0;
-	
-	room_timespeed_temp(0.05, 0.35*SEC, true);
-	
 	
 	actor_buff_apply("immortal", iframe_duration, [], "on_hit_iframe");
 }

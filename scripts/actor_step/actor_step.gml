@@ -18,6 +18,7 @@ entity_run_type_scripts("step");
 		status_armor_health = 0;
 		status_armor_poise = 0;
 		status_immortal = false;
+		physics_time_local = 1;
 
 		var buff_list_length = ds_list_size(status_buff_list);
 		for(var i = 0; i < buff_list_length;i++){actor_buff_process_1(ds_list_find_value(status_buff_list, i))};
@@ -32,9 +33,11 @@ entity_run_type_scripts("step");
 			var arguments = p[2];
 			var buff_id = p[3];
 			if (duration < INFINITY){
+				
+				var new_duration = (type == "untimed") ? duration - 1 : duration - TIMESPEED
 				ds_list_replace(status_buff_list, i, [
 					type,
-					duration - TIMESPEED,
+					new_duration,
 					arguments,
 					buff_id
 				])
@@ -89,30 +92,23 @@ entity_run_type_scripts("step");
 		}
 		
 		if (status_immortal){
-			if (floor_age % (0.2*SEC) == 0 && floor_age != next_floor_age){
-				var bullet = actor_spawn_bullet(x, y, x,y,ExplosionBullet);
-				
-				bullet.animation_sprite = "ExplosionBulletAlt"
-
-				bullet.status_movespeed_base = 0;
-				bullet.status_movesnap_base = 0.2*SEC;
-							
-				bullet.status_health_max = INFINITY;
-				bullet.status_health_current = bullet.status_health_max;
-				bullet.bullet_action_move_angle = 0;
-	
-				bullet.physics_gravity_on = false;
-				bullet.explosion_lifespan_base = 0.8*SEC;			
-				bullet.explosion_lifespan_current = bullet.explosion_lifespan_base;			
-				bullet.explosion_radius_min = 80;
-				bullet.explosion_radius_max = 100;
-				
-				bullet.bullet_death_spawn[?"type"] = noone;
-				
-				bullet.collision_compute = false;
-				bullet.collision_enabled_actors = false;
-				bullet.collision_enabled_bullets = false;
-				bullet.collision_enabled_doodads = false;
+			if (ROOM.room_age_real % (0.2*SEC) == 0){
+				entity_sfx_create(
+					ExplosionBulletAlt_idle,
+					1*SEC*TIMESPEED,
+					0,
+					0,
+					c_white,
+					0,
+					1,
+					1,
+					id,
+					"expand",
+					[
+						80,
+						100
+					]
+				)
 			};
 		}
 	#endregion	

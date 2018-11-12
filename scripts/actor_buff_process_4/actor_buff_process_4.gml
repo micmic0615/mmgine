@@ -25,4 +25,8 @@ switch(type){
 	case "immortal":
 		status_immortal = true;
 		break
+		
+	case "untimed":
+		physics_time_local = 1/global.time_speed
+		break
 }

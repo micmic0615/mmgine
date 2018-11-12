@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "1c66c808-f7f4-4df4-b812-32f3967bfb06",
+            "Value": {
+                "id": "0b2d0da8-0a3d-4726-992b-ccd5f20b08b0",
+                "resourcePath": "scripts\\hero_action_attack_4\\hero_action_attack_4.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1cc58714-3ca4-4fef-8bb9-862fad6d4e3a",
             "Value": {
                 "id": "d9bae4e7-c034-4700-97b8-4ee40bfbe95b",
@@ -547,6 +555,22 @@
             "Value": {
                 "id": "9ed4f7c9-a7d1-4855-a4e8-f423c0acb2fb",
                 "resourcePath": "scripts\\hero_step\\hero_step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "33bdf483-f873-4640-9bfa-9fd9eab880da",
+            "Value": {
+                "id": "41c7b217-1678-4a56-b624-d05d4f05e78d",
+                "resourcePath": "scripts\\entity_sfx_create\\entity_sfx_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "33ca12e7-fadb-4c7f-840c-6b4a62237671",
+            "Value": {
+                "id": "2cac0a52-926c-408d-8a8c-54c89a9a4afe",
+                "resourcePath": "scripts\\hero_can_act\\hero_can_act.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2391,6 +2415,14 @@
             }
         },
         {
+            "Key": "f20da771-8cc4-48af-b2fa-8cf5fe31cb20",
+            "Value": {
+                "id": "737f7811-8ce2-4497-ab4f-b69ea0978fd8",
+                "resourcePath": "scripts\\hero_draw\\hero_draw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "b87c806a-a366-4756-85f4-fc061a0525c4",
@@ -2556,6 +2588,7 @@
         "2dd2b27f-90be-40d6-8591-11680a9a9365",
         "82b55ea0-aede-4615-910a-0aaebe3b98f6",
         "4cc50548-41b8-4f6d-a9f3-e77f580cfcaa",
+        "33bdf483-f873-4640-9bfa-9fd9eab880da",
         "94d60282-ffe9-4ad7-b3b8-87e9239a0565",
         "c5c6f700-c14f-42eb-9b1d-834ef9c2b383",
         "673e77b0-4a10-47e1-85f1-172d0bbb1294",
@@ -2604,17 +2637,20 @@
         "b5122d3a-b082-43d1-b518-8a12dc3d2ea1",
         "3328f79b-6458-48db-a133-07b71f8b3caa",
         "33aa865a-c930-4904-8424-bbf0a40e5c97",
+        "f20da771-8cc4-48af-b2fa-8cf5fe31cb20",
         "41e35712-aa9c-4ea4-a637-a15efb423941",
         "b2823a13-7661-4294-a761-b09563fa2b62",
         "c88f5ff6-4707-468b-b9fc-cad63a750571",
         "d9c306f4-012b-4461-82c4-07168d523ede",
         "cd133a85-05c5-4dfa-aad6-166966886ca9",
+        "1c66c808-f7f4-4df4-b812-32f3967bfb06",
         "96398700-078c-4d21-a5f7-1b824b925ae9",
         "6a89b375-e63a-4c83-bfb2-a7b32d95cd6f",
         "2e10b2f1-607f-4825-bd6c-cf84518604d3",
         "22e0f425-490e-4e69-a379-078c8d24cfc3",
         "f096f9e6-c276-49a9-b9ee-f0a84ec1168e",
         "906ecc6d-908f-40ab-bdd3-ad00b8e586aa",
+        "33ca12e7-fadb-4c7f-840c-6b4a62237671",
         "1b24716d-c99f-49a5-a56f-87da30d336f0",
         "bfecaffb-bae5-4e79-b035-d1429adf6412",
         "b298b21c-f6f2-4011-be27-1dbaa50612f1",

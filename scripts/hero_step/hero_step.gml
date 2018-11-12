@@ -1,16 +1,10 @@
-if (my_rally_limit - my_rally_degen*TIMESPEED > status_health_current){
-	my_rally_limit -= my_rally_degen*TIMESPEED
-} else {
-	my_rally_limit = status_health_current
-}
-
 if (actor_actions_enabled){
 	var compute_flip = (my_attack_channel_angle_target <= 90 && my_attack_channel_angle_target >= 0) || (my_attack_channel_angle_target <= 360 && my_attack_channel_angle_target >= 270)
 	var action_angle = compute_flip ? my_attack_channel_angle_target : my_attack_channel_angle_target - 180;
 	var action_direction = compute_flip ? 1 : -1;
 	
-	var floor_age = floor(ROOM.room_age_game);
-	var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
+	var floor_age = floor(ROOM.room_age_real);
+	var next_floor_age = floor(ROOM.room_age_real + 1);
 		
 	//if (my_attack_cooldown_timer <=  0){
 	//	//if (my_attack_channel_ongoing > 0){
@@ -40,12 +34,18 @@ if (actor_actions_enabled){
 		actor_buff_apply("move_set_raw", 0.1*SEC, [0], "mana_speed_lock");
 	
 		if (
-			(my_attack_cast_timer_1 > 0 && my_attack_combo_1 <= 1) || 
-			(my_attack_cast_timer_2 > 0)
+			my_time_stop_channel == false &&
+			((my_attack_cast_timer_1 > 0 && my_attack_combo_1 <= 1) || 
+			(my_attack_cast_timer_2 > 0))
 		){
 			if (floor_age != next_floor_age){
 				entity_mirage_create(0.4*SEC, 0, 0, make_color_rgb(125,125,125))
 			};
+		}
+		
+		if (my_time_stop_channel && my_time_stop_attack_mirage){
+			my_time_stop_attack_mirage = false
+			entity_mirage_create(0.35*SEC, 0, 0, make_color_rgb(255,125,0), animation_angle, animation_direction, Hero_attack)
 		}
 	} else if (my_attack_cast_timer_3 > 0) {
 		status_poise_current = 0;
@@ -55,41 +55,93 @@ if (actor_actions_enabled){
 		physics_gravity_current = 0;
 		my_attack_cast_timer_3 -= TIMESPEED;
 		actor_buff_apply("move_set_raw", 0.1*SEC, [0], "mana_speed_lock");
+	} else if (my_attack_cast_timer_4 > 0) {
+		status_poise_current = 0;
+		animation_name = "attack_all";
+		animation_angle = 0;
+		animation_direction = 1;
+		physics_gravity_current = 0;
+		my_attack_cast_timer_4 -= 1;
+		my_attack_delay_timer_4 -= 1;
+		actor_buff_apply("move_set_raw", 0.1*SEC, [0], "mana_speed_lock");
+		if (my_attack_delay_timer_4 <= 0 && my_time_stop_trigger){
+			my_time_stop_trigger = false;
+			my_time_stop_channel = true;
+			my_time_stop_degen_interval_timer = 0;
+			entity_sfx_create(
+				ExplosionBulletAlt_idle,
+				0.2*SEC,
+				0,
+				0,
+				make_color_rgb(0,255,255),
+				0,
+				1,
+				1,
+				id,
+				"expand",
+				[
+					30,
+					600
+				]
+			)
+		}
 	} else {
-		my_attack_channel_power_current = min(my_attack_channel_power_current + TIMESPEED, my_attack_channel_power_max);
+		if (!my_time_stop_channel){my_attack_channel_power_current = min(my_attack_channel_power_current + TIMESPEED, my_attack_channel_power_max)};
+		
 		my_attack_cooldown_timer_1 -= TIMESPEED;
 		my_attack_combo_1_window_timer -= TIMESPEED;
 	}
 	
 	
+	if (my_time_stop_channel){
+		var me = id;
+		with(ACTOR){
+			if (player_faction != me.player_faction){
+				actor_buff_apply("immortal", 0.05*SEC, [], "time_stop_immortal");
+			}
+		}
+		status_poise_current = 0;
+		actor_buff_apply("move_set_raw", 0.05*SEC, [status_movespeed_base + (my_attack_mana_speed*0.5)], "mana_speed_lock");
+		actor_buff_apply("untimed", 0.5*SEC, [], "untimed");
+		room_timespeed_temp(0.05, 0.5*SEC, false);
+		
+		if (my_time_stop_degen_interval_timer <= 0){
+			entity_damage_deal([id, my_time_stop_degen_damage, true]);
+			my_time_stop_degen_interval_timer = my_time_stop_degen_interval_value;
+		} else {
+			my_time_stop_degen_interval_timer -= 1;
+		}
+		
+		if (ROOM.room_age_real % (0.1*SEC) == 0){
+			entity_mirage_create(0.03*SEC, 0, 0, make_color_rgb(125,125,125))
+		}
+	} else {
+		if (my_rally_limit - my_rally_degen*TIMESPEED > status_health_current){
+			my_rally_limit -= my_rally_degen*TIMESPEED
+		} else {
+			my_rally_limit = status_health_current
+		}
+	}
+	
+	
 	
 	if (my_attack_channel_power_current == my_attack_channel_power_max && my_attack_channel_power_current != prev_charge){
-	
-
-		var bullet = actor_spawn_bullet(x, y, x,y,ExplosionBullet);
-	
-		bullet.animation_sprite = "ExplosionBulletAlt";
-		bullet.status_movespeed_base = 0;
-		bullet.bullet_origin_anchor = true;
-							
-		bullet.status_health_max = INFINITY;
-		bullet.status_health_current = bullet.status_health_max;
-		bullet.bullet_action_move_angle = 0;
-	
-		bullet.physics_gravity_on = false;
-		bullet.explosion_lifespan_base = 0.5*SEC;			
-		bullet.explosion_lifespan_current = bullet.explosion_lifespan_base;			
-		bullet.explosion_radius_min = 240;
-		bullet.explosion_radius_max = 30;
-		bullet.collision_compute = false;
-		bullet.collision_enabled_actors = false;
-		bullet.collision_enabled_bullets = false;
-		bullet.collision_enabled_doodads = false;
-		
-		bullet.draw_blend_temporary_color = make_color_rgb(0,255,0);
-		bullet.draw_blend_temporary_duration = INFINITY;
-							
-		bullet.bullet_death_spawn[?"type"] = noone;
+		entity_sfx_create(
+			ExplosionBulletAlt_idle,
+			0.5*SEC,
+			0,
+			0,
+			make_color_rgb(0,255,0),
+			0,
+			1,
+			1,
+			id,
+			"expand",
+			[
+				240,
+				30
+			]
+		)
 	}
 	
 	my_attack_cooldown_timer_2 -= TIMESPEED;
@@ -218,4 +270,8 @@ if (actor_actions_enabled){
 	my_attack_combo_2_window_timer = 0;
 	my_attack_channel_ongoing = 0;
 	my_attack_super_duration = 0;
+	my_attack_cast_timer_4 = 0;
+	my_attack_delay_timer_4 = 0;
+	my_time_stop_channel = false;
+	my_time_stop_trigger = false;
 }

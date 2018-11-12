@@ -1,5 +1,7 @@
 var move_x_total = 0;
 var move_y_total = 0;
+
+
 		
 entity_age += TIMESPEED;
 physics_motion_x = 0;
@@ -28,6 +30,8 @@ for(var i = 0; i < list_length;i++){
 	var angle = ds_list_find_value(status_move_angle_list, i);
 	var rad_angle = degtorad(angle)
 	var speed_factor = (status_movespeed_total/(list_length*status_movesnap_total));
+	
+	
 	var move_x = cos(rad_angle)*speed_factor;
 	var move_y = sin(rad_angle)*speed_factor;
 			

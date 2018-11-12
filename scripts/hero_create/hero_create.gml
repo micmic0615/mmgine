@@ -22,7 +22,7 @@ my_attack_bullet_flinch_damage = 25;
 
 my_rally_limit = status_health_max;
 my_rally_degen = 5*PPS;
-my_rally_lifesteal = 5;
+my_rally_lifesteal = 7.5;
 my_rally_lifebank = 0;
 
 my_attack_beatdown_bullet_count = 3
@@ -61,6 +61,20 @@ my_attack_cast_timer_2 = 0;
 my_attack_cast_value_3 = 1*SEC;
 my_attack_cast_timer_3 = 0;
 my_attack_3_immortal_duration = 1.5*SEC;
+
+my_attack_cast_value_4 = 1*SEC;
+my_attack_cast_timer_4 = 0;
+my_attack_delay_value_4 = 0.8*SEC;
+my_attack_delay_timer_4 = 0;
+
+my_time_stop_trigger = false;
+my_time_stop_channel = false;
+my_time_stop_degen_interval_value = 1*SEC;
+my_time_stop_degen_interval_timer = 0;
+my_time_stop_degen_damage = status_health_max*0.01;
+my_time_stop_attack_cost = status_health_max*0.02;
+
+my_time_stop_attack_mirage = false;
 
 my_attack_cooldown_finisher_delay_1 = 0.9*SEC;
 my_attack_cooldown_finisher_delay_2 = 1.2*SEC;

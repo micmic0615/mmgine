@@ -14,6 +14,7 @@ if (room_initiate){
 			room_timespeed_set(global.time_change_value);
 			global.time_change_duration -= 1;
 		} else {
+			
 			room_timespeed_set(global.time_base);
 		}
 	#endregion

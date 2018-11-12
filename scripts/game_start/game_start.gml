@@ -6,8 +6,9 @@ room_speed = 60;
 #macro ROOM room_object
 
 #macro INFINITY 9999999
-#macro TIMESPEED global.time_speed
-#macro PPS (1/(room_speed/TIMESPEED))
+#macro TIMESPEED (global.time_speed*physics_time_local)
+//#macro PPS (1/(room_speed/TIMESPEED))
+#macro PPS (1/(room_speed))
 #macro SEC (room_speed) div 1
 
 #macro GRAVITY_ANGLE global.gravity_angle

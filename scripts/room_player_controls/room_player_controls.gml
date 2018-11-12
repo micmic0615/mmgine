@@ -73,7 +73,7 @@ if (player_controllable && global.replay_mode == "record"){
 				}
 				
 				if (mouse_check_button_pressed(global.mouse_2)){
-					hero_action_attack_3([mouse_x, mouse_y])
+					hero_action_attack_4([mouse_x, mouse_y])
 				}
 				
 				if (keyboard_check_pressed(global.key_action_1)){

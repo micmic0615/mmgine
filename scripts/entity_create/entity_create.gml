@@ -5,6 +5,8 @@ ROOM = instance_find(ROOM_OBJECT, 0);
 depth = 50;
 ds_inventory = ds_list_create();
 
+physics_time_local = 1;
+
 physics_motion_list = ds_create("list");
 physics_motion_x = 0;
 physics_motion_y = 0;

@@ -17,7 +17,8 @@ var mirage_data = [
 	blend,
 	0.5,
 	duration,
-	duration
+	duration,
+	noone
 ]
 		
 with(ROOM){ds_list_add(draw_mirage_list, mirage_data)}

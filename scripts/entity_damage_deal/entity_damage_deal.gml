@@ -41,6 +41,7 @@ if (ACTIVE && ALIVE){
 				if (ACTIVE && ALIVE && !status_immortal){
 					var offset_angle = degtorad(angle_between(final_target.x, final_target.y, me.x, me.y) + random(60) - 30);
 					if (final_target.entity_class_lower == "actor"){
+						if (final_target == me){offset_angle = degtorad(random(360))}
 						entity_draw_text_following(final_value, [cos(offset_angle)*40, sin(offset_angle)*40], 1.5*SEC, c_white, 32);
 					}
 					

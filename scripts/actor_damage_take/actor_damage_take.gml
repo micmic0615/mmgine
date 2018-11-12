@@ -13,7 +13,7 @@ var adjusted_value = is_array(adjusted_args) ? adjusted_args[1] : base_value;
 var adjusted_lethal = is_array(adjusted_args) ? adjusted_args[2] : base_lethal;
 
 if (ROOM.player_main_actor == id){
-	if (actor_buff_find("flinched") == undefined){
+	if (actor_buff_find("flinched") == undefined && adjusted_source != id){
 		room_timespeed_temp(0.05, 0.5*SEC, true)
 	}
 };

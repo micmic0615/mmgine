@@ -1,0 +1,1 @@
+return (actor_actions_enabled && my_attack_cast_timer_1 <= 0 && my_attack_cast_timer_2 <= 0 && my_attack_cast_timer_3 <= 0 && my_attack_cast_timer_4 <= 0)

@@ -2,6 +2,7 @@ ROOM = id;
 ACTIVE = true;
 ALIVE = true;
 
+physics_time_local = 1;
 random_set_seed(random(INFINITY))
 
 GRAVITY_ANGLE = 90;
