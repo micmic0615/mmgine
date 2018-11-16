@@ -3,6 +3,7 @@ var args = argument0;
 var base_target = args[0];
 var base_value = args[1];
 var base_lethal = args[2];
+var damage_id = args[3];
 
 if (base_target != id){
 	var total_heal = base_value*(my_rally_lifesteal/100);
@@ -20,18 +21,20 @@ if (base_target != id){
 	}
 
 			
+	if (damage_id == "main_attack" || damage_id == "beatdown_attack"){
+		my_rally_lifebank += total_heal;
+		var whole_heal = floor(my_rally_lifebank);
+		my_rally_lifebank -= whole_heal;
+		var offset_angle = degtorad(270 + random(30) - 15);
+		var previous_health = status_health_current;
+		status_health_current = min(status_health_current + whole_heal, floor(my_rally_limit));
 
-	my_rally_lifebank += total_heal;
-	var whole_heal = floor(my_rally_lifebank);
-	my_rally_lifebank -= whole_heal;
-	var offset_angle = degtorad(270 + random(30) - 15);
-	var previous_health = status_health_current;
-	status_health_current = min(status_health_current + whole_heal, floor(my_rally_limit));
-
-	var healed_amount = status_health_current - previous_health;
-	if (healed_amount > 0){
-		entity_draw_text_following("+"+string(healed_amount), [cos(offset_angle)*40, sin(offset_angle)*40], 1.5*SEC, c_red, 24);
+		var healed_amount = status_health_current - previous_health;
+		if (healed_amount > 0){
+			entity_draw_text_following("+"+string(healed_amount), [cos(offset_angle)*40, sin(offset_angle)*40], 1.5*SEC, c_red, 24);
+		}
 	}
+	
 }
 
 return [base_target, base_value, base_lethal];

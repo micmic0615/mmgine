@@ -72,7 +72,7 @@ if (base_target.status_poise_current <= 0 && base_target.status_health_current >
 		bullet.animation_sprite = "HeroBullet1";
 		entity_mirage_create(1*SEC, spawn_x, spawn_y, make_color_rgb(255,125,0), mirage_angle, mirage_direction, Hero_attack);
 			
-		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", bullet_damage_value, true]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", bullet_damage_value, true, "beatdown_attack"]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
 				
 				

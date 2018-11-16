@@ -6,6 +6,8 @@ if (ACTIVE && ALIVE){
 	var base_target = args[0];
 	var base_value = args[1];
 	var base_lethal = args[2];
+	var damage_id = undefined;
+	if (array_length_1d(args) >= 4){damage_id = args[3]};
 	
 	if (global.replay_mode == "play"){
 		var base_actor_id = base_target;
@@ -14,21 +16,21 @@ if (ACTIVE && ALIVE){
 		valid = true;
 		
 		if (base_target.entity_class_lower == "actor"){
-			actor_record_replay_data("damage_deal", [base_target.actor_id, base_value, base_lethal])
+			actor_record_replay_data("damage_deal", [base_target.actor_id, base_value, base_lethal, damage_id])
 		}
 	}
 	
 	if (base_target != noone && base_target.entity_class_lower != "actor"){valid = true}
 	
 	if (valid && !base_target.status_immortal){
-		var adjusted_args = entity_run_class_scripts("damage_deal", [base_target, base_value, base_lethal]);
+		var adjusted_args = entity_run_class_scripts("damage_deal", [base_target, base_value, base_lethal, damage_id]);
 
 		var adjusted_target = is_array(adjusted_args) ? adjusted_args[0] : base_target;
 		var adjusted_value = is_array(adjusted_args) ? adjusted_args[1] : base_value;
 		var adjusted_lethal = is_array(adjusted_args) ? adjusted_args[2] : base_lethal;
 		
 		var final_args = adjusted_args;
-		with(adjusted_target){final_args = entity_damage_take([me, adjusted_value, adjusted_lethal])};
+		with(adjusted_target){final_args = entity_damage_take([me, adjusted_value, adjusted_lethal, damage_id])};
 		
 		var final_target = adjusted_target;
 		var final_value = is_array(final_args) ? final_args[1] : adjusted_value;

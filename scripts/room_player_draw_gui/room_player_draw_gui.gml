@@ -42,10 +42,7 @@ if (player_main_actor != noone && instance_exists(player_main_actor)){
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
 		
-		bar_color = make_colour_rgb(180,50,180);
-		
-		draw_set_colour(bar_color);
-		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width/2, bar_loc_y + bar_height, false);
+	
 	
 		var flinch_buff = undefined;
 		with(player_main_actor){flinch_buff = actor_buff_find("flinched")}
@@ -53,10 +50,7 @@ if (player_main_actor != noone && instance_exists(player_main_actor)){
 		if (flinch_buff == undefined){
 			bar_color = make_colour_rgb(255,255,255);
 			var poise_ratio = player_main_actor.status_poise_current/player_main_actor.status_poise_max;
-			if (poise_ratio >= 0.5){
-				var random_blink = random(100);
-				bar_color = random_blink > 50 ? make_colour_rgb(255,200,255) : make_colour_rgb(255,255,255);
-			}
+		
 			
 			bar_width = bar_length*(min(1,(poise_ratio)));
 		} else {

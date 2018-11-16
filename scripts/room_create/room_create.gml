@@ -39,7 +39,7 @@ player_controls_move_dash_timer_right = 0;
 player_controls_move_dash_timer_left = 0;
 player_controls_move_dash_timer_up = 0;
 player_controls_move_dash_timer_down = 0;
-player_controls_move_dash_timer_value = 0.4*SEC;
+player_controls_move_dash_timer_value = 0.25*SEC;
 
 time_base = 1;
 time_change = 1;

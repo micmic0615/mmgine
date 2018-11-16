@@ -96,8 +96,10 @@ if (my_time_stop_channel == false){
 	
 	
 	} else {
-		if (my_attack_combo_2 < my_attack_combo_2_max){
-			my_attack_queue_2 = angle_between(target_point[0],target_point[1],x,y )  
+		if (my_attack_cooldown_timer_2 > 0 || my_attack_cast_timer_2 > 0){
+			if (my_attack_combo_2 < my_attack_combo_2_max){
+				my_attack_queue_2 = angle_between(target_point[0],target_point[1],x,y )  
+			}
 		}
 	}
 }

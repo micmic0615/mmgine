@@ -107,6 +107,8 @@ if (my_attack_cooldown_timer_1 <= 0 && hero_can_act()){
 			var speed_factor = 2.5;
 			bullet.status_movespeed_base *= speed_factor;
 			bullet.bullet_lifespan /= speed_factor;
+			bullet.bullet_seek_range = 320;
+			bullet.bullet_seek_turn_rate = 200*PPS;
 		}
 		
 		
@@ -115,7 +117,7 @@ if (my_attack_cooldown_timer_1 <= 0 && hero_can_act()){
 		var bullet_damage_value = status_damage_total + ((charge_power_ratio * my_attack_channel_power_bonus_factor)*status_damage_total)
 		var bullet_flinch_value = my_attack_bullet_flinch_damage + ((charge_power_ratio * my_attack_channel_power_bonus_factor)*my_attack_bullet_flinch_damage)
 	
-		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", bullet_damage_value*bullet_damage_factor, true]);
+		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", bullet_damage_value*bullet_damage_factor, true, "main_attack"]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", bullet_flinch_value*bullet_flinch_factor]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet*bullet_push_factor , 0.75*SEC, "movement", ["multiply",1.5]]);
 		

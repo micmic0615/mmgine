@@ -129,7 +129,7 @@ if (actor_actions_enabled){
 	
 	
 	
-	if (my_attack_channel_power_current == my_attack_channel_power_max && my_attack_channel_power_current != prev_charge){
+	if (floor_age != next_floor_age && my_attack_channel_power_current == my_attack_channel_power_max && my_attack_channel_power_current != prev_charge){
 		entity_sfx_create(
 			ExplosionBulletAlt_idle,
 			0.5*SEC,
@@ -148,8 +148,29 @@ if (actor_actions_enabled){
 		)
 	}
 	
+	var prev_dash_cooldown = my_attack_cooldown_timer_2;
+	
 	my_attack_cooldown_timer_2 -= TIMESPEED;
 	my_attack_combo_2_window_timer -= TIMESPEED;
+	
+	if (floor_age != next_floor_age && my_attack_cooldown_timer_2 <= 0 && prev_dash_cooldown > 0){
+		entity_sfx_create(
+				ExplosionBulletAlt_idle,
+				0.5*SEC,
+				0,
+				0,
+				make_color_rgb(0,255,255),
+				0,
+				1,
+				1,
+				id,
+				"expand",
+				[
+					160,
+					30
+				]
+			)
+	}
 
 	var charge_power_ratio = (my_attack_channel_power_current/my_attack_channel_power_max)
 	if(charge_power_ratio > my_attack_channel_power_min){
