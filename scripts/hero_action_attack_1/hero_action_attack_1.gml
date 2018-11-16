@@ -93,10 +93,22 @@ if (my_attack_cooldown_timer_1 <= 0 && hero_can_act()){
 		bullet.image_xscale = channel_multiplier_bullet*bullet_size_factor;
 		bullet.image_yscale = channel_multiplier_bullet*bullet_size_factor;
 		
+		
 		bullet.bullet_seek_range = 240;
 		bullet.bullet_seek_turn_rate = 160*PPS;
 		bullet.bullet_lifespan = ((((my_attack_bullet_range*PPS)/TIMESPEED)/my_attack_bullet_speed)*SEC) * bullet_life_factor;
 		bullet.bullet_collision_tile_action = "die";
+		
+		if (my_time_stop_channel){
+			with(bullet){
+				entity_motion_push(180, 0.02*SEC, bullet_angle, ["multiply",1.25], "move_motion");
+			}
+			
+			var speed_factor = 2.5;
+			bullet.status_movespeed_base *= speed_factor;
+			bullet.bullet_lifespan /= speed_factor;
+		}
+		
 		
 		bullet.animation_sprite = channel_multiplier_bullet == 2 ? "HeroBullet3" : "HeroBullet1";
 		

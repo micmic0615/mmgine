@@ -5,5 +5,7 @@ if (my_attack_cooldown_timer <= 0){
 	my_attack_channel_ongoing = 2;
 	my_attack_channel_angle_target = angle_shift(my_attack_channel_angle_target, target_angle, my_attack_channel_turn_rate*TIMESPEED);
 	
-	my_attack_channel_angle_warning = angle_between(target_point[0],target_point[1], x,y)
+	var rad_angle = degtorad(my_attack_channel_angle_target)
+	
+	my_attack_channel_angle_warning = point_direction(x,y, x + cos(rad_angle)*10,y + sin(rad_angle)*10)
 }

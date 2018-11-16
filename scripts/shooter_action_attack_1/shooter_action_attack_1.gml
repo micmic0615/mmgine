@@ -4,16 +4,26 @@ if (my_attack_cooldown_timer <= 0){
 	my_attack_direction = 1;
 	my_attack_queue_1 = undefined;
 	image_index = 0;
-	my_attack_channel_angle_target = point_direction(x,y,target_point[0],target_point[1]);
+	//my_attack_channel_angle_target = point_direction(x,y,target_point[0],target_point[1]);
+	
+	var rad_angle = degtorad(my_attack_channel_angle_target);
+	
+	var x_angle = x + cos(rad_angle)*10;
+	var y_angle = y + sin(rad_angle)*10;
+	
+	var re_angle = degtorad(point_direction(x,y,x_angle,y_angle));
+	
+	var x_re_angle = x + cos(re_angle)*10;
+	var y_re_angle = y + sin(re_angle)*10;
 	
 	var channel_multiplier_bulletchannel_multiplier_bullet = 1;
-	var bullet_angle = angle_between(target_point[0], target_point[1], x,y);
+	var bullet_angle = angle_between(x_re_angle, y_re_angle, x,y);
 	var bullet_spawn_offset = 0;
 	
 	var bullet_x = cos(degtorad(bullet_angle))*bullet_spawn_offset + x;
 	var bullet_y = sin(degtorad(bullet_angle))*bullet_spawn_offset + y;
 	
-	var bullet = actor_spawn_bullet(target_point[0], target_point[1], bullet_x,bullet_y,DefaultBullet);
+	var bullet = actor_spawn_bullet(x_re_angle, y_re_angle, bullet_x,bullet_y,DefaultBullet);
 
 	bullet.status_movespeed_base = my_attack_bullet_speed;
 	bullet.status_movesnap_base = 0.2*SEC;
