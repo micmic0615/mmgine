@@ -64,7 +64,7 @@ my_attack_3_immortal_duration = 1.5*SEC;
 
 my_attack_cast_value_4 = 1*SEC;
 my_attack_cast_timer_4 = 0;
-my_attack_delay_value_4 = 0.8*SEC;
+my_attack_delay_value_4 = 0.7*SEC;
 my_attack_delay_timer_4 = 0;
 
 my_time_stop_trigger = false;

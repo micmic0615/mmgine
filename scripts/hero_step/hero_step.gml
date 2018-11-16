@@ -56,9 +56,10 @@ if (actor_actions_enabled){
 		my_attack_cast_timer_3 -= TIMESPEED;
 		actor_buff_apply("move_set_raw", 0.1*SEC, [0], "mana_speed_lock");
 	} else if (my_attack_cast_timer_4 > 0) {
-		status_poise_current = 0;
+	
 		animation_name = "attack_all";
 		animation_angle = 0;
+		physics_gravity_current = 0;
 		animation_direction = 1;
 		physics_gravity_current = 0;
 		my_attack_cast_timer_4 -= 1;
@@ -100,7 +101,10 @@ if (actor_actions_enabled){
 				actor_buff_apply("immortal", 0.05*SEC, [], "time_stop_immortal");
 			}
 		}
+		
 		status_poise_current = 0;
+		physics_gravity_current = 0;
+		
 		actor_buff_apply("move_set_raw", 0.05*SEC, [status_movespeed_base + (my_attack_mana_speed*0.5)], "mana_speed_lock");
 		actor_buff_apply("untimed", 0.5*SEC, [], "untimed");
 		room_timespeed_temp(0.05, 0.5*SEC, false);

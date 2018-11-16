@@ -25,6 +25,7 @@ my_attack_channel_angle_target = 0;
 my_attack_channel_power_current = 0;
 my_attack_channel_power_max = 1.5*SEC;
 my_attack_channel_angle_warning = 0;
+my_attack_channel_turn_rate = 180*PPS;
 
 my_attack_dash_range = 180;
 my_attack_dash_speed = 360*PPS;
