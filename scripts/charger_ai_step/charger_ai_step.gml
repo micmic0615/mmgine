@@ -21,7 +21,7 @@ if (ai_target == noone){
 				my_attack_channel_angle_warning = angle_between(ai_target.x,ai_target.y, x,y);
 				my_attack_channel_range_warning = distance_between(ai_target.x,ai_target.y, x,y);
 				if (distance_between(ai_target.x,ai_target.y, x, y) > my_dash_range*1.75){
-					actor_action_attack_2([ai_target.x,ai_target.y]);
+					actor_action_2([ai_target.x,ai_target.y]);
 				}
 			}
 		} else {
@@ -37,7 +37,7 @@ if (ai_target == noone){
 	} else {
 		actor_action_channel([ai_target.x,ai_target.y]);
 		if (my_attack_channel_power_current >= my_attack_channel_power_max){
-			actor_action_attack_1([ai_target.x,ai_target.y]);
+			actor_action_1([ai_target.x,ai_target.y]);
 			ai_target_attack_should_channel = false
 		}
 	}

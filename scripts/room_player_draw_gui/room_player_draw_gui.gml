@@ -15,8 +15,8 @@ if (player_main_actor != noone && instance_exists(player_main_actor)){
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
 		
 		
-		bar_color = make_colour_rgb(255,170,0);
-		bar_width = bar_length*(min(1,(player_main_actor.my_rally_limit/player_main_actor.status_health_max)));
+		//bar_color = make_colour_rgb(255,170,0);
+		//bar_width = bar_length*(min(1,(player_main_actor.rally_limit/player_main_actor.status_health_max)));
 		
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);

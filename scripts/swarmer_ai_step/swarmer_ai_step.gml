@@ -35,7 +35,7 @@ if (my_clone_original == true){
 		actor_buff_apply("immortal", 4*SEC, [], "ai_immortal");
 		status_poise_current = status_poise_max;
 		
-		swarmer_action_attack_3();
+		swarmer_action_3();
 		
 		with(object_index){
 			if (my_clone_core == me && my_clone_original == false){

@@ -16,7 +16,7 @@ if (base_target.entity_class_lower == "actor" && base_lethal == false){
 	
 	if (retarget_x != undefined && retarget_y != undefined){
 		my_attack_cooldown_timer = 0;
-		seeker_action_attack_2([retarget_x, retarget_y])
+		seeker_action_2([retarget_x, retarget_y])
 	}
 }
 

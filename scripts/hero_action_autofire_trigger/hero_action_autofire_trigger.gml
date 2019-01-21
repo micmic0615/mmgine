@@ -2,7 +2,6 @@ var target_point = argument0;
 var my_attack_combo_2_max = 3;
 
 
-if (hero_can_act() && status_poise_current/status_poise_max >= 0.5){	
 	
 	var charge_power_ratio = my_attack_channel_power_current/my_attack_channel_power_max;
 	
@@ -53,4 +52,3 @@ if (hero_can_act() && status_poise_current/status_poise_max >= 0.5){
 	my_attack_channel_power_current = 0;
 	
 	actor_buff_apply("immortal", iframe_duration, [], "on_hit_iframe");
-}

@@ -8,7 +8,6 @@
         "33aa865a-c930-4904-8424-bbf0a40e5c97",
         "f20da771-8cc4-48af-b2fa-8cf5fe31cb20",
         "41e35712-aa9c-4ea4-a637-a15efb423941",
-        "b2823a13-7661-4294-a761-b09563fa2b62",
         "c88f5ff6-4707-468b-b9fc-cad63a750571",
         "d9c306f4-012b-4461-82c4-07168d523ede",
         "cd133a85-05c5-4dfa-aad6-166966886ca9",
@@ -18,9 +17,8 @@
         "22e0f425-490e-4e69-a379-078c8d24cfc3",
         "f096f9e6-c276-49a9-b9ee-f0a84ec1168e",
         "906ecc6d-908f-40ab-bdd3-ad00b8e586aa",
-        "33ca12e7-fadb-4c7f-840c-6b4a62237671",
-        "c6230ff3-4534-4f11-a8ca-e86cd6510bc0",
-        "65f5988d-39dd-42b0-9541-b806c6eec585"
+        "65f5988d-39dd-42b0-9541-b806c6eec585",
+        "e83154d7-7c05-46dd-9d55-fbb69ea8e8b4"
     ],
     "filterType": "GMScript",
     "folderName": "Hero",

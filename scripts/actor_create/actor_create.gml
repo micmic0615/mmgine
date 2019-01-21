@@ -8,6 +8,7 @@ physics_gravity_on = true;
 
 status_health_max = 100;
 status_damage_base = 25;
+status_force_base = 25;
 status_poise_max = 20;
 status_poise_regen = 2*PPS;
 status_flinch_duration = 2*SEC;
@@ -18,6 +19,9 @@ status_armor_poise = 0;
 status_buff_list = ds_create("list");
 
 actor_actions_enabled = true;
+actor_actions_idle = true;
+actor_actions_id = "none";
+
 ai_enabled = true;
 ai_delay = 1*SEC;
 
@@ -28,6 +32,7 @@ entity_run_type_scripts("create");
 
 draw_bar_health_damage = status_health_max;
 status_damage_total = status_damage_base;
+status_force_total = status_force_base;
 status_poise_current = status_poise_max;
 
 if (ai_enabled && global.replay_mode == "record"){entity_run_type_scripts("ai_create")}

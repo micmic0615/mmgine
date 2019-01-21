@@ -28,7 +28,7 @@ if (ai_target == noone){
 		actor_action_channel([ai_target.x,ai_target.y]);
 		
 		if (my_attack_channel_power_current >= my_attack_channel_power_max){
-			actor_action_attack_1([ai_target.x,ai_target.y])
+			actor_action_1([ai_target.x,ai_target.y])
 			ai_target_attack_should_channel = false;
 		}
 	}

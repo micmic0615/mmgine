@@ -33,8 +33,13 @@
 	
 				p[4] = (explosion_size*2)/sprite_get_width(sprite_val);
 				p[5] = (explosion_size*2)/sprite_get_height(sprite_val);
+				
 	
 				p[8] = duration/total_duration;
+				
+				if (array_length_1d(style_data) == 3){
+					base_alpha = style_data[2];
+				}
 				break
 			
 			

@@ -1,8 +1,6 @@
 var target_point = argument0;
 var my_attack_combo_2_max = 3;
 
-
-if (hero_can_act()){
 	if (!my_time_stop_channel){
 		if (my_attack_channel_power_current == my_attack_channel_power_max){
 			my_attack_channel_power_current = 0;
@@ -31,4 +29,3 @@ if (hero_can_act()){
 			]
 		)
 	}
-}
