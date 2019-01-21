@@ -35,7 +35,7 @@ global.key_action_1 = vk_space;
 global.key_pause = vk_enter;
 global.key_replay_load = vk_escape;
 
-global.next_room = Level00;
+global.next_room = LevelProto00;
 
 global.random_seed = ds_list_create();
 

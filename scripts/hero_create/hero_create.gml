@@ -14,7 +14,7 @@ collision_persistent = true;
 
 player_faction = 0;
 
-my_attack_bullet_speed = 600*PPS;
+my_attack_bullet_speed = 900*PPS;
 my_attack_bullet_range = 800;
 my_attack_direction = 1;
 
@@ -41,19 +41,19 @@ my_attack_mana_speed_duration = 2*SEC;
 my_attack_channel_ongoing = 0;
 my_attack_channel_angle_target = 0;
 my_attack_channel_power_current = 0;
-my_attack_channel_power_max = 3.5*SEC;
+my_attack_channel_power_max = 2.5*SEC;
 my_attack_channel_power_bonus_factor = 2;
 my_attack_channel_power_min = 0.25;
 
 
-my_attack_cooldown_value_1 = 0;
+my_attack_cooldown_value_1 = 0.15*SEC;
 my_attack_cooldown_value_2 = 0;
 my_attack_cooldown_timer_1 = 0;
 my_attack_cooldown_timer_2 = 0;
 //my_attack_cooldown_value_3 = 4*SEC;
 //my_attack_cooldown_timer_3 = 0;
 
-my_attack_cast_value_1 = 0.25*SEC;
+my_attack_cast_value_1 = 0.2*SEC;
 my_attack_cast_value_2 = 0.25*SEC;
 my_attack_cast_timer_1 = 0;
 my_attack_cast_timer_2 = 0;
