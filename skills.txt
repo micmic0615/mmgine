@@ -1,36 +1,36 @@
 tier 1 
 
-execute
+do (magic missle venge)
 shoot: basic shooting 
 aux: fluid aux, applies a slightly less improvement of the main mod to itself (stacks with itself)
 beatdown: on beatdown, gain the auto-fire buff that fires on random directions
 passive: slightly improves health and poise
 
-crash 
+crash (storm bolt sven)
 shoot: high cast point, high flinch, moderate damage 
 aux: improves the flinch of skills
 beatdown: extended stun time
 passive: improves poise
 
-split
+split (split shot medusa)
 shoot: low cast point, multi-bullet shot that has no tracking and below average range
 aux: makes abilities split/forked
 beatdown: short range auto-fire that targets stunned enemies only
 passive: adds dash combo
 
-load
+load (call down gyro)
 shoot: fires a bomb that has low range/speed/no-tracking and reduced impact damage but has a big explosion
 aux: increases the explosion of shots
 beatdown: stunned enemies continuously explode (doesn't damage itself)
 passive: on-dash explosion that deals minor damage
 
-breach
+breach (shockwave magnus)
 shoot: long range, low damage, high tracking shot
 aux: adds penetration or range to most abilities
 beatdown: long range, penetrating, auto-fire
 passive: improves dash range
 
-ping
+ping (rocket barrage gyro)
 shoot: rapid, minor damage attacks that have decent tracking
 aux: improves the attack speed of most abilities
 beatdown: hitting a stunned target automatically fires another bullet that tracks it (has cooldown)
@@ -40,31 +40,31 @@ passive: improves poise regeneration rate
 
 tier 2
 
-get
+get (meat hook pudge)
 shoot: fast projectile, low damage attack that pulls targets closer
 aux: adds a clumping/pulling effect to most abilities
 beatdown: teleports stunned targets beside you
 passive: dashing releases a pulse that pulls nearby enemies to your previous position
 
-focus
+focus (bash slardar)
 shoot: slightly worse basic shooting that automatically fires a fully-charged shot every X attacks
 aux: adds a combo function to most abilities
 beatdown: hitting stunned enemies builds up your charged
 passive: faster charge build-up
 
-seek
+seek (heat seeking missle tinker)
 shoot: low speed bullets that have ridiculous tracking
 aux: improves the tracking of most abilities
 beatdown: on beatdown, fires a cluster of homing bullets
 passive: speedbuff on kill
 
-cull
+cull (laguna blade lina)
 shoot: high cast point, low range attack that deals heavy damage 
 aux: improves the damage of most abilities
 beatdown: you deal more damage to stunned enemies
 passive: improves health
 
-force
+force (gust drow)
 shoot: a large radius shot that deals low damage but has great knockback
 aux: improves the knockback of most abilities
 beatdown: releases a pulse on beatdown that pushes and slows non-stunned enemies away, deals minor damage to stunned enemies
@@ -74,25 +74,25 @@ passive: dashing into enemies push them away
 
 tier 3
 
-decay
+decay (decay undy)
 shoot: low damage shot that places a debuff on enemies that amplify damage
 aux: abilities apply a minor amplify debuff 
 beatdown: stunned enemies fires bullets that apply the amplify debuff
 passive: reactive armor (being hit temporarily applies a damage mitigation buff)
 
-bind
+bind (overgrowth treant)
 shoot: low damage shot that applies a root debuff, locking enemies on place (doesnt prevent them from attacking)
 aux: abilities apply a minor root debuff
 beatdown: stunned enemies root nearby enemies
 passive: improves basic move speed
 
-linger
+linger (midnight pulse enigma)
 shoot: slow moving projectile that hits enemies multiple times
 aux: adds a linger effect on impact to most abilities
 beatdown: on beatdown, gain a trail-blaze buff
 passive: shield pulse immortality lasts longer
 
-extract
+extract (sunray phenix)
 shoot: high cast point, heavy damage continuous rapid shot that costs health (cost isnt lethal)
 aux: a better fluid aux, applies a better improvement of the main mod to itself (stacks with itself) but shots cost health
 beatdown: hitting stunned enemies more health from rally

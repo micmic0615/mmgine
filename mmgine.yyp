@@ -122,7 +122,7 @@
             "Key": "09c56d30-a6af-4930-a017-97642c89de6d",
             "Value": {
                 "id": "08a35e3c-7c2b-4467-a764-56a68acd9e16",
-                "resourcePath": "scripts\\hero_mod_shoot_short\\hero_mod_shoot_short.yy",
+                "resourcePath": "scripts\\hero_mod_shoot_focus\\hero_mod_shoot_focus.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -516,6 +516,14 @@
                 "id": "bff13a02-98a9-4521-abd4-bbbb810ef549",
                 "resourcePath": "rooms\\GameStart\\GameStart.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "2bd03a6d-d14a-4ec5-a86e-deec526a7fa9",
+            "Value": {
+                "id": "7a7df7ca-a6b4-4c5e-b52d-173645072b07",
+                "resourcePath": "sprites\\HeroBullet5_idle\\HeroBullet5_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -999,6 +1007,14 @@
             }
         },
         {
+            "Key": "567347dc-9c7e-4d45-8f4f-7c80d839c48b",
+            "Value": {
+                "id": "719bb4a3-57df-443f-929b-c07a1d9e7e7a",
+                "resourcePath": "sprites\\HeroBullet7_idle\\HeroBullet7_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "569f2742-bd89-4623-b09a-d3743a8c8e7f",
             "Value": {
                 "id": "4c8af9b4-ba84-4b06-96c9-1aaea5dce33d",
@@ -1471,6 +1487,14 @@
             }
         },
         {
+            "Key": "7f001477-9ae0-4ef5-ad50-64b86665ebf8",
+            "Value": {
+                "id": "c6fa9121-191d-411a-ae7f-9720153a438f",
+                "resourcePath": "sprites\\HeroBullet6_idle\\HeroBullet6_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7f4f34af-71bb-4f9a-9efc-0ef31eeb5ba0",
             "Value": {
                 "id": "69934afd-3344-4a61-8233-c26e07cb40a1",
@@ -1764,6 +1788,14 @@
                 "id": "af251089-bf95-441a-bef9-310ec9433c06",
                 "resourcePath": "sprites\\PelterBullet1_idle\\PelterBullet1_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a03f6549-1566-457e-82d6-496d010fc8c2",
+            "Value": {
+                "id": "dc38115e-a85c-4893-aa37-522578d7076a",
+                "resourcePath": "scripts\\hero_mod_shoot_do\\hero_mod_shoot_do.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2912,6 +2944,7 @@
         "d2e5542e-c8fb-4f86-be09-8368de6c8a5e",
         "c0b0f5fe-c0dd-4b9f-8b5a-d201cacc698b",
         "afff734d-cacf-425f-901a-6b97790fa7cb",
+        "a03f6549-1566-457e-82d6-496d010fc8c2",
         "86ffb56f-fb17-47de-b0e3-fa5b0510c946",
         "71909ebc-3037-4755-ac24-f3534af0e25a",
         "4896aaa4-c7c8-44fa-9d51-c95b7637ca37",

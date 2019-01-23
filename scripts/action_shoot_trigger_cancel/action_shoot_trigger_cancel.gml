@@ -13,7 +13,7 @@ if (actor_actions_enabled){
 		action_shoot_step_phase = 1;
 		actor_actions_id = "shoot";
 	} else if (actor_actions_id == "shoot"){
-		action_shoot_queue_angle = degtorad(angle_between(target_point[0],target_point[1],x,y ));
-		action_shoot_queue_cast = true;
+		//action_shoot_queue_angle = degtorad(angle_between(target_point[0],target_point[1],x,y ));
+		//action_shoot_queue_cast = true;
 	}	
 }

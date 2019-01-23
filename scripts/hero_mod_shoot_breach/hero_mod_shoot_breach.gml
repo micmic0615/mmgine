@@ -1,19 +1,23 @@
-my_shoot_bullet_range *= 1.1;
+hero_mod_shoot_do();
 
-my_shoot_poise_cost += 0.08;
+my_shoot_bullet_type = [DefaultBullet, "HeroBullet6"];
+my_shoot_flair_color = make_color_rgb(255,125,0);
 
-action_shoot_bullet_seek_range *= 1.25;
-action_shoot_bullet_seek_turn_rate *= 0.85;
-action_shoot_bullet_collision_destroy_value += 1;
+my_shoot_bullet_radius = 120;
+my_shoot_bullet_speed = 1000*PPS;
+my_shoot_bullet_range = 1000;
+my_shoot_bullet_explosion = 150;
 
-my_shoot_damage = [
-	my_shoot_damage[0]*0.75,
-	my_shoot_damage[1]*0.75,
-];
+my_shoot_recoil_range = 150;
 
-my_shoot_flinch = [
-	my_shoot_flinch[0]*0.75,
-	my_shoot_flinch[1]*0.75,
-];
+my_shoot_cast_value = 0.2*SEC;
+
+my_shoot_damage = [0.8,0.4];
+my_shoot_flinch = [0.5,0.1];
+my_shoot_push = [0, 0];
+
+action_shoot_bullet_seek_range = 320;
+action_shoot_bullet_seek_turn_rate = 200*PPS;
+action_shoot_bullet_collision_destroy_value = 3;
 
 hero_mod_shoot_apply();

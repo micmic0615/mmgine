@@ -5,12 +5,9 @@ var prev_charge = my_charge_current;
 
 if (actor_actions_idle && my_charge_current < my_charge_max){
 	var charge_sfx_interval = 0.4*SEC;
-	if (action_shoot_backswing_timer <= 0){
+	if (action_shoot_cast_timer <= 0 && action_shoot_channel_timer <= 0){
 		my_charge_current += TIMESPEED
-	} else {
-		my_charge_current += TIMESPEED*(my_charge_max/SEC)
-		charge_sfx_interval = 0.1*SEC;
-	}
+	} 
 	
 	if (floor_age != next_floor_age && floor_age % (charge_sfx_interval) == 0){
 		entity_sfx_create_pulse(

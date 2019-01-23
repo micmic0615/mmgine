@@ -63,16 +63,12 @@ if (player_controllable && global.replay_mode == "record"){
 						me.player_controls_move_dash_timer_left = me.player_controls_move_dash_timer_value;
 					}
 				}
-				
-				if (mouse_check_button_pressed(global.mouse_1)){					
-					action_shoot_trigger_cancel([mouse_x, mouse_y]);
-				}
 			
 				if (mouse_check_button(global.mouse_1)){
 					actor_action_1([mouse_x, mouse_y]);
 				}
 				
-				if (mouse_check_button_pressed(global.mouse_2)){
+				if (mouse_check_button(global.mouse_2)){
 					hero_action_2([mouse_x, mouse_y])
 				}
 				

@@ -12,19 +12,21 @@ if (charge_value == 1){
 var max_combo = (action_shoot_combo_count % action_shoot_combo_max) == (action_shoot_combo_max - 1);
 
 if (max_combo){
-	bonus_size += 0.75;
-	bonus_speed += 0.25;
-	bonus_damage += 0.5;
-	bonus_flinch += 1;
-	charge_value += my_charge_min/my_charge_max;
-	
+	//bonus_size += 1;
+	//bonus_speed += 0.25;
+	//bonus_damage += 0.5;
+	//bonus_flinch += 1;
+	charge_value = 1;
+}
+
+if (charge_value == 1){
 	entity_sfx_create_pulse(
 		/*sprite*/ ExplosionBulletAlt_idle,
-		/*duration*/ 0.25*SEC*TIMESPEED,
+		/*duration*/ 0.35*SEC*TIMESPEED,
 		/*blend*/ my_shoot_flair_color,
 		/*style_data*/ [
+			150,
 			30,
-			120,
 			2
 		]
 	)
@@ -48,7 +50,7 @@ if (charge_value < 1){
 }
 
 if (max_combo){
-	action_shoot_recoil_range += my_shoot_recoil_range*1;
+	action_shoot_recoil_range += my_shoot_recoil_range*0.5;
 }
 
 var diminishing_flinch_main = my_shoot_flinch[0] * flinch_multiplier;

@@ -1,5 +1,7 @@
 var argument_array = argument0;
 
+action_shoot_bullet_type = argument_array[0];
+
 action_shoot_bullet_radius = argument_array[1];
 action_shoot_bullet_speed = argument_array[2];
 action_shoot_bullet_range = argument_array[3]; 

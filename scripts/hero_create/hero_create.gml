@@ -15,26 +15,7 @@ collision_persistent = true;
 
 player_faction = 0;
 
-my_shoot_bullet_radius = 64;
-my_shoot_bullet_speed = 1200*PPS;
-my_shoot_bullet_range = 800;
-my_shoot_bullet_count = 1;
-my_shoot_bullet_explosion = 120;
-my_shoot_poise_cost = 0.1;
-
-my_shoot_recoil_range = 90;
-my_shoot_flair_color = make_color_rgb(255,0,200);
-
-my_shoot_combo_max = 5;
-my_shoot_cast_value = 0.1*SEC;
-my_shoot_channel_value = 0.15*SEC;
-my_shoot_cooldown_value = 0.05*SEC;
-
-my_shoot_damage = [1,0.2];
-my_shoot_flinch = [1,0.2];
-my_shoot_push = [100, 10];
-
-
+hero_mod_shoot_do();
 
 action_shoot_create([
 	/*bullet_type*/ [DefaultBullet, "HeroBullet4"],
@@ -47,7 +28,7 @@ action_shoot_create([
 	/*recoil_range*/ my_shoot_recoil_range,
 	/*cast_value*/ my_shoot_cast_value,
 	/*channel_value*/ my_shoot_channel_value,
-	/*backswing_value*/ 1*SEC,
+	/*backswing_value*/ 0.2*SEC,
 	/*cooldown_value*/ my_shoot_cooldown_value,
 	/*combo_max*/ my_shoot_combo_max,
 	/*damage*/ my_shoot_damage,
@@ -55,13 +36,6 @@ action_shoot_create([
 	/*push*/ my_shoot_push,
 	/*flair_color*/ my_shoot_flair_color,
 ]);
-
-hero_mod_shoot_split();
-hero_mod_shoot_split();
-hero_mod_shoot_split();
-hero_mod_shoot_crash();
-hero_mod_shoot_crash();
-hero_mod_shoot_crash();
 
 my_dash_speed = 540*PPS;
 my_dash_range = 360;
@@ -82,8 +56,8 @@ action_dash_create([
 my_charge_current = 0;
 my_charge_min = 1*SEC;
 my_charge_max = 3*SEC;
-my_charge_factor_size = 3;
-my_charge_factor_speed = 2;
+my_charge_factor_size = 1.5;
+my_charge_factor_speed = 1;
 my_charge_factor_damage = 2;
 my_charge_factor_flinch = 5;
 

@@ -14,10 +14,14 @@ action_shoot_combo_timer = action_shoot_cast_value + action_shoot_channel_value 
 
 while(bullet_count > 0){
 	var bullet = actor_spawn_bullet(action_shoot_target_point[0], action_shoot_target_point[1], bullet_x,bullet_y, action_shoot_bullet_type[0]);
+	var local_angle = bullet_angle;
+	
+	local_angle += (random(action_shoot_angle_chaos) - (action_shoot_angle_chaos*0.5))
 	
 	bullet.status_movespeed_base = action_shoot_bullet_speed;
 	bullet.status_movesnap_base = 0.2*SEC;
-	bullet.bullet_action_move_angle = bullet_angle + ((bullet_count-1)*bullet_spread_angle) - ((bullet_max-1)*(bullet_spread_angle/2));
+	
+	bullet.bullet_action_move_angle = local_angle + ((bullet_count-1)*bullet_spread_angle) - ((bullet_max-1)*(bullet_spread_angle/2));
 		
 	var rad_bullet_angle = degtorad(bullet.bullet_action_move_angle);
 		

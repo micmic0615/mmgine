@@ -7,7 +7,10 @@
         "4b33227a-c240-450c-8d3a-844460b663b0",
         "a2ec3a4d-5225-44a0-818f-ea0a9f2012f4",
         "261f98f6-97bf-426a-a911-afb35ad71cb7",
-        "75659d1c-bc83-4b49-8249-31f8e1ebf9b9"
+        "75659d1c-bc83-4b49-8249-31f8e1ebf9b9",
+        "2bd03a6d-d14a-4ec5-a86e-deec526a7fa9",
+        "7f001477-9ae0-4ef5-ad50-64b86665ebf8",
+        "567347dc-9c7e-4d45-8f4f-7c80d839c48b"
     ],
     "filterType": "GMSprite",
     "folderName": "HeroBullet",
