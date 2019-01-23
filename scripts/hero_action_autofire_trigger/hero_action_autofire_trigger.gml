@@ -7,10 +7,10 @@ var my_attack_combo_2_max = 3;
 	
 	var iframe_duration = my_attack_3_immortal_duration
 	if (status_immortal){
-		hero_shield_pulse(5, 800, 200)
+		hero_action_repel(5, 800, 200)
 		iframe_duration += 0.5*SEC
 	} else {
-		hero_shield_pulse(1.5, 300, 50)
+		hero_action_repel(1.5, 300, 50)
 	}
 	
 	if (charge_power_ratio == 1){

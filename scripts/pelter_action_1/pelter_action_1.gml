@@ -37,9 +37,6 @@ if (my_attack_cooldown_timer <= 0){
 	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*1.5]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", -50 , 0.75*SEC, "movement", ["multiply",1.5]]);
 	
-	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", INFINITY, true]);
-	ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
-	
 	entity_motion_push((my_attack_dash_range), (my_attack_dash_speed/(my_attack_dash_range*PPS))*SEC, my_attack_pelter_angle - 180, ["multiply",1.25], "move_motion");
 	
 	my_attack_channel_power_current = 0;

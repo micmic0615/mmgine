@@ -21,6 +21,8 @@ bullet_seek_angle_limit = 60;
 
 
 bullet_death_spawn = ds_create("map");
-bullet_death_spawn_trigger = "death"
+bullet_death_spawn_trigger = "death";
+
+collision_destroy_enabled = true;
 
 entity_run_type_scripts("create");

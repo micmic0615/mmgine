@@ -53,10 +53,7 @@ if (my_attack_cooldown_timer <= 0 && count < my_attack_bullets_max){
 	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total, false]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", INFINITY]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100*channel_multiplier_bullet , 0.75*SEC, "movement", ["multiply",1.5]]);
-	
-	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", INFINITY, true]);
-	ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
-	
+		
 	entity_motion_push((my_attack_dash_range), (my_attack_dash_speed/(my_attack_dash_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
 	
 	actor_buff_apply("move_set_raw", my_attack_cast_value, [0], "mana_speed_lock");

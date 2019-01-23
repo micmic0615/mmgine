@@ -14,6 +14,8 @@ action_dash_combo_max = argument_array[5];
 action_dash_combo_count = 0;
 action_dash_combo_timer = 0;
 
+action_dash_flair_color = argument_array[6];
+
 action_dash_target_point = [0,0];
 action_dash_target_angle = 0;
 

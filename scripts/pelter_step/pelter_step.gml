@@ -69,9 +69,6 @@ if (actor_actions_enabled){
 				ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*0.5, true]);
 				ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*0.75]);
 				ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", -25 , 0.75*SEC, "movement", ["multiply",1.5]]);
-	
-				ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "bullet", INFINITY, true]);
-				ds_list_add(bullet.bullet_collision_entity_actions, ["self_damage", "actor", INFINITY]);
 				
 				var mini_dash_range = my_attack_dash_range*0.15
 	

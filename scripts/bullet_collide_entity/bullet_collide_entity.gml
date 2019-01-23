@@ -2,6 +2,14 @@ if (ACTIVE && ALIVE){
 	for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 		var p = ds_list_find_value(collision_entities_connect, i);
 		ds_list_add(collision_entities_exceptions, p);
+		
+		if (collision_destroy_enabled){
+			collision_destroy_value_current -= p.collision_destroy_value_max;
+		}
+		
+		if (p.collision_destroy_enabled){
+			p.collision_destroy_value_current -= collision_destroy_value_max;
+		}
 	}
 	
 	for(var i = 0; i < ds_list_size(bullet_collision_entity_actions);i++){
@@ -13,15 +21,6 @@ if (ACTIVE && ALIVE){
 			case "damage": bullet_collision_damage(p); break;
 			case "flinch": bullet_collision_flinch(p); break;
 			case "push": bullet_collision_push(p); break;
-			
-			case "self_damage": 
-				var trigger = false;
-				for(var i2 = 0; i2 < ds_list_size(collision_entities_connect);i2++){
-					if (trigger == false && ds_list_find_value(collision_entities_connect, i2).entity_class_lower == target_class){trigger = true}
-				};
-				
-				if (trigger){entity_damage_deal([id, p[2], true])}
-				break;
 		}
 	}
 

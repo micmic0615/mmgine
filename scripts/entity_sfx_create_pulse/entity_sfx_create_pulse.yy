@@ -1,8 +1,8 @@
 {
-    "id": "906ecc6d-908f-40ab-bdd3-ad00b8e586aa",
+    "id": "db51c592-be04-4909-8907-e2e4518e4ebd",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_shield_pulse",
+    "name": "entity_sfx_create_pulse",
     "IsCompatibility": false,
     "IsDnD": false
 }

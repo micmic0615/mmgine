@@ -93,7 +93,7 @@ entity_run_type_scripts("step");
 		
 		if (status_immortal){
 			if (ROOM.room_age_real % (0.2*SEC) == 0){
-				entity_sfx_create(
+				entity_sfx_create_basic(
 					ExplosionBulletAlt_idle,
 					1*SEC*TIMESPEED,
 					0,

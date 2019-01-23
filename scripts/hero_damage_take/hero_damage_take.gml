@@ -13,7 +13,7 @@
 //			my_shield_damage_accumulated = 0;	
 //			actor_buff_apply("immortal", 3*SEC, [], "on_hit_iframe");
 		
-//			hero_shield_pulse(0.25, 400, 250);
+//			hero_action_repel(0.25, 400, 250);
 //			actor_buff_apply("untimed", 0.5*SEC, [], "untimed");
 //			room_timespeed_temp(0.05, 0.5*SEC, true);
 //		}
@@ -26,7 +26,7 @@
 //		actor_buff_apply("untimed", 1*SEC, [], "untimed");
 //		room_timespeed_temp(0.05, 1*SEC, true);
 	
-//		hero_shield_pulse(1, 800, 500)
+//		hero_action_repel(1, 800, 500)
 //	}
 //}
 

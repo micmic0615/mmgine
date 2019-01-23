@@ -12,7 +12,7 @@ var my_attack_combo_2_max = 3;
 	} else {
 		my_time_stop_channel = false;
 		actor_buff_apply("immortal", 0.5*SEC, [], "time_stop_immortal");
-		entity_sfx_create(
+		entity_sfx_create_basic(
 			ExplosionBulletAlt_idle,
 			0.5*SEC,
 			0,

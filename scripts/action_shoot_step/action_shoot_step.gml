@@ -58,6 +58,7 @@ if (actor_actions_enabled){
 }
 
 if (actor_actions_id == "shoot"){
+	action_shoot_target_angle = point_direction(x,y,action_shoot_target_point[0],action_shoot_target_point[1]);
 	var compute_flip = (action_shoot_target_angle <= 90 && action_shoot_target_angle >= 0) || (action_shoot_target_angle <= 360 && action_shoot_target_angle >= 270)
 	var action_angle = compute_flip ? action_shoot_target_angle : action_shoot_target_angle - 180;
 	var action_direction = compute_flip ? 1 : -1;
@@ -72,7 +73,7 @@ if (actor_actions_id == "shoot"){
 			var floor_age = floor(ROOM.room_age_game);
 			var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
 			if (floor_age != next_floor_age && floor_age % (0.04*SEC) == 0){
-				entity_mirage_create(0.4*SEC, 0, 0, make_color_rgb(255,255,0), action_angle, action_direction);
+				entity_mirage_create(0.4*SEC, 0, 0, action_shoot_flair_color, action_angle, action_direction);
 			}
 			break
 		case 3: 

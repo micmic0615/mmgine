@@ -136,4 +136,9 @@ if (collision_count_entities > 0 || collision_count_tiles > 0){
 	if (sign(final_x_push) < 0){collision_contact_x = "right"}
 	else if (sign(final_x_push) > 0){collision_contact_x = "left"}
 }
+
+if (collision_destroy_enabled && collision_destroy_value_current <= 0){
+	entity_damage_deal([id, status_health_current, true])
+}
+
 return [collision_count_entities, collision_count_tiles]

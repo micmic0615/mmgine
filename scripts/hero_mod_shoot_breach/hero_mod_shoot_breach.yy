@@ -1,8 +1,8 @@
 {
-    "id": "d2e5542e-c8fb-4f86-be09-8368de6c8a5e",
+    "id": "28b69fbd-33b2-418a-b2a9-c0842500380a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_action_charge",
+    "name": "hero_mod_shoot_breach",
     "IsCompatibility": false,
     "IsDnD": false
 }

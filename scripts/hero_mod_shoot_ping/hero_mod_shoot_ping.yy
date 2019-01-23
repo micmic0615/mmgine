@@ -1,8 +1,8 @@
 {
-    "id": "33bdf483-f873-4640-9bfa-9fd9eab880da",
+    "id": "71909ebc-3037-4755-ac24-f3534af0e25a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "entity_sfx_create",
+    "name": "hero_mod_shoot_ping",
     "IsCompatibility": false,
     "IsDnD": false
 }

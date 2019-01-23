@@ -51,6 +51,10 @@ collision_enabled_doodads = true;
 collision_enabled_tiles = true;
 collision_faction = "all";
 
+collision_destroy_enabled = false;
+collision_destroy_value_current = 1;
+collision_destroy_value_max = 1;
+
 
 status_health_max = 1;
 status_movespeed_base = 100*PPS;

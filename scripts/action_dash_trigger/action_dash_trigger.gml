@@ -5,8 +5,6 @@ if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 
 	action_dash_combo_timer = action_dash_cooldown_rest;
 	action_dash_combo_count++;
 	
-	
-	
 	if (action_dash_combo_count >= action_dash_combo_max){
 		action_dash_cooldown_timer = action_dash_cooldown_rest;
 	} else {
