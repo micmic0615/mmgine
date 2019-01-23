@@ -1,8 +1,8 @@
 {
-    "id": "afff734d-cacf-425f-901a-6b97790fa7cb",
+    "id": "a0deb67e-4b23-400d-9f2a-912222163ed2",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_action_autofire_trigger",
+    "name": "hero_aux_shoot_split",
     "IsCompatibility": false,
     "IsDnD": false
 }

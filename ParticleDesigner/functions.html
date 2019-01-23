@@ -1,0 +1,43 @@
+<head>
+<title>Functions</title>
+<style type="text/css">
+.c_box {
+width: 80%;
+background-color: #CCCCCC;
+border: 1px solid #666666;
+padding: 10px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>Functions</h3>
+<a href="HELP.html">Full help file</a><br><br>
+<div class="c_box">
+<table class="main" cellspacing="10">
+<tr><td>
+Sname, Ename, and Pname are sample variables. You may change them, but then you MUST make sure the variable that uses it matches. Make sure that no variable is the same that is not the same particle or system. Enjoy using this program, and hope it helps you out in your games!
+<br>
+If this code is not in your game, copy this particle system create code and paste in an objects' create event. Be sure that it is called(placed) before other particle functions. Use the variable as an indicator of the system. You only need one system for each depth(usually only one is used).<br><br>
+<b>Sname = part_system_create()</b>
+<br><br>
+This is the emitter code in case you have not exported it. If you want to change it during the game, you can put it in the another event for that object:<br><br>
+<b>part_emitter_region(Sname,Ename,x,x,y,y,ps_shape_ellipse,ps_distr_gaussian)</b>
+<br><br>
+If you want the emitter to burst instead of stream, then replace the function with the following(You can place these functions in other events. Stream can be stopped by streaming 0 particles.):
+<br><br>
+<b>part_emitter_burst(Sname,Ename,Pname,10)</b>
+<br><br>
+If you want to clear all of the particles of that system, use this function.
+<br><br>
+<b>part_particles_clear(Sname)</b>
+<br><br>
+When you are done using the system, be sure to delete the particle system to save space.
+<br><br>
+<b>part_system_clear(Sname)</b>
+</td></tr>
+</table>
+</div><br>
+<b><a href="HELP.html">Full help file</a></b>
+</center>
+</body>

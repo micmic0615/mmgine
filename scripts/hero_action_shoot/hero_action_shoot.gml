@@ -1,9 +1,13 @@
 var charge_value = my_charge_current < my_charge_min ? 0 : my_charge_current/my_charge_max;
+if (charge_value < 1){charge_value = min(power(charge_value, 5), 0.5)}
+show_debug_message(charge_value)
 
 var bonus_size = my_charge_factor_size - 1;
-var bonus_speed = my_charge_factor_speed - 1
+var bonus_speed = my_charge_factor_speed - 1;
+var bonus_range = my_charge_factor_range - 1;
 var bonus_damage = my_charge_factor_damage - 1;
 var bonus_flinch = my_charge_factor_flinch - 1;
+var bonus_explosion = my_charge_factor_explosion - 1;
 
 if (charge_value == 1){
 	action_shoot_combo_count = -1;
@@ -11,13 +15,11 @@ if (charge_value == 1){
 
 var max_combo = (action_shoot_combo_count % action_shoot_combo_max) == (action_shoot_combo_max - 1);
 
-if (max_combo){
-	//bonus_size += 1;
-	//bonus_speed += 0.25;
-	//bonus_damage += 0.5;
-	//bonus_flinch += 1;
-	charge_value = 1;
-}
+if (max_combo){charge_value = 1};
+action_shoot_bullet_radius = my_shoot_bullet_radius * (1 + (charge_value*bonus_size));
+action_shoot_bullet_range = my_shoot_bullet_range * (1 + (charge_value*bonus_range))
+action_shoot_bullet_speed = my_shoot_bullet_speed * (1 + (charge_value*bonus_speed));
+action_shoot_bullet_explosion = my_shoot_bullet_explosion * (1 + (charge_value*bonus_explosion));
 
 if (charge_value == 1){
 	entity_sfx_create_pulse(
@@ -30,11 +32,25 @@ if (charge_value == 1){
 			2
 		]
 	)
+	
+	var p_spawn = 30;
+	part_emitter_region(global.particle_system,draw_particle_emitter,x+random_mirror(p_spawn),x+random_mirror(p_spawn),y+random_mirror(p_spawn),y+random_mirror(p_spawn),ps_shape_ellipse,1);
+		
+	var p_loop = 8;
+		
+	while(p_loop > 0){
+		var p_count = 4;
+		var p_model = game_particle_setup_basic(my_shoot_flair_color, 3, (2 + random(1)), ((0.3*SEC) + random(0.1*SEC)));
+		part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
+		p_loop --;
+	}
+	
+	action_shoot_bullet_particles = [game_particle_setup_basic(my_shoot_flair_color, max(2, 4*action_shoot_bullet_radius/150), 0.5, 0.3*SEC), ceil(6*charge_value), action_shoot_bullet_radius];
+} else if (charge_value > 0){
+	action_shoot_bullet_particles = [game_particle_setup_basic(my_shoot_flair_color, max(1, 2*action_shoot_bullet_radius/150), 0.5, 0.3*SEC), ceil(4*charge_value), action_shoot_bullet_radius];
+} else {
+	action_shoot_bullet_particles = [undefined, 0, 0];
 }
-
-action_shoot_bullet_radius = my_shoot_bullet_radius * (1 + (charge_value*bonus_size));
-action_shoot_bullet_speed = my_shoot_bullet_speed * (1 + (charge_value*bonus_speed));
-action_shoot_bullet_explosion = my_shoot_bullet_explosion * (1 + (charge_value*bonus_size*0.3));
 
 action_shoot_damage = [
 	my_shoot_damage[0] * (1 +  (charge_value*bonus_damage)),
@@ -46,7 +62,7 @@ action_shoot_recoil_range = my_shoot_recoil_range*2
 if (charge_value < 1){
 	status_poise_current = max(0, (1 - my_shoot_poise_cost)*status_poise_current);
 	flinch_multiplier = status_poise_current/status_poise_max;
-	action_shoot_recoil_range = (my_shoot_recoil_range*flinch_multiplier*0.65) + (my_shoot_recoil_range*0.35);
+	action_shoot_recoil_range = my_shoot_recoil_range * (1 + (charge_value*0.5))
 }
 
 if (max_combo){

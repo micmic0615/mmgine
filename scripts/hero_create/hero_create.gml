@@ -3,9 +3,9 @@ status_movesnap_base = 0.6*SEC;
 
 status_health_max = 100;
 status_damage_base = 20;
-status_flinch_base = 20;
-status_poise_max = 100;
-status_poise_regen = 17*PPS;
+status_flinch_base = 10;
+status_poise_max = 25;
+status_poise_regen = 2.5*PPS;
 status_flinch_duration = 2*SEC;
 
 draw_bar_health_xscale = 0.5;
@@ -15,7 +15,16 @@ collision_persistent = true;
 
 player_faction = 0;
 
-hero_mod_shoot_do();
+my_shoot_mod_1 = "do";
+my_shoot_mod_2 = "focus";
+
+my_shoot_aux_main = ds_create("list");
+my_shoot_aux_1 = ds_create("list");
+my_shoot_aux_2 = ds_create("list");
+
+
+
+entity_run_type_scripts(("mod_shoot_" + my_shoot_mod_1));
 
 action_shoot_create([
 	/*bullet_type*/ [DefaultBullet, "HeroBullet4"],
@@ -41,7 +50,7 @@ my_dash_speed = 540*PPS;
 my_dash_range = 360;
 my_dash_charge_cost = 0.35*SEC;
 
-my_dash_flair_color = make_color_rgb(0,255,255);
+my_dash_flair_color = make_color_rgb(160,160,160);
 
 action_dash_create([
 	/*speed*/ my_dash_speed,
@@ -54,12 +63,9 @@ action_dash_create([
 ]);
 
 my_charge_current = 0;
-my_charge_min = 1*SEC;
-my_charge_max = 3*SEC;
-my_charge_factor_size = 1.5;
-my_charge_factor_speed = 1;
-my_charge_factor_damage = 2;
-my_charge_factor_flinch = 5;
+my_charge_accelerate_delay_value = 0.25*SEC;
+my_charge_accelerate_delay_timer = 0;
+
 
 
 

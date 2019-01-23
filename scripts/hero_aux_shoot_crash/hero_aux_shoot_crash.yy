@@ -1,8 +1,8 @@
 {
-    "id": "c0b0f5fe-c0dd-4b9f-8b5a-d201cacc698b",
+    "id": "106f7492-e804-4e8b-82fd-f20dd3be4612",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_action_time_freeze",
+    "name": "hero_aux_shoot_crash",
     "IsCompatibility": false,
     "IsDnD": false
 }

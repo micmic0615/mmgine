@@ -12,6 +12,8 @@ status_flinch_base = 25;
 status_poise_max = 20;
 status_poise_regen = 2*PPS;
 status_flinch_duration = 2*SEC;
+status_poise_freeze_timer = 0*SEC;
+status_poise_freeze_value = 0.5*SEC;
 
 status_armor_health = 0;
 status_armor_poise = 0;

@@ -21,7 +21,5 @@ if (ROOM.player_main_actor == id){
 draw_blend_temporary_color = make_color_rgb(255,0,0);
 draw_blend_temporary_duration = 0.5*SEC;
 draw_blend_temporary_style = "flicker";
-
-
 	
 return [adjusted_source, adjusted_value, adjusted_lethal];

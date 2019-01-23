@@ -25,6 +25,7 @@ if (valid && !base_target.status_immortal){
 	with(adjusted_target){if (actor_buff_find("flinched") == undefined){can_flinch = true}}
 	
 	if (can_flinch){
+		adjusted_target.status_poise_freeze_timer = adjusted_target.status_poise_freeze_value;
 		adjusted_target.status_poise_current -= adjusted_value
 		with(adjusted_target){entity_run_type_scripts("flinch_take", [me, adjusted_value])};
 		entity_run_type_scripts("flinch_deal", [adjusted_target, adjusted_value]);

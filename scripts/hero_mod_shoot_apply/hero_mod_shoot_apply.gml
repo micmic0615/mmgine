@@ -9,7 +9,7 @@ action_shoot_mod([
 	/*recoil_range*/ my_shoot_recoil_range,
 	/*cast_value*/ my_shoot_cast_value,
 	/*channel_value*/ my_shoot_channel_value,
-	/*backswing_value*/ 0.2*SEC,
+	/*backswing_value*/ 0.1*SEC,
 	/*cooldown_value*/ my_shoot_cooldown_value,
 	/*combo_max*/ my_shoot_combo_max,
 	/*damage*/ my_shoot_damage,

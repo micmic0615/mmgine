@@ -72,6 +72,9 @@ animation_direction = 1;
 animation_angle = 0;
 animation_rotatable = true;
 
+draw_particle_emitter = part_emitter_create(global.particle_system);
+draw_particle_list = ds_create("list")
+
 entity_run_class_scripts("create");
 
 status_health_current = status_health_max;

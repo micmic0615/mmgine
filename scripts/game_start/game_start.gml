@@ -44,5 +44,7 @@ global.replay_mode = "record";
 global.replay_duration = 0;
 global.actor_id_sequence = 0;
 
+global.particle_system = part_system_create();
+
 
 room_goto(room_next(room));

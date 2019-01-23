@@ -7,7 +7,7 @@ var bullet_count = bullet_max;
 var bullet_x = cos(degtorad(bullet_angle))*bullet_spawn_offset + x;
 var bullet_y = sin(degtorad(bullet_angle))*bullet_spawn_offset + y;
 	
-var bullet_spread_angle = (15 + ((bullet_max/13)*75))/bullet_max;
+var bullet_spread_angle = ((action_shoot_angle_spead*0.2) + ((bullet_max/13)*action_shoot_angle_spead))/bullet_max;
 
 action_shoot_combo_count++;
 action_shoot_combo_timer = action_shoot_cast_value + action_shoot_channel_value + action_shoot_backswing_value;
@@ -16,7 +16,7 @@ while(bullet_count > 0){
 	var bullet = actor_spawn_bullet(action_shoot_target_point[0], action_shoot_target_point[1], bullet_x,bullet_y, action_shoot_bullet_type[0]);
 	var local_angle = bullet_angle;
 	
-	local_angle += (random(action_shoot_angle_chaos) - (action_shoot_angle_chaos*0.5))
+	local_angle += (random(action_shoot_angle_chaos) - (action_shoot_angle_chaos*0.5));
 	
 	bullet.status_movespeed_base = action_shoot_bullet_speed;
 	bullet.status_movesnap_base = 0.2*SEC;
@@ -57,6 +57,13 @@ while(bullet_count > 0){
 		["flinch", "actor", status_flinch_total*action_shoot_flinch[1]],
 		["push", "actor", action_shoot_push[1], 0.5*SEC, "center", ["multiply",1.5]],
 	]
+	
+	if (action_shoot_bullet_particles[0] != undefined && action_shoot_bullet_particles[1] > 0){
+		ds_list_add(
+			bullet.draw_particle_list, 
+			action_shoot_bullet_particles
+		);
+	}
 
 	bullet_count --;
 }	

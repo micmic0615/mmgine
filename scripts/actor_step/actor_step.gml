@@ -44,7 +44,11 @@ entity_run_type_scripts("step");
 			}
 		}
 		
-		status_poise_current = min(status_poise_max, status_poise_current + (status_poise_regen*TIMESPEED));
+		if (status_poise_freeze_timer > 0){
+			status_poise_freeze_timer -= TIMESPEED
+		} else {
+			status_poise_current = min(status_poise_max, status_poise_current + (status_poise_regen*TIMESPEED));
+		}
 	#endregion
 	
 	#region // BUFF COSMETICS

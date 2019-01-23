@@ -12,7 +12,7 @@ my_shoot_recoil_range = 150;
 
 my_shoot_cast_value = 0.2*SEC;
 
-my_shoot_damage = [0.8,0.4];
+my_shoot_damage = [0.9,0.4];
 my_shoot_flinch = [0.5,0.1];
 my_shoot_push = [0, 0];
 

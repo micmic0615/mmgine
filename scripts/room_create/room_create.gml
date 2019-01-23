@@ -79,6 +79,9 @@ if (global.replay_mode == "record" && room_get_name(room) != ROOM_BASE){
 	
 }
 
+part_system_destroy(global.particle_system);
+global.particle_system = part_system_create();
+
 with(ACTOR){
 	if (!variable_instance_exists(id, "actor_id")){
 		if (global.replay_mode == "record"){actor_spawn(x,y,object_index)};

@@ -3,7 +3,7 @@ hero_mod_shoot_do();
 my_shoot_bullet_type = [DefaultBullet, "HeroBullet3"];
 my_shoot_flair_color = make_color_rgb(255,0,255);
 
-my_shoot_bullet_radius = 48;
+my_shoot_bullet_radius = 36;
 my_shoot_bullet_speed = 1400*PPS;
 my_shoot_bullet_range = 900;
 my_shoot_bullet_explosion = 80;

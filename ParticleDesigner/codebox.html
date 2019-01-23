@@ -1,0 +1,120 @@
+<head>
+<title>Codebox Help</title>
+<style type="text/css">
+.c_box {
+width: 80%;
+background-color: #CCCCCC;
+border: 1px solid #666666;
+padding: 10px;
+}
+.c_codebox {
+width: 100%;
+background-color: #CCCCCC;
+border: 1px dashed #999999;
+padding: 5px;
+margin: 5px;
+}
+table.main {
+text-align: left;
+}
+</style>
+</head>
+<body>
+<a name="top"></a>
+<center>
+<h3>Codebox Help</h3>
+<a href="HELP.html">Full help file</a><br><br>
+<h3>Why use the Codebox?</h3>
+<div class="c_box">
+<table class="main" cellspacing="10"><tr><td>
+The codebox allows you to move, change, and draw while the program is testing the particle. This can be used to simulate the actions that it would go through when put into the game. It gives the options to move system functions such as emitters and attractors, and their properties. It also allows you to use the <b>draw</b> functions, and the <b>particle</b> functions. You can change the properties of particles and system functions while testing as well.
+<br><br>
+<a href="#variables">See particle system variables</a><br>
+<a href="#functions">See particle system functions</a><br>
+<a href="#limit">See limited functions</a><br>
+<a href="#code">See example codes</a>
+</td></tr>
+</table>
+</div><br>
+<a name="variables"></a>
+<h3>Particle System Variables</h3>
+<div class="c_box">
+<table class="main" cellspacing="10"><tr><td colspan="2">
+Particle System variables allows you to use the current system in the codebox. These values are mostly simplified to make this easier. These variables can be used to change the current system, including the values in the tabs. It also supplies the variables for the parts of the system so you can use them. If you want to change the settings without changing the tab values, you can also use <a href="#functions">particle system functions</a> in the codebox.<br /><br /></td></tr>
+<tr><td>step</td><td>This is the number of steps since the code was executed, so each step the value is incremented by 1. It also starts at 1. You may want to use this to initiate the variables. This variable can also be changed.</td></tr>
+<tr><td>val[#]</td><td>These are the free variables. At default, the values are 0. The array is any number from 1 to 50.</td></tr>
+<tr><td>sys</td><td>This is the particle system variable that is used by default.</td></tr>
+<tr><td>prt[#]</td><td>The particles. You can use this for "part_type" functions for example. The array is for each particle(1-3).</td></tr>
+<tr><td>emt[#] att[#] chg[#] def[#] des[#]</td><td>Same as prt, but for the other functions.(#: 1-3)</td></tr>
+<tr><td>global.<br>op_(size, speed, direction, etc.)<br>_val(min, max, inc, wig, etc.)[#]<br><br>global.op_(color, alpha, etc.)<br>_val(1, 2, 3)[#]<br><br>global.op_blend_valadd[#]<br><br>etc.</td><td>The most complicated settings is for the particles. For each type of setting there is "<b>global.op_</b>", then there is its name of the setting, and finally "<b>_val</b>" followed by the 3 letter abbreviation for the individual option. Scale uses "<b>valx</b>" and "<b>valy</b>". Others besides alpha and color use min, max, inc, and wig. Orientation uses "<b>valrel</b>" for the relative value(1 or 0). Gravity uses "<b>valamt</b>" and "<b>valdir</b>".<br /><br />Finally, there are different methods for <b>part_step</b> and <b>part_death</b>, but be careful working with these, and be sure to have crash prevention on while you do. "global.op_part_step[#]" is the particle, and "<b>_numb</b>" added to it is the number emitted(a negative value is allowed). "part_death" is the same with 'step' changed to 'death'. Modifying the sprite values is not an option to prevent easy errors. Be sure to inlude the array for the particle!</td></tr>
+<tr><td>ex[#] ey[#]</td><td>The center point values for the emitter exclusively.</td></tr>
+<tr><td>global.e_(x1, x2, y1, y2, shape, distr)[#]</td><td>The emitter values. You may use the constants for the shape and distribution.</td></tr>
+<tr><td>global.a_(x, y, force, dist, kind, add)[#]</td><td>The attractor values.</td></tr>
+<tr><td>global.c_(x1, x2, y1, y2, shape, part1, part2, kind, mx, my)[#]</td><td>The changer values. The "mx" and "my" are the center points of the dimentions.</td></tr>
+<tr><td>global.df_(x1, x2, y1, y2, kind, friction, mx, my)[#]</td><td>The deflector values.</td></tr>
+<tr><td>global.ds_(x1, x2, y1, y2, shape, mx, my)[#]</td><td>The destroyer values</td></tr>
+</table>
+</div><br>
+<a name="functions">
+<h3>Particle System Functions</h3>
+<div class="c_box">
+<table class="main" cellspacing="10"><tr><td>
+The codebox supports mainly particle functions, math functions, and drawing functions. This can help to test the particle as it would change or how it would move in the game. You can use or change variables in the tabs, particularly if the tabs are set each step with the code. Otherwise, particle functions can change the particle. <b>Warning: Particle systems and other parts of the system cannot be destroyed.</b> So be carefull when creating any parts of the system. Refer to the GM manual for the list of particle functions and their action.<br /><br />
+For example:<br />
+part_emitter_burst(<i>sys</i>,<i>emt[1]</i>,<i>prt[1]</i>,10);<br />
+sys, emt, and prt are <a href="#variables">particle system variables</a>. The function will burst using the settings set in the tabs.<br /><br />
+part_attractor_force(<i>sys</i>,<i>att[1]</i>,global.a_force[1],global.a_dist[1],0,1);<br />
+the global variables can be used from the tabs. They can also be changed by setting the variables to another value.
+<br /><br />
+part_system_position(sys,mouse_x,mouse_y);<br />
+This draws the system relative to the mouse position.
+<br /><br />
+<b>Particle <i>functions</i> cannot be used on the tab settings when the 'Set tabs each step' option is selected.</b>
+</td></tr>
+</table>
+</div><br>
+<a name="limit">
+<h3>Limited Functions</h3>
+<div class="c_box">
+<table class="main" cellspacing="10"><tr><td>
+Some functions in GML are limited to prevent abuse of the codebox. These functions include:<br />
+game_,file_,room_,window_,highscore_,instance_,sound_,d3d_,message_,mp_,mplay_,registry_,splash_,view_, object_,display_, datastructures, or any objects or global variables used for the program other than the settings for the particle system.<br /><br />
+This helps avoid code that other people use in a pdsf file that you may not want.
+</td></tr></table>
+</div><br />
+<a name="code">
+<h3>Sample Codes</h3>
+<div class="c_box">
+<table class="main" cellspacing="10"><tr><td>
+Here are some codes that you may want to reference when coding for your own particle system.
+<br /><br />
+This is an effective way to burst a particle only for a specific amount of time, and then wait before bursting again.
+<div class="c_codebox">
+if (step < 30) {<br />
+part_emitter_burst(sys,emt[1],prt[1],10);<br />
+}<br />
+if (step > 60) {<br />
+part_emitter_burst(sys,emt[1],prt[1],0);<br />
+step = 0;<br />
+}
+</div>
+<br /><br />
+You can set values of the particle(with 'Set tabs each step' setting on) in the codebox as well.
+<div class="c_codebox">
+global.op_speed_valmin[1] = point_distance(ex[1],ey[1],mouse_x,mouse_y)/60;<br />
+global.op_direction_valmin[1] = point_direction(ex[1],ey[1],mouse_x,mouse_y);<br />
+global.op_direction_valmax[1] = global.op_direction_valmin[1];
+</div>
+<br /><br />
+Movement of the emitter is also helpful to see some effect movement.
+<div class="c_codebox">
+val[0] += 5;<br />
+ex[1] = 320+100*cos(degtorad(val[0]));<br />
+ey[1] = 240-100*sin(degtorad(val[0]));
+</div>
+</td></tr></table>
+</div><br />
+<a href="#top">Back to top</a><br><br>
+<a href="HELP.html">Full help file</a>
+</center>
+</body>

@@ -21,6 +21,15 @@ if (ACTIVE && ALIVE){
 	#endregion
 
 	#region //ANIMATION
+		if (ds_exists(draw_particle_list, ds_type_list)){
+			for(var i = 0; i < ds_list_size(draw_particle_list);i++){
+				var p = ds_list_find_value(draw_particle_list, i);
+				part_emitter_region(global.particle_system,draw_particle_emitter,x+random_mirror(p[2]),x+random_mirror(p[2]),y+random_mirror(p[2]),y+random_mirror(p[2]),ps_shape_ellipse,1);
+				part_emitter_burst(global.particle_system,draw_particle_emitter,p[0],p[1]);
+			}
+		}
+		
+	
 		var	animation_sprite_name = asset_get_index(animation_sprite + "_" + animation_name);
 		sprite_index = (animation_sprite_name > 0) ? animation_sprite_name : asset_get_index(animation_sprite + "_idle");
 	#endregion
