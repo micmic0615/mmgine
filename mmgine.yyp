@@ -151,14 +151,6 @@
             }
         },
         {
-            "Key": "0a6121cb-130c-4ac7-81d7-8c76ef47dca0",
-            "Value": {
-                "id": "e3556745-1059-4fe5-82b7-eb072f8bef8a",
-                "resourcePath": "sprites\\HI_Skill_Do_idle\\HI_Skill_Do_idle.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "0aa046c8-e8d8-4cd1-8af0-21055ceadd35",
             "Value": {
                 "id": "a995c418-884f-4aa2-abef-f15242f88663",
@@ -943,6 +935,14 @@
             }
         },
         {
+            "Key": "49bf6535-37cb-46d3-921d-a313e20d0a3a",
+            "Value": {
+                "id": "9f7aae80-ba72-4794-9fff-675bb77cc496",
+                "resourcePath": "scripts\\levelproto00_create\\levelproto00_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4a160e53-23b3-4ffa-a4ed-85d34d3c2f5b",
             "Value": {
                 "id": "8b274617-4929-4de8-84ce-d640c8e1788c",
@@ -1204,6 +1204,14 @@
                 "id": "a2d1ce41-9358-44d3-ac59-3b1555b315d1",
                 "resourcePath": "views\\60e29b8b-56b6-4f9f-a470-fc665387de6d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "60fd2016-9e5a-4936-aa28-ab77396400b4",
+            "Value": {
+                "id": "ed914e49-188b-40c1-85c5-d89da70a4074",
+                "resourcePath": "scripts\\hero_mod_shoot_get_cycle\\hero_mod_shoot_get_cycle.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1479,6 +1487,14 @@
             }
         },
         {
+            "Key": "762459a6-9f89-4ca8-b920-5db332e6e32e",
+            "Value": {
+                "id": "5fcb7918-8981-4b32-9f04-9311e27bd959",
+                "resourcePath": "scripts\\levelproto00_step\\levelproto00_step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "76ce4c32-83f8-4a47-8f28-5862dcd0b535",
             "Value": {
                 "id": "df58a8f0-4090-4cef-96ea-1c65080d16a3",
@@ -1735,6 +1751,14 @@
             }
         },
         {
+            "Key": "940a8767-35b1-497a-896a-25be2f221572",
+            "Value": {
+                "id": "a937895c-5c22-4782-b367-f06a47e3f216",
+                "resourcePath": "sprites\\HI_Skill_crash_idle\\HI_Skill_crash_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "942e6b0c-f477-4392-b291-9b8d114e0609",
             "Value": {
                 "id": "8210b75b-a630-4e26-be51-10e7a1d0f534",
@@ -1803,6 +1827,14 @@
             "Value": {
                 "id": "ce9ae985-1e42-4181-b0b5-c317442daefc",
                 "resourcePath": "sprites\\ExplosionBullet_idle\\ExplosionBullet_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9d690968-367e-472b-b0e2-002927e59d39",
+            "Value": {
+                "id": "0cdfc9fb-eda0-44b6-9259-c6418897785d",
+                "resourcePath": "sprites\\HI_Skill_breach_idle\\HI_Skill_breach_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2007,6 +2039,14 @@
             }
         },
         {
+            "Key": "aeaae7c3-2773-4388-9676-65e93e62e783",
+            "Value": {
+                "id": "e06b0665-0cde-45c1-ab51-fe572286fc6b",
+                "resourcePath": "sprites\\HI_Skill_split_idle\\HI_Skill_split_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "af92aedf-2341-47e8-b98f-1b88ef5ff475",
             "Value": {
                 "id": "9aacba55-fc87-45eb-b0b9-d65306d6c9b8",
@@ -2103,6 +2143,22 @@
             }
         },
         {
+            "Key": "b63575df-8a14-41ac-a2d0-adcd3cc3dd8e",
+            "Value": {
+                "id": "e8d89ede-c7c7-44c9-ac69-000ccb031572",
+                "resourcePath": "sprites\\HI_Skill_do_idle\\HI_Skill_do_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b6e175cc-979b-4de7-88de-a00ded65e9b0",
+            "Value": {
+                "id": "f6af73f2-7c94-4448-a02a-8d6e7648bdca",
+                "resourcePath": "scripts\\hero_mod_shoot_set_select\\hero_mod_shoot_set_select.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b6f54289-0e5d-4303-9fa2-64e804d0a7d9",
             "Value": {
                 "id": "fa68a67e-1fac-4a9f-b68a-c78e97efe4a3",
@@ -2151,6 +2207,14 @@
             }
         },
         {
+            "Key": "bde09b14-70de-4b9f-8d50-e2f396113e3b",
+            "Value": {
+                "id": "34f2004b-daa3-4451-abab-49592de3dd3d",
+                "resourcePath": "scripts\\hero_mod_shoot_set_cycle\\hero_mod_shoot_set_cycle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "be56c53f-85db-4a7f-aef5-cb49edd744ce",
             "Value": {
                 "id": "1b2503bd-f676-4851-9b98-8dc5ddf09133",
@@ -2179,6 +2243,14 @@
             "Value": {
                 "id": "ddad1d39-d1d4-4d51-8f1c-a4497dd8d576",
                 "resourcePath": "scripts\\hero_aux_shoot_breach\\hero_aux_shoot_breach.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c0d13176-3975-476f-9507-d0800f486522",
+            "Value": {
+                "id": "119bbddc-f91a-489f-bc0f-832f5faf3902",
+                "resourcePath": "scripts\\hero_mod_shoot_set_modname\\hero_mod_shoot_set_modname.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2255,6 +2327,14 @@
             }
         },
         {
+            "Key": "c6517db5-d6cb-4440-8340-9830d120aa3b",
+            "Value": {
+                "id": "ec36cc9c-3ab9-444e-9cbf-8bba6d59880f",
+                "resourcePath": "sprites\\HI_Skill_ping_idle\\HI_Skill_ping_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c6b3f044-164c-4ff1-947d-f65fe0ae5215",
             "Value": {
                 "id": "501fdec4-213e-44d2-8f2a-96e25467a576",
@@ -2324,6 +2404,14 @@
                 "id": "a8fa34e0-cd27-451e-a456-f7647431d2e6",
                 "resourcePath": "scripts\\swarmer_ai_step\\swarmer_ai_step.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cb78595a-5e62-49c7-8317-c90c6d4849ea",
+            "Value": {
+                "id": "d664d1b3-9dcc-4ab2-9d66-9beac19a785a",
+                "resourcePath": "sprites\\HI_Skill_focus_idle\\HI_Skill_focus_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2455,6 +2543,14 @@
             }
         },
         {
+            "Key": "d63de44e-9eb9-4867-9cf7-4b78d97b7f89",
+            "Value": {
+                "id": "32bd760f-35ff-4e25-9d94-2dec079a5d6e",
+                "resourcePath": "scripts\\hero_mod_shoot_get_modname\\hero_mod_shoot_get_modname.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d6fdeaa1-2496-4be5-af2d-1babf6cf0e42",
             "Value": {
                 "id": "dd13e43a-9125-4c1b-badd-a5f5665e6db7",
@@ -2484,6 +2580,14 @@
                 "id": "785dab63-6ca7-49a1-a051-2f0368fc3599",
                 "resourcePath": "scripts\\entity_sfx_create_pulse\\entity_sfx_create_pulse.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dc3ca1ea-bcb2-4d99-9025-7e1d38c213d7",
+            "Value": {
+                "id": "999d38fc-1e52-4a67-a37a-294a4a5ce6c5",
+                "resourcePath": "sprites\\HI_Skill_load_idle\\HI_Skill_load_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2810,7 +2914,7 @@
             "Key": "f4518aad-771d-4fee-9d75-b7e6f4f72123",
             "Value": {
                 "id": "ceaba4af-60a3-4464-a86e-cb4e71ae63aa",
-                "resourcePath": "scripts\\levelproto00_create\\levelproto00_create.yy",
+                "resourcePath": "scripts\\levelproto00_draw_gui\\levelproto00_draw_gui.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3040,6 +3144,11 @@
         "28b69fbd-33b2-418a-b2a9-c0842500380a",
         "09c56d30-a6af-4930-a017-97642c89de6d",
         "817f303f-11f9-473d-8c2f-f5e4c6a264a9",
+        "b6e175cc-979b-4de7-88de-a00ded65e9b0",
+        "bde09b14-70de-4b9f-8d50-e2f396113e3b",
+        "c0d13176-3975-476f-9507-d0800f486522",
+        "60fd2016-9e5a-4936-aa28-ab77396400b4",
+        "d63de44e-9eb9-4867-9cf7-4b78d97b7f89",
         "5218b885-7feb-4d0c-b8e6-f3d15ad3b01c",
         "a0deb67e-4b23-400d-9f2a-912222163ed2",
         "f5485736-286c-48c8-8be0-6f6800494e41",
@@ -3120,7 +3229,9 @@
         "c8503200-213e-45d2-baed-2499761d8df0",
         "32fdd065-b427-4f54-a941-ee3a3e95a77c",
         "d4393d8a-bc2b-4221-a78b-f3cff8b9b0ca",
+        "49bf6535-37cb-46d3-921d-a313e20d0a3a",
         "f4518aad-771d-4fee-9d75-b7e6f4f72123",
+        "762459a6-9f89-4ca8-b920-5db332e6e32e",
         "c6c7633b-dbb9-4b89-87da-76b04c316d56",
         "8f4926b9-5ae2-43a4-8a97-19ba462f0f90",
         "8e9ea604-86b6-4aec-90fd-631402b54d1d",

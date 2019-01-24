@@ -49,7 +49,7 @@ if (my_attack_cooldown_timer <= 0){
 	bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
 
 	ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total, true]);
-	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_damage_total*0.5]);
+	ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_flinch_total]);
 	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", 100 , 0.75*SEC, "movement", ["multiply",1.5]]);
 	
 	entity_motion_push((my_attack_dash_range), (my_attack_dash_speed/(my_attack_dash_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");

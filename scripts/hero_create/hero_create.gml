@@ -5,7 +5,7 @@ status_health_max = 100;
 status_damage_base = 20;
 status_flinch_base = 10;
 status_poise_max = 25;
-status_poise_regen = 2.5*PPS;
+status_poise_regen = 1.25*PPS;
 status_flinch_duration = 2*SEC;
 
 draw_bar_health_xscale = 0.5;
@@ -15,13 +15,19 @@ collision_persistent = true;
 
 player_faction = 0;
 
-my_shoot_mod_1 = "do";
-my_shoot_mod_2 = "focus";
+my_shoot_mod_select = undefined;
+my_shoot_mod_cycle = 0;
+my_shoot_mod_skip = ds_create("list");
+
+my_shoot_mod_1 = global.hero_mod_1;
+my_shoot_mod_2 = global.hero_mod_2;
 
 my_shoot_aux_main = ds_create("list");
 my_shoot_aux_1 = ds_create("list");
 my_shoot_aux_2 = ds_create("list");
 
+ds_list_copy(my_shoot_aux_1, global.hero_aux_1);
+ds_list_copy(my_shoot_aux_2, global.hero_aux_2);
 
 
 entity_run_type_scripts(("mod_shoot_" + my_shoot_mod_1));

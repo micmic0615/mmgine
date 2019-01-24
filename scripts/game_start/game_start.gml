@@ -30,6 +30,15 @@ global.key_down = ord("S");
 global.key_left = ord("A");
 global.key_right = ord("D");
 
+global.key_tab = vk_tab;
+global.key_num_1 = ord("1");
+global.key_num_2 = ord("2");
+
+global.key_select_right = vk_right;
+global.key_select_left = vk_left;
+global.key_select_up = vk_up;
+global.key_select_down = vk_down;
+
 global.key_action_1 = vk_space;
 
 global.key_pause = vk_enter;
@@ -45,6 +54,21 @@ global.replay_duration = 0;
 global.actor_id_sequence = 0;
 
 global.particle_system = part_system_create();
+
+
+global.hero_mod_1 = "do";
+global.hero_mod_2 = "focus";
+
+global.hero_aux_1 = ds_list_create();
+global.hero_aux_2 = ds_list_create();
+
+ds_list_add(global.hero_aux_1, "load");
+ds_list_add(global.hero_aux_1, "ping");
+ds_list_add(global.hero_aux_1, "crash");
+
+ds_list_add(global.hero_aux_2, "focus");
+ds_list_add(global.hero_aux_2, "breach");
+ds_list_add(global.hero_aux_2, "split");
 
 
 room_goto(room_next(room));

@@ -2,10 +2,10 @@ shooter_create();
 
 status_movespeed_base = 160*PPS;
 
-status_health_max = 180;
-status_poise_max = 50;
-status_flinch_duration = 5*SEC;
-status_damage_base = 10;
+status_health_max = 200;
+status_poise_max = 40;
+status_flinch_duration = 2.5*SEC;
+status_damage_base = 5;
 my_attack_channel_power_max = 1.5*SEC;
 
 my_attack_dash_range = 200;

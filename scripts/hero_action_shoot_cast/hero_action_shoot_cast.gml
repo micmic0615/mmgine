@@ -5,5 +5,3 @@ var divider_channel = my_charge_divider_channel - 1;
 
 action_shoot_cast_value = my_shoot_cast_value / (1 + (charge_value * divider_cast));
 action_shoot_channel_value = my_shoot_channel_value / (1 + (charge_value * divider_channel));
-
-show_debug_message(action_shoot_cast_value)

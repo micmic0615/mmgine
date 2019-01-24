@@ -61,22 +61,64 @@ if (player_main_actor != noone && instance_exists(player_main_actor)){
 
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
+		
 	#endregion
 	
-	//#region //SKILLS
-	//	var skill_count = 5;
-	//	var icon_width = 40;
-	//	var icon_height = 40;
-	//	var icon_gap = 5;
-	//	var icon_loc_x = (screen_width/2);
-	//	var icon_loc_y = screen_height - 80;
-	//	while(skill_count > 0){
-	//		skill_count--;
-	//		var icon_x = icon_loc_x - (skill_count*(icon_width+icon_gap)) + (icon_width+icon_gap)*1.5;
-	//		draw_set_colour(make_colour_rgb(100,100,100));
-	//		draw_rectangle(icon_x, icon_loc_y, icon_x + icon_width, icon_loc_y + icon_height, false);
-	//	}
-	//#endregion
+	#region //SKILLS
+		var mc = player_main_actor;
+		if(mc.active && mc.alive){
+			var icon_size = 40;		
+			var icon_gap = 5;
+			var icon_y = screen_height - 80;
+		
+			var aux_size = 30;
+			var aux_y = screen_height - 70;
+			var icon_distance = 150;
+			var aux_count = 2;
+		
+			if (mc.my_shoot_mod_select == 3){draw_set_colour(make_colour_rgb(0,255,255))} else {draw_set_colour(make_colour_rgb(80,80,80))}
+			var icon_x = (screen_width/2) - icon_distance + (aux_size+icon_gap)*(aux_count+1);
+			draw_rectangle(icon_x, icon_y, icon_x + icon_size, icon_y + icon_size, false);
+			draw_sprite_stretched(asset_get_index("HI_Skill_"+ mc.my_shoot_mod_1 +"_idle"), 0, icon_x+2, icon_y+2, icon_size-3, icon_size-3)
+		
+			var index = 0;
+			while(aux_count >= 0){
+				if (mc.my_shoot_mod_select == aux_count){draw_set_colour(make_colour_rgb(0,255,255))} else {draw_set_colour(make_colour_rgb(80,80,80))}
+				var icon_x = (screen_width/2) - icon_distance +(aux_size+icon_gap)*aux_count;
+				draw_rectangle(icon_x, aux_y, icon_x + aux_size, aux_y + aux_size, false);
+			
+				var aux_name = ds_list_find_value(mc.my_shoot_aux_1, index);
+				if (aux_name != undefined){
+					draw_sprite_stretched(asset_get_index("HI_Skill_"+ aux_name +"_idle"), 0, icon_x+2, aux_y+2, aux_size-3, aux_size-3)
+				}
+			
+				index++;
+				aux_count--
+			}
+		
+			var index = 2;
+			var aux_count = 0;
+			while(aux_count <= 2){
+				if (mc.my_shoot_mod_select == index + 5){draw_set_colour(make_colour_rgb(0,255,255))} else {draw_set_colour(make_colour_rgb(80,80,80))}
+				var icon_x = (screen_width/2) + icon_distance - (aux_size+icon_gap)*(aux_count + 1);
+				draw_rectangle(icon_x, aux_y, icon_x + aux_size, aux_y + aux_size, false);
+			
+				var aux_name = ds_list_find_value(mc.my_shoot_aux_2, index);
+				if (aux_name != undefined){
+					draw_sprite_stretched(asset_get_index("HI_Skill_"+ aux_name +"_idle"), 0, icon_x+2, aux_y+2, aux_size-3, aux_size-3)
+				}
+			
+				index--;
+				aux_count++
+			}
+		
+			if (mc.my_shoot_mod_select == 4){draw_set_colour(make_colour_rgb(0,255,255))} else {draw_set_colour(make_colour_rgb(80,80,80))}
+			var icon_x = (screen_width/2) + icon_distance - ((aux_size+icon_gap)*(aux_count)) - (icon_size + icon_gap);
+			draw_rectangle(icon_x, icon_y, icon_x + icon_size, icon_y + icon_size, false);
+		
+			draw_sprite_stretched(asset_get_index("HI_Skill_"+ mc.my_shoot_mod_2 +"_idle"), 0, icon_x+2, icon_y+2, icon_size-3, icon_size-3)
+		}
+	#endregion
 	
 	
 	with(ACTOR){

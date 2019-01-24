@@ -1,6 +1,5 @@
 var charge_value = my_charge_current < my_charge_min ? 0 : my_charge_current/my_charge_max;
 if (charge_value < 1){charge_value = min(power(charge_value, 5), 0.5)}
-show_debug_message(charge_value)
 
 var bonus_size = my_charge_factor_size - 1;
 var bonus_speed = my_charge_factor_speed - 1;

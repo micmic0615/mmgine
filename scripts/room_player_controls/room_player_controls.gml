@@ -43,6 +43,22 @@ if (player_controllable && global.replay_mode == "record"){
 						me.player_controls_move_dash_timer_down = me.player_controls_move_dash_timer_value;
 					}
 				}
+				
+				if (keyboard_check_pressed(global.key_select_right)){
+					hero_mod_shoot_set_select(1);
+				}
+				
+				if (keyboard_check_pressed(global.key_select_left)){
+					hero_mod_shoot_set_select(-1);
+				}
+				
+				if (keyboard_check_pressed(global.key_select_down)){
+					hero_mod_shoot_set_cycle(1);
+				}
+				
+				if (keyboard_check_pressed(global.key_select_up)){
+					hero_mod_shoot_set_cycle(-1);
+				}
 			
 				if (keyboard_check_pressed(global.key_right)){
 					if (me.player_controls_move_dash_timer_right > 0){

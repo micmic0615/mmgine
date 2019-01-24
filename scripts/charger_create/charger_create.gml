@@ -1,9 +1,9 @@
 status_movespeed_base = 420*PPS;
 status_movesnap_base = 1*SEC;
 
-status_health_max = 160;
-status_damage_base = 30;
-status_poise_max = 60;
+status_health_max = 200;
+status_damage_base = 20;
+status_poise_max = 50;
 status_flinch_duration = 4*SEC;
 
 draw_bar_health_xscale = 0.5;
@@ -25,8 +25,8 @@ my_attack_cooldown_timer = 0;
 my_attack_cast_value = 7*SEC;
 my_attack_cast_timer = 0;
 
-my_attack_cast_armor_health = 0;
-my_attack_cast_armor_poise = 100;
+my_attack_cast_armor_health = 50;
+my_attack_cast_armor_poise = 25;
 my_attack_cast_movespeed = 720*PPS;
 my_attack_cast_movesnap = 0.5*SEC;
 
