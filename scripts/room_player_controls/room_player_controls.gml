@@ -24,25 +24,45 @@ if (player_controllable && global.replay_mode == "record"){
 					actor_action_move_angle(180)
 				}
 				
-				if (keyboard_check_pressed(global.key_up)){
-					if (me.player_controls_move_dash_timer_up > 0){
-						var rad_angle = degtorad(270);
-						actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
-						me.player_controls_move_dash_timer_up = 0;
-					} else {
-						me.player_controls_move_dash_timer_up = me.player_controls_move_dash_timer_value;
-					}
-				}
+				//if (keyboard_check_pressed(global.key_up)){
+				//	if (me.player_controls_move_dash_timer_up > 0){
+				//		var rad_angle = degtorad(270);
+				//		actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
+				//		me.player_controls_move_dash_timer_up = 0;
+				//	} else {
+				//		me.player_controls_move_dash_timer_up = me.player_controls_move_dash_timer_value;
+				//	}
+				//}
 			
-				if (keyboard_check_pressed(global.key_down)){
-					if (me.player_controls_move_dash_timer_down > 0){
-						var rad_angle = degtorad(90);
-						actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
-						me.player_controls_move_dash_timer_down = 0;
-					} else {
-						me.player_controls_move_dash_timer_down = me.player_controls_move_dash_timer_value;
-					}
-				}
+				//if (keyboard_check_pressed(global.key_down)){
+				//	if (me.player_controls_move_dash_timer_down > 0){
+				//		var rad_angle = degtorad(90);
+				//		actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
+				//		me.player_controls_move_dash_timer_down = 0;
+				//	} else {
+				//		me.player_controls_move_dash_timer_down = me.player_controls_move_dash_timer_value;
+				//	}
+				//}
+			
+				//if (keyboard_check_pressed(global.key_right)){
+				//	if (me.player_controls_move_dash_timer_right > 0){
+				//		var rad_angle = degtorad(0);
+				//		actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
+				//		me.player_controls_move_dash_timer_right = 0;
+				//	} else {
+				//		me.player_controls_move_dash_timer_right = me.player_controls_move_dash_timer_value;
+				//	}
+				//}
+			
+				//if (keyboard_check_pressed(global.key_left)){
+				//	if (me.player_controls_move_dash_timer_left > 0){
+				//		var rad_angle = degtorad(180);
+				//		actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
+				//		me.player_controls_move_dash_timer_left = 0;
+				//	} else {
+				//		me.player_controls_move_dash_timer_left = me.player_controls_move_dash_timer_value;
+				//	}
+				//}
 				
 				if (keyboard_check_pressed(global.key_select_right)){
 					hero_mod_shoot_set_select(1);
@@ -58,26 +78,6 @@ if (player_controllable && global.replay_mode == "record"){
 				
 				if (keyboard_check_pressed(global.key_select_up)){
 					hero_mod_shoot_set_cycle(-1);
-				}
-			
-				if (keyboard_check_pressed(global.key_right)){
-					if (me.player_controls_move_dash_timer_right > 0){
-						var rad_angle = degtorad(0);
-						actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
-						me.player_controls_move_dash_timer_right = 0;
-					} else {
-						me.player_controls_move_dash_timer_right = me.player_controls_move_dash_timer_value;
-					}
-				}
-			
-				if (keyboard_check_pressed(global.key_left)){
-					if (me.player_controls_move_dash_timer_left > 0){
-						var rad_angle = degtorad(180);
-						actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
-						me.player_controls_move_dash_timer_left = 0;
-					} else {
-						me.player_controls_move_dash_timer_left = me.player_controls_move_dash_timer_value;
-					}
 				}
 			
 				if (mouse_check_button(global.mouse_1)){

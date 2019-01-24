@@ -14,19 +14,19 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break;
 			
 		case "split":
-			my_shoot_bullet_radius *= 0.9;
-			my_shoot_bullet_count += 2;
+			my_shoot_bullet_radius *= 0.8;
+			my_shoot_bullet_count += 1;
 			action_shoot_bullet_seek_range *= 0.8;
 			action_shoot_bullet_seek_turn_rate *= 0.9;
 			
 			my_shoot_damage = [
-				(my_shoot_damage[0] * 0.5),
-				(my_shoot_damage[1] * 0.5),
+				(my_shoot_damage[0] * 0.7),
+				(my_shoot_damage[1] * 0.7),
 			];
 			
 			my_shoot_flinch = [
-				(my_shoot_flinch[0] * 0.5),
-				(my_shoot_flinch[1] * 0.5),
+				(my_shoot_flinch[0] * 0.6),
+				(my_shoot_flinch[1] * 0.6),
 			];
 			break;
 			

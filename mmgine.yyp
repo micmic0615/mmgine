@@ -2199,6 +2199,14 @@
             }
         },
         {
+            "Key": "bd42a29d-6118-43c3-b61c-c0c2bcbdf7ee",
+            "Value": {
+                "id": "d062c8a7-a253-4c98-a6a3-484b40239aee",
+                "resourcePath": "views\\bd42a29d-6118-43c3-b61c-c0c2bcbdf7ee.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bdcd8d04-718a-41ea-9e42-f0d3791b90de",
             "Value": {
                 "id": "646ef23a-ba1f-4b5d-86aa-86d07fb1a58d",
@@ -3143,12 +3151,6 @@
         "1a1c1be3-bb41-4aee-82cc-616b0b67da90",
         "28b69fbd-33b2-418a-b2a9-c0842500380a",
         "09c56d30-a6af-4930-a017-97642c89de6d",
-        "817f303f-11f9-473d-8c2f-f5e4c6a264a9",
-        "b6e175cc-979b-4de7-88de-a00ded65e9b0",
-        "bde09b14-70de-4b9f-8d50-e2f396113e3b",
-        "c0d13176-3975-476f-9507-d0800f486522",
-        "60fd2016-9e5a-4936-aa28-ab77396400b4",
-        "d63de44e-9eb9-4867-9cf7-4b78d97b7f89",
         "5218b885-7feb-4d0c-b8e6-f3d15ad3b01c",
         "a0deb67e-4b23-400d-9f2a-912222163ed2",
         "f5485736-286c-48c8-8be0-6f6800494e41",
@@ -3156,6 +3158,12 @@
         "50185239-af8d-465d-88ca-843abdf6cc2b",
         "c0aaa3c0-11f3-4386-9c3a-9acdb44cd088",
         "46f04ccf-41f2-4279-a666-82b0ace52f7a",
+        "817f303f-11f9-473d-8c2f-f5e4c6a264a9",
+        "b6e175cc-979b-4de7-88de-a00ded65e9b0",
+        "bde09b14-70de-4b9f-8d50-e2f396113e3b",
+        "c0d13176-3975-476f-9507-d0800f486522",
+        "60fd2016-9e5a-4936-aa28-ab77396400b4",
+        "d63de44e-9eb9-4867-9cf7-4b78d97b7f89",
         "1b24716d-c99f-49a5-a56f-87da30d336f0",
         "bfecaffb-bae5-4e79-b035-d1429adf6412",
         "b298b21c-f6f2-4011-be27-1dbaa50612f1",
