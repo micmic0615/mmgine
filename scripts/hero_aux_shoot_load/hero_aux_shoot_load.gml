@@ -2,7 +2,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 	var p = ds_list_find_value(my_shoot_aux_main, i);
 	switch(p){
 		case "do": 
-			my_shoot_bullet_explosion *= 1.2;
+			my_shoot_bullet_explosion += 60;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.8),
 				(my_shoot_damage[1] * 1.35),
@@ -38,7 +38,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break
 			
 		case "load":
-			my_shoot_bullet_explosion *= 1.3;
+			my_shoot_bullet_explosion += 120;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.7),
 				(my_shoot_damage[1] * 1.5),
@@ -54,9 +54,9 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 		case "focus":
 			my_charge_factor_speed *= 4;
 			my_charge_factor_damage = 2.75;
-			my_charge_factor_explosion *= 1.3;
+			my_charge_factor_explosion *= 1.35;
 			break
 	}
 }
 
-hero_mod_shoot_apply();
+hero_skill_set_shoot_mod_apply();

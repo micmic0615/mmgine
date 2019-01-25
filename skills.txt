@@ -1,65 +1,58 @@
-tier 1 
+tier 1
 
 do (magic missle venge)
-shoot: basic shooting 
+shoot: basic shooting
 aux: fluid aux, applies a slightly less improvement of the main mod to itself (stacks with itself)
-beatdown: on beatdown, gain the auto-fire buff that fires on random directions
+beatdown: on beatdown, fire a cluster of bullets that hit the stunned target
 passive: slightly improves health and poise
-
-crash (storm bolt sven)
-shoot: high cast point, high flinch, moderate damage 
-aux: improves the flinch of skills
-beatdown: extended stun time
-passive: improves poise
 
 split (split shot medusa)
 shoot: low cast point, multi-bullet shot that has no tracking and below average range
 aux: makes abilities split/forked
-beatdown: short range auto-fire that targets stunned enemies only
+beatdown: on beatdown, release a bullet in all directions
 passive: adds dash combo
+
+ping (rocket barrage gyro)
+shoot: rapid, minor damage attacks that have decent tracking
+aux: improves the attack speed of most abilities
+beatdown: on beatdown, gain the auto-fire buff that fires on random directions
+passive: improves poise regeneration rate
+
+crash (storm bolt sven)
+shoot: high cast point, high flinch, moderate damage
+aux: improves the flinch of skills
+beatdown: extended stun time
+passive: improves poise
 
 load (call down gyro)
 shoot: fires a bomb that has low range/speed/no-tracking and reduced impact damage but has a big explosion
 aux: increases the explosion of shots
-beatdown: stunned enemies continuously explode (doesn't damage itself)
+beatdown: on beatdown, enemy explodes, dealing decent damage to nearby enemies
 passive: on-dash explosion that deals minor damage
 
 breach (shockwave magnus)
 shoot: long range, low damage, high tracking shot
 aux: adds penetration or range to most abilities
-beatdown: long range, penetrating, auto-fire
+beatdown: on beatdown, fires a massive wave that penetrates everything
 passive: improves dash range
-
-ping (rocket barrage gyro)
-shoot: rapid, minor damage attacks that have decent tracking
-aux: improves the attack speed of most abilities
-beatdown: hitting a stunned target automatically fires another bullet that tracks it (has cooldown)
-passive: improves poise regeneration rate
-
-
-
-tier 2
-
-get (meat hook pudge)
-shoot: fast projectile, low damage attack that pulls targets closer
-aux: adds a clumping/pulling effect to most abilities
-beatdown: teleports stunned targets beside you
-passive: dashing releases a pulse that pulls nearby enemies to your previous position
 
 focus (bash slardar)
 shoot: slightly worse basic shooting that automatically fires a fully-charged shot every X attacks
 aux: adds a combo function to most abilities
-beatdown: hitting stunned enemies builds up your charged
+beatdown: on-beatdown, receive a 3 second buff that makes all your attacks fully charged
 passive: faster charge build-up
 
-seek (heat seeking missle tinker)
-shoot: low speed bullets that have ridiculous tracking
-aux: improves the tracking of most abilities
-beatdown: on beatdown, fires a cluster of homing bullets
-passive: speedbuff on kill
+get (meat hook pudge)
+shoot: fast projectile, low damage attack that pulls targets closer
+aux: adds a clumping/pulling effect to most abilities
+beatdown: on beatdown, enemy is teleported beside you
+passive: dashing releases a pulse that pulls nearby enemies to your previous position
+
+
+tier 2
 
 cull (laguna blade lina)
-shoot: high cast point, low range attack that deals heavy damage 
+shoot: high cast point, low range attack that deals heavy damage
 aux: improves the damage of most abilities
 beatdown: you deal more damage to stunned enemies
 passive: improves health
@@ -70,20 +63,16 @@ aux: improves the knockback of most abilities
 beatdown: releases a pulse on beatdown that pushes and slows non-stunned enemies away, deals minor damage to stunned enemies
 passive: dashing into enemies push them away
 
-
-
-tier 3
-
 decay (decay undy)
 shoot: low damage shot that places a debuff on enemies that amplify damage
-aux: abilities apply a minor amplify debuff 
-beatdown: stunned enemies fires bullets that apply the amplify debuff
+aux: abilities apply a minor amplify debuff
+beatdown: on beatdown, enemy spreads the amplify damage debuff to nearby enemies
 passive: reactive armor (being hit temporarily applies a damage mitigation buff)
 
 bind (overgrowth treant)
 shoot: low damage shot that applies a root debuff, locking enemies on place (doesnt prevent them from attacking)
 aux: abilities apply a minor root debuff
-beatdown: stunned enemies root nearby enemies
+beatdown: on beatdown, enemy roots nearby enemies
 passive: improves basic move speed
 
 linger (midnight pulse enigma)
@@ -95,6 +84,6 @@ passive: shield pulse immortality lasts longer
 extract (sunray phenix)
 shoot: high cast point, heavy damage continuous rapid shot that costs health (cost isnt lethal)
 aux: a better fluid aux, applies a better improvement of the main mod to itself (stacks with itself) but shots cost health
-beatdown: hitting stunned enemies more health from rally
+beatdown: gains a 3 second buff that makes you recover all life from rally
 passive: decreases rally decay rate
 

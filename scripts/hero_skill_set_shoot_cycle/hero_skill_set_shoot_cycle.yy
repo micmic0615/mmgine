@@ -1,8 +1,8 @@
 {
-    "id": "817f303f-11f9-473d-8c2f-f5e4c6a264a9",
+    "id": "bde09b14-70de-4b9f-8d50-e2f396113e3b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_mod_shoot_apply",
+    "name": "hero_skill_set_shoot_cycle",
     "IsCompatibility": false,
     "IsDnD": false
 }

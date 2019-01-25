@@ -62,6 +62,8 @@ global.hero_mod_2 = "focus";
 global.hero_aux_1 = ds_list_create();
 global.hero_aux_2 = ds_list_create();
 
+global.hero_beatdown_list = ds_list_create();
+
 ds_list_add(global.hero_aux_1, "load");
 ds_list_add(global.hero_aux_1, "ping");
 ds_list_add(global.hero_aux_1, "crash");

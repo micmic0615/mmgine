@@ -6,7 +6,7 @@ my_shoot_flair_color = make_color_rgb(255,0,255);
 my_shoot_bullet_radius = 36;
 my_shoot_bullet_speed = 1400*PPS;
 my_shoot_bullet_range = 900;
-my_shoot_bullet_explosion = 80;
+my_shoot_bullet_explosion = 40;
 
 my_shoot_recoil_range = 30;
 
@@ -23,4 +23,4 @@ action_shoot_angle_chaos = 24;
 action_shoot_bullet_seek_range = 300;
 action_shoot_bullet_seek_turn_rate = 240*PPS;
 
-hero_mod_shoot_apply();
+hero_skill_set_shoot_mod_apply();

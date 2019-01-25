@@ -21,4 +21,4 @@ action_shoot_bullet_seek_turn_rate = 20*PPS;
 
 action_shoot_flag_explode_trigger = "always";
 
-hero_mod_shoot_apply();
+hero_skill_set_shoot_mod_apply();

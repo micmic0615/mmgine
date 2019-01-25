@@ -5,7 +5,7 @@ my_shoot_bullet_radius = 64;
 my_shoot_bullet_speed = 1200*PPS;
 my_shoot_bullet_range = 800;
 my_shoot_bullet_count = 1;
-my_shoot_bullet_explosion = 120;
+my_shoot_bullet_explosion = 80;
 my_shoot_poise_cost = 0;
 
 my_shoot_recoil_range = 90;
@@ -40,4 +40,4 @@ my_charge_factor_explosion = 1;
 my_charge_divider_cast = 1;
 my_charge_divider_channel = 1;
 
-hero_mod_shoot_apply();
+hero_skill_set_shoot_mod_apply();

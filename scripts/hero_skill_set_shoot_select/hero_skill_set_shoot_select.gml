@@ -20,35 +20,35 @@ if (ACTIVE && ALIVE){
 
 	switch(my_shoot_mod_select){
 		case 0:
-			hero_mod_shoot_get_cycle(ds_list_find_value(my_shoot_aux_1, 2));
+			hero_skill_get_index(ds_list_find_value(my_shoot_aux_1, 2));
 			break
 		
 		case 1:
-			hero_mod_shoot_get_cycle(ds_list_find_value(my_shoot_aux_1, 1));
+			hero_skill_get_index(ds_list_find_value(my_shoot_aux_1, 1));
 			break
 		
 		case 2:
-			hero_mod_shoot_get_cycle(ds_list_find_value(my_shoot_aux_1, 0));
+			hero_skill_get_index(ds_list_find_value(my_shoot_aux_1, 0));
 			break
 		
 		case 3:
-			hero_mod_shoot_get_cycle(my_shoot_mod_1);
+			hero_skill_get_index(my_shoot_mod_1);
 			break
 		
 		case 4:
-			hero_mod_shoot_get_cycle(my_shoot_mod_2);
+			hero_skill_get_index(my_shoot_mod_2);
 			break
 		
 		case 5:
-			hero_mod_shoot_get_cycle(ds_list_find_value(my_shoot_aux_2, 0));
+			hero_skill_get_index(ds_list_find_value(my_shoot_aux_2, 0));
 			break
 		
 		case 6:
-			hero_mod_shoot_get_cycle(ds_list_find_value(my_shoot_aux_2, 1));
+			hero_skill_get_index(ds_list_find_value(my_shoot_aux_2, 1));
 			break
 		
 		case 7:
-			hero_mod_shoot_get_cycle(ds_list_find_value(my_shoot_aux_2, 2));
+			hero_skill_get_index(ds_list_find_value(my_shoot_aux_2, 2));
 			break		
 	}
 }

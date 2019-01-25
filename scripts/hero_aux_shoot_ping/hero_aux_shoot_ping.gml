@@ -34,10 +34,10 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break
 			
 		case "load":
-			my_shoot_bullet_explosion *= 2.5;
+			my_shoot_bullet_explosion += 170;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 1),
-				(my_shoot_damage[1] * 2),
+				(my_shoot_damage[1] * 3),
 			];
 			break
 		
@@ -58,4 +58,4 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 	}
 }
 
-hero_mod_shoot_apply();
+hero_skill_set_shoot_mod_apply();
