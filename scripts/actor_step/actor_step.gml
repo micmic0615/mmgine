@@ -18,6 +18,7 @@ entity_run_type_scripts("step");
 		status_armor_health = 0;
 		status_armor_poise = 0;
 		status_immortal = false;
+		status_iframe = false;
 		physics_time_local = 1;
 
 		var buff_list_length = ds_list_size(status_buff_list);
@@ -95,7 +96,7 @@ entity_run_type_scripts("step");
 			};
 		}
 		
-		if (status_immortal){
+		if (status_immortal && !status_iframe){
 			if (ROOM.room_age_real % (0.2*SEC) == 0){
 				entity_sfx_create_basic(
 					ExplosionBulletAlt_idle,

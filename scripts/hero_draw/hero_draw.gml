@@ -18,3 +18,8 @@
 //		}
 //	}
 //}
+
+if (my_shoot_aim_mode == true){
+	var angle_mouse = degtorad(angle_between(mouse_x, mouse_y, x, y));
+	draw_line_width_color(x + cos(angle_mouse)*120, y + sin(angle_mouse)*120, x + cos(angle_mouse)*my_shoot_bullet_range, y + sin(angle_mouse)*my_shoot_bullet_range, 1, my_shoot_flair_color, my_shoot_flair_color);
+}

@@ -4,13 +4,14 @@ my_shoot_bullet_type = [DefaultBullet, "HeroBullet7"];
 my_shoot_flair_color = make_color_rgb(0,125,255);
 
 my_shoot_bullet_radius = 58;
+my_shoot_bullet_range = 640;
 my_shoot_bullet_explosion = 70;
 my_shoot_recoil_range = 70;
 
 
 my_shoot_combo_max = 4;
 my_charge_factor_size = 1.5;
-my_charge_factor_damage = 4;
+my_charge_factor_damage = 3.5;
 my_charge_factor_explosion = 1.35;
 
 my_charge_factor_size = 1.35;

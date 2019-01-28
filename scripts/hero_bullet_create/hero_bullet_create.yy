@@ -1,8 +1,8 @@
 {
-    "id": "55d4593c-122c-4b8b-b1c2-ab7a1b926288",
+    "id": "5d875d00-de9a-4499-bc7b-51d6b3ab0876",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_step_auto_fire_free",
+    "name": "hero_bullet_create",
     "IsCompatibility": false,
     "IsDnD": false
 }

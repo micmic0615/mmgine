@@ -14,12 +14,14 @@ if (ACTIVE && ALIVE){
 	
 			if (list_buff_id == buff_id){
 				buff_id_unique = false;
-				ds_list_replace(status_buff_list, i, [
-					type,
-					duration,
-					arguments,
-					buff_id
-				])
+				if (duration > p[1]){
+					ds_list_replace(status_buff_list, i, [
+						type,
+						duration,
+						arguments,
+						buff_id
+					])
+				}
 			}
 		}
 

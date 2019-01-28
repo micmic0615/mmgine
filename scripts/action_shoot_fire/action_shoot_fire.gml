@@ -46,14 +46,18 @@ while(bullet_count > 0){
 	bullet.bullet_death_spawn_trigger = action_shoot_flag_explode_trigger;
 	bullet.collision_destroy_value_max = action_shoot_bullet_collision_destroy_value;
 	bullet.collision_destroy_value_current = action_shoot_bullet_collision_destroy_value;
+	
+	var round_radius = round(action_shoot_bullet_explosion);
 		
-	bullet.bullet_death_spawn[?"explosion_radius_max"] = round(action_shoot_bullet_explosion);
+	bullet.bullet_death_spawn[?"explosion_radius_max"] = round_radius;
+	bullet.bullet_death_spawn[?"explosion_lifespan_base"] = round_radius/(420*PPS);
+	bullet.bullet_death_spawn[?"explosion_lifespan_current"] = round_radius/(420*PPS);;
 	bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = action_shoot_flair_color;
 	bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
 	bullet.bullet_death_spawn[?"status_immortal"] = true;
 	
 	bullet.bullet_death_spawn[?"bullet_collision_entity_actions"] = [
-		["damage", "actor", status_damage_total*action_shoot_damage[1], true],
+		["damage", "actor", status_damage_total*action_shoot_damage[1], true, "main_attack"],
 		["flinch", "actor", status_flinch_total*action_shoot_flinch[1]],
 		["push", "actor", action_shoot_push[1], 0.5*SEC, "center", ["multiply",1.5]],
 	]

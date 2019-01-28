@@ -56,6 +56,10 @@ if (charge_value < 1){
 	status_poise_current = max(0, (1 - my_shoot_poise_cost)*status_poise_current);
 	action_shoot_recoil_range = my_shoot_recoil_range * (1 + (charge_value*0.5))
 }
+	
+if (my_shoot_aim_mode == true){
+	action_shoot_recoil_range *= 0.35;
+}
 
 action_shoot_damage = [
 	my_shoot_damage[0] * (1 +  (charge_value*bonus_damage)),

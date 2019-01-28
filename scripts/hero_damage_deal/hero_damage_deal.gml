@@ -1,9 +1,16 @@
-//var args = argument0;
+var args = argument0;
 
-//var base_target = args[0];
-//var base_value = args[1];
-//var base_lethal = args[2];
-//var damage_id = args[3];
+var base_target = args[0];
+var base_value = args[1];
+var base_lethal = args[2];
+var damage_id = args[3];
+
+
+hero_beatdown_crash_damage([base_target, base_value, base_lethal, damage_id]);
+
+
+
+
 
 //if (base_target != id){
 //	var total_heal = base_value*(my_rally_lifesteal/100);
@@ -37,4 +44,6 @@
 	
 //}
 
-//return [base_target, base_value, base_lethal];
+
+
+return [base_target, base_value, base_lethal];

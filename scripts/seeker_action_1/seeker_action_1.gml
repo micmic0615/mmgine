@@ -33,7 +33,7 @@ if (my_attack_cooldown_timer <= 0 && count < my_attack_bullets_max){
 	
 	bullet.animation_sprite = "SeekerBullet1";
 	
-	bullet.collision_solid_entities = true;
+	bullet.collision_solid_entities = false;
 		
 	bullet.bullet_seek_range = INFINITY;
 	bullet.bullet_seek_turn_rate = 120*PPS;

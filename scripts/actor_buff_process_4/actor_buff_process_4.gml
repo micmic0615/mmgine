@@ -25,6 +25,11 @@ switch(type){
 	case "immortal":
 		status_immortal = true;
 		break
+	
+	case "iframe":
+		status_immortal = true;
+		status_iframe = true;
+		break
 		
 	case "untimed":
 		physics_time_local = 1/global.time_speed

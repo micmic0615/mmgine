@@ -17,12 +17,15 @@ player_faction = 0;
 
 hero_skill_set_list();
 
+hero_create_charge();
+
 hero_create_shoot();
 
 hero_create_dash();
 
 hero_create_beatdown();
 
+hero_create_autofire();
 
 
 

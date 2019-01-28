@@ -31,6 +31,7 @@ global.key_left = ord("A");
 global.key_right = ord("D");
 
 global.key_tab = vk_tab;
+global.key_shift = vk_shift;
 global.key_num_1 = ord("1");
 global.key_num_2 = ord("2");
 
@@ -73,6 +74,11 @@ ds_list_add(global.hero_aux_2, "none");
 ds_list_add(global.hero_aux_2, "none");
 
 ds_list_add(global.hero_beatdown_list, "do");
-
+//ds_list_add(global.hero_beatdown_list, "split");
+ds_list_add(global.hero_beatdown_list, "ping");
+ds_list_add(global.hero_beatdown_list, "crash");
+//ds_list_add(global.hero_beatdown_list, "load");
+//ds_list_add(global.hero_beatdown_list, "breach");
+//ds_list_add(global.hero_beatdown_list, "focus");
 
 room_goto(room_next(room));

@@ -1,0 +1,1 @@
+my_autofire_list = ds_create("list");

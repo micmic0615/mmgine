@@ -4,7 +4,7 @@ my_shoot_bullet_type = [DefaultBullet, "HeroBullet2"];
 my_shoot_flair_color = make_color_rgb(30,255,30);
 
 my_shoot_bullet_radius = 44;
-my_shoot_bullet_range = 600;
+my_shoot_bullet_range = 520;
 my_shoot_bullet_count = 5;
 my_shoot_bullet_explosion = 50;
 

@@ -5,10 +5,11 @@ var blend = argument_count >= 4 ? argument[3] : image_blend;
 var angle = argument_count >= 5 ? argument[4] : animation_angle;
 var mirage_direction = argument_count >= 6 ? argument[5] : animation_direction;
 var sprite = argument_count >= 7 ? argument[6] : sprite_index;
+var sprite_frame = argument_count >= 8 ? argument[7] : image_index;
 
 var mirage_data = [
 	sprite,
-	image_index,
+	sprite_frame,
 	x + offset_x,
 	y + offset_y,
 	image_xscale*mirage_direction,

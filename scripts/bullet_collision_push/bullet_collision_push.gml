@@ -20,16 +20,19 @@ if (ACTIVE && ALIVE){
 		var p = ds_list_find_value(collision_entities_connect, i);
 		
 		if (p.entity_class_lower == target_class){
-			if (value_push_angle == "center"){
-				rad_angle = degtorad(angle_between(p.x, p.y, x, y));
+			if ((target_class == "actor" && p.status_iframe == false) || target_class != "actor"){
+				if (value_push_angle == "center"){
+					rad_angle = degtorad(angle_between(p.x, p.y, x, y));
+				}
+			
+				var x_move = cos(rad_angle)*value_push_distance/value_push_duration;
+				var y_move = sin(rad_angle)*value_push_distance/value_push_duration;
+	
+				with(p){
+					entity_motion_add(x_move, y_move, value_push_duration, value_push_decay)
+				}
 			}
 			
-			var x_move = cos(rad_angle)*value_push_distance/value_push_duration;
-			var y_move = sin(rad_angle)*value_push_distance/value_push_duration;
-	
-			with(p){
-				entity_motion_add(x_move, y_move, value_push_duration, value_push_decay)
-			}
 		}
 	}
 }

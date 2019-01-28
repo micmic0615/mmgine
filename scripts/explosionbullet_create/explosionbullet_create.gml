@@ -12,5 +12,3 @@ collision_enabled_bullets = false;
 collision_enabled_doodads = false;
 
 depth = 56;
-
-

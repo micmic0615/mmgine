@@ -4,22 +4,28 @@ var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
 var prev_charge = my_charge_current;
 var charge_value = my_charge_current/my_charge_max;
 
+var p_spawn = 60 + (40*charge_value);
+var p_count = ceil(5*charge_value);
+var p_model = game_particle_setup_basic(my_shoot_flair_color, (0.5 + random(1.5)*charge_value), 2*charge_value, 0.5*SEC);
+part_emitter_region(global.particle_system,draw_particle_emitter,x+random_mirror(p_spawn),x+random_mirror(p_spawn),y+random_mirror(p_spawn),y+random_mirror(p_spawn),ps_shape_ellipse,1);
+
 if (actor_actions_idle && my_charge_current < my_charge_max){
-	var p_spawn = 60 + (40*charge_value);
-	var p_count = ceil(5*charge_value);
-	var p_model = game_particle_setup_basic(my_shoot_flair_color, (0.5 + random(1.5)*charge_value), 2*charge_value, 0.5*SEC);
-	part_emitter_region(global.particle_system,draw_particle_emitter,x+random_mirror(p_spawn),x+random_mirror(p_spawn),y+random_mirror(p_spawn),y+random_mirror(p_spawn),ps_shape_ellipse,1);
-		
 	var charge_sfx_interval = 0.4*SEC;
 	if (action_shoot_cast_timer <= 0 && action_shoot_channel_timer <= 0){
 		var charge_accelerator = 1;
-		if (my_charge_accelerate_delay_timer > 0){
-			my_charge_accelerate_delay_timer -= TIMESPEED
+		
+		if (my_shoot_aim_mode){
+			charge_accelerator = my_charge_max/(2*SEC);
+			animation_name = "channel";
 		} else {
-			charge_accelerator = 2.5;
-			if (actor_actions_id == "none"){
-				animation_name = "charge";
-				part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
+			if (my_charge_accelerate_delay_timer > 0){
+				my_charge_accelerate_delay_timer -= TIMESPEED
+			} else {
+				charge_accelerator = my_charge_max/(1.35*SEC);
+				if (actor_actions_id == "none"){
+					animation_name = "charge";
+					part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
+				}
 			}
 		}
 		
@@ -31,6 +37,15 @@ if (actor_actions_idle && my_charge_current < my_charge_max){
 	if (my_charge_current >= my_charge_min){		
 		part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
 	}
+}
+
+if (my_charge_permabuff > 0){
+	my_charge_permabuff -= TIMESPEED;
+	my_charge_current = my_charge_max;
+	
+	var p_count = 5;
+	var p_model = game_particle_setup_basic(my_shoot_flair_color, (1 + random(2)), 1, 0.5*SEC);
+	part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
 }
 
 if (my_charge_current == my_charge_max){

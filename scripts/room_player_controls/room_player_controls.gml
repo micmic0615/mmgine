@@ -24,6 +24,12 @@ if (player_controllable && global.replay_mode == "record"){
 					actor_action_move_angle(180)
 				}
 				
+				if (keyboard_check(global.key_shift)){
+					my_shoot_aim_mode = true;
+				} else {
+					my_shoot_aim_mode = false;
+				}
+				
 				//if (keyboard_check_pressed(global.key_up)){
 				//	if (me.player_controls_move_dash_timer_up > 0){
 				//		var rad_angle = degtorad(270);
@@ -90,6 +96,25 @@ if (player_controllable && global.replay_mode == "record"){
 				
 				if (keyboard_check_pressed(global.key_action_1)){
 					var rad_angle = degtorad(physics_motion_angle);
+					
+					if (keyboard_check(global.key_up) && keyboard_check(global.key_right)){
+						rad_angle = degtorad(315)
+					} else if (keyboard_check(global.key_up) && keyboard_check(global.key_left)){
+						rad_angle = degtorad(225)
+					} else if (keyboard_check(global.key_down) && keyboard_check(global.key_right)){
+						rad_angle = degtorad(45)
+					} else if (keyboard_check(global.key_down) && keyboard_check(global.key_left)){
+						rad_angle = degtorad(135)
+					} else if (keyboard_check(global.key_up)){
+						rad_angle = degtorad(270)
+					} else if (keyboard_check(global.key_down)){
+						rad_angle = degtorad(90)
+					} else if (keyboard_check(global.key_right)){
+						rad_angle = degtorad(0)
+					} else if (keyboard_check(global.key_left)){
+						rad_angle = degtorad(180)
+					}
+					
 					actor_action_3([x + (cos(rad_angle)*10), y + (sin(rad_angle)*10)]);
 				}
 			}

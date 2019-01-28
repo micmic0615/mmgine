@@ -3,7 +3,7 @@ my_shoot_flair_color = make_color_rgb(0,255,255);
 
 my_shoot_bullet_radius = 64;
 my_shoot_bullet_speed = 1000*PPS;
-my_shoot_bullet_range = 800;
+my_shoot_bullet_range = 740;
 my_shoot_bullet_count = 1;
 my_shoot_bullet_explosion = 80;
 my_shoot_poise_cost = 0;
