@@ -64,13 +64,15 @@ global.hero_aux_2 = ds_list_create();
 
 global.hero_beatdown_list = ds_list_create();
 
-ds_list_add(global.hero_aux_1, "load");
-ds_list_add(global.hero_aux_1, "ping");
-ds_list_add(global.hero_aux_1, "crash");
+ds_list_add(global.hero_aux_1, "none");
+ds_list_add(global.hero_aux_1, "none");
+ds_list_add(global.hero_aux_1, "none");
 
-ds_list_add(global.hero_aux_2, "focus");
-ds_list_add(global.hero_aux_2, "breach");
-ds_list_add(global.hero_aux_2, "split");
+ds_list_add(global.hero_aux_2, "none");
+ds_list_add(global.hero_aux_2, "none");
+ds_list_add(global.hero_aux_2, "none");
+
+ds_list_add(global.hero_beatdown_list, "do");
 
 
 room_goto(room_next(room));

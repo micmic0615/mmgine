@@ -1,4 +1,5 @@
 var dir = argument0;
+
 if (ACTIVE && ALIVE){
 	if (sign(dir) == 1){
 		if (my_shoot_mod_select == undefined){

@@ -751,6 +751,14 @@
             }
         },
         {
+            "Key": "3dec7b0f-289b-4b96-982b-a6f305b1f1e3",
+            "Value": {
+                "id": "cbe4c881-33f4-4410-9087-515eb410e203",
+                "resourcePath": "sprites\\HI_Skill_none_idle\\HI_Skill_none_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3e444205-ac57-4524-bfd2-a7bf21dd0667",
             "Value": {
                 "id": "597c556d-c456-4ac8-975f-b8392c52cf10",
@@ -1300,6 +1308,14 @@
                 "id": "7c044931-69b5-4e6e-afbd-a8fe10903316",
                 "resourcePath": "views\\656d383b-9e5f-4811-b97a-7d59601d7fe4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "660b2c22-e8d9-46ce-9ebc-93decc0aff30",
+            "Value": {
+                "id": "c3ba9470-c4fa-4645-b36e-c6933c3bc3a6",
+                "resourcePath": "scripts\\hero_skill_set_list\\hero_skill_set_list.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3253,6 +3269,7 @@
         "c0aaa3c0-11f3-4386-9c3a-9acdb44cd088",
         "46f04ccf-41f2-4279-a666-82b0ace52f7a",
         "b72367ab-210a-413a-9daf-bfbd1536d584",
+        "660b2c22-e8d9-46ce-9ebc-93decc0aff30",
         "817f303f-11f9-473d-8c2f-f5e4c6a264a9",
         "b6e175cc-979b-4de7-88de-a00ded65e9b0",
         "bde09b14-70de-4b9f-8d50-e2f396113e3b",

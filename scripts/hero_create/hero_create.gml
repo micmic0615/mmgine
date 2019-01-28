@@ -15,6 +15,8 @@ collision_persistent = true;
 
 player_faction = 0;
 
+hero_skill_set_list();
+
 hero_create_shoot();
 
 hero_create_dash();

@@ -51,29 +51,20 @@ if (charge_value == 1){
 	action_shoot_bullet_particles = [undefined, 0, 0];
 }
 
+action_shoot_recoil_range = my_shoot_recoil_range*2
+if (charge_value < 1){
+	status_poise_current = max(0, (1 - my_shoot_poise_cost)*status_poise_current);
+	action_shoot_recoil_range = my_shoot_recoil_range * (1 + (charge_value*0.5))
+}
+
 action_shoot_damage = [
 	my_shoot_damage[0] * (1 +  (charge_value*bonus_damage)),
 	my_shoot_damage[1] * (1 +  (charge_value*bonus_damage)),
 ];
 
-var flinch_multiplier = 1;
-action_shoot_recoil_range = my_shoot_recoil_range*2
-if (charge_value < 1){
-	status_poise_current = max(0, (1 - my_shoot_poise_cost)*status_poise_current);
-	flinch_multiplier = status_poise_current/status_poise_max;
-	action_shoot_recoil_range = my_shoot_recoil_range * (1 + (charge_value*0.5))
-}
-
-if (max_combo){
-	action_shoot_recoil_range += my_shoot_recoil_range*0.5;
-}
-
-var diminishing_flinch_main = my_shoot_flinch[0] * flinch_multiplier;
-var diminishing_flinch_explosion = my_shoot_flinch[1] * flinch_multiplier;
-
 action_shoot_flinch = [
-	diminishing_flinch_main * (1 +  (charge_value*bonus_flinch)),
-	diminishing_flinch_explosion * (1 +  (charge_value*bonus_flinch)),
+	my_shoot_flinch[0] * (1 +  (charge_value*bonus_flinch)),
+	my_shoot_flinch[1] * (1 +  (charge_value*bonus_flinch)),
 ];
 
 my_charge_current = 0;
