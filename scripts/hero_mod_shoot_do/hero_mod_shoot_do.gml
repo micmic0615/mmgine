@@ -13,6 +13,7 @@ my_shoot_recoil_range = 90;
 my_shoot_combo_max = INFINITY;
 my_shoot_cast_value = 0.1*SEC;
 my_shoot_channel_value = 0.2*SEC;
+my_shoot_backswing_value = 0.1*SEC;
 my_shoot_cooldown_value = 0.05*SEC;
 
 my_shoot_damage = [1,0.2];
@@ -28,8 +29,6 @@ action_shoot_bullet_collision_destroy_value = 1;
 
 action_shoot_flag_explode_trigger = "death";
 
-my_charge_min = 1*SEC;
-my_charge_max = 4*SEC;
 my_charge_factor_size = 1;
 my_charge_factor_speed = 1;
 my_charge_factor_range = 1;

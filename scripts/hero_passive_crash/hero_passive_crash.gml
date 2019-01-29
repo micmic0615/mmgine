@@ -1,0 +1,1 @@
+actor_stats_adjust_poise(global.hero_stats_poise * 1.4);

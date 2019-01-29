@@ -41,10 +41,6 @@ if (bullet_lifespan > 0){
 					
 					var floor_age = floor(ROOM.room_age_game);
 					var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
-					
-					if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
-						entity_mirage_create(0.35*SEC, 0,0, make_color_rgb(100,100,100))
-					};
 				} else {
 					bullet_seek_target = noone;
 				}

@@ -13,7 +13,6 @@ if (charge_value == 1){
 }
 
 var max_combo = (action_shoot_combo_count % action_shoot_combo_max) == (action_shoot_combo_max - 1);
-
 if (max_combo){charge_value = 1};
 action_shoot_bullet_radius = my_shoot_bullet_radius * (1 + (charge_value*bonus_size));
 action_shoot_bullet_range = my_shoot_bullet_range * (1 + (charge_value*bonus_range))
@@ -72,4 +71,7 @@ action_shoot_flinch = [
 ];
 
 my_charge_current = 0;
-
+switch(my_charge_active){
+	case 1: my_charge_meter_1 = 0; break;
+	case 2: my_charge_meter_2 = 0; break;
+}

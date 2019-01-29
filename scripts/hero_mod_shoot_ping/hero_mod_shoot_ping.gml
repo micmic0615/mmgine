@@ -12,6 +12,7 @@ my_shoot_recoil_range = 30;
 
 my_shoot_cast_value = 1;
 my_shoot_channel_value = 9;
+my_shoot_backswing_value = 1;
 my_shoot_cooldown_value = 0*SEC;
 
 my_shoot_damage = [0.6,0.1];

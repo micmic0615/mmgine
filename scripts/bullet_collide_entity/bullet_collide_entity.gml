@@ -2,10 +2,10 @@ if (ACTIVE && ALIVE){
 	for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 		var p = ds_list_find_value(collision_entities_connect, i);
 		
-		var can_pop = true;
-		if (p.entity_class_lower == "actor" && p.status_iframe == true){can_pop = false}
+		var can_collide = true;
+		if (p.entity_class_lower == "actor" && p.status_iframe == true){can_collide = false}
 		
-		if (can_pop){
+		if (can_collide){
 			ds_list_add(collision_entities_exceptions, p);
 			
 			if (collision_destroy_enabled){

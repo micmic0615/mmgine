@@ -16,7 +16,7 @@ if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 
 	
 	actor_actions_id = "dash";
 	var bullet_angle = angle_between(x,y, target_point[0], target_point[1]);
-	entity_motion_push((action_dash_range), (action_dash_speed/(action_dash_range*PPS))*SEC, bullet_angle  -180, ["multiply",1.25], "move_motion");
+	entity_motion_push((action_dash_range), action_dash_range/action_dash_speed, bullet_angle  -180, ["multiply",1.25], "move_motion");
 	
 } else {
 	if (action_dash_cooldown_timer <= action_dash_cooldown_value){

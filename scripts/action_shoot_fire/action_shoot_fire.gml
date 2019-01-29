@@ -10,7 +10,7 @@ var bullet_y = sin(degtorad(bullet_angle))*bullet_spawn_offset + y;
 var bullet_spread_angle = ((action_shoot_angle_spead*0.2) + ((bullet_max/13)*action_shoot_angle_spead))/bullet_max;
 
 action_shoot_combo_count++;
-action_shoot_combo_timer = action_shoot_cast_value + action_shoot_channel_value + action_shoot_backswing_value;
+action_shoot_combo_timer = action_shoot_cast_value + action_shoot_channel_value + action_shoot_backswing_value + 0.25*SEC;
 
 while(bullet_count > 0){
 	var bullet = actor_spawn_bullet(action_shoot_target_point[0], action_shoot_target_point[1], bullet_x,bullet_y, action_shoot_bullet_type[0]);

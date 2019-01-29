@@ -62,7 +62,7 @@ entity_run_type_scripts("step");
 			var duration = p[1];
 			
 			if (has_speed == 0 && (type == "speed_bonus_raw" || type == "speed_bonus_percent")){
-				has_speed = duration;
+				//has_speed = duration;
 			}
 			
 			if (has_stunned == 0 && type == "stunned"){

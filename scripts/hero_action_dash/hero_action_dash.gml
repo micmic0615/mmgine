@@ -12,9 +12,14 @@ if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0 ){
 	action_dash_flair_color = my_dash_flair_color
 }
 
-actor_buff_apply("iframe", my_dash_channel, [], "dash_iframe")
+actor_buff_apply("iframe", my_dash_iframe, [], "dash_iframe")
 
 action_shoot_combo_count = 0;
-my_charge_current = max(1, my_charge_current - my_dash_charge_cost);
-	
+my_charge_meter_1 =  max(1, my_charge_meter_1 - my_dash_charge_cost);
+my_charge_meter_2 =  max(1, my_charge_meter_2 - my_dash_charge_cost);
 
+
+hero_dash_split();
+hero_dash_ping();
+hero_dash_load();
+hero_dash_breach();

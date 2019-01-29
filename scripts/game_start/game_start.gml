@@ -58,12 +58,13 @@ global.particle_system = part_system_create();
 
 
 global.hero_mod_1 = "do";
-global.hero_mod_2 = "focus";
+global.hero_mod_2 = "crash";
 
 global.hero_aux_1 = ds_list_create();
 global.hero_aux_2 = ds_list_create();
 
 global.hero_beatdown_list = ds_list_create();
+global.hero_passive_list = ds_list_create();
 
 ds_list_add(global.hero_aux_1, "none");
 ds_list_add(global.hero_aux_1, "none");
@@ -74,11 +75,9 @@ ds_list_add(global.hero_aux_2, "none");
 ds_list_add(global.hero_aux_2, "none");
 
 ds_list_add(global.hero_beatdown_list, "do");
-//ds_list_add(global.hero_beatdown_list, "split");
-ds_list_add(global.hero_beatdown_list, "ping");
-ds_list_add(global.hero_beatdown_list, "crash");
-//ds_list_add(global.hero_beatdown_list, "load");
-//ds_list_add(global.hero_beatdown_list, "breach");
-//ds_list_add(global.hero_beatdown_list, "focus");
+ds_list_add(global.hero_beatdown_list, "none");
+
+ds_list_add(global.hero_passive_list, "none");
+ds_list_add(global.hero_passive_list, "none");
 
 room_goto(room_next(room));

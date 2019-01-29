@@ -9,6 +9,8 @@ var bullet_color = argument0[6];
 var spawn_x = argument0[7];
 var spawn_y = argument0[8];
 
+var mirage_spawn = array_length_1d(argument0) > 9 ? argument0[9] : true;
+
 
 
 var rad_angle = degtorad(bullet_angle);	
@@ -47,6 +49,9 @@ with(bullet){
 	entity_motion_push(bullet_range*0.25, 0.5*SEC, bullet_angle, ["multiply",1.25], "bullet_push");
 }
 
-hero_mirage_create(1.5*SEC, bullet_angle, bullet_color, spawn_x, spawn_y);
+if (mirage_spawn){
+	hero_mirage_create(1.5*SEC, bullet_angle, bullet_color, spawn_x, spawn_y);
+}
+
 
 return bullet

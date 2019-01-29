@@ -7,7 +7,7 @@ if (sign(dir) == 1){
 }
 
 var mod_name = hero_skill_get_name(my_shoot_mod_cycle);
-var mod_ban = (my_shoot_mod_select == 3 || my_shoot_mod_select == 4) ? "none" : "";
+var mod_ban = (my_shoot_mod_select == 5 || my_shoot_mod_select == 6) ? "none" : "";
 for(var i = 0; i < ds_list_size(my_shoot_mod_skip);i++){
 	var p = ds_list_find_value(my_shoot_mod_skip, i);
 	if (p != "none"){mod_ban += p + "-"};

@@ -11,6 +11,7 @@ my_shoot_bullet_explosion = 320;
 my_shoot_recoil_range = 180;
 
 my_shoot_cast_value = 0.25*SEC;
+my_shoot_backswing_value = 0.25*SEC;
 
 my_shoot_damage = [0.4, 0.8];
 my_shoot_flinch = [0.25, 0.5];
