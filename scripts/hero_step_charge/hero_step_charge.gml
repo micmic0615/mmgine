@@ -13,8 +13,8 @@ var p_spawn_2 = 60 + (40*charge_value_1);
 var p_count_1 = ceil(3*charge_value_2);
 var p_count_2 = ceil(3*charge_value_2);
 
-var p_model_1 = game_particle_setup_basic(my_charge_color_1, (0.5 + random(1)*charge_value_1), 2*charge_value_1, 0.5*SEC);
-var p_model_2 = game_particle_setup_basic(my_charge_color_2, (0.5 + random(1)*charge_value_2), 2*charge_value_2, 0.5*SEC);
+var p_model_1 = game_particle_setup_basic(my_charge_color_1, (0.5 + random(1)*charge_value_1), 1*charge_value_1, 0.5*SEC);
+var p_model_2 = game_particle_setup_basic(my_charge_color_2, (0.5 + random(1)*charge_value_2), 1*charge_value_2, 0.5*SEC);
 
 my_charge_draw_angle += 20*PPS;
 
@@ -31,39 +31,41 @@ if (actor_actions_idle){
 				charge_accelerator = 2.5;
 				if (actor_actions_id == "none" && (my_charge_meter_1 < my_charge_max || my_charge_meter_2 < my_charge_max)){
 					animation_name = "charge";
-					if (my_charge_meter_1 < my_charge_max){
+					if (my_charge_meter_1 < my_charge_max && floor_age != next_floor_age){
 						hero_particles_create(p_spawn_1, p_model_1, p_count_1)
 					}
 					
-					if (my_charge_meter_2 < my_charge_max){
+					if (my_charge_meter_2 < my_charge_max && floor_age != next_floor_age){
 						hero_particles_create(p_spawn_2, p_model_2, p_count_2)
 					}
 				}
 			}
 		}
 		
-		my_charge_meter_1 = min((my_charge_meter_1 + (TIMESPEED*charge_accelerator)), my_charge_max);
-		my_charge_meter_2 = min((my_charge_meter_2 + (TIMESPEED*charge_accelerator)), my_charge_max);
+		if (action_dash_channel_timer <= 0 && action_dash_cooldown_timer <= 0){
+			my_charge_meter_1 = min((my_charge_meter_1 + (TIMESPEED*charge_accelerator)), my_charge_max);
+			my_charge_meter_2 = min((my_charge_meter_2 + (TIMESPEED*charge_accelerator)), my_charge_max);
+		}
 	} else {
 		my_charge_accelerate_delay_timer = max(my_charge_accelerate_delay_value, my_charge_accelerate_delay_timer);
 	}
 	
-	if (my_charge_meter_1 >= my_charge_min && my_charge_meter_1 < my_charge_max){		
+	if (my_charge_meter_1 >= my_charge_min && my_charge_meter_1 < my_charge_max && floor_age != next_floor_age){		
 		hero_particles_create(p_spawn_1, p_model_1, p_count_1);			
 	}
 	
-	if (my_charge_meter_2 >= my_charge_min && my_charge_meter_2 < my_charge_max){		
+	if (my_charge_meter_2 >= my_charge_min && my_charge_meter_2 < my_charge_max && floor_age != next_floor_age){		
 		hero_particles_create(p_spawn_2, p_model_2, p_count_2);
 	}
 }
 
-if (my_charge_permabuff > 0){
+if (my_charge_permabuff > 0 && floor_age != next_floor_age){
 	my_charge_permabuff -= TIMESPEED;
 	my_charge_meter_1 = my_charge_max;
 	my_charge_meter_2 = my_charge_max;
 	
-	var p_model_1 = game_particle_setup_basic(my_charge_color_1, (1 + random(1)), 1, 0.5*SEC);
-	var p_model_2 = game_particle_setup_basic(my_charge_color_2, (1 + random(1)), 1, 0.5*SEC);
+	var p_model_1 = game_particle_setup_basic(my_charge_color_1, (1 + random(1)), 1, 0.5*SEC, pt_shape_snow);
+	var p_model_2 = game_particle_setup_basic(my_charge_color_2, (1 + random(1)), 1, 0.5*SEC, pt_shape_snow);
 	
 	hero_particles_create(100, p_model_1, 2);
 	hero_particles_create(100, p_model_2, 2);
@@ -85,7 +87,7 @@ if (my_charge_meter_1 == my_charge_max){
 		var p_loop = 3;
 		while(p_loop > 0){
 			var p_count = 3;
-			var p_model = game_particle_setup_basic(my_charge_color_1, (1 + random(2)), (3 + random(1)), ((0.5*SEC) + random(0.25*SEC)));
+			var p_model = game_particle_setup_basic(my_charge_color_1, (3 + random(3)), (3 + random(1)), ((0.5*SEC) + random(0.25*SEC)), pt_shape_snow);
 			
 			hero_particles_create(80, p_model, p_count);
 			p_loop --;
@@ -112,7 +114,7 @@ if (my_charge_meter_2 == my_charge_max){
 		var p_loop = 3;
 		while(p_loop > 0){
 			var p_count = 3;
-			var p_model = game_particle_setup_basic(my_charge_color_2, (1 + random(2)), (3 + random(1)), ((0.5*SEC) + random(0.25*SEC)));
+			var p_model = game_particle_setup_basic(my_charge_color_2, (3 + random(3)), (3 + random(1)), ((0.5*SEC) + random(0.25*SEC)), pt_shape_snow);
 			
 			hero_particles_create(80, p_model, p_count);
 			p_loop --;

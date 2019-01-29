@@ -22,7 +22,7 @@ if (keyboard_check_pressed(global.key_pause)){
 		if (stage_spawn_cycle > 3){stage_spawn_cycle = 0};	
 	
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
-		with(player_main_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		with(player_main_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration*0.5, [], "ai_immortal")};
 	}
 }
 

@@ -75,3 +75,11 @@ switch(my_charge_active){
 	case 1: my_charge_meter_1 = 0; break;
 	case 2: my_charge_meter_2 = 0; break;
 }
+
+if (hero_passive_find("focus")){
+	my_charge_current = 0;
+	switch(my_charge_active){
+		case 1: my_charge_meter_2 = my_charge_meter_2 < my_charge_max ? min(my_charge_meter_2 + 0.5*SEC, my_charge_max - TIMESPEED) : my_charge_max; break;
+		case 2: my_charge_meter_1 = my_charge_meter_1 < my_charge_max ? min(my_charge_meter_1 + 0.5*SEC, my_charge_max - TIMESPEED) : my_charge_max; break;
+	}
+}

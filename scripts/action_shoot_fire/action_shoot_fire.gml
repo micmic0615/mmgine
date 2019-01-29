@@ -16,12 +16,15 @@ while(bullet_count > 0){
 	var bullet = actor_spawn_bullet(action_shoot_target_point[0], action_shoot_target_point[1], bullet_x,bullet_y, action_shoot_bullet_type[0]);
 	var local_angle = bullet_angle;
 	
-	local_angle += (random(action_shoot_angle_chaos) - (action_shoot_angle_chaos*0.5));
+	var angle_chaos = (random(action_shoot_angle_chaos) - (action_shoot_angle_chaos*0.5))
+	local_angle += angle_chaos;
 	
-	bullet.status_movespeed_base = action_shoot_bullet_speed;
+	bullet.status_movespeed_base = action_shoot_bullet_speed + random_mirror(action_shoot_speed_chaos);
 	bullet.status_movesnap_base = 0.2*SEC;
 	
 	bullet.bullet_action_move_angle = local_angle + ((bullet_count-1)*bullet_spread_angle) - ((bullet_max-1)*(bullet_spread_angle/2));
+	
+
 		
 	var rad_bullet_angle = degtorad(bullet.bullet_action_move_angle);
 		
@@ -34,7 +37,7 @@ while(bullet_count > 0){
 		
 	bullet.bullet_seek_range = action_shoot_bullet_seek_range;
 	bullet.bullet_seek_turn_rate = action_shoot_bullet_seek_turn_rate;
-	bullet.bullet_lifespan = ((((action_shoot_bullet_range*PPS)/TIMESPEED)/action_shoot_bullet_speed)*SEC);
+	bullet.bullet_lifespan = (action_shoot_bullet_range + random_mirror(action_shoot_range_chaos) )/ bullet.status_movespeed_base;
 	bullet.bullet_collision_tile_action = "die";
 		
 	bullet.animation_sprite = action_shoot_bullet_type[1];

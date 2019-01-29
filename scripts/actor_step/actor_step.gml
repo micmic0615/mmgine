@@ -20,6 +20,7 @@ entity_run_type_scripts("step");
 		status_immortal = false;
 		status_iframe = false;
 		physics_time_local = 1;
+		status_damage_total = status_damage_base;
 
 		var buff_list_length = ds_list_size(status_buff_list);
 		for(var i = 0; i < buff_list_length;i++){actor_buff_process_1(ds_list_find_value(status_buff_list, i))};

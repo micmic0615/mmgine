@@ -44,6 +44,9 @@ action_shoot_queue_angle = 0;
 action_shoot_angle_chaos = 0;
 action_shoot_angle_spead = 60;
 
+action_shoot_range_chaos = 0;
+action_shoot_speed_chaos = 0;
+
 action_shoot_bullet_seek_range = 240;
 action_shoot_bullet_seek_turn_rate = 160*PPS;
 action_shoot_bullet_collision_destroy_value = 1;

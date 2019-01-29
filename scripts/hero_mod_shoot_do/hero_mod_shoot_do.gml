@@ -22,6 +22,8 @@ my_shoot_push = [100, 10];
 
 action_shoot_angle_chaos = 0;
 action_shoot_angle_spead = 60;
+action_shoot_range_chaos = 0;
+action_shoot_speed_chaos = 0;
 
 action_shoot_bullet_seek_range = 240;
 action_shoot_bullet_seek_turn_rate = 160*PPS;

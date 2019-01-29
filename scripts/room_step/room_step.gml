@@ -8,6 +8,8 @@ if (room_initiate){
 				var time_diff = (global.time_base - global.time_change_value);
 				var time_delta = sqr(time_diff/global.time_change_duration);
 				
+				show_debug_message(time_delta)
+				
 				global.time_change_value += time_delta;
 			}
 			

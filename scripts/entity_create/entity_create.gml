@@ -23,6 +23,13 @@ physics_gravity_turnrate = 45*PPS;
 physics_gravity_falling = 0;
 physics_gravity_factor = 1;
 
+physics_gravity_x = 0;
+physics_gravity_y = 0;
+
+physics_movement_x = 0;
+physics_movement_y = 0;
+physics_movement_angle = 0;
+
 entity_age = 0
 
 entity_class = object_get_name(object_get_parent(object_index));

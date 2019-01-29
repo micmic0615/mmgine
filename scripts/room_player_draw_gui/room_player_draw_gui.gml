@@ -14,9 +14,8 @@ if (player_main_actor != noone && instance_exists(player_main_actor)){
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
 		
-		
-		//bar_color = make_colour_rgb(255,170,0);
-		//bar_width = bar_length*(min(1,(player_main_actor.rally_limit/player_main_actor.status_health_max)));
+		bar_color = make_colour_rgb(255,170,0);
+		bar_width = bar_length*(min(1,(player_main_actor.my_rally_limit/player_main_actor.status_health_max)));
 		
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
@@ -71,8 +70,7 @@ if (player_main_actor != noone && instance_exists(player_main_actor)){
 		
 		var hp_text = string(round(player_main_actor.status_poise_current)) + " / " + string(player_main_actor.status_poise_max);
 		draw_set_color(c_black)
-		draw_text_transformed(bar_loc_x + (bar_length/2), bar_loc_y + (bar_height/2) - 3, hp_text, 0.8, 0.8, 0)
-		
+		draw_text_transformed(bar_loc_x + (bar_length/2), bar_loc_y + (bar_height/2) - 3, hp_text, 0.8, 0.8, 0);
 	#endregion
 	
 	#region //SKILLS

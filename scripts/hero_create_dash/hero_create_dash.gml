@@ -6,6 +6,8 @@ my_dash_iframe = 0.25*SEC;
 my_dash_combo_max = 2;
 my_dash_flair_color = make_color_rgb(160,160,160);
 
+
+
 action_dash_create([
 	/*speed*/ my_dash_speed,
 	/*range*/ my_dash_range,

@@ -1,1 +1,1 @@
-my_dash_charge_cost += 0.75*SEC;
+my_dash_charge_cost += 0.5*SEC;
