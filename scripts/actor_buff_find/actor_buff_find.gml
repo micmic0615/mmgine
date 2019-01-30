@@ -1,7 +1,7 @@
 var buff_filter = argument0;
 var buff_found = undefined;
 
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var buff_list_length = ds_list_size(status_buff_list);
 	for(var i = 0; i < buff_list_length;i++){
 		var p = ds_list_find_value(status_buff_list, i);

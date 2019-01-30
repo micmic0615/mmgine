@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var me = id;
 	seekingbullet_push_cooldown_timer -= TIMESPEED;
 	seekingbullet_hit_take_cooldown_timer -= TIMESPEED;
@@ -8,7 +8,7 @@ if (ACTIVE && ALIVE){
 	
 	if (seekingbullet_push_cooldown_timer <= 0){
 		with(SeekingBullet){
-			if (ACTIVE && ALIVE && id != me){
+			if (entity_enabled() && id != me){
 				var push_factor = sprite_width*image_xscale*0.4;
 				if (distance_between(x,y,me.x,me.y) < push_factor){
 					var angle = angle_between(x,y,me.x,me.y)

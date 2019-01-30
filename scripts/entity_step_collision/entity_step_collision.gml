@@ -28,7 +28,7 @@ while(move_steps_current > 0){
 		if (collision_solid_entities){
 			for(var i = 0; i < collision_count_entities;i++){
 				var p = ds_list_find_value(collision_entities_connect, i);
-				if (p.collision_solid_entities && collision_pushable){
+				if (entity_enabled(p) && p.collision_solid_entities && collision_pushable){
 					if (
 						(physics_motion_x != 0 || physics_motion_y != 0) || 
 						(p.physics_motion_x != 0 || p.physics_motion_y != 0)

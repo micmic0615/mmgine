@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var value_push_distance = argument[0];
 	var value_push_duration = argument[1];
 	var value_push_angle = argument[2];

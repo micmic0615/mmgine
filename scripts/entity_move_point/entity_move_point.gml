@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var move_point = [round(argument0[0]), round(argument0[1])];
 	if (entity_class_lower == "actor"){actor_record_replay_data("move_point", move_point)};
 

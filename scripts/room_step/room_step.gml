@@ -22,6 +22,14 @@ if (room_initiate){
 	room_player_setup();
 	room_player_controls();
 	room_run_scripts("step");
+	
+	#region //COLLISION VALIDATION
+		if (entity_collisions_validate == true){
+			entity_collisions_validate = false;
+			with(ENTITY){if (entity_enabled()){ds_list_clear(collision_entities_valid)}};
+			with(ENTITY){entity_collision_validate_set()}
+		}
+	#endregion
 
 	#region //CAMERA
 		var distance = distance_between(camera_x, camera_y, camera_target_x, camera_target_y);
@@ -78,7 +86,7 @@ if (room_initiate){
 		
 				if (camera_loop_snap){
 					with(ENTITY){
-						if (ACTIVE && camera_inside_view){
+						if (entity_enabled() && camera_inside_view){
 							x += (ROOM.camera_x - base_camera_x);
 							y += (ROOM.camera_y - base_camera_y);
 						}
@@ -107,7 +115,7 @@ if (room_initiate){
 				} else {
 					
 					with(ENTITY){
-						if (ACTIVE && !camera_inside_view) {
+						if (entity_enabled() && !camera_inside_view) {
 							var x_camera_center = camera_view_x + camera_size_w*0.5;
 							var x_camera_distance = abs(x - x_camera_center);
 							if (x_camera_distance > room_width*0.5){

@@ -1,7 +1,7 @@
 var start_height = argument0;
 var mc = player_main_actor;
 
-if (mc != noone && instance_exists(mc) && mc.active && mc.alive){
+if (mc != noone && entity_enabled(mc)){
 	var current_skill = levelproto00_get_hero_skill();
 	
 	var active_slot = current_skill[0];

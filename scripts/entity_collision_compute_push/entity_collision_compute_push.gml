@@ -3,7 +3,7 @@ var p = argument0;
 var final_x_push = argument1;
 var final_y_push = argument2;
 
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var right_push = 0;
 	var left_push = 0;
 	var bottom_push = 0;

@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var type = argument[0];
 	var duration = argument[1];
 	var arguments = argument[2];

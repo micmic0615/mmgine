@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	#region //CAMERA
 		var camera_view_x = camera_get_view_x(view_camera[0]);
 		var camera_view_y = camera_get_view_y(view_camera[0]);
@@ -16,8 +16,10 @@ if (ACTIVE && ALIVE){
 	
 	#region //SCRIPTS
 		entity_run_class_scripts("step");
-		if (collision_count[0] > 0){entity_run_class_scripts("collide_entity")}
 		if (collision_count[1] > 0){entity_run_class_scripts("collide_tile")}
+		if ( ROOM.room_age_real % collision_modulo == collision_index){
+			if (collision_count[0] > 0){entity_run_class_scripts("collide_entity")}
+		}
 	#endregion
 
 	#region //ANIMATION

@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var me = id;
 	
 	//for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
@@ -14,9 +14,9 @@ if (ACTIVE && ALIVE){
 		for(var i = 0; i < connect_length;i++){
 			var p = ds_list_find_value(collision_entities_connect, i);
 		
-			if (p.entity_class_lower == "actor" && p.player_faction != player_faction){	
+			if (entity_enabled(p) && p.entity_class_lower == "actor" && p.player_faction != player_faction){	
 				with(p){
-					if (ACTIVE && ALIVE){
+					if (entity_enabled()){
 						var duration = 1*SEC;
 						var rad_angle = degtorad(angle_between(x,y, me.x, me.y))
 						var x_move = (cos(rad_angle) * me.my_attack_push_distance)/duration;

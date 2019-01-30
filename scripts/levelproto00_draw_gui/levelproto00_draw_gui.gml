@@ -31,6 +31,9 @@ if (player_main_actor != noone && instance_exists(player_main_actor)){
 draw_set_halign(fa_right)
 var screen_width = window_get_width();
 
-draw_text_color(screen_width - 10, 10,"ENEMIES: " + string(enemy_count), c_white, c_white, c_white, c_white, 1);
-draw_text_color(screen_width - 10, 30,"KILLS: " + string(kill_count), c_white, c_white, c_white, c_white, 1);
-draw_text_color(screen_width - 10, 50,"OBJECTS: " + string(instance_number(ENTITY)), c_white, c_white, c_white, c_white, 1);
+
+draw_text_color(screen_width - 10, 10,"OBJECTS: " + string(instance_number(ENTITY)), c_white, c_white, c_white, c_white, 1);
+draw_text_color(screen_width - 10, 30,"FPS: " + string(fps), c_white, c_white, c_white, c_white, 1);
+
+draw_text_color(screen_width - 10, 70,"ENEMIES: " + string(enemy_count), c_white, c_white, c_white, c_white, 1);
+draw_text_color(screen_width - 10, 90,"KILLS: " + string(kill_count), c_white, c_white, c_white, c_white, 1);

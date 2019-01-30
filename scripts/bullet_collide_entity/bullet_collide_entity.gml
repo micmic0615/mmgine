@@ -1,19 +1,20 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 		var p = ds_list_find_value(collision_entities_connect, i);
+		if (entity_enabled(p)){
+			var can_collide = true;
+			if (p.entity_class_lower == "actor" && p.status_iframe == true){can_collide = false}
 		
-		var can_collide = true;
-		if (p.entity_class_lower == "actor" && p.status_iframe == true){can_collide = false}
-		
-		if (can_collide){
-			ds_list_add(collision_entities_exceptions, p);
+			if (can_collide){
+				ds_list_add(collision_entities_exceptions, p);
 			
-			if (collision_destroy_enabled){
-				collision_destroy_value_current -= p.collision_destroy_value_max;
-			}
+				if (collision_destroy_enabled){
+					collision_destroy_value_current -= p.collision_destroy_value_max;
+				}
 		
-			if (p.collision_destroy_enabled){
-				p.collision_destroy_value_current -= collision_destroy_value_max;
+				if (p.collision_destroy_enabled){
+					p.collision_destroy_value_current -= collision_destroy_value_max;
+				}
 			}
 		}
 	}

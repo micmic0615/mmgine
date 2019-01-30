@@ -7,7 +7,7 @@ if (keyboard_check_pressed(global.key_pause)){
 	enemy_count += instance_number(Pelter);
 	enemy_count += instance_number(Charger);
 	
-	if (enemy_count < 20){
+	if (enemy_count < 32){
 		var spawn_type = Shooter;
 		switch(stage_spawn_cycle){
 			case 0: spawn_type = Shooter; break;
@@ -29,10 +29,10 @@ if (keyboard_check_pressed(global.key_pause)){
 if (keyboard_check_pressed(global.key_backspace)){
 	var mc = player_main_actor;
 	with(ACTOR){
-		if (ACTIVE && ALIVE && player_faction != mc.player_faction){
+		if (entity_enabled() && player_faction != mc.player_faction){
 			var enemy = id;
 			with(mc){
-				entity_damage_deal([enemy, 999, true])
+				actor_flinch_deal([enemy, 999])
 			}
 		}
 	}

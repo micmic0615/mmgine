@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var move_angle = round(argument0);
 	if (entity_class_lower == "actor"){actor_record_replay_data("move_angle", move_angle)};
 

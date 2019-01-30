@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	switch(bullet_collision_tile_action){
 		case "die": 
 			status_health_current = 0;

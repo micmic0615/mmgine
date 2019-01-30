@@ -7,7 +7,7 @@ if (player_controllable && global.replay_mode == "record"){
 		player_controls_move_dash_timer_right -= 1;
 		player_controls_move_dash_timer_left -= 1;
 		with(player_main_actor){
-			if (ACTIVE && ALIVE ){
+			if (entity_enabled() ){
 				if (keyboard_check(global.key_up)){
 					actor_action_move_angle(270)
 				}

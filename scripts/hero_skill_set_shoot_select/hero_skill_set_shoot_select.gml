@@ -1,6 +1,6 @@
 var dir = argument0;
 
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	if (sign(dir) == 1){
 		if (my_shoot_mod_select == undefined){
 			my_shoot_mod_select = 6

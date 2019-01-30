@@ -9,7 +9,7 @@ var near = near_or_far == "far" ? false : true;
 var enemy = ally_or_enemy == "ally" ? false : true;
 
 with(ACTOR){
-	if (ACTIVE && ALIVE){
+	if (entity_enabled()){
 		if (
 			(enemy && player_faction != me.player_faction) ||
 			(!enemy && player_faction == me.player_faction)

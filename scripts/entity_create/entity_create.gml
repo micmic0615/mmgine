@@ -55,7 +55,7 @@ collision_enabled_bullets = true;
 collision_enabled_doodads = true;
 collision_enabled_tiles = true;
 collision_faction = "all";
-collision_modulo = 3;
+collision_modulo = 2;
 collision_index = id mod collision_modulo;
 
 collision_destroy_enabled = false;
@@ -91,4 +91,9 @@ status_movespeed_total = status_movespeed_base;
 draw_blend_temporary_color = c_white;
 draw_blend_temporary_style = "solid";
 draw_blend_temporary_duration = 0;
+
+if (ROOM > 0){
+	ROOM.entity_collisions_validate = true;
+}
+
 

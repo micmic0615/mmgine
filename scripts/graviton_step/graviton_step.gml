@@ -1,6 +1,6 @@
 var me = id
 with(ENTITY){
-	if (ACTIVE && ALIVE){
+	if (entity_enabled()){
 		var entity_distance = distance_between(me.x, me.y, x, y);
 		if (entity_distance <= me.my_radius_gravity_effect){
 			var angle = angle_clean(radtodeg(arctan2(me.y - y, me.x - x)));

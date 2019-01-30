@@ -17,7 +17,6 @@ collision_enabled_actors = true;
 collision_enabled_bullets = true;
 collision_enabled_doodads = false;
 
-
 player_faction = 1;
 
 animation_rotatable = false;

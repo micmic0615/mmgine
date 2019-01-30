@@ -60,7 +60,7 @@ for(var i = 0; i < ds_list_size(my_autofire_list);i++){
 			
 			bullet.collision_enabled_bullets = bullet_extra[1];
 			
-			if (target != noone && instance_exists(target) && target.active && target.alive){
+			if (target != noone && entity_enabled(target)){
 				bullet.bullet_seek_target = target;
 		
 			}

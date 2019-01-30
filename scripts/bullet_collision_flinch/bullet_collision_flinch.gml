@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var args = argument0;
 	
 	var target_class = "actor";
@@ -7,7 +7,7 @@ if (ACTIVE && ALIVE){
 	if (instance_exists(bullet_origin)){
 		for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 			var p = ds_list_find_value(collision_entities_connect, i);
-			if (p.entity_class_lower == target_class){
+			if (entity_enabled(p) && p.entity_class_lower == target_class){
 				with(bullet_origin){		
 					actor_flinch_deal([p, value_poise_damage])
 				}
@@ -16,7 +16,7 @@ if (ACTIVE && ALIVE){
 	} else {
 		for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 			var p = ds_list_find_value(collision_entities_connect, i);
-			if (p.entity_class_lower == target_class){
+			if (entity_enabled(p) && p.entity_class_lower == target_class){
 				actor_flinch_deal([p, value_poise_damage])
 			}
 		}

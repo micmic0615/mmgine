@@ -4,7 +4,7 @@ var screen_width = window_get_width();
 var screen_height = window_get_height();
 
 var mc = player_main_actor;
-if(mc.active && mc.alive){
+if(entity_enabled(mc)){
 	draw_set_font(fontGothic)
 			
 	draw_set_halign(fa_center);

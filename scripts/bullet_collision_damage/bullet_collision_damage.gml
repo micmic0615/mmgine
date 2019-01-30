@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var args = argument0;
 	var me = id;
 	
@@ -8,10 +8,10 @@ if (ACTIVE && ALIVE){
 	var damage_id = undefined;
 	if (array_length_1d(args) >= 5){damage_id = args[4]};
 
-	if (instance_exists(bullet_origin)){
+	if (entity_enabled(bullet_origin)){
 		for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 			var p = ds_list_find_value(collision_entities_connect, i);
-			if (p.entity_class_lower == target_class){
+			if (entity_enabled(p) && p.entity_class_lower == target_class){
 				with(bullet_origin){		
 					entity_damage_deal([p, value_damage, value_lethal, damage_id])
 				}
@@ -20,7 +20,7 @@ if (ACTIVE && ALIVE){
 	} else {
 		for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 			var p = ds_list_find_value(collision_entities_connect, i);
-			if (p.entity_class_lower == target_class){
+			if (entity_enabled(p) && p.entity_class_lower == target_class){
 				entity_damage_deal([p, value_damage, value_lethal, damage_id])
 			}
 		}

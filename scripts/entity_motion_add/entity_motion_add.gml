@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var motion_x = argument[0];
 	var motion_y = argument[1];
 	var motion_lifespan = argument[2];

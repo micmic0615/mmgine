@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var args = argument[0];
 	var valid = argument_count >= 2 ? argument[1] : false;
 	var me = id;	
@@ -40,7 +40,7 @@ if (ACTIVE && ALIVE){
 	
 		if (final_value > 0){
 			with(final_target){
-				if (ACTIVE && ALIVE && !status_immortal){
+				if (entity_enabled() && !status_immortal){
 					var offset_angle = degtorad(angle_between(final_target.x, final_target.y, me.x, me.y) + random(60) - 30);
 					if (final_target.entity_class_lower == "actor"){
 						if (final_target == me){offset_angle = degtorad(random(360))}

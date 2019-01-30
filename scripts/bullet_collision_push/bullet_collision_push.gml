@@ -1,4 +1,4 @@
-if (ACTIVE && ALIVE){
+if (entity_enabled()){
 	var args = argument0;
 	
 	var target_class = args[1];
@@ -19,7 +19,7 @@ if (ACTIVE && ALIVE){
 	for(var i = 0; i < ds_list_size(collision_entities_connect);i++){
 		var p = ds_list_find_value(collision_entities_connect, i);
 		
-		if (p.entity_class_lower == target_class){
+		if (entity_enabled(p) && p.entity_class_lower == target_class){
 			if ((target_class == "actor" && p.status_iframe == false) || target_class != "actor"){
 				if (value_push_angle == "center"){
 					rad_angle = degtorad(angle_between(p.x, p.y, x, y));
