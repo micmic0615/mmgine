@@ -9,8 +9,8 @@ if (mc != noone && entity_enabled(mc)){
 	
 	if (active_slot != undefined && active_skill != undefined){
 		var active_slot_string =  string_upper(active_slot);
-		if (active_slot == "aux"){active_slot_string = "ATTACK MODIFIER"}
-		if (active_slot == "mod"){active_slot_string = "ATTACK CORE"}
+		if (active_slot == "aux"){active_slot_string = "SHOT MODIFIER"}
+		if (active_slot == "mod"){active_slot_string = "CORE ATTACK"}
 		
 		if (active_skill != "none"){
 			draw_text_color(10,start_height, "SKILL: " + string_upper(active_skill) + "()", c_white, c_white, c_white, c_white, 1);

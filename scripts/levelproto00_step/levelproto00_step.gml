@@ -32,7 +32,7 @@ if (keyboard_check_pressed(global.key_backspace)){
 		if (entity_enabled() && player_faction != mc.player_faction){
 			var enemy = id;
 			with(mc){
-				actor_flinch_deal([enemy, 999])
+				entity_damage_deal([enemy, 999, true])
 			}
 		}
 	}

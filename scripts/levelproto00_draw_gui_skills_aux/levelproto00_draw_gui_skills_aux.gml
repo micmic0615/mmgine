@@ -5,14 +5,17 @@ var active_skill = argument1;
 
 
 var skill_tooltip_description = "";
+var skill_tooltip_description_next = "";
 
 switch(active_skill){
 	case "do":
-		skill_tooltip_description = "Slightly improves the core attack by itself.";
+		skill_tooltip_description = "Slightly improves the core attack as if modified by itself.";
+		skill_tooltip_description_next = "Fully stacks with core's self modification skill.";
 		break
 		
 	case "split":
-		skill_tooltip_description = "Splits the core attack into 2 or more bullets.  Reduces the damage of the individual bullets.";
+		skill_tooltip_description = "Splits the core attack into 2 or more bullets.";
+		skill_tooltip_description_next = "Reduces the damage of each individual bullets."
 		break
 		
 	case "ping":
@@ -28,13 +31,16 @@ switch(active_skill){
 		break
 		
 	case "breach":
-		skill_tooltip_description = "Adds penetration to your core attack.  Increases the range on some core attacks.";
+		skill_tooltip_description = "Adds penetration to your core attack.";
+		skill_tooltip_description_next = "Increases the range of some cores."
 		break
 		
 	case "focus":
-		skill_tooltip_description = "Improves the damage/flinch/cast-point multipliers of your charge attack.  Automatically fires a fully charged bullet every X attacks on some abilities.";
+		skill_tooltip_description = "Improves the damage/flinch/cast-point/range modifiers of your charge shot.";
+		skill_tooltip_description_next = "Fires a fully charged shot every X attacks on some cores.";
 		break
 		
 }
 
 draw_text_color(10,start_height, skill_tooltip_description, c_white, c_white, c_white, c_white, 1);
+draw_text_color(10,start_height + 20, skill_tooltip_description_next, c_white, c_white, c_white, c_white, 1);
