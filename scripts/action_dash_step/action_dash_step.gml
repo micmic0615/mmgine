@@ -5,7 +5,7 @@ if (actor_actions_enabled){
 		var floor_age = floor(ROOM.room_age_game);
 		var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
 		if (floor_age != next_floor_age && floor_age % (0.04*SEC) == 0){
-			entity_mirage_create(0.4*SEC, 0, 0, action_dash_flair_color);
+			entity_mirage_create(0.3*SEC, 0, 0, action_dash_flair_color, 0.35);
 		}
 		
 		animation_name = "dash";

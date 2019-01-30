@@ -6,6 +6,8 @@ if (hero_passive_find("split")){
 		action_dash_flair_color = my_shoot_flair_color
 		action_dash_range = my_dash_range*1.5;
 		
+		
+		
 		hero_dash_particles_create(10, 4, 2);
 	}
 }

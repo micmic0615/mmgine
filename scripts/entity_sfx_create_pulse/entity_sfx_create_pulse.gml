@@ -27,5 +27,6 @@ var mirage_data = [
 	style,
 	style_data
 ]
+
 		
 with(ROOM){ds_list_add(draw_mirage_list, mirage_data)}

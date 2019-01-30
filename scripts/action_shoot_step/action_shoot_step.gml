@@ -10,6 +10,8 @@ if (actor_actions_enabled){
 					action_shoot_cooldown_timer = action_shoot_cooldown_value;
 					action_shoot_step_phase = 2;
 					entity_run_type_scripts("action_shoot", action_shoot_target_point);
+					animation_name = "attack";
+					image_index = 0;
 					action_shoot_fire();
 				} else {
 					action_shoot_channel_timer = 0;
@@ -70,11 +72,6 @@ if (actor_actions_id == "shoot"){
 			
 		case 2: 
 			animation_name = "attack";
-			var floor_age = floor(ROOM.room_age_game);
-			var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
-			if (floor_age != next_floor_age && floor_age % (0.04*SEC) == 0){
-				entity_mirage_create(0.4*SEC, 0, 0, action_shoot_flair_color, action_angle, action_direction);
-			}
 			break
 		case 3: 
 			animation_name = "rest";

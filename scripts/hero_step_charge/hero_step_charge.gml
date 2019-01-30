@@ -94,7 +94,7 @@ if (my_charge_meter_1 == my_charge_max){
 		}
 	} else if (floor_age != next_floor_age && floor_age % (0.2*SEC) == 0){
 		var flicker_range = 50;
-		entity_mirage_create(0.3*SEC, random(flicker_range) - (flicker_range/2), random(flicker_range) - (flicker_range/2), my_charge_color_1, animation_angle, animation_direction);
+		entity_mirage_create(0.3*SEC, random(flicker_range) - (flicker_range/2), random(flicker_range) - (flicker_range/2), my_charge_color_1, 0.5, animation_angle, animation_direction);
 	}
 }
 
@@ -121,6 +121,6 @@ if (my_charge_meter_2 == my_charge_max){
 		}
 	} else if (floor_age != next_floor_age && floor_age % (0.2*SEC) == 0){
 		var flicker_range = 50;
-		entity_mirage_create(0.3*SEC, random(flicker_range) - (flicker_range/2), random(flicker_range) - (flicker_range/2), my_charge_color_2, animation_angle, animation_direction);
+		entity_mirage_create(0.3*SEC, random(flicker_range) - (flicker_range/2), random(flicker_range) - (flicker_range/2), my_charge_color_2, 0.5, animation_angle, animation_direction);
 	}
 }

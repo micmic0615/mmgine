@@ -13,7 +13,7 @@ action_dash_create([
 	/*range*/ my_dash_range,
 	/*channel_value*/ my_dash_channel,
 	/*cooldown_value*/ 0*SEC,
-	/*cooldown_rest*/ 0.6*SEC,
+	/*cooldown_rest*/ 0.75*SEC,
 	/*combo_max*/ my_dash_combo_max,
 	/*flair_color*/ my_dash_flair_color
 ]);
