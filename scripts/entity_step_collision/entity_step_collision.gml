@@ -21,85 +21,26 @@ while(move_steps_current > 0){
 			
 	move_steps_current--;
 			
-	if (collision_compute){
-				
-		var me = id;
-		ds_list_clear(collision_entities_connect)
-		ds_list_clear(collision_entities_valid);
-				
-		with(ENTITY){
-			if (
-				ACTIVE && ALIVE && id != me &&
-				(
-					(me.entity_class == "ACTOR" && me.collision_enabled_actors && collision_enabled_actors) ||
-					(me.entity_class == "BULLET" && me.collision_enabled_bullets && collision_enabled_bullets) ||
-					(me.entity_class == "DOODAD" && me.collision_enabled_doodads && collision_enabled_doodads) ||
-					(entity_class == "ACTOR" && me.collision_enabled_actors && collision_enabled_actors) ||
-					(entity_class == "BULLET" && me.collision_enabled_bullets && collision_enabled_bullets) ||
-					(entity_class == "DOODAD" && me.collision_enabled_doodads && collision_enabled_doodads)
-				)
-			){
-				var valid_faction = false;
-				switch(collision_faction){
-					case "all":
-						if (me.collision_faction == "all"){
-							valid_faction = true
-						} else if (me.collision_faction == "ally" && player_faction == me.player_faction){
-							valid_faction = true
-						} else if (me.collision_faction == "enemy" && player_faction != me.player_faction){
-							valid_faction = true
-						}
-						break
-					case "ally":
-						if (me.collision_faction == "all" && player_faction == me.player_faction){
-							valid_faction = true
-						} else if (me.collision_faction == "ally" && player_faction == me.player_faction){
-							valid_faction = true
-						}
-						break
-				
-					case "enemy":
-						if (me.collision_faction == "all" && player_faction != me.player_faction){
-							valid_faction = true
-						} else if (me.collision_faction == "enemy" && player_faction != me.player_faction){
-							valid_faction = true
-						}
-						break
-				}
-						
-				if (valid_faction){
-					var not_exception = true;
-					var is_exception = ds_list_find_index(me.collision_entities_exceptions, id);
-					if (is_exception >= 0){not_exception = false}
-					
-					if (not_exception){
-						var checked_entity = id;
-						with(me){ds_list_add(collision_entities_valid, checked_entity)};								
+	if (collision_compute){	
+		entity_collision_place_loop();
+		
+		var collision_count_entities = ds_list_size(collision_entities_connect);
+		if (collision_solid_entities){
+			for(var i = 0; i < collision_count_entities;i++){
+				var p = ds_list_find_value(collision_entities_connect, i);
+				if (p.collision_solid_entities && collision_pushable){
+					if (
+						(physics_motion_x != 0 || physics_motion_y != 0) || 
+						(p.physics_motion_x != 0 || p.physics_motion_y != 0)
+					){
+						var push_replacer = entity_collision_compute_push(p, final_x_push, final_y_push);
+						final_x_push = push_replacer[0];
+						final_y_push = push_replacer[1];
 					}
 				}
 			}
 		}
-				
-		for(var i = 0; i < ds_list_size(collision_entities_valid);i++){
-			var p = ds_list_find_value(collision_entities_valid, i);
-			if (place_meeting(x,y,p)){ds_list_add(collision_entities_connect, p)}
-		}
 		
-		var collision_count_entities = ds_list_size(collision_entities_connect);
-		for(var i = 0; i < collision_count_entities;i++){
-			var p = ds_list_find_value(collision_entities_connect, i);
-			var solid_collision = (collision_solid_entities && p.collision_solid_entities)
-			if (solid_collision && collision_pushable){
-				if (
-					(physics_motion_x != 0 || physics_motion_y != 0) || 
-					(p.physics_motion_x != 0 || p.physics_motion_y != 0)
-				){
-					var push_replacer = entity_collision_compute_push(p, final_x_push, final_y_push);
-					final_x_push = push_replacer[0];
-					final_y_push = push_replacer[1];
-				}
-			}
-		}
 			
 		if (collision_solid_tiles){
 			collision_count_tiles = entity_collision_check_tile(true);

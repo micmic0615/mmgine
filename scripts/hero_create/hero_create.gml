@@ -19,3 +19,4 @@ hero_create_autofire();
 hero_create_autoshield();
 hero_create_rally();
 hero_create_records();
+hero_create_camera();

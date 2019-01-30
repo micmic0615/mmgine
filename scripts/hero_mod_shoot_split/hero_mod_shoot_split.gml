@@ -17,7 +17,7 @@ action_shoot_range_chaos = 200;
 action_shoot_speed_chaos = 160*PPS;
 
 my_shoot_damage = [0.4,0.15];
-my_shoot_flinch = [0.25,0.1];
+my_shoot_flinch = [0.15,0.05];
 my_shoot_push = [30, 0];
 
 action_shoot_bullet_seek_range = 120;

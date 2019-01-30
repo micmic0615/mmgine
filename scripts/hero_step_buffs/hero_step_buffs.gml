@@ -30,7 +30,7 @@ for(var i = 0; i < ds_list_size(status_buff_list);i++){
 var floor_age = floor(ROOM.room_age_game);
 var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
 		
-if (has_ping > 0){
+if (has_ping > 0){	
 	if (animation_name == "walk"){animation_name = "dash"};
 			
 	if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
@@ -53,5 +53,7 @@ if (has_grit_attacc > 0){
 
 if (is_flinched){
 	my_rally_limit = status_health_current;
+	my_charge_meter_1 = 0;
+	my_charge_meter_2 = 0;
 }
 

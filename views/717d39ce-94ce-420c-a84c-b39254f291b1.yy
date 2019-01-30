@@ -9,7 +9,9 @@
         "be6a19e0-cd62-4621-b362-a156ecd6e81f",
         "4a53dcd3-2fb0-4cad-96fb-e5a259a270e7",
         "f7860217-a3d7-4517-8202-cc88012c142b",
-        "2fe52656-bfdc-413d-97f6-1d231e2ef510"
+        "2fe52656-bfdc-413d-97f6-1d231e2ef510",
+        "77113a6e-1ad9-4390-b1de-6b99f7bd9107",
+        "7e078d4a-8e99-43fc-b359-dc8f9279db9e"
     ],
     "filterType": "GMScript",
     "folderName": "HeroStep",

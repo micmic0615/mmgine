@@ -44,6 +44,7 @@ global.key_action_1 = vk_space;
 
 global.key_pause = vk_enter;
 global.key_replay_load = vk_escape;
+global.key_backspace = vk_backspace;
 
 global.next_room = LevelProto00;
 

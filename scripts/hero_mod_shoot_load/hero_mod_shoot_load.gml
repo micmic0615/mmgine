@@ -14,7 +14,7 @@ my_shoot_cast_value = 0.25*SEC;
 my_shoot_backswing_value = 0.25*SEC;
 
 my_shoot_damage = [0.4, 0.8];
-my_shoot_flinch = [0.25, 0.5];
+my_shoot_flinch = [0.15, 0.35];
 my_shoot_push = [0, 60];
 
 action_shoot_bullet_seek_range = 80;

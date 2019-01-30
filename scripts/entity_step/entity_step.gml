@@ -1,5 +1,5 @@
 if (ACTIVE && ALIVE ){
-	var movement_result = entity_step_motion();
-	collision_count = entity_step_collision(movement_result);
+	collision_base_movement = entity_step_motion();
+	collision_count = entity_step_collision(collision_base_movement);
 }
 

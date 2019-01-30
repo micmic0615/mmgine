@@ -7,7 +7,7 @@ if (keyboard_check_pressed(global.key_pause)){
 	enemy_count += instance_number(Pelter);
 	enemy_count += instance_number(Charger);
 	
-	if (enemy_count < INFINITY){
+	if (enemy_count < 20){
 		var spawn_type = Shooter;
 		switch(stage_spawn_cycle){
 			case 0: spawn_type = Shooter; break;
@@ -23,6 +23,18 @@ if (keyboard_check_pressed(global.key_pause)){
 	
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
 		with(player_main_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration*0.5, [], "ai_immortal")};
+	}
+}
+
+if (keyboard_check_pressed(global.key_backspace)){
+	var mc = player_main_actor;
+	with(ACTOR){
+		if (ACTIVE && ALIVE && player_faction != mc.player_faction){
+			var enemy = id;
+			with(mc){
+				entity_damage_deal([enemy, 999, true])
+			}
+		}
 	}
 }
 

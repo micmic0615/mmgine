@@ -23,9 +23,6 @@ physics_gravity_turnrate = 45*PPS;
 physics_gravity_falling = 0;
 physics_gravity_factor = 1;
 
-physics_gravity_x = 0;
-physics_gravity_y = 0;
-
 physics_movement_x = 0;
 physics_movement_y = 0;
 physics_movement_angle = 0;
@@ -40,6 +37,7 @@ entity_type_lower = string_lower(entity_type);
 
 entity_killer = noone;
 
+collision_base_movement = []
 collision_entities_valid = ds_create("list");
 collision_entities_connect = ds_create("list");
 collision_entities_exceptions = ds_create("list");
@@ -57,6 +55,8 @@ collision_enabled_bullets = true;
 collision_enabled_doodads = true;
 collision_enabled_tiles = true;
 collision_faction = "all";
+collision_modulo = 3;
+collision_index = id mod collision_modulo;
 
 collision_destroy_enabled = false;
 collision_destroy_value_current = 1;

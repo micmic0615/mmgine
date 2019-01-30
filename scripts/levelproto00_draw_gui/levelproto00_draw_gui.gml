@@ -9,7 +9,10 @@ draw_text_color(10,90, "use left and right arrow keys to select a skill slot", c
 draw_text_color(10,110,"use up and down arrow keys to change the skill in the selected slot", c_white, c_white, c_white, c_white, 1);
 
 draw_text_color(10,150,"press enter to spawn a dummy enemy", c_white, c_white, c_white, c_white, 1);
-draw_text_color(10,170,"press escape to reset all enemy spawns", c_white, c_white, c_white, c_white, 1);
+draw_text_color(10,170,"press backspace to kill all enemies", c_white, c_white, c_white, c_white, 1);
+draw_text_color(10,190,"press escape to reset room", c_white, c_white, c_white, c_white, 1);
+
+levelproto00_draw_gui_tips(240);
 
 var enemy_count = 0;
 var kill_count = 0;

@@ -13,7 +13,12 @@ if (global.replay_mode == "play"){
 	draw_rectangle(0, screen_height - 4, screen_width*duration, screen_height, false);
 }
 
-room_player_draw_gui();
+if (player_main_actor != noone && instance_exists(player_main_actor)){
+	room_draw_gui_player_bars();
+	room_draw_gui_player_skills();
+	room_draw_gui_player_map();
+	room_draw_gui_boss_bars();
+}
 
 if (screen_cover_text != undefined){
 	draw_set_alpha(0.5);

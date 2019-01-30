@@ -22,3 +22,4 @@ if (stage_restore_health_timer > 0){
 		//player_main_actor.rally_limit = player_main_actor.status_health_max;
 	}
 }
+

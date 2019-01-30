@@ -11,6 +11,9 @@ if (actor_actions_enabled){
 		animation_name = "dash";
 	} else {
 		actor_actions_idle = true;
+		if (actor_actions_id == "dash"){
+			actor_actions_id = "none"
+		}
 	}
 	
 	if (action_dash_queue_cast && actor_actions_idle && action_dash_cooldown_timer <= 0){

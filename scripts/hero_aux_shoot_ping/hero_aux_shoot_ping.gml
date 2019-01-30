@@ -28,8 +28,8 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			
 		case "crash":
 			my_shoot_flinch = [
-				(my_shoot_flinch[0] * 1.3),
-				(my_shoot_flinch[1] * 1.1),
+				(my_shoot_flinch[0] * 1.5),
+				(my_shoot_flinch[1] * 2),
 			];
 			break
 			

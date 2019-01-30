@@ -1,15 +1,10 @@
 for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 	var p = ds_list_find_value(my_shoot_aux_main, i);
 	switch(p){
-		case "do": 
-			my_shoot_damage = [
-				(my_shoot_damage[0] * 1.05),
-				(my_shoot_damage[1] * 1.05),
-			];
-			
+		case "do": 			
 			my_shoot_flinch = [
-				(my_shoot_flinch[0] * 1.5),
-				(my_shoot_flinch[1] * 1.5),
+				(my_shoot_flinch[0] * 1.25),
+				(my_shoot_flinch[1] * 1.25),
 			];
 			break;
 			
@@ -38,13 +33,13 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			
 		case "crash":
 			my_shoot_damage = [
-				(my_shoot_damage[0] * 1.1),
-				(my_shoot_damage[1] * 1.1),
+				(my_shoot_damage[0] * 1.25),
+				(my_shoot_damage[1] * 1.25),
 			];
 			
 			my_shoot_flinch = [
-				(my_shoot_flinch[0] * 1.75),
-				(my_shoot_flinch[1] * 1.75),
+				(my_shoot_flinch[0] * 1.6),
+				(my_shoot_flinch[1] * 1.6),
 			];
 			break
 			

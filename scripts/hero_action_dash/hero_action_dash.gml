@@ -1,4 +1,3 @@
-
 if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0 ){
 	action_dash_speed = my_dash_speed*1.25;
 	action_dash_range = my_dash_range*1.5;
@@ -12,6 +11,7 @@ if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0 ){
 	action_dash_flair_color = my_dash_flair_color
 }
 
+physics_gravity_current = 0;
 actor_buff_apply("iframe", my_dash_iframe, [], "dash_iframe")
 
 action_shoot_combo_count = 0;

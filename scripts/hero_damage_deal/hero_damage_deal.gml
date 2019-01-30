@@ -22,11 +22,8 @@ if (base_target != id){
 		}
 	}
 
-	
-
 			
 	if (damage_id == "main_attack"){
-		
 		if (beatdown){
 			var total_heal = base_value*(my_rally_lifesteal_beatdown/100);
 		} else {

@@ -13,7 +13,8 @@
         "bcb17917-7e2d-471b-bf4f-4faa2f355b9f",
         "62c5743c-005e-4842-9378-cd0198656508",
         "0e10f968-a00a-489d-bd83-3cd64a7b06cb",
-        "d1dcd296-818a-4760-aba9-ec66cf815779"
+        "d1dcd296-818a-4760-aba9-ec66cf815779",
+        "e75443b8-7bbe-41a4-b546-f5bb4110c2cc"
     ],
     "filterType": "GMScript",
     "folderName": "HeroCreate",
