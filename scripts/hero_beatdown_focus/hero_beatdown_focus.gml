@@ -5,7 +5,7 @@ var base_value = args[1];
 var me = id;
 hero_mod_shoot_focus();
 
-my_charge_permabuff = 2.5*SEC;
+my_charge_permabuff = 3.25*SEC;
 
 entity_sfx_create_pulse(
 	/*sprite*/ ExplosionBulletAlt_idle,

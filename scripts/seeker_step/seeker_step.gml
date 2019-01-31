@@ -1,4 +1,4 @@
-shooter_step();
+//shooter_step();
 
 if (actor_actions_enabled){
 	var count = 0;

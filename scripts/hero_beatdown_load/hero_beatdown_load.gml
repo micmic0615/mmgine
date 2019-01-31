@@ -8,8 +8,8 @@ var bullet_speed = 1200*PPS;
 var bullet_range = 1200;
 var bullet_damage_factor = 0.25;
 
-var explosion_radius = 580;
-var explosion_damage_factor = 4;
+var explosion_radius = 640;
+var explosion_damage_factor = 4.25;
 var explosion_push = 120;
 
 hero_mod_shoot_load();
@@ -17,8 +17,8 @@ hero_mod_shoot_load();
 var bullet_angle = angle_between(base_target.x,base_target.y,x,y);
 var rad_angle = degtorad(bullet_angle);	
 			
-var spawn_x = cos(rad_angle)*-150;
-var spawn_y = sin(rad_angle)*-150;
+var spawn_x = (cos(rad_angle)*-150) + random_mirror(90);
+var spawn_y = (sin(rad_angle)*-150) + random_mirror(90);
 			
 var bullet = hero_bullet_create([
 	bullet_angle,
@@ -28,6 +28,7 @@ var bullet = hero_bullet_create([
 	bullet_damage_factor,
 	my_shoot_bullet_type,
 	my_shoot_flair_color,
+	false,
 	spawn_x, 
 	spawn_y
 ]);

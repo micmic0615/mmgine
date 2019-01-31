@@ -6,9 +6,16 @@ var me = id;
 hero_mod_shoot_crash();
 
 with(base_target){
+	
+	
+	var over_flinch = abs(base_target.status_poise_current - base_value);
+	var over_flinch_ratio = min(over_flinch / status_poise_max, 1);
+	
+	var flinch_duration = status_flinch_duration * (1.75 + (over_flinch_ratio * 1.75));
+	
 	entity_sfx_create_pulse(
 		/*sprite*/ ExplosionBulletAlt_idle,
-		/*duration*/ status_flinch_duration,
+		/*duration*/ flinch_duration,
 		/*blend*/ me.my_shoot_flair_color,
 		/*style_data*/ [
 			160,
@@ -17,5 +24,5 @@ with(base_target){
 		]
 	);
 	
-	actor_buff_apply("flinched", status_flinch_duration*2, [], "flinched")
+	actor_buff_apply("flinched", flinch_duration, [], "flinched")
 };	

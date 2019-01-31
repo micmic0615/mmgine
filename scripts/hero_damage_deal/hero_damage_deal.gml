@@ -8,10 +8,6 @@ var damage_id = args[3];
 
 hero_beatdown_crash_damage([base_target, base_value, base_lethal, damage_id]);
 
-
-
-
-
 if (base_target != id){
 	
 	var beatdown = false

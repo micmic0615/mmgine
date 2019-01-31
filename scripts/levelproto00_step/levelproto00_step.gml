@@ -1,26 +1,24 @@
 if (keyboard_check_pressed(global.key_pause)){
 	var me = id;
 	
-	var enemy_count = 0;
-	enemy_count += instance_number(Shooter);
-	enemy_count += instance_number(Seeker);
-	enemy_count += instance_number(Pelter);
-	enemy_count += instance_number(Charger);
+	var spawn_roster = [
+		Wasp,
+		Shooter,
+		
+		//Seeker,
+		//Pelter,
+		//Charger
+	]
+	
+	var spawn_roster_size = array_length_1d(spawn_roster);
+	
+	var enemy_count = 0;	
+	for(var i = 0; i < spawn_roster_size;i++){enemy_count += instance_number(spawn_roster[i])};
 	
 	if (enemy_count < 32){
-		var spawn_type = Shooter;
-		switch(stage_spawn_cycle){
-			case 0: spawn_type = Shooter; break;
-			case 1: spawn_type = Seeker; break;
-			case 2: spawn_type = Pelter; break;
-			case 3: spawn_type = Charger; break;
-		}
-	
-		var spawned_actor = room_spawn_random_from_main_actor(spawn_type);
-	
+		var spawned_actor = room_spawn_random_from_main_actor(spawn_roster[stage_spawn_cycle]);
 		stage_spawn_cycle++;
-		if (stage_spawn_cycle > 3){stage_spawn_cycle = 0};	
-	
+		if (stage_spawn_cycle > (spawn_roster_size - 1)){stage_spawn_cycle = 0};	
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
 		with(player_main_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration*0.5, [], "ai_immortal")};
 	}

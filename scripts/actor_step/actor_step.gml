@@ -92,10 +92,20 @@ entity_run_type_scripts("step");
 		}
 		
 		if (has_flinched > 0){
-			if (floor_age % (0.1*SEC) == 0 && floor_age != next_floor_age){
-				entity_mirage_create(0.5*SEC, random(30) - 15, random(30) - 15, make_color_rgb(255,255,0))
+			physics_gravity_current = 0;
+			var is_overflinch = (has_flinched > status_flinch_duration);
+			var mirage_interval = is_overflinch ? 0.1*SEC : 0.2*SEC;
+			if (floor_age % mirage_interval == 0 && floor_age != next_floor_age){
+				if (is_overflinch){
+					entity_mirage_create(0.5*SEC, random_mirror(60), random_mirror(60), make_color_rgb(255,255,0), 0.5);
+				} else {
+					entity_mirage_create(0.25*SEC, random_mirror(30), random_mirror(30), make_color_rgb(255,255,0), 0.35);
+				}
 			};
 		}
+		
+		
+		
 		
 		if (status_immortal && !status_iframe){
 			if (ROOM.room_age_real % (0.2*SEC) == 0){

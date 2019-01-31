@@ -14,10 +14,16 @@ bullet_origin_anchor = false;
 bullet_collision_entity_actions = ds_create("list");
 bullet_collision_tile_action = "bounce";
 
+bullet_collision_cooldown_value = INFINITY;
+bullet_collision_cooldown_timer = 0;
+
+bullet_spawn_group = "none";
+
 bullet_seek_range = 0;
 bullet_seek_target = noone;
 bullet_seek_turn_rate = 0;
 bullet_seek_angle_limit = 60;
+bullet_seek_no_decay = true;
 
 
 bullet_death_spawn = ds_create("map");

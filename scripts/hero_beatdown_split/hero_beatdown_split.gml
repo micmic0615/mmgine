@@ -3,16 +3,16 @@ var base_target = args[0];
 var base_value = args[1];
 
 var bullet_count = 0;
-var bullet_max = 12;
+var bullet_max = 9;
 
-var bullet_radius = 40;
+var bullet_radius = 54;
 var bullet_speed = 720*PPS;
-var bullet_range = 840;
-var bullet_damage_factor = 0.4;
+var bullet_range = 1240;
+var bullet_damage_factor = 1.25;
 
 hero_mod_shoot_split();
 
-var spread_angle = 120;
+var spread_angle = 75;
 
 while(bullet_count < bullet_max){
 	var bullet_angle = angle_between(base_target.x,base_target.y,x,y) + ((spread_angle/bullet_max)*bullet_count) - (spread_angle*0.5);
@@ -29,6 +29,7 @@ while(bullet_count < bullet_max){
 		bullet_damage_factor, 
 		my_shoot_bullet_type,
 		my_shoot_flair_color,
+		true,
 		spawn_x, 
 		spawn_y
 	]);

@@ -15,6 +15,7 @@ if (instance_exists(id)){
 			var spawn_y = bullet_death_spawn[?"y"] != undefined ? y + bullet_death_spawn[?"y"] : y;
 			var bullet = instance_create_depth(spawn_x, spawn_y, depth, bullet_death_spawn[?"type"]);
 			bullet.bullet_origin = bullet_origin;
+			bullet.player_faction = player_faction
 	
 			var current_key = ds_map_find_first(bullet_death_spawn);
 			if (current_key != undefined && current_key != "type" && current_key != "x" && current_key != "y" ){

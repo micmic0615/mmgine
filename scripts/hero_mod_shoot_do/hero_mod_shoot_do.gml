@@ -18,7 +18,7 @@ my_shoot_cooldown_value = 0.05*SEC;
 
 my_shoot_damage = [1,0.2];
 my_shoot_flinch = [1,0.2];
-my_shoot_push = [100, 10];
+my_shoot_push = [60, 10];
 
 action_shoot_angle_chaos = 0;
 action_shoot_angle_spead = 60;
@@ -35,7 +35,7 @@ my_charge_factor_size = 1;
 my_charge_factor_speed = 1;
 my_charge_factor_range = 1;
 my_charge_factor_damage = 2;
-my_charge_factor_flinch = 5;
+my_charge_factor_flinch = 4;
 my_charge_factor_explosion = 1;
 
 my_charge_divider_cast = 1;

@@ -4,12 +4,10 @@
     "mvc": "1.1",
     "name": "eaf6c44b-e185-4f4b-a565-2c0cb7252ecd",
     "children": [
-        "1b24716d-c99f-49a5-a56f-87da30d336f0",
-        "bfecaffb-bae5-4e79-b035-d1429adf6412",
-        "b298b21c-f6f2-4011-be27-1dbaa50612f1",
-        "e7314c0d-5223-4f2c-83f6-2a486a519c5d",
-        "aa1f1cef-c277-4f30-800b-797157417fb4",
-        "d19e1703-735f-4723-a7d9-29e22aa26050"
+        "40d04020-22ac-45eb-b78d-42a674e120b0",
+        "a6dbb692-4ef4-4f6c-805d-fb858bd6be32",
+        "8115b6c7-f0e9-48cb-af4f-08aa09072435",
+        "22d26d8d-eeed-49dd-9dc4-88509352c93c"
     ],
     "filterType": "GMScript",
     "folderName": "Shooter",

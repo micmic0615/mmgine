@@ -3,12 +3,12 @@ var base_target = args[0];
 var base_value = args[1];
 
 var bullet_count = 0;
-var bullet_max = 4;
+var bullet_max = 3;
 
 var bullet_radius = 60;
 var bullet_speed = 720*PPS;
 var bullet_range = 720;
-var bullet_damage_factor = 0.5;
+var bullet_damage_factor = 1.25;
 
 hero_mod_shoot_do();
 
@@ -27,6 +27,7 @@ while(bullet_count < bullet_max){
 		bullet_damage_factor,
 		my_shoot_bullet_type,
 		my_shoot_flair_color,
+		true,
 		spawn_x, 
 		spawn_y
 	]);

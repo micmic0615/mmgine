@@ -10,7 +10,8 @@
         "ca46e4d8-4aa2-466e-aced-ff38dbfca0ff",
         "e1cf5944-e7f8-4c2e-a2b4-375083742fb8",
         "32ca56a6-4270-41b9-a509-9910bba3f7b4",
-        "4b51f8da-6573-4b9c-a830-96d43853056f"
+        "4b51f8da-6573-4b9c-a830-96d43853056f",
+        "cc2e6150-db3a-4251-8364-38e967b0d5d4"
     ],
     "filterType": "GMScript",
     "folderName": "HeroBeatdown",

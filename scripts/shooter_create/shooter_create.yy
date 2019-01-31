@@ -1,5 +1,5 @@
 {
-    "id": "1b24716d-c99f-49a5-a56f-87da30d336f0",
+    "id": "fd672230-07b6-48f6-b3e1-6ac84761479e",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "shooter_create",

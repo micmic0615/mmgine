@@ -1,22 +1,21 @@
-status_movesnap_base = 0.5*SEC;
-draw_bar_health_xscale = 0.5;
-draw_bar_health_y = 30;
+hero_create_init();
 
-collision_persistent = true; 
-player_faction = 0;
-
-status_health_current = status_health_max;
-status_poise_current = status_poise_max;
-
-hero_skill_set_list();
+//ACTIONS
 hero_create_charge();
 hero_create_shoot();
 hero_create_dash();
-hero_create_stats();
 hero_create_beatdown();
+
+//STATS AND SKILLS
+hero_create_stats();
+hero_create_skills();
+
+//AUTOMATIC FUNCTIONS
+hero_create_rally();
 hero_create_passive();
 hero_create_autofire();
 hero_create_autoshield();
-hero_create_rally();
+
+//MISC
 hero_create_records();
 hero_create_camera();

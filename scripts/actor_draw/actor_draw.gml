@@ -41,9 +41,17 @@
 			bar_width = sprite_width*draw_bar_health_xscale*(min(1,(status_poise_current/status_poise_max)));
 			
 		} else {
-			var random_yellow = random(200);
-			bar_color = make_colour_rgb(200,200,random_yellow);
-			bar_width = sprite_width*draw_bar_health_xscale*(min(1,(flinch_buff[1]/status_flinch_duration)));
+			var flinch_ratio = flinch_buff[1]/status_flinch_duration;
+			
+			if (flinch_ratio > 1){
+				var random_yellow = ((entity_age mod (0.5*SEC))*6) + 75
+				
+				bar_color = make_colour_rgb(random_yellow,random_yellow,0);
+			} else {
+				bar_color = make_colour_rgb(170,170,0);
+			}
+			
+			bar_width = sprite_width*draw_bar_health_xscale*(min(1,(flinch_ratio)));
 		}
 
 		draw_set_colour(bar_color);

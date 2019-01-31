@@ -5,11 +5,12 @@ var bullet_range = argument0[3];
 var bullet_damage_factor = argument0[4];
 var bullet_type = argument0[5];
 var bullet_color = argument0[6];
+var bullet_should_push = argument0[7];
 
-var spawn_x = argument0[7];
-var spawn_y = argument0[8];
+var spawn_x = argument0[8];
+var spawn_y = argument0[9];
 
-var mirage_spawn = array_length_1d(argument0) > 9 ? argument0[9] : true;
+var mirage_spawn = array_length_1d(argument0) > 10 ? argument0[10] : true;
 
 
 
@@ -32,7 +33,12 @@ bullet.collision_enabled_bullets = false;
 bullet.image_xscale = (bullet_radius*2)/sprite_get_width(sprite_index);
 bullet.image_yscale = (bullet_radius*2)/sprite_get_width(sprite_index);
 
-bullet.bullet_lifespan = ((((bullet_range*0.75*PPS)/TIMESPEED)/bullet_speed)*SEC);
+if (bullet_should_push){
+	bullet.bullet_lifespan = (bullet_range*0.75)/bullet_speed
+} else {
+	bullet.bullet_lifespan = bullet_range/bullet_speed
+}
+
 bullet.bullet_collision_tile_action = "die";
 
 bullet.bullet_death_spawn[?"explosion_radius_max"] = 50;
@@ -45,9 +51,12 @@ bullet.animation_sprite = bullet_type[1];
 			
 ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", bullet_damage_value, true, "beatdown_attack"]);
 
-with(bullet){
-	entity_motion_push(bullet_range*0.25, 0.5*SEC, bullet_angle, ["multiply",1.25], "bullet_push");
+if (bullet_should_push){
+	with(bullet){
+		entity_motion_push(bullet_range*0.25, 0.5*SEC, bullet_angle, ["multiply",1.25], "bullet_push");
+	}
 }
+
 
 if (mirage_spawn){
 	hero_mirage_create(1.5*SEC, bullet_angle, bullet_color, spawn_x, spawn_y);

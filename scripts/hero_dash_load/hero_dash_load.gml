@@ -8,6 +8,7 @@ if (hero_passive_find("load")){
 		0,
 		my_shoot_bullet_type,
 		my_shoot_flair_color,
+		false,
 		0, 
 		0,
 		false

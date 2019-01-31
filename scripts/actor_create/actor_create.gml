@@ -26,6 +26,8 @@ actor_actions_enabled = true;
 actor_actions_idle = true;
 actor_actions_id = "none";
 
+collision_persistent = true;
+
 ai_enabled = true;
 ai_delay = 1*SEC;
 

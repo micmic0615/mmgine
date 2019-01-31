@@ -14,6 +14,7 @@ for(var i = 0; i < ds_list_size(my_autofire_list);i++){
 	var bullet_color = p[8];
 	var bullet_seek = p[9];
 	var bullet_extra = p[10];
+	var autofire_id = p[11];
 	
 	var new_duration = duration - TIMESPEED;
 	if (new_duration > 0){
@@ -28,7 +29,8 @@ for(var i = 0; i < ds_list_size(my_autofire_list);i++){
 			bullet_type,
 			bullet_color,
 			bullet_seek,
-			bullet_extra
+			bullet_extra,
+			autofire_id
 		]);
 	
 		if (
@@ -47,6 +49,7 @@ for(var i = 0; i < ds_list_size(my_autofire_list);i++){
 				bullet_damage_factor, 
 				bullet_type,
 				bullet_color,
+				true,
 				spawn_x, 
 				spawn_y
 			]);

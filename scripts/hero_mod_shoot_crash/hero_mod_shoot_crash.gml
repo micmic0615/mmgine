@@ -16,7 +16,7 @@ my_shoot_channel_value = 0.25*SEC;
 
 my_shoot_damage = [0.5,0.1];
 my_shoot_flinch = [3.5,0.6];
-my_shoot_push = [-40, 0];
+my_shoot_push = [-50, 0];
 
 action_shoot_bullet_seek_range = 180;
 action_shoot_bullet_seek_turn_rate = 640*PPS;

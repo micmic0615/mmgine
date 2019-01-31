@@ -30,7 +30,8 @@ if (valid && !base_target.status_immortal){
 		with(adjusted_target){entity_run_type_scripts("flinch_take", [me, adjusted_value])};
 		
 		if (adjusted_target.status_poise_current <= 0){
-			with(adjusted_target){actor_buff_apply("flinched", status_flinch_duration, [], "flinched")};	
+			var over_flinch = min(abs(adjusted_target.status_poise_current)/status_poise_max, 1);
+			with(adjusted_target){actor_buff_apply("flinched", status_flinch_duration*(1 + over_flinch), [], "flinched")};	
 			adjusted_target.status_poise_current = adjusted_target.status_poise_max;
 		}
 	}

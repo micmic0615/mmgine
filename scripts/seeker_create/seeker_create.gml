@@ -1,4 +1,4 @@
-shooter_create();
+//shooter_create();
 status_movespeed_base  = 240*PPS;
 
 status_health_max = 320;

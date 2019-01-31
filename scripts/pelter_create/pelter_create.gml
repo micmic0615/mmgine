@@ -1,4 +1,4 @@
-shooter_create();
+//shooter_create();
 
 status_movespeed_base = 160*PPS;
 
