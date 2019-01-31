@@ -12,13 +12,13 @@ my_shoot_bullet_explosion = 50;
 my_shoot_cast_value = 0.15*SEC;
 my_shoot_backswing_value = 0.15*SEC;
 
-action_shoot_angle_chaos = 20;
-action_shoot_range_chaos = 200;
-action_shoot_speed_chaos = 160*PPS;
-
 my_shoot_damage = [0.4,0.15];
 my_shoot_flinch = [0.15,0.05];
 my_shoot_push = [25, 0];
+
+action_shoot_angle_chaos = 20;
+action_shoot_range_chaos = 200;
+action_shoot_speed_chaos = 160*PPS;
 
 action_shoot_bullet_seek_range = 120;
 action_shoot_bullet_seek_turn_rate = 80*PPS;

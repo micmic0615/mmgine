@@ -11,8 +11,7 @@ if (base_source != id){
 		
 		if (my_frenzy_timer > 0){
 			my_frenzy_timer = 0;
-			action_shoot_combo_timer = my_shoot_cooldown_value;
+			action_shoot_cooldown_timer = my_shoot_cooldown_value;
 		}
-		
 	}
 }

@@ -14,6 +14,10 @@ action_shoot_bullet_range = my_shoot_bullet_range * (1 + (charge_value*bonus_ran
 action_shoot_bullet_speed = my_shoot_bullet_speed * (1 + (charge_value*bonus_speed));
 action_shoot_bullet_explosion = my_shoot_bullet_explosion * (1 + (charge_value*bonus_explosion));
 
+if (my_frenzy_timer > 0){
+	action_shoot_bullet_speed *= 1.25
+}
+
 action_shoot_damage = [
 	my_shoot_damage[0] * (1 +  (charge_value*bonus_damage)),
 	my_shoot_damage[1] * (1 +  (charge_value*bonus_damage)),

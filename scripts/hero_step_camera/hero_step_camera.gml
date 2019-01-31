@@ -1,24 +1,53 @@
-if (ROOM.camera_zoom + my_camera_zoom_speed < my_camera_zoom_current){
-	ROOM.camera_zoom += my_camera_zoom_speed
-}
-
-if (ROOM.camera_zoom - my_camera_zoom_speed > my_camera_zoom_current){
-	ROOM.camera_zoom -= my_camera_zoom_speed
-}
-
 var me = id;
-var max_distance = 0
+var max_distance = 0;
+
 with(ACTOR){
 	if (me.player_faction != player_faction && variable_instance_exists(id, "ai_target_attack_should_channel")){
-		if (ai_target_attack_should_channel == true){
+		var should_add = true;
+		
+		if (ai_target_attack_should_channel == true){			
 			var current_distance = distance_between(x,y,me.x,me.y);
 			if (current_distance > max_distance){
 				max_distance = current_distance
 			}
+		} else {
+			should_add = false;
+		}
+		
+		var add_index = -1;
+		for(var i = 0; i < ds_list_size(me.my_camera_threats);i++){
+			var p = ds_list_find_value(me.my_camera_threats, i);				
+			if (p[0] == id){add_index = i}
+		}
+		
+		
+		if (should_add && add_index == -1){
+			ds_list_add(me.my_camera_threats, [id, me.entity_age, me.x, me.y])
+		} else if (!should_add && add_index >= 0) {
+			ds_list_delete(me.my_camera_threats, add_index)
 		}
 		
 	}
 }
 
-var multiplier = (max_distance*1.75) / ((room_width/2) + (room_height/2));
+
+
+var room_diagonal_size = sqrt(sqr(window_get_width()) + sqr(window_get_height()));
+var multiplier = min(1, ((max_distance*1) / room_diagonal_size));
+
+
+
 my_camera_zoom_current = my_camera_zoom_min + (multiplier*(my_camera_zoom_max - my_camera_zoom_min))
+
+
+
+var camera_snap_step = round(1/(abs(my_camera_zoom_max - my_camera_zoom_min)/6));
+var camera_snap_current = round(camera_snap_step*my_camera_zoom_current)/camera_snap_step;
+
+if (ROOM.camera_zoom + my_camera_zoom_speed < camera_snap_current){
+	ROOM.camera_zoom += my_camera_zoom_speed
+}
+
+if (ROOM.camera_zoom - my_camera_zoom_speed > camera_snap_current){
+	ROOM.camera_zoom -= my_camera_zoom_speed
+}

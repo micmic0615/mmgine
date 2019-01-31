@@ -31,7 +31,7 @@ if (deducted_flinch  <= 0 && base_target.status_health_current > 0){
 					);
 				}
 				
-				entity_damage_deal([base_target, over_damage, false, "main_attack"])
+				entity_damage_deal([base_target, min(status_damage_total*2.5, over_damage), false, "main_attack"])
 			}
 		
 		}

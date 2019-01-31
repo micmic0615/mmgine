@@ -56,7 +56,7 @@ if (my_attack_cooldown_timer <= 0 && count < my_attack_bullets_max){
 		
 	entity_motion_push((my_attack_dash_range), (my_attack_dash_speed/(my_attack_dash_range*PPS))*SEC, bullet_angle - 180, ["multiply",1.25], "move_motion");
 	
-	actor_buff_apply("move_set_raw", my_attack_cast_value, [0], "mana_speed_lock");
+	actor_buff_apply("movespeed_set_raw", my_attack_cast_value, [0], "mana_speed_lock");
 	
 	my_attack_channel_power_current = 0;
 	my_attack_cooldown_timer = my_attack_cooldown_value;	

@@ -1071,14 +1071,6 @@
             }
         },
         {
-            "Key": "41e35712-aa9c-4ea4-a637-a15efb423941",
-            "Value": {
-                "id": "fa9d96da-8375-4799-94f3-edd5f85e92bd",
-                "resourcePath": "scripts\\hero_collide_entity\\hero_collide_entity.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "42728c79-2ee9-43b9-8566-03414adcc620",
             "Value": {
                 "id": "a3c36772-c8b7-4e84-9d37-7ec13a17ff17",
@@ -3383,6 +3375,14 @@
             }
         },
         {
+            "Key": "d99826b7-ffd7-4232-b706-960520aaa11b",
+            "Value": {
+                "id": "ebafa4e6-95c9-4997-9239-4e28cd5632a8",
+                "resourcePath": "scripts\\point_inside_camera\\point_inside_camera.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d9c306f4-012b-4461-82c4-07168d523ede",
             "Value": {
                 "id": "aa3d1ca1-9b11-45a4-9250-8ac8712c8470",
@@ -3935,6 +3935,14 @@
             }
         },
         {
+            "Key": "f9d82c8c-b3ca-4529-9bc7-08fde64440e2",
+            "Value": {
+                "id": "af1e77a8-131a-4bcc-8e75-78039cbf297b",
+                "resourcePath": "scripts\\wasp_create_shoot\\wasp_create_shoot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fa5f6c25-6652-4c86-be6b-e73fa13f9bd4",
             "Value": {
                 "id": "34b87ece-ad12-4b53-9ec3-0f876d4060a6",
@@ -4010,6 +4018,7 @@
         "a9bbf8e0-97eb-4a58-b461-15d0d78e88b2",
         "3680923a-43a8-4e3a-b082-e04ef89d3de5",
         "af92aedf-2341-47e8-b98f-1b88ef5ff475",
+        "d99826b7-ffd7-4232-b706-960520aaa11b",
         "eaf032e4-3c72-480b-88e3-a3fa4f3297d0",
         "d976ef61-1f41-4320-bc69-f65fac1e0e7d",
         "103fbc9f-85a0-47b6-8177-86965d89fceb",
@@ -4096,7 +4105,6 @@
         "3328f79b-6458-48db-a133-07b71f8b3caa",
         "33aa865a-c930-4904-8424-bbf0a40e5c97",
         "f20da771-8cc4-48af-b2fa-8cf5fe31cb20",
-        "41e35712-aa9c-4ea4-a637-a15efb423941",
         "c88f5ff6-4707-468b-b9fc-cad63a750571",
         "d9c306f4-012b-4461-82c4-07168d523ede",
         "cd133a85-05c5-4dfa-aad6-166966886ca9",
@@ -4195,6 +4203,7 @@
         "8ff09113-54a5-46ea-861a-114976c1c30c",
         "044d6895-eed7-42b7-a8a9-336e3fde6d06",
         "cb0b94bb-1187-4153-b073-81a199b75e48",
+        "f9d82c8c-b3ca-4529-9bc7-08fde64440e2",
         "921e73e8-906e-452d-9f70-3a5ca5adff1d",
         "ec28526f-4539-494a-91e0-bb0e90b7c702",
         "c2a77681-24ee-4872-8194-0dd3a3758cf7",

@@ -1,7 +1,7 @@
 var target_point = argument0;
 
 if (my_attack_cooldown_timer <= 0){	
-	actor_buff_apply("move_set_raw", my_attack_cast_value, [my_attack_cast_movespeed], "mana_speed_set");
+	actor_buff_apply("movespeed_set_raw", my_attack_cast_value, [my_attack_cast_movespeed], "mana_speed_set");
 	actor_buff_apply("movesnap_set_raw", my_attack_cast_value, [my_attack_cast_movesnap], "mana_snap_set");
 	
 	actor_buff_apply("armor_health", my_attack_cast_value, [my_attack_cast_armor_health], "mana_armor_health_1");

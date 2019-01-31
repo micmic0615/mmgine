@@ -27,7 +27,7 @@ if (stage_trigger){
 	if (stage_time_stamp != 0){
 		with(Swarmer){
 			ai_delay = 3*SEC;
-			actor_buff_apply("move_set_raw", 0.1*SEC, [100*PPS], "cinematic_set");
+			actor_buff_apply("movespeed_set_raw", 0.1*SEC, [100*PPS], "cinematic_set");
 			entity_move_point([ROOM.player_main_actor.x, ROOM.player_main_actor.y]);
 		}
 		camera_target_x = stage_boss.x;

@@ -1,8 +1,8 @@
 {
-    "id": "41e35712-aa9c-4ea4-a637-a15efb423941",
+    "id": "f9d82c8c-b3ca-4529-9bc7-08fde64440e2",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_collide_entity",
+    "name": "wasp_create_shoot",
     "IsCompatibility": false,
     "IsDnD": false
 }

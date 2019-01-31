@@ -1,5 +1,6 @@
 my_rally_lifesteal_normal = 8;
 my_rally_lifesteal_beatdown = 12;
+my_rally_lifesteal_side_attack_factor = 0.25;
 
 my_rally_lifebank = 0;
 

@@ -1,4 +1,5 @@
 ai_target_move_cooldown_timer -= TIMESPEED;
+ai_target_distance_limit = enemy_attack_range_total*1.25;
 ai_target_attack_aquisition_range = enemy_attack_range_total;
 
 var should_attack = false;

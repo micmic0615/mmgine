@@ -16,7 +16,7 @@ if (actor_actions_enabled){
 		
 			var power_ratio = (my_attack_channel_power_current/my_attack_channel_power_max);
 			var power_quadroot = sqrt(sqrt(power_ratio));
-			actor_buff_apply("move_set_percent", 0.1*SEC, [100 - (power_quadroot*100)], "channel_slow");
+			actor_buff_apply("movespeed_set_percent", 0.1*SEC, [100 - (power_quadroot*100)], "channel_slow");
 		}
 	} else {
 		my_attack_cooldown_timer -= TIMESPEED;

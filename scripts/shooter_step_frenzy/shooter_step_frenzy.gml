@@ -13,6 +13,8 @@ if (my_frenzy_timer > 0){
 	part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
 		
 	actor_buff_apply("speed_bonus_percent", 0.1*SEC, [-50], "shooter_charging");
+	actor_buff_apply("armor_poise", 3, [50], "shooter_frenzy_bonus_poise");
+	actor_buff_apply("armor_health", 3, [-200], "shooter_frenzy_penalty_health");
 } else {
 	enemy_attack_range_total = enemy_attack_range_base;
 	action_shoot_cast_value = my_shoot_cast_value;
