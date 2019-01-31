@@ -7,19 +7,7 @@ var damage_id = args[3];
 
 var me = id;
 
-hero_mod_shoot_crash();
 
-var bullet_angle = angle_between(base_target.x,base_target.y,x,y);
-var bullet_damage_factor = (base_value*0.25)/status_damage_total;
-var bullet_radius = 24 + (bullet_damage_factor*48);
-var bullet_speed = 1000*PPS;
-var bullet_range = 1000;
-
-
-var rad_angle = degtorad(bullet_angle);
-			
-var spawn_x = (cos(rad_angle)*-150) + random_mirror(90);
-var spawn_y = (sin(rad_angle)*-150) + random_mirror(90);
 
 if (hero_beatdown_find("crash")){
 	if (damage_id == "main_attack"){
@@ -32,6 +20,20 @@ if (hero_beatdown_find("crash")){
 		}
 		
 		if (bonus_projectile){
+			hero_mod_shoot_crash();
+
+			var bullet_angle = angle_between(base_target.x,base_target.y,x,y);
+			var bullet_damage_factor = (base_value*0.25)/status_damage_total;
+			var bullet_radius = 24 + (bullet_damage_factor*48);
+			var bullet_speed = 1000*PPS;
+			var bullet_range = 1000;
+
+
+			var rad_angle = degtorad(bullet_angle);
+			
+			var spawn_x = (cos(rad_angle)*-150) + random_mirror(90);
+			var spawn_y = (sin(rad_angle)*-150) + random_mirror(90);
+			
 			var bullet = hero_bullet_create([
 				bullet_angle,
 				bullet_radius,

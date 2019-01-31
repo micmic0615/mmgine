@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "1162d617-015c-485e-87da-7700613bccea",
+            "Value": {
+                "id": "5465c618-0863-4fc0-8aa3-5463775920e2",
+                "resourcePath": "scripts\\hero_step_bloodlust\\hero_step_bloodlust.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "11c32f18-307e-4fe4-900d-131af553fa2e",
             "Value": {
                 "id": "f636d523-d831-4df1-95d6-0ad1f063c6a7",
@@ -883,6 +891,14 @@
             "Value": {
                 "id": "f6f8a61d-118a-41d9-be9f-4802fe3fd82c",
                 "resourcePath": "scripts\\room_draw_gui\\room_draw_gui.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "363339e2-e4eb-4f3e-95a4-e1dc74238c3d",
+            "Value": {
+                "id": "1f64857b-eee9-42f7-ade6-c612a216f99f",
+                "resourcePath": "scripts\\hero_action_bloodlust_attack\\hero_action_bloodlust_attack.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2162,7 +2178,7 @@
             "Key": "8170a5f9-f04b-46cf-9617-2c527f6533f2",
             "Value": {
                 "id": "5a42a87c-22bc-4909-83f6-4a44add047aa",
-                "resourcePath": "scripts\\hero_beatdown_crash_damage\\hero_beatdown_crash_damage.yy",
+                "resourcePath": "scripts\\hero_action_beatdown_crash_attack\\hero_action_beatdown_crash_attack.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3015,6 +3031,14 @@
             }
         },
         {
+            "Key": "c2933de6-5b24-4ed2-8f19-afe414c43342",
+            "Value": {
+                "id": "605e561d-d6a1-4e58-bd5f-17b8dcb39afa",
+                "resourcePath": "scripts\\hero_create_bloodlust\\hero_create_bloodlust.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c2a77681-24ee-4872-8194-0dd3a3758cf7",
             "Value": {
                 "id": "0feaf7c3-5bef-4122-b44f-269b62ea0c26",
@@ -3303,6 +3327,14 @@
             }
         },
         {
+            "Key": "d5f50b5b-4a4a-4665-80cb-2b351cd2c75a",
+            "Value": {
+                "id": "1a897e91-a7aa-43c6-9d36-314e18499ee5",
+                "resourcePath": "sprites\\HeroBulletClear_idle\\HeroBulletClear_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d63de44e-9eb9-4867-9cf7-4b78d97b7f89",
             "Value": {
                 "id": "32bd760f-35ff-4e25-9d94-2dec079a5d6e",
@@ -3579,6 +3611,14 @@
             "Value": {
                 "id": "d41f1ae2-b90f-4edd-a350-0280084fd7d3",
                 "resourcePath": "scripts\\actor_spawn\\actor_spawn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e608803e-4f39-4b93-9dc8-8f061d979f36",
+            "Value": {
+                "id": "256f6bdf-c668-4b39-812f-1c04edbe1482",
+                "resourcePath": "scripts\\hero_action_bloodlust\\hero_action_bloodlust.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4124,21 +4164,26 @@
         "17cdc19c-67c3-4d6b-8f74-ae28973e11d6",
         "bcb17917-7e2d-471b-bf4f-4faa2f355b9f",
         "62c5743c-005e-4842-9378-cd0198656508",
+        "c2933de6-5b24-4ed2-8f19-afe414c43342",
         "d1dcd296-818a-4760-aba9-ec66cf815779",
         "e75443b8-7bbe-41a4-b546-f5bb4110c2cc",
+        "f7860217-a3d7-4517-8202-cc88012c142b",
         "0c926adb-0632-4038-9043-b6f2d97c1695",
+        "77113a6e-1ad9-4390-b1de-6b99f7bd9107",
+        "4a53dcd3-2fb0-4cad-96fb-e5a259a270e7",
         "55d4593c-122c-4b8b-b1c2-ab7a1b926288",
         "be6a19e0-cd62-4621-b362-a156ecd6e81f",
-        "4a53dcd3-2fb0-4cad-96fb-e5a259a270e7",
-        "f7860217-a3d7-4517-8202-cc88012c142b",
+        "1162d617-015c-485e-87da-7700613bccea",
         "2fe52656-bfdc-413d-97f6-1d231e2ef510",
-        "77113a6e-1ad9-4390-b1de-6b99f7bd9107",
         "7e078d4a-8e99-43fc-b359-dc8f9279db9e",
         "9e348456-a9da-4278-94f6-42e3fae36baa",
         "67b75972-0675-4a11-8e3a-ac7c4a6a5891",
         "f25b261f-d05d-4d66-a6d9-69aa4c1709c6",
         "906ecc6d-908f-40ab-bdd3-ad00b8e586aa",
         "5409a14a-d45d-4416-9085-1fb4cbe789d7",
+        "e608803e-4f39-4b93-9dc8-8f061d979f36",
+        "363339e2-e4eb-4f3e-95a4-e1dc74238c3d",
+        "8170a5f9-f04b-46cf-9617-2c527f6533f2",
         "e59f0a98-46e2-4524-97bf-a84dea2eda78",
         "476cfc1f-dff9-440b-acb6-8b9df8118b59",
         "ebe8ebd5-cd27-47cb-abb7-b99f36d0c812",
@@ -4166,7 +4211,6 @@
         "4b51f8da-6573-4b9c-a830-96d43853056f",
         "a1348ecb-5ee2-4cae-b7bf-c74c66c77ceb",
         "6e73ed93-ded9-430d-8f9a-1a5c58cb8c38",
-        "8170a5f9-f04b-46cf-9617-2c527f6533f2",
         "3b138dc0-71c2-46f2-87c0-55c6bb750d6d",
         "56235052-d1ab-41d4-96dc-ec8e651cfd96",
         "df8f7562-2b63-4172-825f-999d8c85bd0d",

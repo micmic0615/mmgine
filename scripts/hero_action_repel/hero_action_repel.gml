@@ -14,7 +14,7 @@ bullet.status_health_current = bullet.status_health_max;
 bullet.bullet_action_move_angle = 0;
 	
 bullet.physics_gravity_on = false;
-bullet.explosion_lifespan_base = pulse_radius/(360*PPS);	
+bullet.explosion_lifespan_base = pulse_radius/(640*PPS);	
 bullet.explosion_lifespan_current = bullet.explosion_lifespan_base;		 	
 bullet.explosion_radius_min = 60;
 bullet.explosion_radius_max = pulse_radius;

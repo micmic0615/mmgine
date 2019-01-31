@@ -1,6 +1,6 @@
 global.hero_stats_health = 100;
 global.hero_stats_poise = 25;
-global.hero_stats_damage = 20;
+global.hero_stats_damage = 15;
 global.hero_stats_flinch = 10;
 
 status_poise_regen = 1.25*PPS;

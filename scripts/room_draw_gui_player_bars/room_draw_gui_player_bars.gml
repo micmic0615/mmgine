@@ -84,4 +84,29 @@ bar_shield_color = make_color_rgb(60,255,255)
 bar_shield_y += shield_ratio*82
 draw_rectangle_color(bar_shield_x, bar_shield_y, bar_shield_x + bar_shield_width, bar_shield_y + bar_shield_height, bar_shield_color, bar_shield_color, bar_shield_color, bar_shield_color, false)
 
+
+var bar_shield_height = 82;
+var bar_shield_width = 10;
+var bar_shield_x = (screen_width/2) - (bar_length/2) - (bar_shield_width*2) + 5;
+var bar_shield_y = screen_height - (bar_shield_height + 9);
+
+var bar_shield_color = make_color_rgb(60,20,0)
+draw_rectangle_color(bar_shield_x, bar_shield_y, bar_shield_x + bar_shield_width, bar_shield_y + bar_shield_height, bar_shield_color, bar_shield_color, bar_shield_color, bar_shield_color, false);
+
+
+if (player_main_actor.my_bloodlust_active_timer > 0){
+	var shield_ratio = 1 - (player_main_actor.my_bloodlust_active_timer/player_main_actor.my_bloodlust_active_value);
+	bar_shield_height = 82 * (1 - shield_ratio);
+	bar_shield_color = make_color_rgb(240,80,0)
+} else {
+	var shield_ratio = 1 - (player_main_actor.my_bloodlust_trigger_timer/player_main_actor.my_bloodlust_trigger_treshold);
+	bar_shield_height = 82 * (1 - shield_ratio);
+	bar_shield_color = make_color_rgb(160,40,0)
+}
+
+
+
+bar_shield_y += shield_ratio*82
+draw_rectangle_color(bar_shield_x, bar_shield_y, bar_shield_x + bar_shield_width, bar_shield_y + bar_shield_height, bar_shield_color, bar_shield_color, bar_shield_color, bar_shield_color, false)
+
 	

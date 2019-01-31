@@ -15,6 +15,7 @@ hero_create_rally();
 hero_create_passive();
 hero_create_autofire();
 hero_create_autoshield();
+hero_create_bloodlust();
 
 //MISC
 hero_create_records();

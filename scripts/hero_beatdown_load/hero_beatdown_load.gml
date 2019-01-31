@@ -8,8 +8,8 @@ var bullet_speed = 1200*PPS;
 var bullet_range = 1200;
 var bullet_damage_factor = 0.25;
 
-var explosion_radius = 640;
-var explosion_damage_factor = 4.25;
+var explosion_radius = 720;
+var explosion_damage_factor = 2.75;
 var explosion_push = 120;
 
 hero_mod_shoot_load();
