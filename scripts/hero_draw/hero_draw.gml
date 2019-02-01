@@ -43,9 +43,8 @@ if (my_shoot_aim_mode == true){
 
 var me = id;
 var line_speed = 640*PPS;
-var alpha_cycle = ROOM.room_age_real mod 0.25*SEC;
 
-draw_set_alpha(0.4 + (0.06*alpha_cycle))
+draw_set_alpha(0.75)
 
 var room_diagonal_size = sqrt(sqr(window_get_width()) + sqr(window_get_height()));
 for(var i = 0; i < ds_list_size(my_camera_threats);i++){

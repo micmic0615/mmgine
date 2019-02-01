@@ -1,0 +1,72 @@
+Shooter 1
+-basic ranged enemy
+-charges for a while before attacking
+-if fully charged attack hits the player, shooter enters a frenzy state
+-during frenzy, shooter doesn't bother charging its attack and fires rapidly
+-hitting the frenzied shooter will remove the frenzy state and deal bonus damage
+-frenzy duration is reset if shooter hits the player while frenzied
+
+Shooter 2
+-automatically retaliates and fires lesser bullets while charging, not interrupting itself
+
+------------------------
+
+Wasp 1
+-ambush type enemy
+-normally moves slowly, but can increase movespeed to seek the player
+-seeks the player, upon reaching melee range charges for a while before releasing a conical attack
+-while seeking, wasps can be stunned easily
+
+Wasp 2
+-wasps now attempt to dodge attacks while seeking
+
+------------------------
+
+Tank 1
+-basic melee enemy
+-chases the player at basic movespeed
+-if player enters attack range, tank winds up before dashing towards the player
+-hitting the player with a dash results in a moderate damge to health but massive damage to poise
+-being hit by the player causes the tank to do a mini-dash to try to close the gap
+
+Tank 2
+-hitting the tank on the front gives it a 1 second buff that provides 99% damage and flinch resistance
+
+------------------------
+
+Swarm 1
+-swarm type 
+-composed of 2 or more enemies that are in sync and have linked health and poise
+-chases the player from afar, similar to the seeker
+-has increased flinch resistance while charging
+-however, upon entering midrange, dashes like the tank to try to hit the player
+-if reaches a certain distance, swarm explodes and runs away
+-if doesnt reach the player after x seconds, explodes and runs away nonetheless
+-vulnerable while running away
+
+Swarm 2
+-autofires while running away
+
+------------------------
+
+Bomber 1
+-fires a cluster of slow, homing bullet that explodes after a while
+-if the bullets simply expire, an explosion happens dealing massive damage
+-hitting all of the cluster diffuses the bomb
+-moves identically to the Shooter
+
+Bomber 2
+-hitting the clusterbomb causes bomber to autofire in retaliation
+
+------------------------
+
+Ward 1
+-totem type enemy
+-doesnt attack directly but provides an aura that makes nearby allies invulnerable
+-making it flinch stops the aura
+-aura doesnt affect itself
+
+Ward 2
+-ward fires off large bullets that destroys bullets and pushes the player away
+
+------------------------

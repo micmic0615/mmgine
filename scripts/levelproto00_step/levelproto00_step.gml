@@ -2,8 +2,9 @@ if (keyboard_check_pressed(global.key_pause)){
 	var me = id;
 	
 	var spawn_roster = [
-		Wasp,
-		Shooter,
+		Swarmer
+		//Wasp,
+		//Shooter,
 		
 		//Seeker,
 		//Pelter,

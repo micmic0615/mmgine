@@ -1,8 +1,8 @@
 {
-    "id": "f0012607-169a-4bd4-a6c6-4d82688cb5e6",
+    "id": "7a5a3e2f-2d89-4c84-b2d5-ab6c261ca50f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "swarmer_action_channel",
+    "name": "swarmer_old_ai_create",
     "IsCompatibility": false,
     "IsDnD": false
 }

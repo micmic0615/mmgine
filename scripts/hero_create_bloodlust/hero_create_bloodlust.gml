@@ -10,4 +10,4 @@ my_bloodlust_active_level = 2;
 my_bloodlust_active_level_cap = 5;
 
 my_bloodlust_attack_bank = 0;
-my_bloodlust_attack_base_damage_factor = 1.5;
+my_bloodlust_attack_base_damage_factor = 2;

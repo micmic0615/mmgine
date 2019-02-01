@@ -1,8 +1,8 @@
 {
-    "id": "4065a5ba-ff1f-4bbf-ae77-cb664b545b2e",
+    "id": "c910b26f-5fa1-4fb9-bd0b-92f9dd5e81e7",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "swarmer_action_3",
+    "name": "swarmer_old_destroy",
     "IsCompatibility": false,
     "IsDnD": false
 }

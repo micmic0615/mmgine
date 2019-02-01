@@ -27,6 +27,10 @@ physics_movement_x = 0;
 physics_movement_y = 0;
 physics_movement_angle = 0;
 
+physics_loop_x = 0;
+physics_loop_y = 0;
+physics_loop_enabled = true;
+
 entity_age = 0
 
 entity_class = object_get_name(object_get_parent(object_index));

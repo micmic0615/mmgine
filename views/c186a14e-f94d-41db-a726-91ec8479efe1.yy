@@ -8,7 +8,7 @@
         "caba9612-16df-4af5-a53a-7257dd74a02e"
     ],
     "filterType": "GMScript",
-    "folderName": "Swarmer",
+    "folderName": "SwarmerOld",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -7,7 +7,7 @@ var damage_id = args[3];
 
 if (base_source != id){
 	if (damage_id == "main_attack"){
-		action_shoot_cast_timer = 1;
+		action_shoot_cast_timer = min(action_shoot_cast_timer, 0.5*SEC);
 		
 		if (my_frenzy_timer > 0){
 			my_frenzy_timer = 0;

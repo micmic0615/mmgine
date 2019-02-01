@@ -115,18 +115,25 @@ if (room_initiate){
 				} else {
 					
 					with(ENTITY){
-						if (entity_enabled() && !camera_inside_view) {
+						if (entity_enabled() && physics_loop_enabled && !camera_inside_view) {
+							physics_loop_x = 0;
+							physics_loop_y = 0;
+							
 							var x_camera_center = camera_view_x + camera_size_w*0.5;
 							var x_camera_distance = abs(x - x_camera_center);
 							if (x_camera_distance > room_width*0.5){
-								x = (x > x_camera_center) ? (x - room_width) : (x + room_width);
+								var new_x = (x > x_camera_center) ? (x - room_width) : (x + room_width);
+								physics_loop_x = new_x - x;
+								x = new_x;
 							}
 						
 						
 							var y_camera_center = camera_view_y + camera_size_h*0.5;
 							var y_camera_distance = abs(y - y_camera_center);
 							if (y_camera_distance > room_height*0.5){
-								y = (y > y_camera_center) ? (y - room_height) : (y + room_height);
+								var new_y = (y > y_camera_center) ? (y - room_height) : (y + room_height);
+								physics_loop_y = new_y - y;
+								y = new_y;
 							}
 						}
 					}

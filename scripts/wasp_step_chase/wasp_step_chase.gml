@@ -9,16 +9,11 @@ if (my_chase_fire){
 
 	part_emitter_region(global.particle_system,draw_particle_emitter,x+random_mirror(p_spawn),x+random_mirror(p_spawn),y+random_mirror(p_spawn),y+random_mirror(p_spawn),pt_shape_spark,1);
 	part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
-		
-	actor_buff_apply("speed_bonus_percent", 0.1*SEC, [-50], "shooter_charging");
 	
 	physics_gravity_current = 0;
 	
 	if (action_shoot_cast_timer <= 0){
 		my_chase_fire = false;
-	} else {
-		actor_buff_apply("armor_health", 3, [50], "wasp_chase_bonus_health");
-		actor_buff_apply("armor_poise", 3, [50], "wasp_chase_bonus_poise");
 	}
 } else {
 	my_chase_fire = false
@@ -32,12 +27,12 @@ if (my_chase_fire){
 			part_emitter_region(global.particle_system,draw_particle_emitter,x+random_mirror(p_spawn),x+random_mirror(p_spawn),y+random_mirror(p_spawn),y+random_mirror(p_spawn),pt_shape_star,1);
 			part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
 			
-			if (entity_room_age_modulo(0.1*SEC)){	
-				actor_buff_apply("movespeed_set_raw", 0.15*SEC, [my_chase_movespeed_bonus], "wasp_chase_movespeed");
-				actor_buff_apply("movesnap_set_raw", my_shoot_cast_value, [my_chase_movesnap_set], "wasp_chase_movesnap");
+			if (entity_room_age_modulo(0.1*SEC)){					
 				entity_mirage_create(0.25*SEC, 0, 0, my_chase_color, 0.5);
 			}
 			
+			actor_buff_apply("movespeed_set_raw", 3, [my_chase_movespeed_bonus], "wasp_chase_movespeed");
+			actor_buff_apply("movesnap_set_raw", 3, [my_chase_movesnap_set], "wasp_chase_movesnap");
 			actor_buff_apply("armor_health", 3, [-50], "wasp_chase_penalty_health");
 			actor_buff_apply("armor_poise", 3, [-500], "wasp_chase_penalty_poise");
 		

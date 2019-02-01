@@ -18,7 +18,7 @@
         "26d634f1-2423-4059-bf1b-9258dd66ed94"
     ],
     "filterType": "GMScript",
-    "folderName": "Swarmer",
+    "folderName": "SwarmerOld",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
