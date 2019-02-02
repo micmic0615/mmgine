@@ -7,16 +7,21 @@ var damage_id = args[3];
 
 var me = id;
 
+
+
 if (my_bloodlust_active_timer > 0){
-	if (damage_id == "main_attack"){
-		my_bloodlust_attack_bank += base_value;
-		
+	my_bloodlust_attack_bank += base_value;
+
+	if (damage_id == "main_attack" && my_bloodlust_attack_cooldown_timer <= 0){
+		my_bloodlust_attack_cooldown_timer = my_bloodlust_attack_cooldown_value
 		var bloodlust_power = 0;
 		
 		while(my_bloodlust_attack_bank > status_damage_base*my_bloodlust_attack_base_damage_factor){
 			my_bloodlust_attack_bank -= (status_damage_base*my_bloodlust_attack_base_damage_factor);
 			bloodlust_power += 1;
 		}
+		
+		bloodlust_power = min(bloodlust_power, 3);
 		
 		if (bloodlust_power >= 1){
 			var bullet_damage_factor = bloodlust_power*0.25;

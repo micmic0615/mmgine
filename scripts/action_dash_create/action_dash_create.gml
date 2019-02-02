@@ -21,3 +21,7 @@ action_dash_target_angle = 0;
 
 action_dash_queue_cast = false;
 action_dash_queue_target = [0,0];
+
+ds_list_add(actor_actions_module, ["dash", [
+	"step"
+]])

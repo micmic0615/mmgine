@@ -1,8 +1,8 @@
 {
-    "id": "16c95a5f-9ae2-4d14-9869-777632440eaa",
+    "id": "05ee1d10-f1d0-4381-b059-2d32ee360a25",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "swarmer_move_point",
+    "name": "action_clone_draw",
     "IsCompatibility": false,
     "IsDnD": false
 }

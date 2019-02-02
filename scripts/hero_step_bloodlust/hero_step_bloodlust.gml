@@ -2,6 +2,10 @@ if (my_bloodlust_trigger_timer > 0){
 	my_bloodlust_trigger_timer -= TIMESPEED;
 }
 
+if (my_bloodlust_attack_cooldown_timer > 0){
+	my_bloodlust_attack_cooldown_timer -= TIMESPEED
+}
+
 if (my_bloodlust_active_timer > 0){
 	my_bloodlust_active_timer -= TIMESPEED;
 	actor_buff_apply("speed_bonus_percent", 0.15*SEC, [50], "bloodlust_speed");

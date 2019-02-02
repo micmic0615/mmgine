@@ -60,4 +60,5 @@
 	}
 #endregion
 
+actor_action_module_run("draw");
 entity_run_type_scripts("draw");

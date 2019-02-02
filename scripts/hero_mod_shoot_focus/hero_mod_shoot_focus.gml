@@ -17,7 +17,7 @@ my_charge_factor_explosion = 1.35;
 my_charge_factor_size = 1.35;
 
 my_shoot_damage = [0.85,0.3];
-my_shoot_flinch = [0.5,0.15];
+my_shoot_flinch = [0.5,0];
 my_shoot_push = [50, 20];
 
 hero_skill_set_shoot_mod_apply();

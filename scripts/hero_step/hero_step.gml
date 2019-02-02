@@ -1,5 +1,3 @@
-action_shoot_step();
-action_dash_step();
 hero_step_aim();
 hero_step_charge();
 hero_step_beatdown();

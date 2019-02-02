@@ -8,5 +8,3 @@ shooter_create_stats();
 shooter_create_shoot();
 shooter_create_charge();
 shooter_create_frenzy();
-
-

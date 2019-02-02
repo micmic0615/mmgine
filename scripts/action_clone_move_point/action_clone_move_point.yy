@@ -1,8 +1,8 @@
 {
-    "id": "5ee239c4-c212-4af3-9dc4-eb5a3b80f9b0",
+    "id": "239c2a70-e690-45b7-9101-38f91d8df095",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "swarmer_damage_take",
+    "name": "action_clone_move_point",
     "IsCompatibility": false,
     "IsDnD": false
 }

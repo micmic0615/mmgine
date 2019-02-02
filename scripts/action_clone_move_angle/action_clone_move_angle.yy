@@ -1,8 +1,8 @@
 {
-    "id": "7509c7ea-b5ae-46e1-a03a-e73617d69595",
+    "id": "64e243b0-a2c6-4491-b762-73de39b1a61b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "swarmer_draw",
+    "name": "action_clone_move_angle",
     "IsCompatibility": false,
     "IsDnD": false
 }

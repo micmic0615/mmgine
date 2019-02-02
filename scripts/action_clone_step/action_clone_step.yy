@@ -1,8 +1,8 @@
 {
-    "id": "ec2e1afe-4290-4988-9326-a9e0eadd1151",
+    "id": "ef03dfe8-64be-4d37-8ff1-b8e340e6b421",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "swarmer_flinch_take",
+    "name": "action_clone_step",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -36,20 +36,22 @@ if (entity_enabled()){
 		var final_value = is_array(final_args) ? final_args[1] : adjusted_value;
 		var final_lethal = is_array(final_args) ? final_args[2] : adjusted_lethal;
 		
-		final_value = max(1, ceil(final_value));
+		if (sign(final_value) != -1){
+			final_value = max(1, ceil(final_value));
 	
-		if (final_value > 0){
-			with(final_target){
-				if (entity_enabled() && !status_immortal){
-					var offset_angle = degtorad(angle_between(final_target.x, final_target.y, me.x, me.y) + random(60) - 30);
-					if (final_target.entity_class_lower == "actor"){
-						if (final_target == me){offset_angle = degtorad(random(360))}
-						entity_draw_text_following(final_value, [cos(offset_angle)*40, sin(offset_angle)*40], 1.5*SEC, c_white, 32);
-					}
+			if (final_value > 0){
+				with(final_target){
+					if (entity_enabled() && !status_immortal){
+						var offset_angle = degtorad(angle_between(final_target.x, final_target.y, me.x, me.y) + random(60) - 30);
+						if (final_target.entity_class_lower == "actor"){
+							if (final_target == me){offset_angle = degtorad(random(360))}
+							entity_draw_text_following(final_value, [cos(offset_angle)*40, sin(offset_angle)*40], 1.5*SEC, c_white, 18);
+						}
 					
-					var min_health = final_lethal ? 0 : 1;
-					status_health_current = max(min_health, status_health_current - final_value);
-					if (status_health_current <= 0){entity_killer = me};
+						var min_health = final_lethal ? 0 : 1;
+						status_health_current = max(min_health, status_health_current - final_value);
+						if (status_health_current <= 0){entity_killer = me};
+					}
 				}
 			}
 		}

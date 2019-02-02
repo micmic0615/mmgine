@@ -1,8 +1,8 @@
 {
-    "id": "ef03dfe8-64be-4d37-8ff1-b8e340e6b421",
+    "id": "d7aa3701-5486-4b88-a670-3b0c8b8552a5",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "swarmer_step_clones_create",
+    "name": "action_clone_create",
     "IsCompatibility": false,
     "IsDnD": false
 }

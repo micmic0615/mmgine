@@ -25,6 +25,7 @@ status_buff_list = ds_create("list");
 actor_actions_enabled = true;
 actor_actions_idle = true;
 actor_actions_id = "none";
+actor_actions_module = ds_create("list");
 
 collision_persistent = true;
 
@@ -40,5 +41,7 @@ draw_bar_health_damage = status_health_max;
 status_damage_total = status_damage_base;
 status_flinch_total = status_flinch_base;
 status_poise_current = status_poise_max;
+
+
 
 if (ai_enabled && global.replay_mode == "record"){entity_run_type_scripts("ai_create")}

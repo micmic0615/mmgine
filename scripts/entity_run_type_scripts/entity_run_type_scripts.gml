@@ -8,5 +8,7 @@ if (script_class > -1){
 	} else {
 		return script_execute(script_class)
 	}
-};
+} else {
+	return undefined;
+}
 

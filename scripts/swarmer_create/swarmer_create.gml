@@ -5,4 +5,4 @@ swarmer_create_stats();
 
 
 //SKILLS
-swarmer_create_clones();
+action_clone_create(5);

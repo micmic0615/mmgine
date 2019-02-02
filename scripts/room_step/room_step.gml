@@ -116,14 +116,18 @@ if (room_initiate){
 					
 					with(ENTITY){
 						if (entity_enabled() && physics_loop_enabled && !camera_inside_view) {
-							physics_loop_x = 0;
-							physics_loop_y = 0;
-							
 							var x_camera_center = camera_view_x + camera_size_w*0.5;
 							var x_camera_distance = abs(x - x_camera_center);
+							
 							if (x_camera_distance > room_width*0.5){
 								var new_x = (x > x_camera_center) ? (x - room_width) : (x + room_width);
-								physics_loop_x = new_x - x;
+								if (variable_instance_exists(id, "actor_clone_children")){
+									for(var i = 0; i < ds_list_size(actor_clone_children);i++){
+										var p = ds_list_find_value(actor_clone_children, i);
+										p.x += (new_x - x)
+									};
+								}
+								
 								x = new_x;
 							}
 						
@@ -132,7 +136,13 @@ if (room_initiate){
 							var y_camera_distance = abs(y - y_camera_center);
 							if (y_camera_distance > room_height*0.5){
 								var new_y = (y > y_camera_center) ? (y - room_height) : (y + room_height);
-								physics_loop_y = new_y - y;
+								if (variable_instance_exists(id, "actor_clone_children")){
+									for(var i = 0; i < ds_list_size(actor_clone_children);i++){
+										var p = ds_list_find_value(actor_clone_children, i);
+										p.y += (new_y - y)
+									};
+								}
+								
 								y = new_y;
 							}
 						}

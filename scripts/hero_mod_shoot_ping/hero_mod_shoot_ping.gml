@@ -16,7 +16,7 @@ my_shoot_backswing_value = 1;
 my_shoot_cooldown_value = 0*SEC;
 
 my_shoot_damage = [0.6,0.1];
-my_shoot_flinch = [0.25,0.05];
+my_shoot_flinch = [0.25,0];
 my_shoot_push = [15, 0];
 
 action_shoot_angle_chaos = 24;

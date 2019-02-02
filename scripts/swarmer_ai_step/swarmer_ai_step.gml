@@ -1,4 +1,4 @@
-if (my_clone_original){
+if (actor_clone_original){
 	ai_target_attack_should_channel = false;
 	if (ai_step_attack_else_wander()){
 

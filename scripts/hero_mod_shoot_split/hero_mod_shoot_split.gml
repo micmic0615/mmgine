@@ -13,7 +13,7 @@ my_shoot_cast_value = 0.15*SEC;
 my_shoot_backswing_value = 0.15*SEC;
 
 my_shoot_damage = [0.4,0.15];
-my_shoot_flinch = [0.15,0.05];
+my_shoot_flinch = [0.15,0];
 my_shoot_push = [25, 0];
 
 action_shoot_angle_chaos = 20;

@@ -1,3 +1,4 @@
+actor_action_module_run("step");
 entity_run_type_scripts("step");
 
 #region //DRAW

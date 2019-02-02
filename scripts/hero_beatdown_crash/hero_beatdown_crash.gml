@@ -6,8 +6,6 @@ var me = id;
 hero_mod_shoot_crash();
 
 with(base_target){
-	
-	
 	var over_flinch = abs(base_target.status_poise_current - base_value);
 	var over_flinch_ratio = min(over_flinch / status_poise_max, 1);
 	
@@ -25,4 +23,13 @@ with(base_target){
 	);
 	
 	actor_buff_apply("flinched", flinch_duration, [], "flinched")
+	
+	if (variable_instance_exists(base_target, "actor_clone_original")){
+		for(var i = 0; i < ds_list_size(actor_clone_family);i++){
+			var p = ds_list_find_value(actor_clone_family, i);
+			with(p){
+				actor_buff_apply("flinched", flinch_duration, [], "flinched")
+			}
+		};
+	}
 };	

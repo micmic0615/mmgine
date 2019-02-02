@@ -42,7 +42,7 @@ action_shoot_queue_cast = false;
 action_shoot_queue_angle = 0;
 
 action_shoot_angle_chaos = 0;
-action_shoot_angle_spead = 60;
+action_shoot_angle_spead = 60; 
 
 action_shoot_range_chaos = 0;
 action_shoot_speed_chaos = 0;
@@ -53,3 +53,7 @@ action_shoot_bullet_collision_destroy_value = 1;
 action_shoot_bullet_particles = [undefined, 0, 0];
 
 action_shoot_flag_explode_trigger = "death";
+
+ds_list_add(actor_actions_module, ["shoot", [
+	"step"
+]])
