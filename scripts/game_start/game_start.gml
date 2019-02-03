@@ -34,6 +34,9 @@ global.key_tab = vk_tab;
 global.key_shift = vk_shift;
 global.key_num_1 = ord("1");
 global.key_num_2 = ord("2");
+global.key_num_3 = ord("3");
+global.key_num_4 = ord("4");
+global.key_num_5 = ord("5");
 
 global.key_select_right = vk_right;
 global.key_select_left = vk_left;

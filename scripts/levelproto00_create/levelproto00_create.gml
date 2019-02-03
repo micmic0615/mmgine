@@ -3,3 +3,4 @@ screen_cover_color = c_white;
 stage_spawn_immortal_duration = 1.5*SEC;
 
 stage_spawn_cycle = 0;
+stage_draw_tips = true;

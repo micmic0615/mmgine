@@ -59,7 +59,7 @@ for(var i = 0; i < ds_list_size(my_camera_threats);i++){
 		
 			if (entity_age - p[1] > 0){
 				var duration_min = (line_speed*(entity_age - p[1])) + 40;
-				var duration_max = duration_min + 30;
+				var duration_max = duration_min + 50;
 	
 				var origin_x = p[2];
 				var origin_y = p[3];
@@ -78,7 +78,7 @@ for(var i = 0; i < ds_list_size(my_camera_threats);i++){
 				if (!point_inside_camera((line_start_x + line_end_x)/2, (line_start_y + line_end_y)/2)){
 					refresh_drawing = true
 				} else {
-					draw_line_width_color(line_start_x, line_start_y, line_end_x, line_end_y,2,c_red,c_red)
+					draw_line_width_color(line_start_x, line_start_y, line_end_x, line_end_y,3,c_red,c_red)
 				}
 	
 				if (distance_between(enemy.x, enemy.y, line_end_x, line_end_y) < 80){

@@ -15,7 +15,7 @@ if (base_source != id){
 			my_autoshield_cooldown_timer = my_autoshield_cooldown_value;
 			actor_buff_apply("immortal", my_autoshield_duration, [], "autoshield");
 			room_timespeed_temp(0.05, 1*SEC, true);
-			var bullet = hero_action_repel(1, 1.5, 420, 80);	
+			var bullet = hero_action_repel(1, 0, 420, 80);	
 			bullet.draw_blend_temporary_style = "solid";
 			bullet.draw_blend_temporary_color = make_color_rgb(180,180,0);
 			bullet.draw_blend_temporary_duration = INFINITY;
@@ -32,7 +32,7 @@ if (base_source != id){
 			actor_buff_apply("immortal", my_grit_duration, [], "autoshield");
 			actor_buff_apply("damage_bonus_percent", my_grit_duration*2.5, [100], "grit_attacc");
 			room_timespeed_temp(0.05, 1.5*SEC, true);
-			var bullet = hero_action_repel(2, 3, 780, 120);
+			var bullet = hero_action_repel(2, 0, 780, 120);
 			bullet.draw_blend_temporary_style = "solid";
 			bullet.draw_blend_temporary_color = make_color_rgb(255,0,0);
 			bullet.draw_blend_temporary_duration = INFINITY;

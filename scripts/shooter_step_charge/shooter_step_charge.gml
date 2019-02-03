@@ -1,6 +1,9 @@
 if (actor_actions_id == "shoot"){
-	my_charge_meter = min(my_charge_meter + TIMESPEED, my_charge_max);
-	var charge_value = my_charge_meter/my_charge_max
+	my_charge_meter = min(my_charge_meter + (TIMESPEED*2), my_charge_max);
+	
+	var charge_value = my_charge_meter/my_charge_max;
+	if (charge_value > 0.95){charge_value = 1}
+	
 	if (action_shoot_cast_timer > 0){
 		var p_spawn = 60;
 		var p_count = 2;

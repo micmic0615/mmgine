@@ -4,7 +4,7 @@ if (entity_enabled()){
 	var arguments = argument[2];
 	var buff_id = (argument_count >= 4) ? argument[3] : ("random_buff_id_" + string(random(INFINITY)) + "_" + string(random(INFINITY)) + "_" + string(random(INFINITY)));
 
-	if (instance_exists(id) && ds_exists(status_buff_list, ds_type_list)){
+	if (entity_enabled() && ds_exists(status_buff_list, ds_type_list)){
 		var buff_id_unique = true
 			
 		var buff_list_length = ds_list_size(status_buff_list);
@@ -26,6 +26,7 @@ if (entity_enabled()){
 		}
 
 		if (buff_id_unique == true){
+			if (type == "flinched"){ds_list_clear(physics_motion_list)}
 			ds_list_add(status_buff_list, [type, duration, arguments, buff_id])
 		}
 	}

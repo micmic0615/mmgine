@@ -6,7 +6,8 @@
     "children": [
         "656d383b-9e5f-4811-b97a-7d59601d7fe4",
         "c4e5936d-7e06-4d88-b201-dd43917f42ba",
-        "0cb33f2f-0266-43ab-ac6d-31969122832c"
+        "0cb33f2f-0266-43ab-ac6d-31969122832c",
+        "07819f0d-9ce5-4cd0-ba5f-4b8e143b60a8"
     ],
     "filterType": "GMScript",
     "folderName": "ActorActions",

@@ -24,9 +24,9 @@ with(base_target){
 	
 	actor_buff_apply("flinched", flinch_duration, [], "flinched")
 	
-	if (variable_instance_exists(base_target, "actor_clone_original")){
-		for(var i = 0; i < ds_list_size(actor_clone_family);i++){
-			var p = ds_list_find_value(actor_clone_family, i);
+	if (variable_instance_exists(base_target, "action_clone_original")){
+		for(var i = 0; i < ds_list_size(action_clone_family);i++){
+			var p = ds_list_find_value(action_clone_family, i);
 			with(p){
 				actor_buff_apply("flinched", flinch_duration, [], "flinched")
 			}

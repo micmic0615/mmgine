@@ -1,5 +1,5 @@
 {
-    "id": "6259a92f-4010-48bb-b07a-a1761f62fef6",
+    "id": "994b41d5-c286-4630-a290-60c227783dd5",
     "modelName": "GMSprite",
     "mvc": "1.12",
     "name": "Charger_attack",
@@ -16,24 +16,24 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "034192b5-6c80-4821-8ac9-a0f65707621a",
+            "id": "3844f5f5-e14b-414d-ba37-e98ee97d987d",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
-            "SpriteId": "6259a92f-4010-48bb-b07a-a1761f62fef6",
+            "SpriteId": "994b41d5-c286-4630-a290-60c227783dd5",
             "compositeImage": {
-                "id": "0a140749-607e-4ad5-8fdd-df5cd1bffa46",
+                "id": "c917659f-655e-408d-90a6-3b495a585844",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "034192b5-6c80-4821-8ac9-a0f65707621a",
+                "FrameId": "3844f5f5-e14b-414d-ba37-e98ee97d987d",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "b65278a2-8919-4607-b832-d244f12a3a35",
+                    "id": "a3bd049d-bce3-4240-a205-1aaadd48def1",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "034192b5-6c80-4821-8ac9-a0f65707621a",
-                    "LayerId": "154feb0b-3ad5-41f8-a1fb-a1ac7de2bb39"
+                    "FrameId": "3844f5f5-e14b-414d-ba37-e98ee97d987d",
+                    "LayerId": "9bb60158-1e29-4340-b6ab-4acbad9579fb"
                 }
             ]
         }
@@ -43,10 +43,10 @@
     "height": 140,
     "layers": [
         {
-            "id": "154feb0b-3ad5-41f8-a1fb-a1ac7de2bb39",
+            "id": "9bb60158-1e29-4340-b6ab-4acbad9579fb",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
-            "SpriteId": "6259a92f-4010-48bb-b07a-a1761f62fef6",
+            "SpriteId": "994b41d5-c286-4630-a290-60c227783dd5",
             "blendMode": 0,
             "isLocked": false,
             "name": "default",

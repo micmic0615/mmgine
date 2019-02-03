@@ -12,7 +12,7 @@ if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 
 	};
 	
 	actor_actions_idle = false;
-	entity_run_type_scripts("action_dash", action_shoot_target_point);
+	entity_run_type_scripts("action_dash", target_point);
 	
 	actor_actions_id = "dash";
 	var bullet_angle = angle_between(x,y, target_point[0], target_point[1]);

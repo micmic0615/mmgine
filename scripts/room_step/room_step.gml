@@ -121,9 +121,9 @@ if (room_initiate){
 							
 							if (x_camera_distance > room_width*0.5){
 								var new_x = (x > x_camera_center) ? (x - room_width) : (x + room_width);
-								if (variable_instance_exists(id, "actor_clone_children")){
-									for(var i = 0; i < ds_list_size(actor_clone_children);i++){
-										var p = ds_list_find_value(actor_clone_children, i);
+								if (variable_instance_exists(id, "action_clone_children")){
+									for(var i = 0; i < ds_list_size(action_clone_children);i++){
+										var p = ds_list_find_value(action_clone_children, i);
 										p.x += (new_x - x)
 									};
 								}
@@ -136,9 +136,9 @@ if (room_initiate){
 							var y_camera_distance = abs(y - y_camera_center);
 							if (y_camera_distance > room_height*0.5){
 								var new_y = (y > y_camera_center) ? (y - room_height) : (y + room_height);
-								if (variable_instance_exists(id, "actor_clone_children")){
-									for(var i = 0; i < ds_list_size(actor_clone_children);i++){
-										var p = ds_list_find_value(actor_clone_children, i);
+								if (variable_instance_exists(id, "action_clone_children")){
+									for(var i = 0; i < ds_list_size(action_clone_children);i++){
+										var p = ds_list_find_value(action_clone_children, i);
 										p.y += (new_y - y)
 									};
 								}
