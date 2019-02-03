@@ -2,8 +2,8 @@ if (hero_passive_find("load")){
 	hero_mod_shoot_load();
 	var bullet = hero_bullet_create([
 		0,
-		0,
-		0, 
+		1,
+		1, 
 		1,
 		0,
 		my_shoot_bullet_type,
@@ -16,9 +16,9 @@ if (hero_passive_find("load")){
 	
 	bullet.bullet_seek_range = 0;
 	
-	var explosion_radius = 280;
-	var explosion_damage_factor = 0.4;
-	var explosion_push = 40
+	var explosion_radius = 250;
+	var explosion_damage_factor = 0.3;
+	var explosion_push = 30
 	
 	bullet.bullet_death_spawn_trigger = "always";
 		

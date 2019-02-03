@@ -2,8 +2,8 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 	var p = ds_list_find_value(my_shoot_aux_main, i);
 	switch(p){
 		case "do": 
-			my_charge_factor_damage *= 1.2;
-			my_charge_factor_explosion *= 1.2;
+			my_charge_factor_damage *= 1.1;
+			my_charge_factor_explosion *= 1.1;
 			break;
 			
 		case "split":

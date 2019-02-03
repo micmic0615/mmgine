@@ -10,21 +10,30 @@ hero_action_bloodlust_attack([base_target, base_value, base_lethal, damage_id]);
 
 if (base_target != id){
 	
-	var beatdown = false
+	var beatdown = false;
+	var flinch_buff = undefined;
 	if (base_target.entity_class_lower == "actor"){
 		var me = id;
 		with(base_target){
-			if (actor_buff_find("flinched") != undefined){beatdown = true}
+			flinch_buff = actor_buff_find("flinched")
+			if (flinch_buff != undefined){beatdown = true}
 		}
 	}
 	
 	if (beatdown){
+		if (damage_id == "main_attack" && flinch_buff != undefined){
+			var overflinch = flinch_buff[1] - base_target.status_flinch_duration
+			if (overflinch > 0){base_value *= 1.5}
+		}
+		
 		var total_heal = base_value*(my_rally_lifesteal_beatdown/100);
 	} else {
 		var total_heal = base_value*(my_rally_lifesteal_normal/100);
 	}
 	
 	if (damage_id != "main_attack"){total_heal *= my_rally_lifesteal_side_attack_factor};
+	
+	
 	
 	my_rally_lifebank += total_heal;
 	var whole_heal = floor(my_rally_lifebank);

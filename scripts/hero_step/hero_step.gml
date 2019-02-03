@@ -1,5 +1,6 @@
 hero_step_aim();
 hero_step_charge();
+hero_step_heal();
 hero_step_beatdown();
 hero_step_rally();
 hero_step_autofire();

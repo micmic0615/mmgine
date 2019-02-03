@@ -1,8 +1,8 @@
 {
-    "id": "031b1488-231f-4d58-b8db-a942d941a1c7",
+    "id": "2e9dda91-b205-4e82-9177-010755e8bccd",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "saber_create_shoot",
+    "name": "hero_step_heal",
     "IsCompatibility": false,
     "IsDnD": false
 }

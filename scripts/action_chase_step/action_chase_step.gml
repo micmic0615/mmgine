@@ -15,11 +15,13 @@ if (actor_buff_find("flinched") == undefined){
 		
 				animation_name = "chase";
 				entity_move_point([action_chase_target.x, action_chase_target.y])
-		
-				if (!action_chase_target.status_immortal && distance_between(x,y,action_chase_target.x,action_chase_target.y) < action_chase_distance){
-					action_chase_success = true;
-					action_chase_active_timer = 0;
-					action_chase_cooldown_timer = action_chase_cooldown_value;
+			
+				if (action_chase_distance > 0){
+					if (!action_chase_target.status_immortal && distance_between(x,y,action_chase_target.x,action_chase_target.y) < action_chase_distance){
+						action_chase_success = true;
+						action_chase_active_timer = 0;
+						action_chase_cooldown_timer = action_chase_cooldown_value;
+					}
 				}
 			} else {
 				action_chase_active_timer = 0;

@@ -87,7 +87,7 @@ draw_rectangle_color(bar_shield_x, bar_shield_y, bar_shield_x + bar_shield_width
 
 var bar_shield_height = 82;
 var bar_shield_width = 10;
-var bar_shield_x = (screen_width/2) - (bar_length/2) - (bar_shield_width*2) + 5;
+var bar_shield_x = (screen_width/2) + (bar_length/2) + 20;
 var bar_shield_y = screen_height - (bar_shield_height + 9);
 
 var bar_shield_color = make_color_rgb(60,20,0)
@@ -108,5 +108,33 @@ if (player_main_actor.my_bloodlust_active_timer > 0){
 
 bar_shield_y += shield_ratio*82
 draw_rectangle_color(bar_shield_x, bar_shield_y, bar_shield_x + bar_shield_width, bar_shield_y + bar_shield_height, bar_shield_color, bar_shield_color, bar_shield_color, bar_shield_color, false)
+
+
+var bar_shield_height = 82;
+var bar_shield_width = 10;
+var bar_shield_x = (screen_width/2) - (bar_length/2) - (bar_shield_width*2) + 5;
+var bar_shield_y = screen_height - (bar_shield_height + 8);
+bar_shield_color = make_color_rgb(20,50,20)
+draw_rectangle_color(bar_shield_x, bar_shield_y, bar_shield_x + bar_shield_width, bar_shield_y + bar_shield_height, bar_shield_color, bar_shield_color, bar_shield_color, bar_shield_color, false)
+
+
+var heal_count = player_main_actor.my_heal_count;
+
+var bar_shield_height = 87;
+var bar_shield_width = 10;
+var bar_shield_x = (screen_width/2) - (bar_length/2) - (bar_shield_width*2) + 5;
+var bar_shield_y = screen_height - (4);
+var bar_shield_color = player_main_actor.my_heal_color_2;
+
+bar_shield_height -= ((heal_count)*5);
+bar_shield_height /= 3;
+
+//bar_shield_y += (bar_shield_height )
+
+while(heal_count > 0){
+	heal_count--;
+	bar_shield_y -= bar_shield_height + 5;
+	draw_rectangle_color(bar_shield_x, bar_shield_y, bar_shield_x + bar_shield_width, bar_shield_y + bar_shield_height, bar_shield_color, bar_shield_color, bar_shield_color, bar_shield_color, false)
+}
 
 	

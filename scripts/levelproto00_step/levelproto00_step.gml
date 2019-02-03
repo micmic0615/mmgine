@@ -12,46 +12,64 @@ var spawn_roster = [
 	Swarmer
 ]
 var spawn_roster_size = array_length_1d(spawn_roster);
-for(var i = 0; i < spawn_roster_size;i++){enemy_count += instance_number(spawn_roster[i])};
+for(var i = 0; i < spawn_roster_size;i++){
+	if (spawn_roster[i] != Swarmer){
+		enemy_count += instance_number(spawn_roster[i])
+	} else {
+		with(Swarmer){
+			if (entity_enabled() && action_clone_original){
+				enemy_count ++;
+			}
+		}
+	}
+	
+};
 
+
+var enemy_limit = 24;
 
 if (keyboard_check_pressed(global.key_num_1)){
-	if (enemy_count < 32){
+	if (enemy_count < enemy_limit){
 		var spawned_actor = room_spawn_random_from_main_actor(Saber);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }
 
 if (keyboard_check_pressed(global.key_num_2)){
-	if (enemy_count < 32){
+	if (enemy_count < enemy_limit){
 		var spawned_actor = room_spawn_random_from_main_actor(Shooter);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }
 
 if (keyboard_check_pressed(global.key_num_3)){
-	if (enemy_count < 32){
+	if (enemy_count < enemy_limit){
 		var spawned_actor = room_spawn_random_from_main_actor(Stunner);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }
 
 if (keyboard_check_pressed(global.key_num_4)){
-	if (enemy_count < 32){
+	if (enemy_count < enemy_limit){
 		var spawned_actor = room_spawn_random_from_main_actor(Wasp);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }
 
 if (keyboard_check_pressed(global.key_num_5)){
-	if (enemy_count < 32){
+	if (enemy_count < enemy_limit){
 		var spawned_actor = room_spawn_random_from_main_actor(Swarmer);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }
 
 if (keyboard_check_pressed(global.key_num_0)){
-	if (enemy_count < 32){
+	if (enemy_count < enemy_limit){
 		var random_num = random(100);
 		var random_spawn = noone;
 		
@@ -69,6 +87,7 @@ if (keyboard_check_pressed(global.key_num_0)){
 		
 		var spawned_actor = room_spawn_random_from_main_actor(random_spawn);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }
 

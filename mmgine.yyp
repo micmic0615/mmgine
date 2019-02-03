@@ -47,14 +47,6 @@
             }
         },
         {
-            "Key": "031b1488-231f-4d58-b8db-a942d941a1c7",
-            "Value": {
-                "id": "db58fd74-09c8-4ee4-9bfb-cab0ccf2a420",
-                "resourcePath": "scripts\\saber_create_shoot\\saber_create_shoot.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "03a69f8c-5f52-4330-aca4-f9f916d2f34d",
             "Value": {
                 "id": "4fdaf96d-f862-4520-b14c-191143db63e0",
@@ -891,6 +883,14 @@
             "Value": {
                 "id": "fee3e204-b251-45bb-9f4d-cc0a335a8fd1",
                 "resourcePath": "scripts\\levelproto00_draw_gui_skills_beatdown\\levelproto00_draw_gui_skills_beatdown.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2e9dda91-b205-4e82-9177-010755e8bccd",
+            "Value": {
+                "id": "53167501-3f33-4737-b69b-31907792d7c8",
+                "resourcePath": "scripts\\hero_step_heal\\hero_step_heal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1815,6 +1815,14 @@
             }
         },
         {
+            "Key": "5ef38fb5-4c99-4353-97fc-eb14b58f502a",
+            "Value": {
+                "id": "35223f00-c872-4056-95ba-526ce1fd225b",
+                "resourcePath": "sprites\\Hero_heal\\Hero_heal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5f26c39b-725f-4906-a2ff-8b9228d01be2",
             "Value": {
                 "id": "51a93c74-a940-47c6-b981-a1ffeea9de10",
@@ -2631,6 +2639,14 @@
             }
         },
         {
+            "Key": "87b8bbdd-8ea2-4ab3-a1d4-b0a0381c9f0c",
+            "Value": {
+                "id": "ec5deb69-2e1b-4cb1-a142-70c87cd3ca14",
+                "resourcePath": "sprites\\Saber_chase\\Saber_chase.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "87c30d60-d08c-46b2-9a05-e1d122bfaa8a",
             "Value": {
                 "id": "53e3e6cd-d87d-488a-a84a-f7215e1c4923",
@@ -2652,6 +2668,14 @@
                 "id": "166e3a4c-2f78-49ce-9129-e19a1660ba6f",
                 "resourcePath": "views\\8b73794d-1bea-4c53-8edf-b7a8e4e05411.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8c169344-4d9b-4831-8822-56e8af1ce29a",
+            "Value": {
+                "id": "2270dad0-5ed4-483c-aada-c7e2cf65b8cc",
+                "resourcePath": "scripts\\hero_action_heal\\hero_action_heal.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3115,6 +3139,14 @@
             "Value": {
                 "id": "74f7d108-73f1-4bc5-8b6b-240c5c7ab2aa",
                 "resourcePath": "scripts\\actor_kill\\actor_kill.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ac9c614d-87b1-4084-8040-0d1534d50cef",
+            "Value": {
+                "id": "a8070f49-d9dd-416a-9a8c-0e35980caa21",
+                "resourcePath": "scripts\\hero_create_heal\\hero_create_heal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4837,6 +4869,7 @@
         "f096f9e6-c276-49a9-b9ee-f0a84ec1168e",
         "0a56c125-0c6f-4c92-9e5f-6eb3b9e1a923",
         "f7f84a0f-8a5d-4ac4-8e9a-43dcdcb1c75e",
+        "ac9c614d-87b1-4084-8040-0d1534d50cef",
         "62af1bda-bb7e-4368-b15f-276474f671d8",
         "af4cd5bc-34e1-4354-8c76-35c483da1153",
         "cef726e4-df8f-4f67-8196-4ae5c542e4b0",
@@ -4851,6 +4884,7 @@
         "e75443b8-7bbe-41a4-b546-f5bb4110c2cc",
         "f7860217-a3d7-4517-8202-cc88012c142b",
         "0c926adb-0632-4038-9043-b6f2d97c1695",
+        "2e9dda91-b205-4e82-9177-010755e8bccd",
         "77113a6e-1ad9-4390-b1de-6b99f7bd9107",
         "4a53dcd3-2fb0-4cad-96fb-e5a259a270e7",
         "55d4593c-122c-4b8b-b1c2-ab7a1b926288",
@@ -4858,6 +4892,7 @@
         "1162d617-015c-485e-87da-7700613bccea",
         "2fe52656-bfdc-413d-97f6-1d231e2ef510",
         "7e078d4a-8e99-43fc-b359-dc8f9279db9e",
+        "8c169344-4d9b-4831-8822-56e8af1ce29a",
         "9e348456-a9da-4278-94f6-42e3fae36baa",
         "67b75972-0675-4a11-8e3a-ac7c4a6a5891",
         "f25b261f-d05d-4d66-a6d9-69aa4c1709c6",
@@ -4916,7 +4951,6 @@
         "f26db052-a8a7-42c0-a8fe-60ddae1bb1f7",
         "b5abe752-74fd-40a4-9d46-991d09678607",
         "13e5a583-787a-4c34-9122-1db7e09ccdab",
-        "031b1488-231f-4d58-b8db-a942d941a1c7",
         "36fb5f41-78ba-44a9-82ba-a228866ea24e",
         "1d15decf-8c90-4bf8-b963-539a9dff7f78",
         "4cc21bf7-5b79-46bc-b933-9f9f932b2d39",

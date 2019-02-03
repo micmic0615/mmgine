@@ -2,6 +2,7 @@ hero_create_init();
 
 //ACTIONS
 hero_create_charge();
+hero_create_heal();
 hero_create_shoot();
 hero_create_dash();
 hero_create_beatdown();

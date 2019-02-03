@@ -6,7 +6,8 @@
     "children": [
         "6fa6fb73-d835-459a-8705-02876e0d90c4",
         "4e7833bc-d5bf-486b-b546-cdfb80d038f3",
-        "b34344ec-1b77-45e1-b5f7-ecd15d815270"
+        "b34344ec-1b77-45e1-b5f7-ecd15d815270",
+        "87b8bbdd-8ea2-4ab3-a1d4-b0a0381c9f0c"
     ],
     "filterType": "GMSprite",
     "folderName": "Saber",

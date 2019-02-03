@@ -10,10 +10,14 @@ status_health_max = 100;
 status_damage_base = 25;
 status_flinch_base = 25;
 status_poise_max = 20;
-status_poise_regen = 2*PPS;
+
 status_flinch_duration = 2*SEC;
 status_poise_freeze_timer = 0*SEC;
 status_poise_freeze_value = 0.5*SEC;
+
+status_health_regen_base = 0;
+status_health_regen_bank = 0;
+status_poise_regen_base = 2*PPS;
 
 status_iframe = false;
 
@@ -41,6 +45,8 @@ draw_bar_health_damage = status_health_max;
 status_damage_total = status_damage_base;
 status_flinch_total = status_flinch_base;
 status_poise_current = status_poise_max;
+status_health_regen_total = status_health_regen_total;
+status_poise_regen_total = status_poise_regen_base;
 
 
 

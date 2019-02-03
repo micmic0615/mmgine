@@ -63,8 +63,8 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			my_charge_factor_speed = 1.25;
 			my_charge_factor_range = 1.5;
 			my_charge_divider_cast = 3;
-			
-			my_charge_factor_damage = 3;
+			my_charge_factor_flinch = 5;
+			my_charge_factor_damage = 2.5;
 			break
 	}
 }

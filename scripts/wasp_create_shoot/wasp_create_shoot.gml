@@ -3,13 +3,13 @@ my_shoot_flair_color = make_color_rgb(255,0,0);
 
 my_shoot_bullet_radius = 32;
 my_shoot_bullet_speed = 1800*PPS;
-my_shoot_bullet_range = 540;
+my_shoot_bullet_range = 640;
 my_shoot_bullet_count = 10;
 my_shoot_bullet_explosion = 80;
 
 my_shoot_recoil_range = 90;
 
-my_shoot_cast_value = 1*SEC;
+my_shoot_cast_value = 0.5*SEC;
 my_shoot_channel_value = 0.3*SEC;
 my_shoot_backswing_value = 0*SEC;
 my_shoot_cooldown_value = 0*SEC;

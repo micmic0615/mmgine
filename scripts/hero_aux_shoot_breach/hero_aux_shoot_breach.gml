@@ -64,7 +64,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 		case "focus":
 			my_charge_factor_range = 1.25;
 			my_charge_factor_size = 1.5;
-			my_charge_factor_damage = 3.25;
+			my_charge_factor_damage = 2.75;
 			my_charge_divider_cast = 3;
 			break
 	}

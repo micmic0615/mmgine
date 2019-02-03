@@ -33,4 +33,14 @@ switch(type){
 		var value = arguments[0];
 		status_armor_health = (status_armor_health + ((100 - status_armor_health)*(value/100)));
 		break
+		
+	case "regen_health":
+		var value = arguments[0];
+		status_health_regen_total += value;
+		break
+		
+	case "regen_poise":
+		var value = arguments[0];
+		status_poise_regen_total += value;
+		break
 }

@@ -4,20 +4,21 @@ draw_set_valign(fa_top);
 
 if (global.draw_tips){
 	
-	draw_text_color(10,10, "use wasd to move", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,10, "use WASD to move", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,30, "use left and right click to attack", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,50, "use spacebar to dash", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,70, "hold shift to enter aim mode", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,90, "use left and right arrow keys to select a skill slot", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,110,"use up and down arrow keys to change the skill in the selected slot", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,50, "use spacebar to dash", c_white, c_white, c_white, c_white, 1);	
+	draw_text_color(10,70, "hold R to heal", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,90, "hold shift to enter aim mode", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,110, "use left and right arrow keys to select a skill slot", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,130,"use up and down arrow keys to change the skill in the selected slot", c_white, c_white, c_white, c_white, 1);
 
-	draw_text_color(10,150,"press 1, 2, 3, 4 and 5 to spawn enemies (each button spawns a different enemy)", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,170,"press 0 to spawn random enemy", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,190,"press backspace to kill all enemies", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,210,"press escape to reset room", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,230,"press enter to toggle tips", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,170,"press 1, 2, 3, 4 and 5 to spawn enemies (each button spawns a different enemy)", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,190,"press 0 to spawn random enemy", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,210,"press backspace to kill all enemies", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,230,"press escape to reset room", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,250,"press enter to toggle tips", c_white, c_white, c_white, c_white, 1);
 
-	levelproto00_draw_gui_tips(280);
+	levelproto00_draw_gui_tips(310);
 }
 
 
@@ -26,7 +27,13 @@ var kill_count = 0;
 if (player_main_actor != noone && instance_exists(player_main_actor)){
 	var hero = player_main_actor;
 	with(ACTOR){
-		if (player_faction != hero.player_faction){
+		if (
+			player_faction != hero.player_faction && 
+			(
+				!variable_instance_exists(id, "action_clone_original") ||
+				(variable_instance_exists(id, "action_clone_original") && action_clone_original)
+			)
+		){
 			enemy_count++;
 		}
 	}

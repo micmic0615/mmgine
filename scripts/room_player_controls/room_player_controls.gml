@@ -30,6 +30,10 @@ if (player_controllable && global.replay_mode == "record"){
 					my_shoot_aim_mode = false;
 				}
 				
+				if (keyboard_check(global.key_heal)){
+					hero_action_heal()
+				}
+				
 				//if (keyboard_check_pressed(global.key_up)){
 				//	if (me.player_controls_move_dash_timer_up > 0){
 				//		var rad_angle = degtorad(270);

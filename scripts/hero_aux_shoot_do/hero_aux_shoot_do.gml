@@ -61,7 +61,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 		case "focus":
 			my_shoot_combo_max = 6;
 			my_charge_factor_size = 1.35;
-			my_charge_factor_damage = 2.5;
+			my_charge_factor_damage = 2.35;
 			my_charge_factor_explosion = 1.2;
 			break
 	}
