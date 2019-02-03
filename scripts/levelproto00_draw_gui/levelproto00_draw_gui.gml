@@ -2,7 +2,7 @@ draw_set_font(fontArial)
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-if (stage_draw_tips){
+if (global.draw_tips){
 	
 	draw_text_color(10,10, "use wasd to move", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,30, "use left and right click to attack", c_white, c_white, c_white, c_white, 1);
@@ -11,8 +11,8 @@ if (stage_draw_tips){
 	draw_text_color(10,90, "use left and right arrow keys to select a skill slot", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,110,"use up and down arrow keys to change the skill in the selected slot", c_white, c_white, c_white, c_white, 1);
 
-	draw_text_color(10,150,"press 1, 2, 3 and 4 to spawn enemies (each button spawns a different enemy)", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,170,"press 5 to spawn random enemy", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,150,"press 1, 2, 3, 4 and 5 to spawn enemies (each button spawns a different enemy)", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,170,"press 0 to spawn random enemy", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,190,"press backspace to kill all enemies", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,210,"press escape to reset room", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,230,"press enter to toggle tips", c_white, c_white, c_white, c_white, 1);

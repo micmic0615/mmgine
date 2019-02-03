@@ -95,7 +95,13 @@ if (player_controllable && global.replay_mode == "record"){
 				}
 				
 				if (keyboard_check_pressed(global.key_action_1)){
-					var rad_angle = degtorad(physics_motion_angle);
+					var rad_angle = degtorad(animation_angle);
+					if (animation_direction == -1){
+						rad_angle = degtorad(animation_angle - 180);
+					}
+					var new_angle = angle_between(x + (cos(rad_angle)*10), y + (sin(rad_angle)*-10), x, y) - (action_dash_combo_count == 0 ? 180 : 0);
+					rad_angle = degtorad(new_angle)
+					
 					
 					if (keyboard_check(global.key_up) && keyboard_check(global.key_right)){
 						rad_angle = degtorad(315)

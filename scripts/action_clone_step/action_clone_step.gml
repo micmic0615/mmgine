@@ -39,8 +39,21 @@ if (!action_clone_active){
 			if (p.action_clone_spread_cooldown_timer <= 0){
 				var distance_from_parent = distance_between(p.x,p.y,x,y);
 				if (distance_from_parent > action_clone_spread_distance_max*3){
+					entity_sfx_create_pulse(
+						/*sprite*/ ExplosionBulletAlt_idle,
+						/*duration*/ 0.75*SEC,
+						/*blend*/ c_red,
+						/*style_data*/ [
+							0,
+							120,
+							1.5
+						],
+						noone
+					);
+					
 					p.x = x;
 					p.y = y;
+					
 				} else if (distance_from_parent > action_clone_spread_distance_max){
 					action_clone_spread_cooldown_timer = action_clone_spread_cooldown_value;
 					var me = id;

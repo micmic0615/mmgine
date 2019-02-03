@@ -17,7 +17,7 @@ if (action_clone_original == true){
 			var parent = me.action_clone_parent;
 			var flinch_base = (flinch_value/(1 - (parent.status_armor_poise/100)))
 			actor_flinch_deal([me.action_clone_parent, flinch_base]);
-			if (status_poise_current <= 0){status_poise_current = 1};
+			//if (status_poise_current <= 0){status_poise_current = 1};
 		}
 	}
 }

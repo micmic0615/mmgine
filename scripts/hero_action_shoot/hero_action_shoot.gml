@@ -70,6 +70,17 @@ action_shoot_flinch = [
 	my_shoot_flinch[1] * (1 +  (charge_value*bonus_flinch)),
 ];
 
+if (my_shoot_aim_mode == true){
+	action_shoot_push = [
+		my_shoot_push[0] * 0.25,
+		my_shoot_push[1] * 0.25,
+	]
+	action_shoot_bullet_speed *= 1.4;
+	action_shoot_bullet_radius *= 0.8;
+} else {
+	action_shoot_push = my_shoot_push
+}
+
 my_charge_current = 0;
 switch(my_charge_active){
 	case 1: my_charge_meter_1 = 0; break;

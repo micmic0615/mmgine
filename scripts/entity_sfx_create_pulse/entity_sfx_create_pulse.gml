@@ -1,14 +1,14 @@
-var sprite = argument0;
-var duration = argument1;
-var loc_x = 0;
-var loc_y = 0;
-var blend = argument2;
+var sprite = argument[0];
+var duration = argument[1];
+var loc_x = x;
+var loc_y = y;
+var blend = argument[2];
 var angle = 0;
 var mirage_direction = 1;
 var scale = 1;
-var anchor = id;
+var anchor = argument_count >= 5 ? argument[4] : id;
 var style = "expand";
-var style_data = argument3;
+var style_data = argument[3];
 
 
 var mirage_data = [

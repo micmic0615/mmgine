@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "031b1488-231f-4d58-b8db-a942d941a1c7",
+            "Value": {
+                "id": "db58fd74-09c8-4ee4-9bfb-cab0ccf2a420",
+                "resourcePath": "scripts\\saber_create_shoot\\saber_create_shoot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "03a69f8c-5f52-4330-aca4-f9f916d2f34d",
             "Value": {
                 "id": "4fdaf96d-f862-4520-b14c-191143db63e0",
@@ -407,6 +415,14 @@
             }
         },
         {
+            "Key": "13e5a583-787a-4c34-9122-1db7e09ccdab",
+            "Value": {
+                "id": "769d0de7-e367-4d9f-9bde-48faf567e689",
+                "resourcePath": "scripts\\saber_create_chase\\saber_create_chase.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "14471f6b-1cc8-4cfb-bfc9-a55e45207cd5",
             "Value": {
                 "id": "29353e51-801f-4808-99a2-5f0581be5132",
@@ -547,6 +563,14 @@
             "Value": {
                 "id": "cc79edde-87f8-46ac-8026-19bcf79c4ddc",
                 "resourcePath": "scripts\\explosionbullet_create\\explosionbullet_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1d15decf-8c90-4bf8-b963-539a9dff7f78",
+            "Value": {
+                "id": "3620d388-1e3e-4434-b521-2df944f553bf",
+                "resourcePath": "scripts\\saber_action_chase_active\\saber_action_chase_active.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -799,6 +823,14 @@
             }
         },
         {
+            "Key": "2b487208-5db9-40c6-a6a1-fab3129a4ccc",
+            "Value": {
+                "id": "e18d05e5-bd7f-49dd-bc30-b0ca8bf6134d",
+                "resourcePath": "views\\2b487208-5db9-40c6-a6a1-fab3129a4ccc.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2bd03a6d-d14a-4ec5-a86e-deec526a7fa9",
             "Value": {
                 "id": "7a7df7ca-a6b4-4c5e-b52d-173645072b07",
@@ -959,6 +991,14 @@
             }
         },
         {
+            "Key": "33d66992-0b8a-4d88-82f3-edb0f45cdd0a",
+            "Value": {
+                "id": "7c3fb6f6-b799-43d8-9297-85fb5b0a8b79",
+                "resourcePath": "views\\33d66992-0b8a-4d88-82f3-edb0f45cdd0a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "340a9a28-62cb-47fb-9a24-6becaa70fd01",
             "Value": {
                 "id": "72d4b4bf-4282-4a64-82fe-089a2d742250",
@@ -1027,6 +1067,14 @@
             "Value": {
                 "id": "756fc171-b569-457f-92a9-8940accdcbe6",
                 "resourcePath": "scripts\\tiletest_step\\tiletest_step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "36fb5f41-78ba-44a9-82ba-a228866ea24e",
+            "Value": {
+                "id": "439b6fa0-c2e1-469a-b1d9-185cbf0edaac",
+                "resourcePath": "scripts\\saber_action_chase_cast\\saber_action_chase_cast.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1479,6 +1527,14 @@
             }
         },
         {
+            "Key": "4cc21bf7-5b79-46bc-b933-9f9f932b2d39",
+            "Value": {
+                "id": "0b2a73ea-2ec3-44cf-9672-77f743905f7c",
+                "resourcePath": "scripts\\saber_action_chase_success\\saber_action_chase_success.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4cc50548-41b8-4f6d-a9f3-e77f580cfcaa",
             "Value": {
                 "id": "d8613f35-371e-4e73-bc27-883b313f72ab",
@@ -1516,6 +1572,14 @@
                 "id": "45301b57-f16f-4d60-9653-6ebb8b85f680",
                 "resourcePath": "scripts\\graviton_step\\graviton_step.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4e7833bc-d5bf-486b-b546-cdfb80d038f3",
+            "Value": {
+                "id": "a90d4202-77f0-438b-bc05-4aa8f918441b",
+                "resourcePath": "sprites\\Saber_channel\\Saber_channel.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1715,6 +1779,14 @@
             "Value": {
                 "id": "8b7458f0-191e-4517-9c51-6023298bd711",
                 "resourcePath": "scripts\\hero_bullet_create\\hero_bullet_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5d9c88b3-1691-4b1a-9b98-337fabaffaf2",
+            "Value": {
+                "id": "0d8fd8de-e0c3-46fb-89fd-1ef93aad779e",
+                "resourcePath": "scripts\\saber_create\\saber_create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2084,6 +2156,14 @@
                 "id": "b72be01e-76ec-4984-94f2-a90afd82ed21",
                 "resourcePath": "views\\6f6bd37e-d891-4a22-8e99-b287f02de3bf.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6fa6fb73-d835-459a-8705-02876e0d90c4",
+            "Value": {
+                "id": "f9c168db-c3d9-4e9c-b251-8643a181a602",
+                "resourcePath": "sprites\\Saber_idle\\Saber_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2559,6 +2639,14 @@
             }
         },
         {
+            "Key": "8af5fcf6-8846-4923-bb0c-a0113a30fe19",
+            "Value": {
+                "id": "34fdb8e1-daf9-4e26-a603-54730d8a3c65",
+                "resourcePath": "views\\8af5fcf6-8846-4923-bb0c-a0113a30fe19.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8b73794d-1bea-4c53-8edf-b7a8e4e05411",
             "Value": {
                 "id": "166e3a4c-2f78-49ce-9129-e19a1660ba6f",
@@ -2623,6 +2711,14 @@
             }
         },
         {
+            "Key": "8eceac74-ab9d-481e-b652-62a936d3505c",
+            "Value": {
+                "id": "c114a729-611a-4792-98a9-eb5045bb22cd",
+                "resourcePath": "views\\8eceac74-ab9d-481e-b652-62a936d3505c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8ef0102b-fe38-4bb1-a86f-e78535252f27",
             "Value": {
                 "id": "f75871ac-7f67-462e-8415-68d079206457",
@@ -2684,6 +2780,14 @@
                 "id": "628ab0ea-62cb-4709-9e42-d562c75baa1c",
                 "resourcePath": "scripts\\wasp_action_chase_active\\wasp_action_chase_active.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9247335e-6ef1-4e4c-895b-be48ae1ec667",
+            "Value": {
+                "id": "55bb1fcb-e148-4484-9af0-280783f59ffe",
+                "resourcePath": "views\\9247335e-6ef1-4e4c-895b-be48ae1ec667.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3143,6 +3247,14 @@
             }
         },
         {
+            "Key": "b34344ec-1b77-45e1-b5f7-ecd15d815270",
+            "Value": {
+                "id": "aab66f32-9c0e-4ebd-9066-08d4fa7cd2eb",
+                "resourcePath": "sprites\\Saber_attack\\Saber_attack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b345f9fd-bb47-4b7e-8627-2f5139829782",
             "Value": {
                 "id": "1e4a8b0f-36bd-42a5-b8e0-66e943519e94",
@@ -3204,6 +3316,14 @@
                 "id": "8a600349-fd7e-4032-a7fe-896354b64883",
                 "resourcePath": "sprites\\ExplosionBulletAlt_idle\\ExplosionBulletAlt_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b5abe752-74fd-40a4-9d46-991d09678607",
+            "Value": {
+                "id": "54e818e9-758f-4729-ab7a-abb80a28f5c7",
+                "resourcePath": "scripts\\saber_create_stats\\saber_create_stats.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3703,6 +3823,14 @@
             }
         },
         {
+            "Key": "d31366b7-f3aa-4e65-8e13-e421bc3dd338",
+            "Value": {
+                "id": "6dd65566-778f-4867-a3c7-32c1e284a17e",
+                "resourcePath": "objects\\Saber\\Saber.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d3a8fc35-d4c9-4c44-b8eb-d8944cecd113",
             "Value": {
                 "id": "41dcb5dc-1d1a-48e4-aa07-f668dac3d071",
@@ -3851,6 +3979,14 @@
             "Value": {
                 "id": "aa3d1ca1-9b11-45a4-9250-8ac8712c8470",
                 "resourcePath": "scripts\\hero_action_2\\hero_action_2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "da156afd-e8c4-4961-839d-f3a99cce7dbd",
+            "Value": {
+                "id": "d3f608c9-fa99-4dcc-93d9-ac63d66b37b2",
+                "resourcePath": "scripts\\saber_ai_create\\saber_ai_create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4047,6 +4183,14 @@
             }
         },
         {
+            "Key": "e4447c63-90bd-4352-801a-badbdb769eef",
+            "Value": {
+                "id": "1e2dc41e-059d-4e27-bec4-880dac7d5daa",
+                "resourcePath": "scripts\\saber_ai_step\\saber_ai_step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e45454dd-6fd1-4b77-990f-1562fe2fa4e1",
             "Value": {
                 "id": "b21c26d5-d80c-44b6-ba7e-169636e7f87f",
@@ -4215,6 +4359,14 @@
             }
         },
         {
+            "Key": "eb15de9b-97db-4c91-96d5-b3d94c7bb249",
+            "Value": {
+                "id": "4aa8bdf8-267d-4a0d-8280-cbe814862387",
+                "resourcePath": "views\\eb15de9b-97db-4c91-96d5-b3d94c7bb249.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ebcf352b-8e3f-44ad-868b-6f7ab2a9b427",
             "Value": {
                 "id": "3619014b-2214-4bc1-aa07-4498126dc05e",
@@ -4331,6 +4483,14 @@
             "Value": {
                 "id": "e2fa9170-af83-47a2-b6bc-f034b54fb857",
                 "resourcePath": "scripts\\hero_action_dash\\hero_action_dash.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f26db052-a8a7-42c0-a8fe-60ddae1bb1f7",
+            "Value": {
+                "id": "e743ad33-5b85-4d98-9364-25cab5686132",
+                "resourcePath": "scripts\\saber_create_init\\saber_create_init.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4752,6 +4912,14 @@
         "dd2ffc57-5c7b-47c0-bb9f-ad4389675287",
         "46b9b3af-3f91-4fc7-822f-d61653b0b7bc",
         "ad4c4aec-7ff1-4f9c-93ed-4675083f9489",
+        "5d9c88b3-1691-4b1a-9b98-337fabaffaf2",
+        "f26db052-a8a7-42c0-a8fe-60ddae1bb1f7",
+        "b5abe752-74fd-40a4-9d46-991d09678607",
+        "13e5a583-787a-4c34-9122-1db7e09ccdab",
+        "031b1488-231f-4d58-b8db-a942d941a1c7",
+        "36fb5f41-78ba-44a9-82ba-a228866ea24e",
+        "1d15decf-8c90-4bf8-b963-539a9dff7f78",
+        "4cc21bf7-5b79-46bc-b933-9f9f932b2d39",
         "fd672230-07b6-48f6-b3e1-6ac84761479e",
         "d719b75d-7375-4bde-b25a-b23aa0631d11",
         "6e26ce31-aac3-43eb-9579-5a4b1d1aaf7e",
@@ -4896,6 +5064,8 @@
         "3cc5309d-f9a6-434a-9ef4-2e59aa011f13",
         "f6c25ddf-83ec-4ac1-b13f-e1d3427dab91",
         "634acc51-3885-4523-8a4a-fba44119cedb",
+        "da156afd-e8c4-4961-839d-f3a99cce7dbd",
+        "e4447c63-90bd-4352-801a-badbdb769eef",
         "453d308f-e2fc-487f-889e-db259989ac7d",
         "27b4d8b2-fd3a-4db0-bd53-b69a6d2ad054",
         "0a9c6701-df4c-45d8-9cd8-e17a4ffc5053",

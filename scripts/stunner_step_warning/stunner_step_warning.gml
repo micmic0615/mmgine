@@ -1,4 +1,5 @@
 if (action_shoot_cooldown_timer <= (0.5*SEC) && actor_actions_enabled){
+	enemy_attack_range_threat = 1080;
 	if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0){
 		if (entity_room_age_modulo(0.2*SEC)){
 			entity_sfx_create_pulse(
@@ -27,6 +28,7 @@ if (action_shoot_cooldown_timer <= (0.5*SEC) && actor_actions_enabled){
 		}
 	}
 } else {
+	enemy_attack_range_threat = 0;
 	if (entity_room_age_modulo(1*SEC)){	
 		entity_sfx_create_pulse(
 			/*sprite*/ ExplosionBulletAlt_idle,

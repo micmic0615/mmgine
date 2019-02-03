@@ -9,6 +9,7 @@ if (actor_actions_enabled && actor_actions_idle && action_shoot_backswing_timer 
 	
 	if (action_shoot_step_phase == 0){		
 		entity_run_type_scripts("action_shoot_cast", action_shoot_target_point);
+		
 		action_shoot_cast_timer = action_shoot_cast_value;
 		action_shoot_backswing_timer = 0;
 		action_shoot_step_phase = 1;

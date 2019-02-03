@@ -4,14 +4,18 @@ var max_distance = 0;
 with(ACTOR){
 	if (me.player_faction != player_faction && variable_instance_exists(id, "ai_target_attack_should_channel")){
 		var should_add = true;
-		
-		if (ai_target_attack_should_channel == true){			
-			var current_distance = distance_between(x,y,me.x,me.y);
-			if (current_distance > max_distance){
-				max_distance = current_distance
-			}
+		var current_distance = distance_between(x,y,me.x,me.y);
+		if (ai_target_attack_should_channel){
+			if (current_distance > max_distance){max_distance = current_distance}
 		} else {
-			should_add = false;
+			if (
+				variable_instance_exists(id, "enemy_attack_range_threat") &&
+				current_distance < enemy_attack_range_threat
+			){
+				if (current_distance > max_distance){max_distance = current_distance}
+			} else {
+				should_add = false;
+			}
 		}
 		
 		var add_index = -1;
@@ -38,7 +42,7 @@ var multiplier = min(1, ((max_distance*1) / room_diagonal_size));
 
 
 my_camera_zoom_current = my_camera_zoom_min + (multiplier*(my_camera_zoom_max - my_camera_zoom_min))
-
+if (my_shoot_aim_mode == true && my_camera_zoom_current > my_camera_zoom_aim){my_camera_zoom_current = my_camera_zoom_aim}
 
 
 var camera_snap_step = round(1/(abs(my_camera_zoom_max - my_camera_zoom_min)/6));

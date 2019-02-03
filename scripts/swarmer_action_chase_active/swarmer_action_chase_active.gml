@@ -7,3 +7,5 @@ part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count)
 			
 actor_buff_apply("armor_health", 3, [50], "chase_bonus_health");
 actor_buff_apply("armor_poise", 3, [50], "chase_bonus_poise");
+
+
