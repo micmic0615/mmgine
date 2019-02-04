@@ -9,7 +9,8 @@ var spawn_roster = [
 	Shooter,
 	Stunner,
 	Wasp,
-	Swarmer
+	Swarmer,
+	Virus
 ]
 var spawn_roster_size = array_length_1d(spawn_roster);
 for(var i = 0; i < spawn_roster_size;i++){
@@ -68,21 +69,31 @@ if (keyboard_check_pressed(global.key_num_5)){
 	}
 }
 
+if (keyboard_check_pressed(global.key_num_6)){
+	if (enemy_count < enemy_limit){
+		var spawned_actor = room_spawn_random_from_main_actor(Virus);
+		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
+	}
+}
+
 if (keyboard_check_pressed(global.key_num_0)){
 	if (enemy_count < enemy_limit){
 		var random_num = random(100);
 		var random_spawn = noone;
 		
-		if (random_num < 30){
+		if (random_num < 25){
 			random_spawn = Saber
-		} else if (random_num < 60){
+		} else if (random_num < 50){
 			random_spawn = Shooter
-		} else if (random_num < 75){
+		} else if (random_num < 65){
 			random_spawn = Stunner
-		} else if (random_num < 90){
+		} else if (random_num < 80){
 			random_spawn = Wasp
-		} else {
+		} else if (random_num < 90) {
 			random_spawn = Swarmer
+		} else {
+			random_spawn = Virus
 		}
 		
 		var spawned_actor = room_spawn_random_from_main_actor(random_spawn);

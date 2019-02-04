@@ -6,6 +6,7 @@ hero_create_heal();
 hero_create_shoot();
 hero_create_dash();
 hero_create_beatdown();
+hero_create_frenzy();
 
 //STATS AND SKILLS
 hero_create_stats();

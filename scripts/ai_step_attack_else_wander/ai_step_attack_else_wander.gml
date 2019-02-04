@@ -1,3 +1,4 @@
+var target_type = argument_count >= 1 ? argument[0] : ["near", "enemy"];
 
 ai_target_move_cooldown_timer -= TIMESPEED;
 ai_target_distance_limit = enemy_attack_range_total*1.25;
@@ -16,7 +17,7 @@ if (ai_target_move_cooldown_timer <= 0){
 }
 
 if (ai_target == noone){
-	ai_target = ai_get_target("near", "enemy", ai_target_distance_limit);
+	ai_target = ai_get_target(target_type[0], target_type[1], ai_target_distance_limit);
 	if (ai_target != noone){
 		ai_target_move_point = [ai_target.x,ai_target.y]
 	}

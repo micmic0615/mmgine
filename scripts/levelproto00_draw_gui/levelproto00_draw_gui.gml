@@ -12,7 +12,7 @@ if (global.draw_tips){
 	draw_text_color(10,110, "use left and right arrow keys to select a skill slot", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,130,"use up and down arrow keys to change the skill in the selected slot", c_white, c_white, c_white, c_white, 1);
 
-	draw_text_color(10,170,"press 1, 2, 3, 4 and 5 to spawn enemies (each button spawns a different enemy)", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,170,"press 1, 2, 3, 4, 5 or 6 to spawn enemies (each button spawns a different enemy)", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,190,"press 0 to spawn random enemy", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,210,"press backspace to kill all enemies", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,230,"press escape to reset room", c_white, c_white, c_white, c_white, 1);

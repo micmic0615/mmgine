@@ -40,6 +40,4 @@ if (valid && !base_target.status_immortal){
 	}
 }
 
-show_debug_message("-----")
-
 

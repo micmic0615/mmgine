@@ -49,3 +49,5 @@ bullet.bullet_death_spawn[?"bullet_collision_entity_actions"] = [
 	["damage", "actor", status_damage_total*explosion_damage_factor, true, "main_attack"],
 	["push", "actor", explosion_push, 0.5*SEC, "center", ["multiply",1.5]],
 ]
+
+hero_beatdown_bullet_sfx(bullet, my_shoot_flair_color, bullet_radius)

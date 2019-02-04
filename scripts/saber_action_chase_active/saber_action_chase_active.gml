@@ -59,7 +59,8 @@ if (my_chase_jump_active){
 		my_chase_jump_mirage_timer = jump_time;
 		entity_motion_push(my_chase_jump_range, jump_time, fire_angle)
 		my_chase_jump_count--;
-		my_chase_jump_active = false
+		my_chase_jump_active = false;
+		my_chase_jump_mirage_down = true
 	}
 }
 
@@ -71,26 +72,36 @@ if (my_chase_jump_mirage_timer > 0 ){
 		entity_mirage_create(0.5*SEC, 0, 0, make_color_rgb(200,200,200), 0.75);
 	}
 	my_chase_jump_mirage_timer -= TIMESPEED;
+} else {
+	if (my_chase_jump_mirage_down){
+		my_chase_sword_disable_timer = 0.5*SEC;
+		my_chase_jump_mirage_down = false;
+	}
+}
+
+if (my_chase_sword_disable_timer > 0){
+	actor_buff_apply("rooted", 2, [], "chase_jump");
+	my_chase_sword_disable_timer -= TIMESPEED
 }
 	
 
 var spawn_interval = 0.2*SEC;
 
-if (entity_room_age_modulo(spawn_interval) && my_chase_jump_cast_timer <= 0){
+if (entity_room_age_modulo(spawn_interval) && my_chase_jump_cast_timer <= 0 && my_chase_sword_disable_timer <= 0){
 	var bullet_x = cos(degtorad(fire_angle))*my_chase_sword_radius + x;
 	var bullet_y = sin(degtorad(fire_angle))*my_chase_sword_radius + y;
 
 	var sword = actor_spawn_bullet(sword_angle[0], sword_angle[1], bullet_x,bullet_y, my_chase_sword_type[0]);
 	var one_second = SEC;
-	if (my_chase_jump_mirage_timer > 0){one_second = one_second/2}
-	ds_list_add(sword.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*(spawn_interval/one_second), true, "main_attack"]);
+	if (my_chase_jump_mirage_timer > 0){one_second = spawn_interval}
+	ds_list_add(sword.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*(spawn_interval/one_second), true, my_chase_jump_mirage_timer > 0 ? "main_attack" : "side_attack"]);
 	ds_list_add(sword.bullet_collision_entity_actions, ["flinch", "actor", status_flinch_total*(spawn_interval/one_second)]);
-	ds_list_add(sword.bullet_collision_entity_actions, ["push", "actor", 100, 0.5*SEC, "movement", ["multiply",1.5]]);
+	ds_list_add(sword.bullet_collision_entity_actions, ["push", "actor", my_chase_jump_mirage_timer > 0 ? 240 : 100, 0.5*SEC, "movement", ["multiply",1.5]]);
 	
 	var sword_range = my_chase_jump_mirage_timer > 0 ? my_chase_sword_range*2 : my_chase_sword_range;
 	var sword_speed = my_chase_sword_speed + my_chase_movespeed_set;
 	if (my_chase_jump_mirage_timer > 0){sword_speed += my_chase_jump_speed}
-	var sword_radius = my_chase_jump_mirage_timer > 0 ? my_chase_sword_radius*1.5 : my_chase_sword_radius;
+	var sword_radius = my_chase_jump_mirage_timer > 0 ? my_chase_sword_radius*3 : my_chase_sword_radius;
 	
 	sword.animation_sprite = my_chase_sword_type[1];
 	sword.status_movespeed_base = sword_speed;
@@ -108,12 +119,12 @@ if (entity_room_age_modulo(spawn_interval) && my_chase_jump_cast_timer <= 0){
 	if (my_chase_jump_mirage_timer > 0){
 		ds_list_add(
 			sword.draw_particle_list, 
-			[game_particle_setup_basic(my_chase_color_particles, 2 + random(3), 0.5, 0.25*SEC), 12, sword_radius]
+			[game_particle_setup_basic(my_chase_color_particles, 3 + random(5), 0.5, 0.25*SEC), 18, sword_radius]
 		);
 				
 		ds_list_add(
 			sword.draw_particle_list, 
-			[game_particle_setup_basic(my_chase_color, 2 + random(3), 0.25, 0.15*SEC), 12, sword_radius]
+			[game_particle_setup_basic(my_chase_color, 3 + random(5), 0.25, 0.15*SEC), 18, sword_radius]
 		);
 	} else {
 		ds_list_add(

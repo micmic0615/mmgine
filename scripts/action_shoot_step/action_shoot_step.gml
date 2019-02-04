@@ -25,6 +25,7 @@ if (actor_actions_enabled){
 				action_shoot_channel_timer -= TIMESPEED;
 			} else {
 				actor_actions_idle = true;
+				
 				action_shoot_backswing_timer = action_shoot_backswing_value;				
 				action_shoot_step_phase = 3;
 			}; break

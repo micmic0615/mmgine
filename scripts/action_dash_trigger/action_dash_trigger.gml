@@ -1,14 +1,13 @@
 var target_point = argument0;
 
-if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 0 && action_dash_cooldown_timer <= 0){
+if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 0 && action_dash_off_cooldown()){
 	action_dash_channel_timer = action_dash_channel_value;
-	action_dash_combo_timer = action_dash_cooldown_rest;
+	action_dash_combo_timer = action_dash_cooldown_value;
 	action_dash_combo_count++;
 	
-	if (action_dash_combo_count >= action_dash_combo_max){
-		action_dash_cooldown_timer = action_dash_cooldown_rest;
-	} else {
-		action_dash_cooldown_timer = action_dash_cooldown_value;
+	for(var i = 0; i < array_length_1d(action_dash_cooldown_multi_timer);i++){
+		var p = action_dash_cooldown_multi_timer[i];
+		if (p == 0){action_dash_cooldown_multi_timer[i] = action_dash_cooldown_value; break}
 	};
 	
 	actor_actions_idle = false;
@@ -19,8 +18,16 @@ if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 
 	entity_motion_push((action_dash_range), action_dash_range/action_dash_speed, bullet_angle  -180, ["multiply",1.25], "move_motion");
 	
 } else {
-	if (action_dash_cooldown_timer <= action_dash_cooldown_value){
-		action_dash_queue_angle = degtorad(angle_between(target_point[0],target_point[1],x,y ));
-		action_dash_queue_cast = true;
+	if (!action_dash_off_cooldown()){
+		var lowest = INFINITY
+		for(var i = 0; i < array_length_1d(action_dash_cooldown_multi_timer);i++){
+			var p = action_dash_cooldown_multi_timer[i];
+			if (p < lowest){lowest = p}
+		};
+		
+		if (lowest <= action_dash_cooldown_value*0.25){
+			action_dash_queue_angle = degtorad(angle_between(target_point[0],target_point[1],x,y ));
+			action_dash_queue_cast = true;
+		}
 	}
 }

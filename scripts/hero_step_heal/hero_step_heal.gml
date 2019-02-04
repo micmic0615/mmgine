@@ -38,10 +38,10 @@ if (my_heal_cooldown_timer <= 0){
 				)
 			}
 			
-			
 			my_heal_cooldown_timer = my_heal_cooldown_value;
-			
 		}
+		
+		my_charge_accelerate_delay_timer = max(my_charge_accelerate_delay_value, my_charge_accelerate_delay_timer);
 		
 		physics_gravity_current = 0;
 		
@@ -53,6 +53,9 @@ if (my_heal_cooldown_timer <= 0){
 	
 		my_heal_active -= TIMESPEED;
 	} else {
+		if (actor_actions_id == "heal"){			
+			actor_actions_id = "none";
+		}
 		my_heal_cast_timer = my_heal_cast_value;
 	}
 } else {

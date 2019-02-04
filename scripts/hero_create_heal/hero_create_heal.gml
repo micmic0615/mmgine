@@ -9,5 +9,5 @@ my_heal_active = false;
 my_heal_cooldown_timer = 0;
 my_heal_cooldown_value = 1*SEC;
 
-my_heal_color_1 = make_color_rgb(255,140,30);
+my_heal_color_1 = make_color_rgb(185,255,60);
 my_heal_color_2 = make_color_rgb(60,255,30);

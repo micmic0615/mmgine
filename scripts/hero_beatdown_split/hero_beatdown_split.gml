@@ -36,6 +36,7 @@ while(bullet_count < bullet_max){
 
 	bullet.bullet_seek_range = 80;
 	bullet.bullet_seek_turn_rate = 120*PPS;
-				
+	
+	hero_beatdown_bullet_sfx(bullet, my_shoot_flair_color, bullet_radius);		
 	bullet_count++;
 }

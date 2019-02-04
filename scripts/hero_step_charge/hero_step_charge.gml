@@ -8,13 +8,13 @@ var charge_value_1 = my_charge_meter_1/my_charge_max;
 var charge_value_2 = my_charge_meter_2/my_charge_max;
 
 var p_spawn_1 = 60 + (40*charge_value_1);
-var p_spawn_2 = 60 + (40*charge_value_1);
+var p_spawn_2 = 60 + (40*charge_value_2);
 
-var p_count_1 = ceil(3*charge_value_2);
-var p_count_2 = ceil(3*charge_value_2);
+var p_count_1 = ceil(2*charge_value_1);
+var p_count_2 = ceil(2*charge_value_2);
 
-var p_model_1 = game_particle_setup_basic(my_charge_color_1, (0.5 + random(1)*charge_value_1), 1*charge_value_1, 0.5*SEC);
-var p_model_2 = game_particle_setup_basic(my_charge_color_2, (0.5 + random(1)*charge_value_2), 1*charge_value_2, 0.5*SEC);
+var p_model_1 = game_particle_setup_basic(my_charge_color_1, (0.5 + random(1)*charge_value_1), 0.6*charge_value_1, 0.35*SEC);
+var p_model_2 = game_particle_setup_basic(my_charge_color_2, (0.5 + random(1)*charge_value_2), 0.6*charge_value_2, 0.35*SEC);
 
 my_charge_draw_angle += 20*PPS;
 
@@ -42,7 +42,7 @@ if (actor_actions_idle){
 			}
 		}
 		
-		if (action_dash_channel_timer <= 0 && action_dash_cooldown_timer <= 0){
+		if (action_dash_channel_timer <= 0 && action_dash_off_cooldown()){
 			my_charge_meter_1 = min((my_charge_meter_1 + (TIMESPEED*charge_accelerator)), my_charge_max);
 			my_charge_meter_2 = min((my_charge_meter_2 + (TIMESPEED*charge_accelerator)), my_charge_max);
 		}

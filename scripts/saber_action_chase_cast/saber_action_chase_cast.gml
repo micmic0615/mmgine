@@ -9,4 +9,5 @@ my_chase_jump_count = my_chase_jump_max;
 my_chase_jump_mirage_timer = 0;
 my_chase_jump_cast_timer = 0;
 my_chase_jump_active = false;
+my_chase_jump_mirage_down = false;
 my_chase_jump_cooldown_timer = my_chase_jump_cooldown_value/2;

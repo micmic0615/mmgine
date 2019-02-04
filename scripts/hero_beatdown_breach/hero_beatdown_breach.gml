@@ -83,6 +83,8 @@ while(bullet_count < bullet_max){
 	bullet.bullet_death_spawn[?"bullet_collision_entity_actions"] = [
 		["damage", "actor", status_damage_total*bullet_damage_factor, true, "main_attack"]
 	]
+	
+	hero_beatdown_bullet_sfx(bullet, my_shoot_flair_color, bullet_radius)
 		
 	bullet_count++;
 }

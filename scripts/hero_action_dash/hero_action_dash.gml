@@ -1,7 +1,7 @@
 if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0 ){
 	action_dash_speed = my_dash_speed*1.25;
 	action_dash_range = my_dash_range*1.5;
-	action_dash_cooldown_timer = 0;
+	action_dash_cooldown_multi_timer = array_create(action_dash_combo_max, 0);
 	hero_dash_particles_create(5, 2, 1, c_white);
 } else {
 	action_dash_speed = my_dash_speed;

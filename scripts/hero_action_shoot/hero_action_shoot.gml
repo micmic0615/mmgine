@@ -57,7 +57,7 @@ if (charge_value < 1){
 }
 	
 if (my_shoot_aim_mode == true){
-	action_shoot_recoil_range *= 0.35;
+	action_shoot_recoil_range *= my_frenzy_timer > 0 ? 0.1 : 0.35;
 }
 
 action_shoot_damage = [
@@ -72,8 +72,8 @@ action_shoot_flinch = [
 
 if (my_shoot_aim_mode == true){
 	action_shoot_push = [
-		my_shoot_push[0] * 0.25,
-		my_shoot_push[1] * 0.25,
+		my_shoot_push[0] * my_frenzy_timer > 0 ? 0.1 : 0.25,
+		my_shoot_push[1] * my_frenzy_timer > 0 ? 0.1 : 0.25,
 	]
 	action_shoot_bullet_speed *= 1.4;
 	action_shoot_bullet_radius *= 0.8;

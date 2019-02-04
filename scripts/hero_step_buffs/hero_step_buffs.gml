@@ -24,9 +24,7 @@ for(var i = 0; i < ds_list_size(status_buff_list);i++){
 		has_autoshield = duration;
 	}
 	
-	if (has_heal == 0 && buff_id == "estus_flask"){
-		has_heal = duration;
-	}
+	
 	
 	if (type == "flinched"){
 		is_flinched = true
@@ -82,11 +80,5 @@ if (has_iframe){
 	draw_blend_temporary_color = make_color_rgb(black_number, black_number, black_number);
 }
 
-if (has_heal){
-	var p_model_1 = game_particle_setup_basic(my_heal_color_1, (1 + random(2)), 0.65, 0.5*SEC, pt_shape_ring);
-	hero_particles_create(100, p_model_1, 2);
-	
-	var p_model_1 = game_particle_setup_basic(my_heal_color_2, (1 + random(2)), 0.65, 0.5*SEC, pt_shape_ring);
-	hero_particles_create(100, p_model_1, 2);
-}
+
 

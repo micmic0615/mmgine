@@ -51,6 +51,8 @@ if (hero_beatdown_find("crash")){
 			bullet.bullet_seek_turn_rate = 360*PPS;
 			bullet.bullet_seek_angle_limit = 360;
 			bullet.bullet_seek_target = base_target;
+			
+			hero_beatdown_bullet_sfx(bullet, my_shoot_flair_color, bullet_radius);
 		}
 		
 	}

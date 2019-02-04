@@ -11,6 +11,8 @@ for(var i = 0; i < ds_list_size(my_infest_bug_list);i++){
 	var rad_angle = degtorad(bug_angle);
 	
 	if (entity_enabled(bug) && entity_enabled(target)){
+		
+	
 		if (bug_duration < my_infest_duration){
 			ds_list_replace(my_infest_bug_list, i, [
 				target,

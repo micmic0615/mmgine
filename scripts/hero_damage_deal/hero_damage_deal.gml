@@ -21,9 +21,11 @@ if (base_target != id){
 	}
 	
 	if (beatdown){
-		if (damage_id == "main_attack" && flinch_buff != undefined){
+		if (flinch_buff != undefined){
 			var overflinch = flinch_buff[1] - base_target.status_flinch_duration
 			if (overflinch > 0){base_value *= 1.5}
+			//else {base_value *= 1.5}
+			hero_action_frenzy();
 		}
 		
 		var total_heal = base_value*(my_rally_lifesteal_beatdown/100);

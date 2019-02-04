@@ -1,5 +1,6 @@
 var target = argument0;
 if (entity_enabled(target)){
+	room_timespeed_temp(0.05, 1*SEC)
 	var bug_count = action_clone_count + 1;
 	var bug_angle = random(360);
 	while(bug_count > 0){

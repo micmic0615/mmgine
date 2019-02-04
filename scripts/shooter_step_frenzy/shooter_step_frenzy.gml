@@ -2,7 +2,7 @@ if (my_frenzy_timer > 0){
 	enemy_attack_range_total = INFINITY;
 	action_shoot_cooldown_timer = 0;
 	
-	action_shoot_cast_value = 0.35*SEC;
+	action_shoot_cast_value = 0.5*SEC;
 	my_frenzy_timer--;
 	
 	var p_spawn = 60;

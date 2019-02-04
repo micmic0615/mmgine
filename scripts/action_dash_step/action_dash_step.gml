@@ -16,7 +16,9 @@ if (actor_actions_enabled){
 		}
 	}
 	
-	if (action_dash_queue_cast && actor_actions_idle && action_dash_cooldown_timer <= 0){
+	
+	
+	if (action_dash_queue_cast && actor_actions_idle && action_dash_off_cooldown()){
 		var target_point = [
 			x + cos(action_dash_queue_angle)*INFINITY,
 			y + sin(action_dash_queue_angle)*INFINITY,
@@ -28,8 +30,11 @@ if (actor_actions_enabled){
 	action_dash_channel_timer = 0;
 }
 
-if (action_dash_channel_timer <= 0 && action_dash_cooldown_timer > 0){
-	action_dash_cooldown_timer -= TIMESPEED;
+if (action_dash_channel_timer <= 0){	
+	for(var i = 0; i < array_length_1d(action_dash_cooldown_multi_timer);i++){
+		var p = action_dash_cooldown_multi_timer[i];
+		if (p > 0){action_dash_cooldown_multi_timer[i] = p - TIMESPEED};		
+	};
 }
 
 if (action_dash_combo_timer > 0){
