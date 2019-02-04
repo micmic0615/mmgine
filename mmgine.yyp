@@ -31,10 +31,26 @@
     },
     "resources": [
         {
+            "Key": "0078df0e-0f29-4e29-99b6-37f62126899d",
+            "Value": {
+                "id": "8ea9a56d-2af2-4786-9aed-fbbef05ecf6e",
+                "resourcePath": "views\\0078df0e-0f29-4e29-99b6-37f62126899d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "00e83146-d3b0-4d3a-9d2d-4ad2766a7007",
             "Value": {
                 "id": "73a37705-97f5-4a5b-8085-eb6999e5b92e",
                 "resourcePath": "scripts\\bullet_step\\bullet_step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "02569682-6d2e-428f-b9af-bba7051d5e49",
+            "Value": {
+                "id": "b42c0d7c-1142-4370-8a38-e8768488d0fa",
+                "resourcePath": "scripts\\lazer_action_barrage\\lazer_action_barrage.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -343,6 +359,14 @@
             }
         },
         {
+            "Key": "10b95628-404f-4b05-a22b-63cec76c8d8e",
+            "Value": {
+                "id": "9e3b5082-3f64-4489-b815-c81ca38ac805",
+                "resourcePath": "scripts\\lazer_create_barrage\\lazer_create_barrage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1116d700-02ec-4708-8ace-fdc6e18753d5",
             "Value": {
                 "id": "1a621fce-1734-40fb-be6f-ac1420e5cdab",
@@ -420,6 +444,14 @@
                 "id": "f7480c4a-18a9-4e3c-9359-3927e5cbd264",
                 "resourcePath": "scripts\\virus_create_aura\\virus_create_aura.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "14d1c0d7-78a7-4a7f-a593-1603250d24ad",
+            "Value": {
+                "id": "c0c8f8d2-3d1b-445d-a4b2-a9451ff9f823",
+                "resourcePath": "views\\14d1c0d7-78a7-4a7f-a593-1603250d24ad.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -756,6 +788,14 @@
                 "id": "3f24dcf6-2978-4c5d-a95e-79cd02daf266",
                 "resourcePath": "sprites\\HeroBullet3_idle\\HeroBullet3_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "265b0ae3-8c8b-4955-8b61-616e8bdc1c44",
+            "Value": {
+                "id": "488736d4-08b7-4880-bc8e-e32dd32865d4",
+                "resourcePath": "views\\265b0ae3-8c8b-4955-8b61-616e8bdc1c44.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1631,10 +1671,26 @@
             }
         },
         {
+            "Key": "507213c8-aa56-4ad6-b941-c2678a982e2d",
+            "Value": {
+                "id": "4550d1c5-912f-4b6d-b2ae-833262fe15fb",
+                "resourcePath": "scripts\\lazer_create_stats\\lazer_create_stats.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "50a3ba79-e1ea-4599-a86e-b672c64eff7c",
             "Value": {
                 "id": "6c90a5ee-3b18-4000-9f70-237872e34848",
                 "resourcePath": "sprites\\Shooter_channel\\Shooter_channel.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "51af31a8-418b-4279-9858-2fde8875f31e",
+            "Value": {
+                "id": "e6614807-d006-42a5-8d39-60854434e156",
+                "resourcePath": "sprites\\Lazer_channel\\Lazer_channel.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1675,6 +1731,22 @@
             "Value": {
                 "id": "7522acb4-e709-42c0-b93a-054640032194",
                 "resourcePath": "scripts\\hero_action_beatdown\\hero_action_beatdown.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "54744e62-255f-4f91-a6d3-ecdc2aa0e6b7",
+            "Value": {
+                "id": "9feee9be-2bec-4ea8-9e44-8f1920cf395a",
+                "resourcePath": "views\\54744e62-255f-4f91-a6d3-ecdc2aa0e6b7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "557b8455-2f01-48e4-8f4e-8eabd9e92cca",
+            "Value": {
+                "id": "31ac3e78-c4af-4bad-92d2-043c5431a91c",
+                "resourcePath": "scripts\\lazer_create\\lazer_create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1835,6 +1907,14 @@
             "Value": {
                 "id": "51a93c74-a940-47c6-b981-a1ffeea9de10",
                 "resourcePath": "scripts\\actor_action_module_run\\actor_action_module_run.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5fa38e17-8b60-4749-8b47-6f064f878d3c",
+            "Value": {
+                "id": "e50d8eb4-2ccc-4753-bd0b-ab86bdbfd068",
+                "resourcePath": "scripts\\saber_draw\\saber_draw.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2279,6 +2359,14 @@
             }
         },
         {
+            "Key": "75c060a1-6e2a-4a95-a1a5-45c95ce8f174",
+            "Value": {
+                "id": "c70c10ab-7f95-4092-8a3e-0f7bf47370c3",
+                "resourcePath": "scripts\\lazer_create_init\\lazer_create_init.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "760ea45f-df8c-4bfc-a113-dbea7d11e436",
             "Value": {
                 "id": "f7196b42-a99f-4d48-bb1b-9872e647056c",
@@ -2308,6 +2396,14 @@
                 "id": "8fe9c304-8384-4098-9c81-c72136019bcf",
                 "resourcePath": "scripts\\levelproto00_get_hero_skill\\levelproto00_get_hero_skill.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "76c32b37-c6d9-4795-a022-a586adfeb351",
+            "Value": {
+                "id": "5b298512-f5ef-4823-bd3d-e54e7b049adc",
+                "resourcePath": "views\\76c32b37-c6d9-4795-a022-a586adfeb351.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2879,6 +2975,14 @@
             }
         },
         {
+            "Key": "98599fc2-fdd9-4774-b319-b0ac13776156",
+            "Value": {
+                "id": "87da920c-a865-4de4-a11e-3d8ce72d2b54",
+                "resourcePath": "scripts\\lazer_ai_step\\lazer_ai_step.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "98f13c6f-c28c-461b-93b0-2c78b7889760",
             "Value": {
                 "id": "9c4ab245-59b3-4a27-8ba2-0eee9a5bc51e",
@@ -3111,6 +3215,14 @@
             }
         },
         {
+            "Key": "a8335325-9f57-44b5-975b-dc238f6c478f",
+            "Value": {
+                "id": "5a17f32b-e566-40f0-a127-178544789294",
+                "resourcePath": "scripts\\lazer_step_barrage\\lazer_step_barrage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "c3b735e1-12d6-4751-806c-ca3b06e0cd9c",
@@ -3132,6 +3244,14 @@
                 "id": "6f50ab85-5644-4385-a02d-c4ed1ac84d7e",
                 "resourcePath": "scripts\\random_seed_populate\\random_seed_populate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a9f4f148-6ee2-4f1e-85df-2a4ad4ed5948",
+            "Value": {
+                "id": "62a0c0e1-f0f9-404b-b641-523e91f81ddb",
+                "resourcePath": "sprites\\Lazer_attack\\Lazer_attack.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3188,6 +3308,14 @@
                 "id": "62be0612-d8ae-406e-913e-6a70889e6839",
                 "resourcePath": "scripts\\hero_dash_particles_create\\hero_dash_particles_create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "adc2583d-f9f3-4bf4-b0da-9a90133e273d",
+            "Value": {
+                "id": "63e3a5db-2680-48f2-9e3f-60e93dcbb81e",
+                "resourcePath": "sprites\\Lazer_idle\\Lazer_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3364,6 +3492,14 @@
                 "id": "8a600349-fd7e-4032-a7fe-896354b64883",
                 "resourcePath": "sprites\\ExplosionBulletAlt_idle\\ExplosionBulletAlt_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b592f3a6-705d-4d22-a84b-d8721be907dd",
+            "Value": {
+                "id": "34cb8563-dcc9-4e43-8529-6a610182acfe",
+                "resourcePath": "views\\b592f3a6-705d-4d22-a84b-d8721be907dd.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3647,6 +3783,14 @@
             }
         },
         {
+            "Key": "c4568e3d-5c44-4892-8eff-4bb4305aef6a",
+            "Value": {
+                "id": "03bfe9e7-e5da-4688-8a20-edbcc49df093",
+                "resourcePath": "scripts\\lazer_ai_create\\lazer_ai_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c4e5936d-7e06-4d88-b201-dd43917f42ba",
             "Value": {
                 "id": "9591701c-ff8d-499a-9b34-e6502aaf782f",
@@ -3855,6 +3999,14 @@
             }
         },
         {
+            "Key": "cf4091ee-2e9b-41e8-9075-0573b84f712a",
+            "Value": {
+                "id": "032cc1d8-a7ad-41ca-b2f8-a7246fc43ede",
+                "resourcePath": "objects\\Lazer\\Lazer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d0813b83-b65e-4957-92a0-b711f818d602",
             "Value": {
                 "id": "e9b5740b-c3ac-4b7a-9e5b-e9d41dfb8593",
@@ -3924,6 +4076,14 @@
                 "id": "26c1cacf-5768-42c5-80a0-d8c8f5993414",
                 "resourcePath": "views\\d52517e7-4845-4a43-b956-4ef54a007cef.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d54320fb-f242-45d9-9121-660318bc033a",
+            "Value": {
+                "id": "3b2d0323-dafd-4442-8572-e732b48597c4",
+                "resourcePath": "scripts\\lazer_step\\lazer_step.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4172,6 +4332,14 @@
                 "id": "8f7d004e-b452-4fbf-a8ee-1971a0b0edb1",
                 "resourcePath": "scripts\\seekingbullet_create\\seekingbullet_create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e1b0e3ac-9f13-4109-a063-052291586702",
+            "Value": {
+                "id": "f9f031a1-0c4a-4fb4-9815-8785ef465fd7",
+                "resourcePath": "views\\e1b0e3ac-9f13-4109-a063-052291586702.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4914,6 +5082,7 @@
         "f7c3176d-2f0c-4a02-a657-0dcab2e3605c",
         "5d9c88b3-1691-4b1a-9b98-337fabaffaf2",
         "468348cc-2e9a-48b1-8fab-0580b3f97e60",
+        "5fa38e17-8b60-4749-8b47-6f064f878d3c",
         "f26db052-a8a7-42c0-a8fe-60ddae1bb1f7",
         "b5abe752-74fd-40a4-9d46-991d09678607",
         "13e5a583-787a-4c34-9122-1db7e09ccdab",
@@ -4932,6 +5101,13 @@
         "7ce7d1ea-6269-4ef5-8afd-ea2dedaa96cd",
         "0c30c78b-1dc3-47dc-947a-30c8ab66a75b",
         "2289785b-e351-4f2d-90ae-934915ba7ac7",
+        "557b8455-2f01-48e4-8f4e-8eabd9e92cca",
+        "d54320fb-f242-45d9-9121-660318bc033a",
+        "75c060a1-6e2a-4a95-a1a5-45c95ce8f174",
+        "507213c8-aa56-4ad6-b941-c2678a982e2d",
+        "10b95628-404f-4b05-a22b-63cec76c8d8e",
+        "a8335325-9f57-44b5-975b-dc238f6c478f",
+        "02569682-6d2e-428f-b9af-bba7051d5e49",
         "f6b0967f-59a1-4641-bc93-e421882f53d2",
         "617e1e99-4cfb-486b-860e-ff0066b24822",
         "49930efa-97ca-4df3-974e-1ac5891e66cb",
@@ -5016,6 +5192,8 @@
         "e4447c63-90bd-4352-801a-badbdb769eef",
         "453d308f-e2fc-487f-889e-db259989ac7d",
         "27b4d8b2-fd3a-4db0-bd53-b69a6d2ad054",
+        "c4568e3d-5c44-4892-8eff-4bb4305aef6a",
+        "98599fc2-fdd9-4774-b319-b0ac13776156",
         "0a9c6701-df4c-45d8-9cd8-e17a4ffc5053",
         "04074d53-a9a1-46ad-b8b5-e070425e6b8f",
         "44074653-0441-466b-b173-9ae4c24e47a9",

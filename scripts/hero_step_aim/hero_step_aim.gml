@@ -11,5 +11,9 @@ if (my_shoot_aim_mode){
 		animation_name = "channel";
 	}
 	
-	actor_buff_apply("movespeed_set_raw", 0.1*SEC, [100*PPS], "aim_mode");
+	actor_buff_apply("movespeed_set_raw", 0.5*SEC, [100*PPS], "aim_mode");
 } 
+
+if (my_shoot_aim_dash_disable_timer > 0){
+	my_shoot_aim_dash_disable_timer -= TIMESPEED
+}

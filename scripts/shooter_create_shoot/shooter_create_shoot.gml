@@ -9,7 +9,7 @@ my_shoot_bullet_explosion = 120;
 
 my_shoot_recoil_range = 90;
 
-my_shoot_cast_value = 3*SEC;
+my_shoot_cast_value = 2*SEC;
 my_shoot_channel_value = 0.4*SEC;
 my_shoot_backswing_value = 0.2*SEC;
 my_shoot_cooldown_value = 6*SEC;

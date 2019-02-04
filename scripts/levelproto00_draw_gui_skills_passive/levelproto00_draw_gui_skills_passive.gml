@@ -12,7 +12,7 @@ switch(active_skill){
 		break
 		
 	case "split":
-		skill_tooltip_description = "Triple-dash.";
+		skill_tooltip_description = "Quadruple-dash.";
 		break
 		
 	case "ping":

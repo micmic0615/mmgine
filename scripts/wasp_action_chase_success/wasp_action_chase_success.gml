@@ -12,8 +12,12 @@ if (action_shoot_cast_timer == action_shoot_cast_value - 1){
 }
 
 var cast_value = 1 - (action_shoot_cast_timer / action_shoot_cast_value)
-action_shoot_trigger([action_chase_target.x,action_chase_target.y]);
-entity_move_point([action_chase_target.x, action_chase_target.y]);
+
+if (entity_enabled(action_chase_target)){
+	action_shoot_trigger([action_chase_target.x,action_chase_target.y]);
+	entity_move_point([action_chase_target.x, action_chase_target.y]);
+}
+
 	
 var p_spawn = 60;
 var p_count = 5;

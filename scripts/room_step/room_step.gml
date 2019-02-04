@@ -25,9 +25,22 @@ if (room_initiate){
 	
 	#region //COLLISION VALIDATION
 		if (entity_collisions_validate == true){
+			var me = id;
 			entity_collisions_validate = false;
-			with(ENTITY){if (entity_enabled()){ds_list_clear(collision_entities_valid)}};
-			with(ENTITY){entity_collision_validate_set()}
+			
+			with(ENTITY){
+				if (entity_enabled()){
+					if  (me.entity_collisions_faction == player_faction || me.entity_collisions_faction == undefined){
+						ds_list_clear(collision_entities_valid);
+						entity_collision_validate_set();
+					}
+					
+				}
+			}
+			
+			if (entity_collisions_faction != undefined){
+				entity_collisions_faction = undefined
+			}
 		}
 	#endregion
 

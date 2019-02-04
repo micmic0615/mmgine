@@ -7,8 +7,9 @@ if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 
 	
 	for(var i = 0; i < array_length_1d(action_dash_cooldown_multi_timer);i++){
 		var p = action_dash_cooldown_multi_timer[i];
-		if (p == 0){action_dash_cooldown_multi_timer[i] = action_dash_cooldown_value; break}
+		if (p <= 0){action_dash_cooldown_multi_timer[i] = action_dash_cooldown_value; break}
 	};
+	
 	
 	actor_actions_idle = false;
 	entity_run_type_scripts("action_dash", target_point);

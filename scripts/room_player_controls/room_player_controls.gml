@@ -25,7 +25,9 @@ if (player_controllable && global.replay_mode == "record"){
 				}
 				
 				if (keyboard_check(global.key_shift)){
-					my_shoot_aim_mode = true;
+					if (my_shoot_aim_dash_disable_timer <= 0){
+						my_shoot_aim_mode = true;
+					}
 				} else {
 					my_shoot_aim_mode = false;
 				}

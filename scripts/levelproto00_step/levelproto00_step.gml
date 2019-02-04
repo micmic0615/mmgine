@@ -7,6 +7,7 @@ var enemy_count = 0;
 var spawn_roster = [
 	Saber,
 	Shooter,
+	Lazer,
 	Stunner,
 	Wasp,
 	Swarmer,
@@ -47,7 +48,7 @@ if (keyboard_check_pressed(global.key_num_2)){
 
 if (keyboard_check_pressed(global.key_num_3)){
 	if (enemy_count < enemy_limit){
-		var spawned_actor = room_spawn_random_from_main_actor(Stunner);
+		var spawned_actor = room_spawn_random_from_main_actor(Lazer);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
 		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
@@ -63,13 +64,21 @@ if (keyboard_check_pressed(global.key_num_4)){
 
 if (keyboard_check_pressed(global.key_num_5)){
 	if (enemy_count < enemy_limit){
-		var spawned_actor = room_spawn_random_from_main_actor(Swarmer);
+		var spawned_actor = room_spawn_random_from_main_actor(Stunner);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
 		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }
 
 if (keyboard_check_pressed(global.key_num_6)){
+	if (enemy_count < enemy_limit){
+		var spawned_actor = room_spawn_random_from_main_actor(Swarmer);
+		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
+	}
+}
+
+if (keyboard_check_pressed(global.key_num_7)){
 	if (enemy_count < enemy_limit){
 		var spawned_actor = room_spawn_random_from_main_actor(Virus);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
@@ -82,14 +91,16 @@ if (keyboard_check_pressed(global.key_num_0)){
 		var random_num = random(100);
 		var random_spawn = noone;
 		
-		if (random_num < 25){
+		if (random_num < 20){
 			random_spawn = Saber
-		} else if (random_num < 50){
+		} else if (random_num < 40){
 			random_spawn = Shooter
-		} else if (random_num < 65){
-			random_spawn = Stunner
-		} else if (random_num < 80){
+		} else if (random_num < 55){
+			random_spawn = Lazer
+		} else if (random_num < 70){
 			random_spawn = Wasp
+		} else if (random_num < 80){
+			random_spawn = Stunner
 		} else if (random_num < 90) {
 			random_spawn = Swarmer
 		} else {
