@@ -12,7 +12,7 @@ bullet_lifespan = 1*SEC;
 bullet_origin = noone;
 bullet_origin_anchor = false;
 bullet_collision_entity_actions = ds_create("list");
-bullet_collision_tile_action = "bounce";
+bullet_collision_tile_action = "die";
 
 bullet_collision_cooldown_value = INFINITY;
 bullet_collision_cooldown_timer = 0;

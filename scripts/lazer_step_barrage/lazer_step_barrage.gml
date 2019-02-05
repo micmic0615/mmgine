@@ -47,37 +47,24 @@ if (my_barrage_active){
 }
 
 if (my_barrage_active && my_barrage_channel_timer > 0 && my_barrage_cast_timer <= 0){
-	var spawn_interval = 0.35*SEC;
+	var spawn_interval = 0.4*SEC;
 	if (entity_room_age_modulo(spawn_interval)){
 		var bullet_x = (cos(degtorad(my_barrage_angle_active))*(my_barrage_bullet_radius*0.5)) + x;
 		var bullet_y = (sin(degtorad(my_barrage_angle_active))*(my_barrage_bullet_radius*0.5)) + y;
 	
 		var bullet = actor_spawn_bullet(target_point[0], target_point[1], bullet_x, bullet_y, my_barrage_bullet_type[0]);
 		var bullet_radius = my_barrage_bullet_radius;
-		
-		//var hero = ROOM.player_main_actor;
-		//if (entity_enabled(hero)){
-		//	ROOM.entity_collisions_validate = true;
-		//	ROOM.entity_collisions_faction = hero.player_faction;
-		//}		
 	
 		var one_second = SEC;
-		//if (my_chase_jump_mirage_timer > 0){one_second = spawn_interval}
 		ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total, true, "main_attack"]);
 		ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_flinch_total]);
 		
 		ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", -40, 0.75*SEC, "origin", ["multiply",1.5]]);
-	
-		//var bullet_range = my_chase_jump_mirage_timer > 0 ? my_chase_bullet_range*2 : my_chase_bullet_range;
-		//var bullet_speed = my_chase_bullet_speed + my_chase_movespeed_set;
-		//if (my_chase_jump_mirage_timer > 0){bullet_speed += my_chase_jump_speed}
-		//var bullet_radius = my_chase_jump_mirage_timer > 0 ? my_chase_bullet_radius*3 : my_chase_bullet_radius;
 		
 		var bullet_speed = my_barrage_bullet_speed + status_movespeed_total;
 		
 		bullet.animation_sprite = my_barrage_bullet_type[1];
 		bullet.status_movespeed_base = bullet_speed;
-		//bullet.collision_enabled_bullets = false;
 		bullet.bullet_lifespan = my_barrage_bullet_range/bullet_speed;
 		bullet.status_movesnap_base = 0.1*SEC;
 		bullet.bullet_action_move_angle = my_barrage_angle_active;

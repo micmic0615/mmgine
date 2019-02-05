@@ -26,7 +26,17 @@ if (entity_enabled()){
 		}
 
 		if (buff_id_unique == true){
-			if (type == "flinched"){ds_list_clear(physics_motion_list)}
+			if (type == "flinched"){
+				ds_list_clear(physics_motion_list)
+				var offset_angle = degtorad(270)
+				if (duration <= status_flinch_duration){
+					entity_draw_text_following("stunned!", [cos(degtorad(270))*40, sin(degtorad(270))*40], 1*SEC, c_white, 16);
+				} else {	
+					entity_draw_text_following("over-stun!", [cos(degtorad(270))*40, sin(degtorad(270))*40], 1*SEC, c_white, 16);
+				}
+				
+			};
+			
 			ds_list_add(status_buff_list, [type, duration, arguments, buff_id])
 		}
 	}

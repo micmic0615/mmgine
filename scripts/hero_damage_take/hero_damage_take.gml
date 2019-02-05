@@ -7,11 +7,14 @@ var damage_id = args[3];
 
 if (base_source != id){
 	if (!status_immortal){
-		var ratio = 0.25 + (0.75*(base_value/(my_autoshield_cooldown_treshold*status_health_max)));
-		room_timespeed_temp(0.05, ratio*0.5*SEC, true);
+		if (actor_buff_find("flinched") == undefined){
+			if (base_value/status_health_max >= 0.2){
+				room_timespeed_temp(0.05, 0.35*SEC, true);
+			}
+		}
 		
 		if (my_autoshield_cooldown_timer <= 0){
-			//base_value = 1;
+			entity_draw_text_following("protection!", [cos(degtorad(270))*25, sin(degtorad(270))*25], 1.5*SEC, c_white, 18);
 			my_autoshield_cooldown_timer = my_autoshield_cooldown_value;
 			actor_buff_apply("immortal", my_autoshield_duration, [], "autoshield");
 			room_timespeed_temp(0.05, 1*SEC, true);
@@ -28,6 +31,7 @@ if (base_source != id){
 		}
 		
 		if (status_health_current - base_value <= 0 && my_grit_cooldown_timer <= 0 && base_lethal){
+			entity_draw_text_following("grit!", [cos(degtorad(270))*25, sin(degtorad(270))*25], 1.5*SEC, c_white, 18);
 			my_grit_cooldown_timer = my_grit_cooldown_value;
 			actor_buff_apply("immortal", my_grit_duration, [], "autoshield");
 			actor_buff_apply("damage_bonus_percent", my_grit_duration*2.5, [100], "grit_attacc");

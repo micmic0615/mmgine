@@ -41,9 +41,6 @@ player_controls_move_dash_timer_up = 0;
 player_controls_move_dash_timer_down = 0;
 player_controls_move_dash_timer_value = 0.25*SEC;
 
-entity_collisions_validate = true;
-entity_collisions_faction = undefined
-
 time_base = 1;
 time_change = 1;
 time_change_duration = 0;

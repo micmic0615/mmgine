@@ -43,6 +43,7 @@ collision_base_movement = []
 collision_entities_valid = ds_create("list");
 collision_entities_connect = ds_create("list");
 collision_entities_exceptions = ds_create("list");
+collision_entities_valid_is_computed = false;
 collision_count = [0,0]
 collision_tiles = ds_create("list");
 collision_contact_x = "none";
@@ -93,9 +94,3 @@ status_movespeed_total = status_movespeed_base;
 draw_blend_temporary_color = c_white;
 draw_blend_temporary_style = "solid";
 draw_blend_temporary_duration = 0;
-
-if (ROOM > 0){
-	ROOM.entity_collisions_validate = true;
-}
-
-

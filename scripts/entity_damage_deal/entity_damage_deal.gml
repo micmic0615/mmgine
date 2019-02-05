@@ -45,7 +45,7 @@ if (entity_enabled()){
 						var offset_angle = degtorad(angle_between(final_target.x, final_target.y, me.x, me.y) + random(60) - 30);
 						if (final_target.entity_class_lower == "actor"){
 							if (final_target == me){offset_angle = degtorad(random(360))}
-							entity_draw_text_following(final_value, [cos(offset_angle)*40, sin(offset_angle)*40], 1*SEC, c_white, 18);
+							entity_draw_text_following(final_value, [cos(offset_angle)*40, sin(offset_angle)*40], 1*SEC, c_white, 14);
 						}
 					
 						var min_health = final_lethal ? 0 : 1;

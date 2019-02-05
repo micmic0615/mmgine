@@ -7,7 +7,7 @@ status_poise_regen_base = 1.5*PPS;
 status_flinch_duration = 2.5*SEC;
 status_movespeed_base = 500*PPS
 
-my_dash_combo_max = 3;
+my_dash_combo_max = 2;
 action_dash_combo_max = my_dash_combo_max;
 action_dash_cooldown_multi_timer = array_create(action_dash_combo_max, 0);
 

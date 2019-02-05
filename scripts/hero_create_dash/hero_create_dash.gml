@@ -3,8 +3,8 @@ my_dash_range = 360;
 my_dash_charge_cost = 0;
 my_dash_channel = 0.1*SEC;
 my_dash_iframe = 0.2*SEC;
-my_dash_cooldown_value = 1.1*SEC
-my_dash_combo_max = 3;
+my_dash_cooldown_value = 1*SEC
+my_dash_combo_max = 2;
 my_dash_flair_color = make_color_rgb(160,160,160);
 
 action_dash_create([

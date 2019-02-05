@@ -1,5 +1,5 @@
 var charge_value = my_charge_meter/my_charge_max;
-if (charge_value < 0.5){charge_value = 0}
+if (charge_value < 0.75){charge_value = 0}
 
 var bonus_size = my_charge_factor_size - 1;
 var bonus_speed = my_charge_factor_speed - 1;

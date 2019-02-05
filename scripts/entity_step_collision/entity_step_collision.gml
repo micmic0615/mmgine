@@ -46,8 +46,19 @@ while(move_steps_current > 0){
 			collision_count_tiles = entity_collision_check_tile(true);
 			for(var i = 0; i < collision_count_tiles;i++){
 				var p = ds_list_find_value(collision_tiles, i);
-					
-				var push_replacer = entity_collision_compute_push(p, final_x_push, final_y_push);
+				
+				var push_replacer = [0,0];
+				switch(entity_class_lower){
+					case "actor": 
+						push_replacer =  entity_collision_compute_push(p, final_x_push, final_y_push); 
+						break
+						
+					case "bullet": 
+						if (bullet_collision_tile_action != "die"){
+							push_replacer =  entity_collision_compute_push(p, final_x_push, final_y_push)
+						};
+						break
+				}
 					
 				final_x_push = push_replacer[0];
 				final_y_push = push_replacer[1];

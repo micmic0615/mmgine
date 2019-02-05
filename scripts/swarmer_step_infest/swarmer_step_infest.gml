@@ -70,7 +70,7 @@ for(var i = 0; i < ds_list_size(my_infest_bug_list);i++){
 			if (bug_duration >= 1*SEC && bug.collision_enabled_bullets == false){
 				bug.collision_enabled_bullets = true;
 				bug.collision_enabled_actors = true;
-				ROOM.entity_collisions_validate = true;
+				bug.collision_entities_valid_is_computed = false;
 			};
 			
 			bug.x = target.x + (cos(rad_angle)*bug_distance);

@@ -30,7 +30,6 @@ if (entity_enabled()){
 				part_emitter_burst(global.particle_system,draw_particle_emitter,p[0],p[1]);
 			}
 		}
-		
 	
 		var	animation_sprite_name = asset_get_index(animation_sprite + "_" + animation_name);
 		sprite_index = (animation_sprite_name > 0) ? animation_sprite_name : asset_get_index(animation_sprite + "_idle");

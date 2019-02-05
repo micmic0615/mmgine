@@ -24,22 +24,19 @@ if (room_initiate){
 	room_run_scripts("step");
 	
 	#region //COLLISION VALIDATION
-		if (entity_collisions_validate == true){
-			var me = id;
-			entity_collisions_validate = false;
-			
-			with(ENTITY){
-				if (entity_enabled()){
-					if  (me.entity_collisions_faction == player_faction || me.entity_collisions_faction == undefined){
-						ds_list_clear(collision_entities_valid);
-						entity_collision_validate_set();
+		with(ENTITY){
+			if (entity_enabled() && !collision_entities_valid_is_computed){
+				ds_list_clear(collision_entities_valid);
+				entity_collision_validate_set();
+						
+				for (var i = 0; i < ds_list_size(collision_entities_valid); ++i) {
+					var p = ds_list_find_value(collision_entities_valid, i)
+					if (ds_list_find_index(p.collision_entities_valid, id) <= -1){
+						ds_list_add(p.collision_entities_valid, id)
 					}
-					
 				}
-			}
-			
-			if (entity_collisions_faction != undefined){
-				entity_collisions_faction = undefined
+						
+				collision_entities_valid_is_computed = true
 			}
 		}
 	#endregion

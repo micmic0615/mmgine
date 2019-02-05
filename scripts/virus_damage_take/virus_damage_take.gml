@@ -35,7 +35,7 @@ if (status_health_current - base_value <= 0 && base_lethal){
 
 
 	
-	var explosion_radius = 380;
+	var explosion_radius = 480;
 	var explosion_push = -200;
 
 	entity_sfx_create_pulse(

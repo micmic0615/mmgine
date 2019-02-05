@@ -5,6 +5,7 @@ if (my_bloodlust_active_timer <= 0){
 		my_bloodlust_trigger_timer = 0;
 		my_bloodlust_active_timer = my_bloodlust_active_value;
 		
+		entity_draw_text_following("bloodlust!", [cos(degtorad(270))*25, sin(degtorad(270))*25], 1.5*SEC, c_white, 18);
 		room_timespeed_temp(0.01, 1*SEC, true);
 		actor_buff_apply("immortal", 1*SEC, [], "autoshield");
 		
