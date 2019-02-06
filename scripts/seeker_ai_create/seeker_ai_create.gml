@@ -1,1 +1,0 @@
-shooter_ai_create();

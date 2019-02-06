@@ -1,4 +1,5 @@
 var target_point = argument0;
+var did_dash = false;
 
 if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 0 && action_dash_off_cooldown()){
 	action_dash_channel_timer = action_dash_channel_value;
@@ -17,7 +18,7 @@ if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 
 	actor_actions_id = "dash";
 	var bullet_angle = angle_between(x,y, target_point[0], target_point[1]);
 	entity_motion_push((action_dash_range), action_dash_range/action_dash_speed, bullet_angle  -180, ["multiply",1.25], "move_motion");
-	
+	did_dash = true;
 } else {
 	if (!action_dash_off_cooldown()){
 		var lowest = INFINITY
@@ -32,3 +33,5 @@ if (actor_actions_enabled && actor_actions_idle && action_dash_channel_timer <= 
 		}
 	}
 }
+
+return did_dash;

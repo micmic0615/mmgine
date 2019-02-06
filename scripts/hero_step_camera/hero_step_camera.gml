@@ -5,7 +5,7 @@ with(ACTOR){
 	if (me.player_faction != player_faction && variable_instance_exists(id, "ai_target_attack_should_channel")){
 		var should_add = true;
 		var current_distance = distance_between(x,y,me.x,me.y);
-		if (ai_target_attack_should_channel){
+		if (ai_target_attack_should_channel || player_boss == true){
 			if (current_distance > max_distance){max_distance = current_distance}
 		} else {
 			if (

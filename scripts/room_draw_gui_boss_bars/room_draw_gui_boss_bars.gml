@@ -27,6 +27,8 @@ with(ACTOR){
 		draw_set_colour(bar_color);
 		draw_rectangle(bar_loc_x, bar_loc_y, bar_loc_x + bar_width, bar_loc_y + bar_height, false);
 			
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
 		draw_set_font(fontArial)
 		draw_text_transformed_colour(
 			20, 

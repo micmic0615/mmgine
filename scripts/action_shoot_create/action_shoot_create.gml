@@ -51,6 +51,11 @@ action_shoot_bullet_seek_range = 240;
 action_shoot_bullet_seek_turn_rate = 160*PPS;
 action_shoot_bullet_collision_destroy_value = 1;
 action_shoot_bullet_particles = [undefined, 0, 0];
+action_shoot_bullet_tile_phase = false;
+
+action_shoot_animation_channel = "channel";
+action_shoot_animation_attack = "attack";
+action_shoot_animation_rest = "rest";
 
 action_shoot_flag_explode_trigger = "death";
 

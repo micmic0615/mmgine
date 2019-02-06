@@ -68,14 +68,14 @@ if (actor_actions_id == "shoot"){
 	
 	switch(action_shoot_step_phase){
 		case 1: 
-			animation_name = "channel";
+			animation_name = action_shoot_animation_channel;
 			break
 			
 		case 2: 
-			animation_name = "attack";
+			animation_name = action_shoot_animation_attack;
 			break
 		case 3: 
-			animation_name = "rest";
+			animation_name = action_shoot_animation_rest;
 			break
 	}
 	

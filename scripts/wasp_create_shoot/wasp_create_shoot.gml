@@ -1,4 +1,4 @@
-my_shoot_bullet_type = [DefaultBullet, "PelterBullet1"];
+my_shoot_bullet_type = [DefaultBullet, "ShooterBullet3"];
 my_shoot_flair_color = make_color_rgb(255,0,0);
 
 my_shoot_bullet_radius = 32;

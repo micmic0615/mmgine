@@ -1,1 +1,0 @@
-with(Charger){status_health_current = 0}

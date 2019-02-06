@@ -6,8 +6,7 @@
     "children": [
         "0078df0e-0f29-4e29-99b6-37f62126899d",
         "e1b0e3ac-9f13-4109-a063-052291586702",
-        "54744e62-255f-4f91-a6d3-ecdc2aa0e6b7",
-        "76c32b37-c6d9-4795-a022-a586adfeb351"
+        "c9f765c2-7c60-46fd-8972-5e4f659228a7"
     ],
     "filterType": "GMScript",
     "folderName": "Lazer",

@@ -11,7 +11,8 @@ var spawn_roster = [
 	Stunner,
 	Wasp,
 	Swarmer,
-	Virus
+	Virus,
+	LadySofia
 ]
 var spawn_roster_size = array_length_1d(spawn_roster);
 for(var i = 0; i < spawn_roster_size;i++){
@@ -82,6 +83,14 @@ if (keyboard_check_pressed(global.key_num_7)){
 	if (enemy_count < enemy_limit){
 		var spawned_actor = room_spawn_random_from_main_actor(Virus);
 		with(spawned_actor){actor_buff_apply("immortal", me.stage_spawn_immortal_duration, [], "ai_immortal")};
+		room_timespeed_temp(0.05, 0.35*SEC, true);
+	}
+}
+
+if (keyboard_check_pressed(global.key_num_9)){
+	if (enemy_count < enemy_limit){
+		global.draw_tips = false;
+		var spawned_actor = room_spawn_random_from_main_actor(LadySofia);
 		room_timespeed_temp(0.05, 0.35*SEC, true);
 	}
 }

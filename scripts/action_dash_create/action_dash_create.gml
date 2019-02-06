@@ -7,7 +7,6 @@ action_dash_channel_value = argument_array[2];
 action_dash_channel_timer = 0;
 
 
-
 action_dash_combo_max = argument_array[4];
 action_dash_combo_count = 0;
 action_dash_combo_timer = 0;
