@@ -8,3 +8,4 @@ entity_run_type_scripts(("aux_shoot_" + my_shoot_mod_2));
 hero_shoot_frenzy();
 
 action_shoot_trigger(target_point);
+//action_strike_trigger(target_point);

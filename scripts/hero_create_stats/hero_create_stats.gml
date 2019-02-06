@@ -8,13 +8,13 @@ status_flinch_duration = 2.5*SEC;
 status_movespeed_base = 500*PPS
 
 my_dash_combo_max = 2;
-action_dash_combo_max = my_dash_combo_max;
-action_dash_cooldown_multi_timer = array_create(action_dash_combo_max, 0);
+action_dash[?"combo_max"] = my_dash_combo_max;
+action_dash[?"cooldown_multi_timer"] = action_dash_cooldown_reset();
 
 my_dash_speed = 540*PPS;
 my_dash_range = 320;
-action_dash_speed = my_dash_speed;
-action_dash_range = my_dash_range;
+action_dash[?"speed"] = my_dash_speed;
+action_dash[?"range"] = my_dash_range;
 
 my_dash_charge_cost = 0;
 

@@ -8,7 +8,7 @@ if (entity_enabled(action_chase_target)){
 	if (my_chase_random > 50){
 		action_shoot_trigger([action_chase_target.x,action_chase_target.y]);
 		if (!my_chase_did_attack){
-			if (action_shoot_cast_timer > 0 && action_dash_channel_timer <= 0){
+			if (action_shoot_cast_timer > 0 && action_dash[?"channel_timer"] <= 0){
 				my_chase_did_attack = true
 			}
 		} else {
@@ -21,7 +21,7 @@ if (entity_enabled(action_chase_target)){
 	} else {
 		action_barrage_trigger([action_chase_target.x,action_chase_target.y]);
 		if (!my_chase_did_attack){
-			if (action_barrage_cast_timer > 0 && action_dash_channel_timer <= 0){
+			if (action_barrage_cast_timer > 0 && action_dash[?"channel_timer"] <= 0){
 				my_chase_did_attack = true
 			}
 		} else {

@@ -42,7 +42,7 @@ if (actor_actions_idle){
 			}
 		}
 		
-		if (action_dash_channel_timer <= 0 && action_dash_off_cooldown()){
+		if (action_dash[?"channel_timer"] <= 0 && action_dash_cooldown_check() <= 0){
 			my_charge_meter_1 = min((my_charge_meter_1 + (TIMESPEED*charge_accelerator)), my_charge_max);
 			my_charge_meter_2 = min((my_charge_meter_2 + (TIMESPEED*charge_accelerator)), my_charge_max);
 		}

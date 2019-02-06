@@ -68,8 +68,10 @@ if (!my_chase_success_validation){
 				var p = ds_list_find_value(action_clone_family, i);
 				p.action_chase_success = false;
 				p.my_chase_success_validation = false;
-				p.action_dash_cooldown_multi_timer = array_create(action_dash_combo_max, 0);
-				with(p){action_dash_trigger(target_point)};
+				with(p){
+					action_dash_cooldown_reset();
+					action_dash_trigger(target_point);
+				};
 			};
 			
 			swarmer_action_infest(action_chase_target);

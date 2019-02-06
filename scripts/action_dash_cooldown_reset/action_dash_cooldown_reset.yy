@@ -1,8 +1,8 @@
 {
-    "id": "8d6e420c-6f9b-443d-b9c2-c93995ebda6b",
+    "id": "9d477fdc-8a93-49c4-8809-6a8b95b0bd53",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "action_dash_off_cooldown",
+    "name": "action_dash_cooldown_reset",
     "IsCompatibility": false,
     "IsDnD": false
 }

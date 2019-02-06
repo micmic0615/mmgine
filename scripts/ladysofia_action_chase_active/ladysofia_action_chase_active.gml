@@ -15,7 +15,7 @@ animation_direction = action_direction;
 if (my_chase_dash_timer <= 0){
 	
 	var rad_angle = degtorad(angle_between(action_chase_target.x,action_chase_target.y,x,y) + random_mirror(90));
-	if (distance_between(x,y,action_chase_target.x,action_chase_target.y) < action_dash_range*1.5){
+	if (distance_between(x,y,action_chase_target.x,action_chase_target.y) < action_dash[?"range"]*1.5){
 		rad_angle = degtorad(angle_between(action_chase_target.x,action_chase_target.y,x,y));
 	}
 	

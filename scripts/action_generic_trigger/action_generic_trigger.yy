@@ -1,8 +1,8 @@
 {
-    "id": "c34cec5f-977f-4028-803c-47efa3e0d074",
+    "id": "86606361-ecd6-4240-b396-278cbf83baad",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "action_strike_step",
+    "name": "action_generic_trigger",
     "IsCompatibility": false,
     "IsDnD": false
 }
