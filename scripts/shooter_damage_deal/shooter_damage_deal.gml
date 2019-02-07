@@ -6,7 +6,6 @@ var base_lethal = args[2];
 var damage_id = args[3];
 
 if (damage_id == "main_attack"){
-	
 	if (my_frenzy_timer == 0 && base_value == status_damage_total*my_charge_factor_damage){
 		my_frenzy_timer = my_frenzy_value;
 	} else if (my_frenzy_timer > 0){

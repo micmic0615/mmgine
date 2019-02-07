@@ -17,6 +17,7 @@ my_shoot_bullet_angle_spread = 60;
 my_shoot_bullet_seek_range = 240;
 my_shoot_bullet_seek_turn_rate = 160*PPS;
 my_shoot_bullet_seek_angle_limit = 160;
+my_shoot_bullet_seek_no_decay = false;
 my_shoot_bullet_tile_phase = false;
 my_shoot_damage = [1,0.2];
 my_shoot_flinch = [1,0];

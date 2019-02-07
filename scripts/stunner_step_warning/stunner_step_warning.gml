@@ -1,13 +1,13 @@
-if (action_shoot_cooldown_timer <= (0.5*SEC) && actor_actions_enabled){
+if (action_shoot[?"cooldown_timer"] <= (0.35*SEC) && actor_actions_enabled){
 	enemy_attack_range_threat = 1080;
-	if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0){
+	if (actor_actions_id == "shoot" && action_shoot[?"cast_timer"] > 0){
 		if (entity_room_age_modulo(0.2*SEC)){
 			entity_sfx_create_pulse(
 				/*sprite*/ ExplosionBulletAlt_idle,
 				/*duration*/ 0.4*SEC,
 				/*blend*/ my_shoot_color,
 				/*style_data*/ [
-					my_vacuum_range,
+					my_shoot_vacuum_range,
 					40,
 					1
 				]

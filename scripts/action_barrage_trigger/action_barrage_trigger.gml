@@ -2,7 +2,8 @@ var target = argument[0];
 var did_barrage = action_generic_trigger(action_barrage, target);
 
 if (did_barrage){
-	if (action_barrage[?"sequence"] == 0){		
+	if (action_barrage[?"sequence"] == 0){	
+		entity_run_type_scripts("action_barrage_trigger", action_barrage);
 		action_barrage[?"cast_timer"] = action_barrage[?"cast_value"];	
 		action_barrage[?"sequence"] = 1;
 		actor_actions_id = "barrage";

@@ -1,8 +1,8 @@
 if (my_frenzy_timer > 0){
 	enemy_attack_range_total = INFINITY;
-	action_shoot_cooldown_timer = 0;
+	action_shoot[?"cooldown_timer"] = 0;
 	
-	action_shoot_cast_value = 0.4*SEC;
+	action_shoot[?"cast_value"] = 0.4*SEC;
 	my_frenzy_timer--;
 	
 	var p_spawn = 60;
@@ -15,5 +15,5 @@ if (my_frenzy_timer > 0){
 	actor_buff_apply("speed_bonus_percent", 0.1*SEC, [-50], "shooter_charging");
 } else {
 	enemy_attack_range_total = enemy_attack_range_base;
-	action_shoot_cast_value = my_shoot_cast_value;
+	action_shoot[?"cast_value"] = my_shoot_cast_value;
 }

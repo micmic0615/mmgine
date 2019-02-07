@@ -8,6 +8,7 @@ hero_mod_shoot_crash();
 with(base_target){
 	var over_flinch = abs(base_target.status_poise_current - base_value);
 	var over_flinch_ratio = min(over_flinch / status_poise_max, 1);
+	if (over_flinch_ratio < 0.5){over_flinch_ratio = 0};
 	
 	var flinch_duration = status_flinch_duration * (1.75 + (over_flinch_ratio * 1.75));
 	

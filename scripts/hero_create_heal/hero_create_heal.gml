@@ -3,7 +3,7 @@ my_heal_cast_timer = 0;
 my_heal_cast_value = 0.75*SEC;
 
 my_heal_percent = 100;
-my_heal_duration = 4*SEC;
+my_heal_duration = 10*SEC;
 my_heal_active = false;
 
 my_heal_cooldown_timer = 0;

@@ -16,6 +16,7 @@ action_shoot_create([
 	/*bullet_seek_range*/ my_shoot_bullet_seek_range,
 	/*bullet_seek_turn_rate*/ my_shoot_bullet_seek_turn_rate,
 	/*bullet_seek_angle_limit*/ my_shoot_bullet_seek_angle_limit,
+	/*bullet_seek_no_decay*/ my_shoot_bullet_seek_no_decay,
 	/*bullet_tile_phase*/ my_shoot_bullet_tile_phase,
 	/*damage*/ my_shoot_damage,
 	/*flinch*/ my_shoot_flinch,

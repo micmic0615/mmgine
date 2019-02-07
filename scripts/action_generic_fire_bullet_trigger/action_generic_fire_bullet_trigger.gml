@@ -47,7 +47,8 @@ while(bullet_total > 0){
 	bullet.bullet_seek_range = action_map[?"bullet_seek_range"];
 	bullet.bullet_seek_turn_rate = action_map[?"bullet_seek_turn_rate"];
 	bullet.bullet_seek_angle_limit = action_map[?"bullet_seek_angle_limit"];
-
+	bullet.collision_enabled_tiles = !action_map[?"bullet_tile_phase"]
+	bullet.bullet_seek_no_decay = action_map[?"bullet_seek_no_decay"];
 		
 	var round_radius = round(action_map[?"bullet_explosion_radius"]);
 		

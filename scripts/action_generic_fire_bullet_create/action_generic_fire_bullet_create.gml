@@ -24,13 +24,14 @@ action_map[?"bullet_angle_spread"] = argument_array[13];
 action_map[?"bullet_seek_range"] = argument_array[14];
 action_map[?"bullet_seek_turn_rate"] = argument_array[15];
 action_map[?"bullet_seek_angle_limit"] = argument_array[16];
-action_map[?"bullet_tile_phase"] = argument_array[17];
+action_map[?"bullet_seek_no_decay"] = argument_array[17];
+action_map[?"bullet_tile_phase"] = argument_array[18];
 
-action_map[?"damage"] = argument_array[18];
-action_map[?"flinch"] = argument_array[19];
-action_map[?"push"] = argument_array[20];
+action_map[?"damage"] = argument_array[19];
+action_map[?"flinch"] = argument_array[20];
+action_map[?"push"] = argument_array[21];
 
-action_map[?"fire_recoil"] = argument_array[21];
+action_map[?"fire_recoil"] = argument_array[22];
 action_map[?"fire_angle"] = 0
 
 ds_map_copy(action_map_source, action_map);

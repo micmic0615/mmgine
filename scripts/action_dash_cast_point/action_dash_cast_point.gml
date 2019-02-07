@@ -1,8 +1,7 @@
 var action_map = argument[0];
+entity_run_type_scripts("action_dash_cast_point", action_map);
 
 var target_point = action_map[?"target_point"];
-entity_run_type_scripts("action_dash_cast_point", target_point);
-
 var dash_angle = angle_between(x,y, target_point[0], target_point[1]);
 entity_motion_push(action_map[?"range"], action_map[?"range"]/action_map[?"speed"], dash_angle  -180, ["multiply",1.25], "move_motion");
 

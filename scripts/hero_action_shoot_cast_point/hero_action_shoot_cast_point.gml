@@ -84,7 +84,7 @@ if (my_shoot_aim_mode == true){
 	action_map[?"bullet_speed"] *= 1.4;
 	action_map[?"bullet_radius"] *= 0.8;
 } else {
-	action_map[?"push"] = my_shoot_push
+	action_map[?"push"] = my_shoot_push;
 }
 
 my_charge_current = 0;

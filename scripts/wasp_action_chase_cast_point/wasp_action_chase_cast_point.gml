@@ -1,3 +1,5 @@
+var action_map = argument[0];
+
 var p_spawn = 120;
 var p_count = 10;
 var p_model = game_particle_setup_basic(make_color_rgb(255,255,0), (1 + random(2)), 2, 1.5*SEC);

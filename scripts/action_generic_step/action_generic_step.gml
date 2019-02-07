@@ -14,19 +14,23 @@ if (actor_actions_enabled){
 				action_map[?"cast_timer"] -= TIMESPEED;				
 			} else {
 				if (actor_actions_id == action_name || action_map[?"free_action"]){	
-					for(var i = 0; i < ds_list_size(actor_actions_module);i++){
-						var p = ds_list_find_value(actor_actions_module, i);
+					if (!action_map[?"free_action"]){
+						actor_actions_idle = false;
 						
-						if (p[0] != action_name){
-							var action_module = variable_instance_get(id, "action_" + p[0]);
-							action_module[?"cast_timer"] = 0;
-							action_module[?"channel_timer"] = 0;
-							action_module[?"backswing_timer"] = 0;
-							action_module[?"sequence"] = 0;
-						}
-					};
-					
-					if (!action_map[?"free_action"]){actor_actions_idle = false}
+						for(var i = 0; i < ds_list_size(actor_actions_module);i++){
+							var p = ds_list_find_value(actor_actions_module, i);
+						
+							if (p[0] != action_name){
+								var action_module = variable_instance_get(id, "action_" + p[0]);
+								if (action_module != undefined && action_module[?"free_action"] != true){
+									action_module[?"cast_timer"] = 0;
+									action_module[?"channel_timer"] = 0;
+									action_module[?"backswing_timer"] = 0;
+									action_module[?"sequence"] = 0;
+								}
+							}
+						};
+					}
 					
 					var script_name = asset_get_index("action_" + action_name + "_cast_point");
 					if (script_name > -1){script_execute(script_name, action_map)};

@@ -39,6 +39,7 @@ action_barrage_create([
 	/*bullet_seek_range*/ 240*PPS,
 	/*bullet_seek_turn_rate*/ 120*PPS,
 	/*bullet_seek_angle_limit*/ 90,
+	/*bullet_seek_no_decay*/ false,
 	/*bullet_tile_phase*/ false,
 	/*damage*/ my_barrage_damage,
 	/*flinch*/ my_barrage_flinch,

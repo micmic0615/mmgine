@@ -7,7 +7,8 @@
         "98af761c-1360-4fed-9c43-accdfd23f346",
         "66b3d65f-c5f6-4236-ab79-ad1b136624ca",
         "a7c673ad-4634-4051-9c86-096a935fd14f",
-        "88cf150b-2b82-4f69-8527-b53d32d6ba20"
+        "88cf150b-2b82-4f69-8527-b53d32d6ba20",
+        "46902a13-b742-4291-840e-8fa96971e6f1"
     ],
     "filterType": "GMScript",
     "folderName": "LadySofia",

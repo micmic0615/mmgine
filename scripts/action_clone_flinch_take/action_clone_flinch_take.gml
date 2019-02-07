@@ -6,6 +6,8 @@ var me = id;
 if (action_clone_original == true){
 	if (status_poise_current <= 0){
 		var over_flinch = min(abs(status_poise_current)/status_poise_max, 1);
+		if (over_flinch < 0.5){over_flinch = 0};
+			
 		for(var i = 0; i < ds_list_size(action_clone_children);i++){
 			var p = ds_list_find_value(action_clone_children, i);
 			with(p){actor_buff_apply("flinched", status_flinch_duration*(1 + over_flinch), [], "flinched");}

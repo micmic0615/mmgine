@@ -14,11 +14,12 @@ if (global.draw_tips){
 
 	draw_text_color(10,170,"press num keys 1-7 to spawn enemies (each number spawns a different enemy)", c_white, c_white, c_white, c_white, 1);
 	draw_text_color(10,190,"press 0 to spawn random enemy", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,210,"press backspace to kill all enemies", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,230,"press escape to reset room", c_white, c_white, c_white, c_white, 1);
-	draw_text_color(10,250,"press enter to toggle tips", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,210,"press 9 to spawn a boss enemy", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,230,"press backspace to kill all enemies", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,250,"press escape to reset room", c_white, c_white, c_white, c_white, 1);
+	draw_text_color(10,270,"press enter to toggle tips", c_white, c_white, c_white, c_white, 1);
 
-	levelproto00_draw_gui_tips(310);
+	levelproto00_draw_gui_tips(330);
 }
 
 

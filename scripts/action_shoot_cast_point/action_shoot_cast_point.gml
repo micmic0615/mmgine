@@ -11,8 +11,6 @@ if (action_map[?"combo_count"] < action_map[?"combo_max"]){
 	action_map[?"combo_count"] = 0;
 }
 
-physics_gravity_current = 0;
-
 entity_run_type_scripts("action_shoot_cast_point", action_map);
 
 var target_point = action_map[?"target_point"];

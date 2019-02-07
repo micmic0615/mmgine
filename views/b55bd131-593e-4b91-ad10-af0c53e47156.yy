@@ -6,8 +6,7 @@
     "children": [
         "49930efa-97ca-4df3-974e-1ac5891e66cb",
         "3696ca61-4b6c-4ea6-a06a-63614e82a51d",
-        "d48f8cd7-ef44-4f90-8b89-25eeda6a6581",
-        "0c9c1129-a749-4a0c-964c-62c5236f3d4b"
+        "d48f8cd7-ef44-4f90-8b89-25eeda6a6581"
     ],
     "filterType": "GMScript",
     "folderName": "StunnerCreate",
