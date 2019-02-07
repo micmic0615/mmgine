@@ -13,31 +13,36 @@ my_barrage_channel_value = 5*SEC;
 my_barrage_cooldown_value = 5*SEC;
 my_barrage_interval = 0.4*SEC
 
-my_barrage_damage = 1;
-my_barrage_flinch = 1;
-my_barrage_push = -40;
+my_barrage_damage = [1,0];
+my_barrage_flinch = [1,0];
+my_barrage_push = [-40,0];
 
 my_barrage_particles = array_create(2);
 my_barrage_particles[0] = [game_particle_setup_basic(my_barrage_color, 3 + random(5), 0.5, 0.25*SEC), 24, my_barrage_bullet_radius]
-my_barrage_particles[1] = [game_particle_setup_basic(c_white, 1 + random(3), 0.25, 0.15*SEC), 18, my_barrage_bullet_radius*0.5]
+my_barrage_particles[1] = [game_particle_setup_basic(c_white, 1 + random(3), 0.25, 0.15*SEC), 18, my_barrage_bullet_radius*0.5];
 
 action_barrage_create([
-	/*bullet_type*/ my_barrage_bullet_type,
 	/*color*/ my_barrage_color,
-	/*angle_turn_rate_cast*/ my_barrage_angle_turn_rate_cast,
-	/*angle_turn_rate_channel*/ my_barrage_angle_turn_rate_channel,
-	/*bullet_radius*/ my_barrage_bullet_radius,
+	/*bullet_type*/ my_barrage_bullet_type,
 	/*bullet_speed*/ my_barrage_bullet_speed,
 	/*bullet_range*/ my_barrage_bullet_range,
-	/*cast_value*/ my_barrage_cast_value,
-	/*channel_value*/ my_barrage_channel_value,
-	/*cooldown_value*/ my_barrage_cooldown_value,
-	/*interval*/ my_barrage_interval,
+	/*bullet_radius*/ my_barrage_bullet_radius,
+	/*bullet_interval*/ my_barrage_interval,
+	/*bullet_particles*/ my_barrage_particles,
+	/*bullet_impact_health*/ INFINITY,
+	/*bullet_explosion_radius*/ 0,
 	/*damage*/ my_barrage_damage,
 	/*flinch*/ my_barrage_flinch,
 	/*push*/ my_barrage_push,
-	/*particles*/ my_barrage_particles
-]);
-
-action_barrage_recoil = 80;
-action_barrage_collision_destroy_value = INFINITY;
+	/*turn_rate_cast*/ my_barrage_angle_turn_rate_cast,
+	/*turn_rate_channel*/ my_barrage_angle_turn_rate_channel,
+	/*recoil*/ 80,
+	/*bullet_angle_chaos*/ 0,
+	/*bullet_seek_range*/ 240*PPS,
+	/*bullet_seek_turn_rate*/ 120*PPS,
+	/*bullet_seek_angle_limit*/ 90,
+	/*cast_value*/ my_barrage_cast_value,
+	/*channel_value*/ my_barrage_channel_value,
+	/*backswing_value*/ 0,
+	/*cooldown_value*/ my_barrage_cooldown_value
+])

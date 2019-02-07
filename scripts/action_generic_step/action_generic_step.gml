@@ -9,15 +9,15 @@ if (actor_actions_enabled){
 		case 1:
 			if (action_map[?"cast_timer"] > 0){
 				var script_name = asset_get_index("action_" + action_name + "_cast_active");
-				if (script_name > -1){script_execute(script_name)};		
+				if (script_name > -1){script_execute(script_name, action_map)};		
 				animation_name = action_map[?"animation_cast"];
 				action_map[?"cast_timer"] -= TIMESPEED;				
 			} else {
-				if (actor_actions_id == action_name){
-					actor_actions_idle = false;
+				if (actor_actions_id == action_name || action_map[?"free_action"]){				
+					if (!action_map[?"free_action"]){actor_actions_idle = false}
 					
 					var script_name = asset_get_index("action_" + action_name + "_cast_point");
-					if (script_name > -1){script_execute(script_name)};
+					if (script_name > -1){script_execute(script_name, action_map)};
 					action_map[?"channel_timer"] = action_map[?"channel_value"];
 					action_map[?"backswing_timer"] = action_map[?"backswing_value"];
 					action_map[?"cooldown_timer"] = action_map[?"cooldown_value"];
@@ -35,13 +35,14 @@ if (actor_actions_enabled){
 		case 2:
 			if (action_map[?"channel_timer"] > 0){
 				var script_name = asset_get_index("action_" + action_name + "_channel_active");
-				if (script_name > -1){script_execute(script_name)};
+				if (script_name > -1){script_execute(script_name, action_map)};
 				animation_name = action_map[?"animation_channel"];
 				action_map[?"channel_timer"] -= TIMESPEED;
+				
 			} else {
-				actor_actions_idle = true;	
+				if (!action_map[?"free_action"]){actor_actions_idle = true}
 				var script_name = asset_get_index("action_" + action_name + "_channel_point");
-				if (script_name > -1){script_execute(script_name)};
+				if (script_name > -1){script_execute(script_name, action_map)};
 				animation_name = action_map[?"animation_backswing"];
 				image_index = 0;
 				
@@ -51,13 +52,18 @@ if (actor_actions_enabled){
 		case 3:
 			if (action_map[?"backswing_timer"] > 0){
 				var script_name = asset_get_index("action_" + action_name + "_backswing_active");
-				if (script_name > -1){script_execute(script_name)};
+				if (script_name > -1){script_execute(script_name, action_map)};
 				animation_name = action_map[?"animation_backswing"];
 				action_map[?"backswing_timer"] -= TIMESPEED;
 			} else {
 				var script_name = asset_get_index("action_" + action_name + "_backswing_point");
-				if (script_name > -1){script_execute(script_name)};
-				actor_actions_id = "none";
+				if (script_name > -1){script_execute(script_name, action_map)};
+				if (actor_actions_id == action_name){
+					actor_actions_id = "none";
+				};
+				action_map[?"target_entity"] = noone;
+				action_map[?"target_point"] = [0,0];
+				action_map[?"target_angle"] = 0;
 				action_map[?"sequence"] = 0;
 			}; break;
 	}
@@ -65,6 +71,13 @@ if (actor_actions_enabled){
 	action_map[?"cast_timer"] = 0;
 	action_map[?"channel_timer"] = 0;
 	action_map[?"backswing_timer"] = 0;
+	action_map[?"target_entity"] = noone;
+	action_map[?"target_point"] = [0,0];
+	action_map[?"target_angle"] = 0;
+	
+	if (actor_actions_id == action_name){
+		actor_actions_id = "none";
+	}
 }
 
 if (action_map[?"sequence"] == 0){

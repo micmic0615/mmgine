@@ -48,7 +48,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 		case "breach":
 			my_shoot_bullet_speed = 540*PPS;
 			my_shoot_bullet_range = 420;
-			action_shoot_bullet_collision_destroy_value += 1;
+			action_shoot_bullet_collision_impact_health += 1;
 			break
 		
 		case "focus":

@@ -66,8 +66,8 @@ while(bullet_count < bullet_max){
 	bullet.bullet_seek_target = id;
 	bullet.bullet_seek_no_decay = false;
 	
-	bullet.collision_destroy_value_max = 10;
-	bullet.collision_destroy_value_current = bullet.collision_destroy_value_max;
+	bullet.collision_impact_health_max = 10;
+	bullet.collision_impact_health_current = bullet.collision_impact_health_max;
 	
 	bullet.collision_enabled_bullets = true;
 	

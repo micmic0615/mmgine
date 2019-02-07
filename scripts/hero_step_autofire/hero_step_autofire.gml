@@ -58,8 +58,8 @@ for(var i = 0; i < ds_list_size(my_autofire_list);i++){
 			bullet.bullet_seek_turn_rate = bullet_seek[1];
 			bullet.bullet_seek_angle_limit = bullet_seek[2];
 			
-			bullet.collision_destroy_value_max = bullet_extra[0];
-			bullet.collision_destroy_value_current = bullet_extra[0];
+			bullet.collision_impact_health_max = bullet_extra[0];
+			bullet.collision_impact_health_current = bullet_extra[0];
 			
 			bullet.collision_enabled_bullets = bullet_extra[1];
 			

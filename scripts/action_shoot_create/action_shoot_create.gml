@@ -49,7 +49,7 @@ action_shoot_speed_chaos = 0;
 
 action_shoot_bullet_seek_range = 240;
 action_shoot_bullet_seek_turn_rate = 160*PPS;
-action_shoot_bullet_collision_destroy_value = 1;
+action_shoot_bullet_collision_impact_health = 1;
 action_shoot_bullet_particles = [undefined, 0, 0];
 action_shoot_bullet_tile_phase = false;
 

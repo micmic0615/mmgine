@@ -1,4 +1,4 @@
-if (my_chase_jump_cast_timer > 0){
+if (action_chase[?"channel_timer"] > 0 && my_chase_jump_cast_timer > 0){
 	draw_set_alpha(random((0.25 + 0.5)))
 	var fire_angle = degtorad(angle_between(my_chase_jump_point[0],my_chase_jump_point[1],x,y));
 	var distance = my_chase_jump_range*0.75 + random(my_chase_jump_range*0.75)

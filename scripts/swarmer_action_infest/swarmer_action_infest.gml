@@ -1,6 +1,44 @@
 var target = argument0;
 if (entity_enabled(target)){
-	room_timespeed_temp(0.05, 1*SEC)
+	var me = id;
+	
+	with(target){
+		entity_sfx_create_pulse(
+			/*sprite*/ ExplosionBulletAlt_idle,
+			/*duration*/ 0.5*SEC,
+			/*blend*/ me.my_infest_color_1,
+			/*style_data*/ [
+				0,
+				150,
+				1.5
+			]
+		);
+				
+		entity_sfx_create_pulse(
+			/*sprite*/ ExplosionBulletAlt_idle,
+			/*duration*/ 0.75*SEC,
+			/*blend*/ me.my_infest_color_2,
+			/*style_data*/ [
+				0,
+				160,
+				1.5
+			]
+		);
+				
+		entity_sfx_create_pulse(
+			/*sprite*/ ExplosionBulletAlt_idle,
+			/*duration*/ 1*SEC,
+			/*blend*/ me.my_infest_color_1,
+			/*style_data*/ [
+				0,
+				170,
+				1.5
+			]
+		);
+	}
+	
+	
+	room_timespeed_temp(0.05, 0.35*SEC)
 	var bug_count = action_clone_count + 1;
 	var bug_angle = random(360);
 	while(bug_count > 0){

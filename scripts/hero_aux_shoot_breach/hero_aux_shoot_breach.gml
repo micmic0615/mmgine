@@ -2,7 +2,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 	var p = ds_list_find_value(my_shoot_aux_main, i);
 	switch(p){
 		case "do": 
-			action_shoot_bullet_collision_destroy_value += 1;
+			action_shoot_bullet_collision_impact_health += 1;
 			action_shoot_bullet_seek_range *= 1.1;
 			action_shoot_bullet_seek_turn_rate *= 1.1;
 			my_shoot_bullet_range *= 1.15;
@@ -51,7 +51,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break
 		
 		case "breach":
-			action_shoot_bullet_collision_destroy_value += 10;
+			action_shoot_bullet_collision_impact_health += 10;
 			action_shoot_bullet_seek_range *= 1.2;
 			action_shoot_bullet_seek_turn_rate *= 1.2;
 			my_shoot_bullet_range *= 1.3;

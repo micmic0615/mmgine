@@ -62,8 +62,8 @@ collision_modulo = 2;
 collision_index = id mod collision_modulo;
 
 collision_destroy_enabled = false;
-collision_destroy_value_current = 1;
-collision_destroy_value_max = 1;
+collision_impact_health_current = 1;
+collision_impact_health_max = 1;
 
 
 status_health_max = 1;

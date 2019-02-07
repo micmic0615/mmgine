@@ -7,7 +7,6 @@ if (can_dash){
 	if (cooldown_remaining <= 0){
 		did_dash = true;
 		if (action_dash[?"sequence"] == 0){		
-			entity_run_type_scripts("action_dash_cast", action_dash[?"target_point"]);
 			action_dash[?"cast_timer"] = action_dash[?"cast_value"];	
 			action_dash[?"sequence"] = 1;
 			actor_actions_id = "dash";

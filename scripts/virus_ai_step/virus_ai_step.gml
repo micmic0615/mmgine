@@ -13,8 +13,6 @@ if (ai_step_attack_else_wander(["health_low_not_full", "ally"])){
 			]
 		}
 	}
-	//if (ai_limit_targeting(1)){action_chase_trigger(ai_target)};	
-	//ai_target_attack_should_channel = (action_chase_active_timer > 0 || action_chase_success);
 };
 
 if (!ai_target_attack_should_channel){

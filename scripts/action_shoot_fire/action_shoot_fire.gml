@@ -45,8 +45,8 @@ while(bullet_count > 0){
 	ds_list_add(bullet.bullet_collision_entity_actions, ["push", "actor", action_shoot_push[0], 0.75*SEC, "movement", ["multiply",1.5]]);
 		
 	bullet.bullet_death_spawn_trigger = action_shoot_flag_explode_trigger;
-	bullet.collision_destroy_value_max = action_shoot_bullet_collision_destroy_value;
-	bullet.collision_destroy_value_current = action_shoot_bullet_collision_destroy_value;
+	bullet.collision_impact_health_max = action_shoot_bullet_collision_impact_health;
+	bullet.collision_impact_health_current = action_shoot_bullet_collision_impact_health;
 	
 	if (action_shoot_bullet_tile_phase == true){
 		bullet.collision_enabled_tiles = false

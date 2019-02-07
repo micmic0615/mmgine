@@ -9,11 +9,11 @@ if (entity_enabled()){
 				ds_list_add(collision_entities_exceptions, p);
 			
 				if (collision_destroy_enabled){
-					collision_destroy_value_current -= p.collision_destroy_value_max;
+					collision_impact_health_current -= p.collision_impact_health_max;
 				}
 		
 				if (p.collision_destroy_enabled){
-					p.collision_destroy_value_current -= collision_destroy_value_max;
+					p.collision_impact_health_current -= collision_impact_health_max;
 				}
 			}
 		}

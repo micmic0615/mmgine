@@ -21,8 +21,8 @@ bullet.explosion_radius_max = pulse_radius;
 
 bullet.bullet_origin_anchor = true;
 
-bullet.collision_destroy_value_max = INFINITY;
-bullet.collision_destroy_value_current = bullet.collision_destroy_value_max;
+bullet.collision_impact_health_max = INFINITY;
+bullet.collision_impact_health_current = bullet.collision_impact_health_max;
 		
 ds_list_add(bullet.bullet_collision_entity_actions, ["damage", "actor", status_damage_total*pulse_damage_factor, true]);
 ds_list_add(bullet.bullet_collision_entity_actions, ["flinch", "actor", status_flinch_total*pulse_flinch_factor, true]);

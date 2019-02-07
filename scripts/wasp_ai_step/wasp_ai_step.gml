@@ -1,9 +1,9 @@
 ai_target_attack_should_channel = false;
 if (ai_step_attack_else_wander()){
 	if (ai_limit_targeting(3)){action_chase_trigger(ai_target)};	
-	ai_target_attack_should_channel = (action_chase_active_timer > 0 || action_chase_success);
+	ai_target_attack_should_channel = (action_chase[?"channel_timer"] > 0);
 }
 
 if (!ai_target_attack_should_channel){
 	entity_move_point(ai_target_move_point);
-}
+} 

@@ -44,7 +44,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break
 		
 		case "breach":
-			action_shoot_bullet_collision_destroy_value += 1;
+			action_shoot_bullet_collision_impact_health += 1;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.75),
 				(my_shoot_damage[1] * 0.75),

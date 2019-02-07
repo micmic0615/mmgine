@@ -19,6 +19,6 @@ my_shoot_push = [0, 0];
 
 action_shoot_bullet_seek_range = 320;
 action_shoot_bullet_seek_turn_rate = 200*PPS;
-action_shoot_bullet_collision_destroy_value = 3;
+action_shoot_bullet_collision_impact_health = 3;
 
 hero_skill_set_shoot_mod_apply();

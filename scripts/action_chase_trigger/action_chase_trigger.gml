@@ -1,12 +1,12 @@
-var target = argument0;
-var is_chasing = false;
+var target_entity = argument[0];
+var did_chase = action_generic_trigger(action_chase, target_entity);
 
-if (actor_actions_enabled && action_chase_cooldown_timer <= 0){
-	action_chase_target = target;
-	action_chase_active_timer = action_chase_active_value;
-	action_chase_cooldown_timer = action_chase_cooldown_value;
-	entity_run_type_scripts("action_chase_cast", action_chase_target);
-	is_chasing = true;
+if (did_chase){
+	if (action_chase[?"sequence"] == 0){
+		action_chase[?"cast_timer"] = action_chase[?"cast_value"];	
+		action_chase[?"sequence"] = 1;
+		actor_actions_id = "chase";
+	}
 }
 
-return is_chasing
+return did_chase;

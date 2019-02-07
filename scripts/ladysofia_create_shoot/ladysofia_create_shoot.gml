@@ -50,7 +50,7 @@ action_shoot_bullet_tile_phase = true;
 action_shoot_bullet_seek_range = 120;
 action_shoot_bullet_seek_turn_rate = 80*PPS;
 
-action_shoot_bullet_collision_destroy_value = INFINITY;
+action_shoot_bullet_collision_impact_health = INFINITY;
 action_shoot_bullet_seek_range = 0;
 action_shoot_bullet_seek_turn_rate = 0;
 

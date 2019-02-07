@@ -1,13 +1,11 @@
-my_chase_distance = 00
+my_chase_distance = 0;
 my_chase_movespeed_set = 580*PPS;
 my_chase_movesnap_set = 0.25*SEC;
-my_chase_active_value = 6.5*SEC;
+my_chase_channel_value = 6.5*SEC;
 my_chase_cooldown_value = 6*SEC;
 my_chase_color = make_color_rgb(125,30,255);
 
-
 my_chase_sword_type = [DefaultBullet, "HeroBulletClear"]
-//my_chase_sword_type = [DefaultBullet, "DefaultBullet"]
 my_chase_sword_speed = 580*PPS;
 my_chase_sword_range = 240;
 my_chase_sword_radius = 32;
@@ -30,11 +28,14 @@ my_chase_jump_cast_value = 0.5*SEC;
 my_chase_jump_mirage_timer = 0;
 my_chase_jump_mirage_down = false;
 
-action_chase_create([
-	/*distance*/ my_chase_distance,
-	/*movespeed_set*/ my_chase_movespeed_set,
-	/*movesnap_set*/ my_chase_movesnap_set,
-	/*active_value*/ my_chase_active_value,
-	/*cooldown_value*/ my_chase_cooldown_value,
-	/*color*/ my_chase_color
+action_chase_create([	
+	/*color"*/ my_chase_color,
+	/*distance"*/ my_chase_distance,
+	/*movespeed_set"*/ my_chase_movespeed_set,
+	/*movesnap_set"*/ my_chase_movesnap_set,
+	/*cast_value"*/ 0,
+	/*channel_value"*/ my_chase_channel_value,
+	/*backswing_value"*/ 0,
+	/*cooldown_value"*/ my_chase_cooldown_value,
 ])
+
