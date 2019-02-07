@@ -3,6 +3,7 @@ var can_dash = action_generic_trigger(action_dash, target_point);
 var did_dash = false;
 
 var cooldown_remaining = action_dash_cooldown_check();
+
 if (can_dash){
 	if (cooldown_remaining <= 0){
 		did_dash = true;
