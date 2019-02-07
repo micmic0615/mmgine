@@ -44,7 +44,7 @@ while(bullet_count < bullet_max){
 		bullet_range,
 		bullet_damage_factor,
 		my_shoot_bullet_type,
-		my_shoot_flair_color,
+		my_shoot_color,
 		false,
 		spawn_x, 
 		spawn_y
@@ -76,7 +76,7 @@ while(bullet_count < bullet_max){
 	bullet.bullet_death_spawn[?"explosion_radius_max"] = explosion_radius;
 	bullet.bullet_death_spawn[?"explosion_lifespan_base"] = explosion_radius/(160*PPS);
 	bullet.bullet_death_spawn[?"explosion_lifespan_current"] = explosion_radius/(160*PPS);;
-	bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = my_shoot_flair_color;
+	bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = my_shoot_color;
 	bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
 	bullet.bullet_death_spawn[?"status_immortal"] = true;
 	
@@ -84,7 +84,7 @@ while(bullet_count < bullet_max){
 		["damage", "actor", status_damage_total*bullet_damage_factor, true, "main_attack"]
 	]
 	
-	hero_beatdown_bullet_sfx(bullet, my_shoot_flair_color, bullet_radius)
+	hero_beatdown_bullet_sfx(bullet, my_shoot_color, bullet_radius)
 		
 	bullet_count++;
 }

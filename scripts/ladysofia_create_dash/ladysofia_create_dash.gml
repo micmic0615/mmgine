@@ -4,10 +4,10 @@ my_dash_charge_cost = 0;
 my_dash_channel = 0*SEC;
 my_dash_cooldown_value = 1*SEC
 my_dash_combo_max = 9;
-my_dash_flair_color = make_color_rgb(200,200,200);
+my_dash_color = make_color_rgb(200,200,200);
 
 action_dash_create([	
-	/*"color"*/ my_dash_flair_color,
+	/*"color"*/ my_dash_color,
 	/*"speed"*/ my_dash_speed,
 	/*"range"*/ my_dash_range,
 	/*"combo_max"*/ my_dash_combo_max,

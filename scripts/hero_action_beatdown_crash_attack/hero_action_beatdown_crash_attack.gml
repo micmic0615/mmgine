@@ -41,7 +41,7 @@ if (hero_beatdown_find("crash")){
 				bullet_range,
 				bullet_damage_factor, 
 				my_shoot_bullet_type,
-				my_shoot_flair_color,
+				my_shoot_color,
 				false,
 				spawn_x, 
 				spawn_y
@@ -52,7 +52,7 @@ if (hero_beatdown_find("crash")){
 			bullet.bullet_seek_angle_limit = 360;
 			bullet.bullet_seek_target = base_target;
 			
-			hero_beatdown_bullet_sfx(bullet, my_shoot_flair_color, bullet_radius);
+			hero_beatdown_bullet_sfx(bullet, my_shoot_color, bullet_radius);
 		}
 		
 	}

@@ -1,8 +1,8 @@
 {
-    "id": "9e348456-a9da-4278-94f6-42e3fae36baa",
+    "id": "2f33b727-5ffc-45b1-b17b-ada560e86dcc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_action_shoot",
+    "name": "action_shoot_cast_active",
     "IsCompatibility": false,
     "IsDnD": false
 }

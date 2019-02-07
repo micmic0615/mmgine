@@ -19,7 +19,7 @@ var p_model_2 = game_particle_setup_basic(my_charge_color_2, (0.5 + random(1)*ch
 my_charge_draw_angle += 20*PPS;
 
 if (actor_actions_idle){
-	if (action_shoot_cast_timer <= 0 && action_shoot_channel_timer <= 0){
+	if (action_shoot[?"cast_timer"] <= 0 && action_shoot[?"channel_timer"] <= 0){
 		var charge_accelerator = 1;
 		if (my_shoot_aim_mode){
 			charge_accelerator = 1.7;

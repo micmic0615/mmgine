@@ -33,14 +33,14 @@ switch(my_shoot_mod_select){
 		ds_list_add(my_shoot_mod_skip, my_shoot_mod_2);
 		my_shoot_mod_1 = hero_skill_set_shoot_modname(dir);
 		entity_run_type_scripts(("mod_shoot_" + my_shoot_mod_1));
-		my_charge_color_1 = my_shoot_flair_color;
+		my_charge_color_1 = my_shoot_color;
 		break
 		
 	case 6:
 		ds_list_add(my_shoot_mod_skip, my_shoot_mod_1);
 		my_shoot_mod_2 = hero_skill_set_shoot_modname(dir);
 		entity_run_type_scripts(("mod_shoot_" + my_shoot_mod_2));
-		my_charge_color_2 = my_shoot_flair_color;
+		my_charge_color_2 = my_shoot_color;
 		break
 		
 	case 7:

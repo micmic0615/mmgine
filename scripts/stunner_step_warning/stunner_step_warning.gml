@@ -5,7 +5,7 @@ if (action_shoot_cooldown_timer <= (0.5*SEC) && actor_actions_enabled){
 			entity_sfx_create_pulse(
 				/*sprite*/ ExplosionBulletAlt_idle,
 				/*duration*/ 0.4*SEC,
-				/*blend*/ my_shoot_flair_color,
+				/*blend*/ my_shoot_color,
 				/*style_data*/ [
 					my_vacuum_range,
 					40,
@@ -18,7 +18,7 @@ if (action_shoot_cooldown_timer <= (0.5*SEC) && actor_actions_enabled){
 			entity_sfx_create_pulse(
 				/*sprite*/ ExplosionBulletAlt_idle,
 				/*duration*/ 1.4*SEC,
-				/*blend*/ my_shoot_flair_color,
+				/*blend*/ my_shoot_color,
 				/*style_data*/ [
 					40,
 					enemy_attack_range_total,

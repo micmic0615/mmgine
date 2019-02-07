@@ -1,7 +1,7 @@
 var p_loop = argument[0];
 var p_size = argument[1];
 var p_speed = argument[2];
-var p_color = argument_count >= 4 ? argument[3] : my_shoot_flair_color;
+var p_color = argument_count >= 4 ? argument[3] : my_shoot_color;
 
 while(p_loop > 0){
 	var p_count = 3;

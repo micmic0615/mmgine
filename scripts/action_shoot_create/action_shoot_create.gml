@@ -1,64 +1,38 @@
 var argument_array = argument0;
+var should_init = true;
+if (variable_instance_exists(id, "action_shoot") && ds_exists(action_shoot, ds_type_map)){should_init = false};
 
-action_shoot_bullet_type = argument_array[0];
-action_shoot_bullet_radius = argument_array[1];
-action_shoot_bullet_speed = argument_array[2];
-action_shoot_bullet_range = argument_array[3]; 
-action_shoot_bullet_count = argument_array[4];
-action_shoot_bullet_explosion = argument_array[5];
+if (should_init){
+	action_shoot = ds_create("map");
+}
 
-action_shoot_recoil_speed = argument_array[6];
-action_shoot_recoil_range = argument_array[7];
+action_generic_fire_bullet_create(action_shoot, argument_array);
 
-action_shoot_cast_value = argument_array[8];
-action_shoot_cast_timer = 0;
+action_shoot[?"combo_max"] = argument_array[22];
 
-action_shoot_channel_value = argument_array[9];
-action_shoot_channel_timer = 0;
+if (should_init){
+	action_shoot[?"combo_count"] = 0;
+	action_shoot[?"combo_timer"] = 0;
+	
+	action_generic_create(action_shoot, [
+		/*free_action*/ false,
+		/*cast_value*/ argument_array[23],
+		/*channel_value*/ argument_array[24],
+		/*backswing_value*/ argument_array[25],
+		/*cooldown_value*/ argument_array[26],
+		/*animation_cast*/ "channel",
+		/*animation_channel*/ "attack",
+		/*animation_backswing*/ "rest",
+	]);
+} else {
+	action_shoot[?"cast_value"] = argument_array[23];
+	action_shoot[?"channel_value"] = argument_array[24];
+	action_shoot[?"backswing_value"] = argument_array[25];
+	action_shoot[?"cooldown_value"] = argument_array[26];
+}
 
-action_shoot_backswing_value = argument_array[10];
-action_shoot_backswing_timer = 0;
-
-action_shoot_cooldown_value = argument_array[11];
-action_shoot_cooldown_timer = 0;
-
-action_shoot_combo_max = argument_array[12];
-action_shoot_combo_count = 0;
-action_shoot_combo_timer = 0;
-
-action_shoot_damage = argument_array[13];
-action_shoot_flinch = argument_array[14];
-action_shoot_push = argument_array[15];
-
-action_shoot_flair_color = argument_array[16];
-
-action_shoot_direction = 1;
-action_shoot_step_phase = 0;
-
-action_shoot_target_point = [0,0];
-action_shoot_target_angle = 0;
-
-action_shoot_queue_cast = false;
-action_shoot_queue_angle = 0;
-
-action_shoot_angle_chaos = 0;
-action_shoot_angle_spead = 60; 
-
-action_shoot_range_chaos = 0;
-action_shoot_speed_chaos = 0;
-
-action_shoot_bullet_seek_range = 240;
-action_shoot_bullet_seek_turn_rate = 160*PPS;
-action_shoot_bullet_collision_impact_health = 1;
-action_shoot_bullet_particles = [undefined, 0, 0];
-action_shoot_bullet_tile_phase = false;
-
-action_shoot_animation_channel = "channel";
-action_shoot_animation_attack = "attack";
-action_shoot_animation_rest = "rest";
-
-action_shoot_flag_explode_trigger = "death";
-
-ds_list_add(actor_actions_module, ["shoot", [
-	"step"
-]])
+if (should_init){
+	ds_list_add(actor_actions_module, ["shoot", [
+		"step"
+	]])
+}

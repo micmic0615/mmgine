@@ -27,7 +27,7 @@ var bullet = hero_bullet_create([
 	bullet_range,
 	bullet_damage_factor,
 	my_shoot_bullet_type,
-	my_shoot_flair_color,
+	my_shoot_color,
 	false,
 	spawn_x, 
 	spawn_y
@@ -41,7 +41,7 @@ bullet.bullet_seek_target = base_target;
 bullet.bullet_death_spawn[?"explosion_radius_max"] = explosion_radius;
 bullet.bullet_death_spawn[?"explosion_lifespan_base"] = explosion_radius/(420*PPS);
 bullet.bullet_death_spawn[?"explosion_lifespan_current"] = explosion_radius/(420*PPS);;
-bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = my_shoot_flair_color;
+bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = my_shoot_color;
 bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
 bullet.bullet_death_spawn[?"status_immortal"] = true;
 	
@@ -50,4 +50,4 @@ bullet.bullet_death_spawn[?"bullet_collision_entity_actions"] = [
 	["push", "actor", explosion_push, 0.5*SEC, "center", ["multiply",1.5]],
 ]
 
-hero_beatdown_bullet_sfx(bullet, my_shoot_flair_color, bullet_radius)
+hero_beatdown_bullet_sfx(bullet, my_shoot_color, bullet_radius)

@@ -1,8 +1,8 @@
 {
-    "id": "4fa6e462-321c-469e-bf98-4b501b73838f",
+    "id": "9e348456-a9da-4278-94f6-42e3fae36baa",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "action_shoot_trigger_cancel",
+    "name": "hero_action_shoot_cast_point",
     "IsCompatibility": false,
     "IsDnD": false
 }

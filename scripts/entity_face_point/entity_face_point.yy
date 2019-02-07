@@ -1,8 +1,8 @@
 {
-    "id": "67b75972-0675-4a11-8e3a-ac7c4a6a5891",
+    "id": "d8f9cf2f-5d3a-4783-a890-10bb804dd60e",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hero_action_shoot_cast",
+    "name": "entity_face_point",
     "IsCompatibility": false,
     "IsDnD": false
 }

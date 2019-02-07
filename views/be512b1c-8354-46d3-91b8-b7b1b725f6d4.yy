@@ -22,7 +22,8 @@
         "db51c592-be04-4909-8907-e2e4518e4ebd",
         "94d60282-ffe9-4ad7-b3b8-87e9239a0565",
         "0d9068d5-f99b-4ddf-9052-a315a3eb4e51",
-        "294428e5-9a67-490a-be21-2f1552977609"
+        "294428e5-9a67-490a-be21-2f1552977609",
+        "d8f9cf2f-5d3a-4783-a890-10bb804dd60e"
     ],
     "filterType": "GMScript",
     "folderName": "EntityBasics",

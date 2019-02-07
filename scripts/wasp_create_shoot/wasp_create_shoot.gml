@@ -1,13 +1,13 @@
 my_shoot_bullet_type = [DefaultBullet, "ShooterBullet3"];
-my_shoot_flair_color = make_color_rgb(255,0,0);
+my_shoot_color = make_color_rgb(255,0,0);
 
 my_shoot_bullet_radius = 32;
 my_shoot_bullet_speed = 1800*PPS;
 my_shoot_bullet_range = 640;
 my_shoot_bullet_count = 10;
-my_shoot_bullet_explosion = 80;
+my_shoot_bullet_explosion_radius = 80;
 
-my_shoot_recoil_range = 90;
+my_shoot_fire_recoil = 90;
 
 my_shoot_cast_value = 0.5*SEC;
 my_shoot_channel_value = 0.3*SEC;
@@ -26,9 +26,9 @@ action_shoot_create([
 	/*bullet_speed*/ my_shoot_bullet_speed,
 	/*bullet_range*/ my_shoot_bullet_range,
 	/*bullet_count*/ my_shoot_bullet_count,
-	/*bullet_explosion*/ my_shoot_bullet_explosion,
+	/*bullet_explosion*/ my_shoot_bullet_explosion_radius,
 	/*recoil_speed*/ 420*PPS,
-	/*recoil_range*/ my_shoot_recoil_range,
+	/*recoil_range*/ my_shoot_fire_recoil,
 	/*cast_value*/ my_shoot_cast_value,
 	/*channel_value*/ my_shoot_channel_value,
 	/*backswing_value*/ my_shoot_backswing_value,
@@ -40,11 +40,11 @@ action_shoot_create([
 	/*flair_color*/ my_chase_color,
 ]);
 
-action_shoot_angle_chaos = 30;
-action_shoot_range_chaos = 340;
-action_shoot_speed_chaos = 900*PPS;
+my_shoot_bullet_chaos_angle = 30;
+my_shoot_bullet_chaos_range = 340;
+my_shoot_bullet_chaos_speed = 900*PPS;
 
-action_shoot_bullet_seek_range = 120;
-action_shoot_bullet_seek_turn_rate = 80*PPS;
+my_shoot_bullet_seek_range = 120;
+my_shoot_bullet_seek_turn_rate = 80*PPS;
 
 action_shoot_bullet_particles = [game_particle_setup_basic(my_chase_color, 1.5, 0.5, 0.3*SEC), 3, action_shoot_bullet_radius];

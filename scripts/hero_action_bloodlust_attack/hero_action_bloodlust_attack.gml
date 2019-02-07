@@ -64,7 +64,7 @@ if (my_bloodlust_active_timer > 0){
 				
 				ds_list_add(
 					bullet.draw_particle_list, 
-					[game_particle_setup_basic(my_shoot_flair_color, 1 + random(1*bloodlust_power), 0.25, 0.15*SEC), ceil(2*bloodlust_power), bullet_radius*0.25]
+					[game_particle_setup_basic(my_shoot_color, 1 + random(1*bloodlust_power), 0.25, 0.15*SEC), ceil(2*bloodlust_power), bullet_radius*0.25]
 				);
 			
 				bullet.bullet_seek_range = 640;;

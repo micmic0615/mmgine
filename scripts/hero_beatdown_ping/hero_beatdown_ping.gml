@@ -18,7 +18,7 @@ var bullet_seek = [540, 480*PPS, 360];
 var bullet_extra = [1, false];
 	
 var bullet_type = my_shoot_bullet_type;
-var bullet_color = my_shoot_flair_color;
+var bullet_color = my_shoot_color;
 
 var new_autofire = true;
 

@@ -15,6 +15,11 @@ if (can_dash){
 		action_dash[?"queue_active"] = true;
 		action_dash[?"queue_angle"] = angle_between(target_point[0], target_point[1], x, y);
 	}
+} else {
+	if (cooldown_remaining < 0.25*SEC){
+		action_dash[?"queue_active"] = true;
+		action_dash[?"queue_angle"] = angle_between(target_point[0], target_point[1], x, y);
+	}
 }
 
 return did_dash;

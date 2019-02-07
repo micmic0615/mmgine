@@ -14,7 +14,7 @@ with(base_target){
 	entity_sfx_create_pulse(
 		/*sprite*/ ExplosionBulletAlt_idle,
 		/*duration*/ flinch_duration,
-		/*blend*/ me.my_shoot_flair_color,
+		/*blend*/ me.my_shoot_color,
 		/*style_data*/ [
 			160,
 			40,

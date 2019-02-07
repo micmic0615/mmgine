@@ -11,9 +11,9 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 		case "split":
 			my_shoot_bullet_radius *= 0.6;
 			my_shoot_bullet_count += 1;
-			action_shoot_bullet_seek_range *= 0.8;
-			action_shoot_bullet_seek_turn_rate *= 0.9;
-			action_shoot_angle_spead = 90;
+			my_shoot_bullet_seek_range *= 0.8;
+			my_shoot_bullet_seek_turn_rate *= 0.9;
+			my_shoot_bullet_angle_spread = 90;
 			
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.7),
@@ -44,7 +44,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break
 			
 		case "load":
-			my_shoot_bullet_explosion += 200;
+			my_shoot_bullet_explosion_radius += 200;
 			my_shoot_flinch = [
 				(my_shoot_flinch[0] * 0.8),
 				(my_shoot_flinch[1] * 2),
@@ -52,7 +52,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break
 		
 		case "breach":
-			action_shoot_bullet_collision_impact_health += 1;
+			my_shoot_bullet_impact_health += 1;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.8),
 				(my_shoot_damage[1] * 0.8),

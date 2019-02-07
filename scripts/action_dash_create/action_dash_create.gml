@@ -8,8 +8,6 @@ action_dash[?"speed"] = argument_array[1];
 action_dash[?"range"] = argument_array[2];
 
 action_dash[?"combo_max"] = argument_array[3];
-action_dash[?"combo_count"] = 0;
-action_dash[?"combo_timer"] = 0;
 
 action_dash[?"cooldown_multi_value"] = argument_array[7];
 action_dash[?"cooldown_multi_timer"] = ds_create("list");

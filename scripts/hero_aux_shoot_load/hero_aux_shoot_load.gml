@@ -2,7 +2,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 	var p = ds_list_find_value(my_shoot_aux_main, i);
 	switch(p){
 		case "do": 
-			my_shoot_bullet_explosion += 60;
+			my_shoot_bullet_explosion_radius += 60;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.8),
 				(my_shoot_damage[1] * 1.35),
@@ -12,8 +12,8 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 		case "split":
 			my_shoot_bullet_radius *= 0.7;
 			my_shoot_bullet_count += 1;
-			action_shoot_angle_spead = 180;
-			my_shoot_bullet_explosion *= 0.85;
+			my_shoot_bullet_angle_spread = 180;
+			my_shoot_bullet_explosion_radius *= 0.85;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.75),
 				(my_shoot_damage[1] * 0.75),
@@ -38,7 +38,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 			break
 			
 		case "load":
-			my_shoot_bullet_explosion += 120;
+			my_shoot_bullet_explosion_radius += 120;
 			my_shoot_damage = [
 				(my_shoot_damage[0] * 0.7),
 				(my_shoot_damage[1] * 1.5),
@@ -48,7 +48,7 @@ for(var i = 0; i < ds_list_size(my_shoot_aux_main);i++){
 		case "breach":
 			my_shoot_bullet_speed = 540*PPS;
 			my_shoot_bullet_range = 420;
-			action_shoot_bullet_collision_impact_health += 1;
+			my_shoot_bullet_impact_health += 1;
 			break
 		
 		case "focus":

@@ -5,10 +5,10 @@ my_dash_channel = 0.1*SEC;
 my_dash_iframe = 0.2*SEC;
 my_dash_cooldown_value = 1*SEC
 my_dash_combo_max = 2;
-my_dash_flair_color = make_color_rgb(160,160,160);
+my_dash_color = make_color_rgb(160,160,160);
 
 action_dash_create([	
-	/*"color"*/ my_dash_flair_color,
+	/*"color"*/ my_dash_color,
 	/*"speed"*/ my_dash_speed,
 	/*"range"*/ my_dash_range,
 	/*"combo_max"*/ my_dash_combo_max,

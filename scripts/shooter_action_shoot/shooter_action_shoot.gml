@@ -12,7 +12,7 @@ var bonus_flinch = my_charge_factor_flinch - 1;
 action_shoot_bullet_radius = my_shoot_bullet_radius * (1 + (charge_value*bonus_size));
 action_shoot_bullet_range = my_shoot_bullet_range * (1 + (charge_value*bonus_range))
 action_shoot_bullet_speed = my_shoot_bullet_speed * (1 + (charge_value*bonus_speed));
-action_shoot_bullet_explosion = my_shoot_bullet_explosion * (1 + (charge_value*bonus_explosion));
+action_shoot_bullet_explosion = my_shoot_bullet_explosion_radius * (1 + (charge_value*bonus_explosion));
 
 if (my_frenzy_timer > 0){
 	action_shoot_bullet_speed *= 1.25
@@ -28,7 +28,7 @@ action_shoot_flinch = [
 	my_shoot_flinch[1] * (1 +  (charge_value*bonus_flinch)),
 ];
 
-action_shoot_recoil_range = my_shoot_recoil_range * (1 +  (charge_value*bonus_damage));
+action_shoot_recoil_range = my_shoot_fire_recoil * (1 +  (charge_value*bonus_damage));
 
 my_charge_meter = 0;
 

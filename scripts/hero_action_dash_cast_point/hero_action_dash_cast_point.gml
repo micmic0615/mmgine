@@ -1,4 +1,4 @@
-if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0 ){
+if (actor_actions_id == "shoot" && action_shoot[?"cast_timer"] > 0 ){
 	action_dash[?"speed"] = my_dash_speed*1.25;
 	action_dash[?"range"] = my_dash_range*1.5;
 	action_dash[?"cooldown_multi_timer"] = action_dash_cooldown_reset();
@@ -8,12 +8,12 @@ if (actor_actions_id == "shoot" && action_shoot_cast_timer > 0 ){
 	action_dash[?"range"] = my_dash_range;
 }
 
-action_dash[?"color"] = my_dash_flair_color
+action_dash[?"color"] = my_dash_color
 
 physics_gravity_current = 0;
 actor_buff_apply("iframe", my_dash_iframe, [], "dash_iframe")
 
-action_shoot_combo_count = 0;
+action_shoot[?"combo_count"] = 0;
 my_charge_meter_1 =  max(1, my_charge_meter_1 - my_dash_charge_cost);
 my_charge_meter_2 =  max(1, my_charge_meter_2 - my_dash_charge_cost);
 
