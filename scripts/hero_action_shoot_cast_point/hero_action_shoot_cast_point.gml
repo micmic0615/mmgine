@@ -42,7 +42,7 @@ if (charge_value == 1){
 		
 	while(p_loop > 0){
 		var p_count = 4;
-		var p_model = game_particle_setup_basic(my_shoot_color, 3, (2 + random(1)), ((0.3*SEC) + random(0.1*SEC)));
+		var p_model = game_particle_setup_basic(my_shoot_color, 3, (2 + random(1)), ((0.3*SEC) + random(0.1*SEC)), pt_shape_snow);
 		part_emitter_burst(global.particle_system,draw_particle_emitter,p_model,p_count);
 		p_loop --;
 	}

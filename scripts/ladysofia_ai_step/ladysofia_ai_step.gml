@@ -30,7 +30,7 @@ if (action_chase[?"success"]){
 			};
 		}
 		
-		if (status_health_current < status_health_max*0.40 && ai_ex_mode_available){
+		if (status_health_current < status_health_max*0.4 && ai_ex_mode_available){
 			ai_ex_mode_timer = ai_ex_mode_value
 			ai_ex_mode_available = false
 		}

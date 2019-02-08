@@ -68,10 +68,19 @@ if (has_grit_attacc > 0){
 }
 
 if (is_flinched){
+	if (my_autoshield_was_flinched == false){
+		my_autoshield_was_flinched = true;
+		room_timespeed_temp(0.05, 1.5*SEC, true);
+		ROOM.screen_cover_color = make_color_rgb(160,160,0)
+		ROOM.screen_cover_alpha = 0.25
+	}
 	my_rally_limit = status_health_current;
 	my_charge_meter_1 = 0;
 	my_charge_meter_2 = 0;
+} else {
+	my_autoshield_was_flinched = false
 }
+
 
 if (has_iframe){
 	draw_blend_temporary_style = "solid";

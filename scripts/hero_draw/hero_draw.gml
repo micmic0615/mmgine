@@ -2,14 +2,20 @@
 	var angle = my_charge_draw_angle + 180;
 	var distance = 90;
 	var radius = 10;
+	var ring_pulse = 0.5*SEC;
+	var ring_age = (entity_age % ring_pulse)  / ring_pulse;
+	var ring_radius = (ring_age*12) + 8;
 	
 	draw_set_alpha(0.5)
 	
 	draw_set_color(make_color_hsv(color_get_hue(my_charge_color_1), color_get_saturation(my_charge_color_1)*0.25, color_get_value(my_charge_color_1)*0.1))
-	draw_circle(x + (cos(degtorad(angle))*distance), y + (sin(degtorad(angle))*distance), radius, false);
+	draw_circle (x + (cos(degtorad(angle))*distance), y + (sin(degtorad(angle))*distance), radius, false);
 	
 	if (my_charge_meter_1 == my_charge_max){
-		radius = 10 +  random(4);
+		radius = 8 + random(2);
+		draw_set_alpha(0.25*(sqrt(1 - ring_age)))
+		draw_circle_color(x + (cos(degtorad(angle))*distance), y + (sin(degtorad(angle))*distance), ring_radius,  my_charge_color_1, my_charge_color_1, true);
+		draw_set_alpha(0.5)
 	} else {
 		radius = 10;
 	}
@@ -23,8 +29,11 @@
 	draw_set_color(make_color_hsv(color_get_hue(my_charge_color_2), color_get_saturation(my_charge_color_2)*0.25, color_get_value(my_charge_color_2)*0.1))
 	draw_circle(x + (cos(degtorad(angle))*distance), y + (sin(degtorad(angle))*distance), radius, false);
 	
-	if (my_charge_meter_1 == my_charge_max){
-		radius = 10 +  random(4);
+	if (my_charge_meter_2 == my_charge_max){
+		radius = 8 + random(2);
+		draw_set_alpha(0.25*(sqrt(1 - ring_age)))
+		draw_circle_color(x + (cos(degtorad(angle))*distance), y + (sin(degtorad(angle))*distance), ring_radius,  my_charge_color_2, my_charge_color_2, true);
+		draw_set_alpha(0.5)
 	} else {
 		radius = 10;
 	}

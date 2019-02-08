@@ -1,11 +1,14 @@
-my_dash_speed = 540*PPS;
-my_dash_range = 360;
+my_dash_speed = 580*PPS;
+my_dash_range = 340;
 my_dash_charge_cost = 0;
 my_dash_channel = 0.1*SEC;
 my_dash_iframe = 0.2*SEC;
 my_dash_cooldown_value = 1*SEC
 my_dash_combo_max = 2;
-my_dash_color = make_color_rgb(160,160,160);
+my_dash_color = make_color_rgb(200,200,200);
+
+my_dash_cancel_cooldown_timer = 0;
+my_dash_cancel_cooldown_value = 1.5*SEC;
 
 action_dash_create([	
 	/*"color"*/ my_dash_color,

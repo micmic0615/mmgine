@@ -1,6 +1,6 @@
 my_strike_color = make_color_rgb(60,255,120);
-my_strike_speed =  1500*PPS;
-my_strike_range = 1500;
+my_strike_speed =  1800*PPS;
+my_strike_range = 1800;
 my_strike_radius = 420;
 my_strike_cast_value = 1.3*SEC;
 
@@ -10,7 +10,7 @@ action_strike_create([
 	/*range*/ my_strike_range,
 	/*radius*/ my_strike_radius,
 	/*damage*/ [1.5,0],
-	/*flinch*/ [1.5,0],
+	/*flinch*/ [1.25,0],
 	/*push*/ [-100,0],
 	/*dash_multiply*/ 1.075,
 	/*cast_aim_limit*/ 0.65*SEC,

@@ -1,5 +1,5 @@
 var action_map = argument[0];
-if (action_map[?"cast_timer"] > 0.3*SEC){
+if (action_map[?"cast_timer"] > 0.5*SEC){
 	action_generic_target_entity_to_point(action_map);
 }
 

@@ -14,7 +14,7 @@ my_barrage_cooldown_value = 0*SEC;
 my_barrage_interval = 0.15*SEC
 
 my_barrage_damage = [0.5,0];
-my_barrage_flinch = [0.5,0];
+my_barrage_flinch = [0.25,0];
 my_barrage_push = [0,0];
 
 my_barrage_particles = [];
