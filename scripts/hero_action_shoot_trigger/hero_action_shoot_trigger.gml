@@ -8,5 +8,3 @@ var divider_channel = my_charge_divider_channel - 1;
 action_map[?"cast_value"] = my_shoot_cast_value / (1 + (charge_value * divider_cast));
 
 if (my_frenzy_timer > 0){action_map[?"cast_value"] = ceil(my_shoot_cast_value*my_frenzy_attack_speed_factor)}
-
-//action_dash_cooldown_reset();

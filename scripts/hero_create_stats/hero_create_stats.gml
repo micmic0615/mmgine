@@ -9,7 +9,7 @@ status_movespeed_base = 500*PPS
 
 my_dash_combo_max = 2;
 action_dash[?"combo_max"] = my_dash_combo_max;
-action_dash[?"cooldown_multi_timer"] = action_dash_cooldown_reset();
+action_dash_cooldown_reset();
 
 my_dash_speed = 540*PPS;
 my_dash_range = 320;
