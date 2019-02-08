@@ -26,3 +26,6 @@ if (action_map[?"cast_timer"] < action_map[?"cast_aim_limit"]){
 		entity_motion_push(10, back_interval*2, back_angle);
 	}
 }
+
+actor_buff_apply("armor_health", 2, [50], "strike_health");
+actor_buff_apply("armor_poise", 2, [50], "strike_poise");

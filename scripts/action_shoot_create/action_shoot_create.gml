@@ -13,7 +13,7 @@ if (should_init){
 	
 	action_shoot[?"create_lock"] = 0;
 	
-	action_generic_create(action_shoot, [
+	action_generic_create("shoot", [
 		/*free_action*/ false,
 		/*cast_value*/ argument_array[24],
 		/*channel_value*/ argument_array[25],

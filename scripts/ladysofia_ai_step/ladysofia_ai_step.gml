@@ -9,10 +9,21 @@ if (action_chase[?"success"]){
 	}
 } else {	
 	if (ai_step_attack_else_wander()){
-		can_move = ladysofia_ai_phases(can_move);
-		
-		var distance = distance_between(x,y,ai_target.x,ai_target.y);
-		
+		can_move = ladysofia_ai_manage_phases(can_move);
+		if (can_move){
+			var distance = distance_between(x,y,ai_target.x,ai_target.y);
+			if (distance < 2200){
+				switch(my_invoke_boss_phase){
+					case 0: can_move = ladysofia_ai_fight_phase_0(can_move, distance); break
+					case 1: can_move = ladysofia_ai_fight_phase_1(can_move, distance); break
+					case 2: can_move = ladysofia_ai_fight_phase_2(can_move, distance); break
+				}
+				
+			} else {
+				can_move = false;
+				action_chase_trigger(ai_target)
+			}
+		}
 	}
 }
 

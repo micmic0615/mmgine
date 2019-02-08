@@ -42,8 +42,6 @@ if (bullet_lifespan > 0){
 						bullet_seek_no_decay = false
 					}
 					
-					
-					
 					var floor_age = floor(ROOM.room_age_game);
 					var next_floor_age = floor(ROOM.room_age_game + TIMESPEED);
 				} else {

@@ -1,7 +1,5 @@
 var action_map = argument[0];
-
 action_chase[?"success"] = false;
-my_dodge_timer = my_strike_cast_value;
 
 var target_point = action_map[?"target_point"];
 var back_angle = angle_between(x,y,target_point[0],target_point[1]);

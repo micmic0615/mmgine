@@ -10,7 +10,7 @@ action_barrage[?"turn_rate_channel"] = argument_array[24];
 action_barrage[?"interval"] = argument_array[25];
 action_barrage[?"active_angle"] = 0;
 
-action_generic_create(action_barrage, [
+action_generic_create("barrage", [
 	/*free_action*/ false,
 	/*cast_value*/ argument_array[26],
 	/*channel_value*/ argument_array[27],

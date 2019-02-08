@@ -8,7 +8,7 @@ if (should_init){
 	
 	action_invoke[?"create_lock"] = 0;
 	
-	action_generic_create(action_invoke, [
+	action_generic_create("invoke", [
 		/*free_action*/ false,
 		/*cast_value*/ argument_array[0],
 		/*channel_value*/ argument_array[1],

@@ -1,8 +1,8 @@
 {
-    "id": "90d2cd33-225b-4719-816f-e9364e224ac6",
+    "id": "10293c31-d5ee-4e8c-afb2-90f71bd2e675",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "ladysofia_ai_phases",
+    "name": "ladysofia_ai_attack_rest",
     "IsCompatibility": false,
     "IsDnD": false
 }

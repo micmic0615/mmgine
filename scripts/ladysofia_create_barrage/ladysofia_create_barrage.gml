@@ -9,7 +9,7 @@ my_barrage_bullet_speed = 900*PPS;
 my_barrage_bullet_range = 900;
 
 my_barrage_cast_value = 0.65*SEC;
-my_barrage_channel_value = 2.5*SEC;
+my_barrage_channel_value = 2*SEC;
 my_barrage_cooldown_value = 0*SEC;
 my_barrage_interval = 0.15*SEC
 

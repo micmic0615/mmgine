@@ -10,5 +10,5 @@ while(particount > 0){
 	particount --;
 };
 
-physics_gravity_current = 0;
-my_shoot_switch = "free"
+actor_buff_apply("armor_health", 2, [50], "strike_health");
+actor_buff_apply("armor_poise", 2, [50], "strike_poise");

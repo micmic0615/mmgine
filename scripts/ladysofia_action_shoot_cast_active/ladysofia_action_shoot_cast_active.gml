@@ -4,7 +4,6 @@ if (my_shoot_id == "melee"){
 	if(entity_room_age_modulo(back_interval)){
 		var target_point = action_map[?"target_point"];
 		var back_angle = angle_between(x,y,target_point[0],target_point[1]);
-		entity_motion_push(25, back_interval*2, back_angle);
+		entity_motion_push(15, back_interval*2, back_angle);
 	}
-	
 } 

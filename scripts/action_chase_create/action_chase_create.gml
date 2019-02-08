@@ -10,7 +10,7 @@ action_chase[?"movesnap_set"] = argument_array[3];
 
 action_chase[?"success"] = false;
 
-action_generic_create(action_chase, [
+action_generic_create("chase", [
 	/*free_action*/ true,
 	/*cast_value*/ argument_array[4],
 	/*channel_value*/ argument_array[5],

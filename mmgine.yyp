@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "10293c31-d5ee-4e8c-afb2-90f71bd2e675",
+            "Value": {
+                "id": "370ec302-085e-4ae7-b74f-0e5f74585bcb",
+                "resourcePath": "scripts\\ladysofia_ai_attack_rest\\ladysofia_ai_attack_rest.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "103fbc9f-85a0-47b6-8177-86965d89fceb",
             "Value": {
                 "id": "f36012ce-b4ea-41ce-9181-592a979a17ee",
@@ -1359,6 +1367,14 @@
             }
         },
         {
+            "Key": "41f8296f-73f4-4aa0-a6ee-d6addbaf8e24",
+            "Value": {
+                "id": "8c79dd6f-c2fa-4280-9b29-cc4b0b8cbe6a",
+                "resourcePath": "scripts\\ladysofia_ai_fight_phase_2\\ladysofia_ai_fight_phase_2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "42728c79-2ee9-43b9-8566-03414adcc620",
             "Value": {
                 "id": "a3c36772-c8b7-4e84-9d37-7ec13a17ff17",
@@ -1436,6 +1452,14 @@
                 "id": "af4028f6-a25b-4039-9ec4-9344bd3783da",
                 "resourcePath": "scripts\\shooter_ai_create\\shooter_ai_create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "45488e6e-bbb6-49e3-b08e-c8a2ff828375",
+            "Value": {
+                "id": "d8d6cb25-47f2-49a3-aa5e-5485c5a5a7cb",
+                "resourcePath": "views\\45488e6e-bbb6-49e3-b08e-c8a2ff828375.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1659,14 +1683,6 @@
             "Value": {
                 "id": "56ca10f6-aac1-418a-86f8-0167b930d6f3",
                 "resourcePath": "scripts\\room_player_setup\\room_player_setup.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "4cf8c44e-fe31-49a4-927a-3d60ae9094da",
-            "Value": {
-                "id": "ecae7cfa-c59c-4aa6-a726-c7029f4993b2",
-                "resourcePath": "scripts\\ladysofia_ai_step_old\\ladysofia_ai_step_old.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2303,6 +2319,14 @@
             }
         },
         {
+            "Key": "6b4c7faa-9a7c-4d52-81c4-6d916cec6e53",
+            "Value": {
+                "id": "79cb33cf-1ead-4c06-8c14-a36efcb99dc5",
+                "resourcePath": "views\\6b4c7faa-9a7c-4d52-81c4-6d916cec6e53.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6bd6b127-27d4-4e65-afdf-714e58c8ca27",
             "Value": {
                 "id": "781cc8cd-9303-4d10-b422-329845ab0600",
@@ -2468,6 +2492,14 @@
                 "id": "9e49b669-f593-49ee-8591-60ea24505e2a",
                 "resourcePath": "scripts\\hero_mod_shoot_ping\\hero_mod_shoot_ping.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "71b377fb-a82a-4684-bb78-ebde21b55048",
+            "Value": {
+                "id": "3b23b888-bcf0-4a53-8826-b8efa811a7e9",
+                "resourcePath": "views\\71b377fb-a82a-4684-bb78-ebde21b55048.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2919,19 +2951,19 @@
             }
         },
         {
+            "Key": "8792687e-11d0-40b2-a302-ec85c809d543",
+            "Value": {
+                "id": "3d345085-e39a-47a3-8b3d-c8a173f6868c",
+                "resourcePath": "views\\8792687e-11d0-40b2-a302-ec85c809d543.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "87b8bbdd-8ea2-4ab3-a1d4-b0a0381c9f0c",
             "Value": {
                 "id": "ec5deb69-2e1b-4cb1-a142-70c87cd3ca14",
                 "resourcePath": "sprites\\Saber_chase\\Saber_chase.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "8852e8c2-a442-477f-8a6f-edde0cefcd15",
-            "Value": {
-                "id": "491e9bf6-7c3a-4406-af0c-d0f2b839961d",
-                "resourcePath": "scripts\\ladysofia_action_shoot_cast_point\\ladysofia_action_shoot_cast_point.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -3106,7 +3138,7 @@
             "Key": "90d2cd33-225b-4719-816f-e9364e224ac6",
             "Value": {
                 "id": "e1b199bc-7b74-47e5-b372-17afff9f79e4",
-                "resourcePath": "scripts\\ladysofia_ai_phases\\ladysofia_ai_phases.yy",
+                "resourcePath": "scripts\\ladysofia_ai_manage_phases\\ladysofia_ai_manage_phases.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3423,6 +3455,14 @@
             }
         },
         {
+            "Key": "a115a421-3bdc-4f74-8beb-298b523a0a31",
+            "Value": {
+                "id": "43caec70-0956-4e14-bf24-51da25bbb265",
+                "resourcePath": "scripts\\ladysofia_ai_fight_phase_1\\ladysofia_ai_fight_phase_1.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a1348ecb-5ee2-4cae-b7bf-c74c66c77ceb",
             "Value": {
                 "id": "fda9ef0f-2ef1-4914-8941-58dee3212c27",
@@ -3476,14 +3516,6 @@
                 "id": "efa49803-5545-4535-9133-6b104bd8a469",
                 "resourcePath": "sprites\\HeroBullet2_idle\\HeroBullet2_idle.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "a31d8736-a9b5-435b-825e-cb003e7746e2",
-            "Value": {
-                "id": "b9e6af11-cdc4-418d-bf5b-82244867c051",
-                "resourcePath": "scripts\\ladysofia_action_chase_channel_point\\ladysofia_action_chase_channel_point.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -3628,6 +3660,14 @@
                 "id": "62a0c0e1-f0f9-404b-b641-523e91f81ddb",
                 "resourcePath": "sprites\\Lazer_attack\\Lazer_attack.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aada8aa8-bbc8-42a8-9271-0dd01c079eec",
+            "Value": {
+                "id": "52bf3a31-1284-415c-ac53-e4e1e6d8d280",
+                "resourcePath": "scripts\\ladysofia_action_generic_cast_active\\ladysofia_action_generic_cast_active.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3780,6 +3820,14 @@
                 "id": "6f14976e-e90c-4c63-882f-5c3bd9492109",
                 "resourcePath": "scripts\\action_shoot_backswing_point\\action_shoot_backswing_point.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b2456acb-e3d4-4827-98f3-7ce9f58ca669",
+            "Value": {
+                "id": "6085fe2c-765f-45e3-8e72-580a25d0bbc4",
+                "resourcePath": "views\\b2456acb-e3d4-4827-98f3-7ce9f58ca669.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3972,6 +4020,14 @@
                 "id": "caa69e7e-8f82-48e1-a0b4-baef9931fc87",
                 "resourcePath": "views\\b9138fa7-b9ac-4530-b696-4b734dc9ee6b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b991429b-0528-4382-9b52-6689c176a490",
+            "Value": {
+                "id": "d644fdd8-0c1b-4eb1-b110-bd8ab3a9d348",
+                "resourcePath": "scripts\\ladysofia_action_shoot_channel_point\\ladysofia_action_shoot_channel_point.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4479,14 +4535,6 @@
             }
         },
         {
-            "Key": "d2b51598-414f-41a0-82c5-3c8e3424bb74",
-            "Value": {
-                "id": "4eb0cc90-8c6a-459e-8012-998f84e630f4",
-                "resourcePath": "scripts\\ladysofia_action_barrage_channel_active\\ladysofia_action_barrage_channel_active.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "d31366b7-f3aa-4e65-8e13-e421bc3dd338",
             "Value": {
                 "id": "6dd65566-778f-4867-a3c7-32c1e284a17e",
@@ -4911,6 +4959,14 @@
             }
         },
         {
+            "Key": "e43b9d2c-16e3-4718-9226-6f173449f4d8",
+            "Value": {
+                "id": "7978c452-eaef-45e2-89a8-8e764834f06e",
+                "resourcePath": "scripts\\ladysofia_ai_fight_phase_0\\ladysofia_ai_fight_phase_0.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e4447c63-90bd-4352-801a-badbdb769eef",
             "Value": {
                 "id": "1e2dc41e-059d-4e27-bec4-880dac7d5daa",
@@ -4931,6 +4987,14 @@
             "Value": {
                 "id": "07c39d4f-3ef6-4e5c-bc43-a8bc859b64bc",
                 "resourcePath": "scripts\\shooter_create_init\\shooter_create_init.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e5e35235-c6a2-4a1d-8cae-8fb75705de34",
+            "Value": {
+                "id": "17e2187a-4c5c-4c45-b7c9-baeed79deae7",
+                "resourcePath": "scripts\\ladysofia_ai_can_dash_chase\\ladysofia_ai_can_dash_chase.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5423,14 +5487,6 @@
             }
         },
         {
-            "Key": "feb5543c-a040-46bd-b7fd-81a25531bb90",
-            "Value": {
-                "id": "723fa357-8df0-46cd-8b13-fa0a13347dd8",
-                "resourcePath": "scripts\\ladysofia_action_chase_trigger\\ladysofia_action_chase_trigger.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "ff7e51b8-24cb-486b-b483-c547b06d2866",
             "Value": {
                 "id": "5405d1f1-870d-4ce9-a4ac-6aacc80aa779",
@@ -5714,24 +5770,22 @@
         "2293db35-4078-4662-80f3-120e365b1599",
         "71108151-f494-43ad-a8d2-b627ffd9661d",
         "10bde286-1425-4df7-8385-31275320f0e2",
-        "feb5543c-a040-46bd-b7fd-81a25531bb90",
         "38b421ac-3ac1-4f9c-b589-57ca41295bd8",
         "a241c096-4c34-4305-a47a-3365bb20951e",
-        "a31d8736-a9b5-435b-825e-cb003e7746e2",
         "94224a68-ddc8-4d5b-a911-727777b0d710",
         "bf6dd0e2-fd43-4717-89bb-ffa92d251392",
-        "d2b51598-414f-41a0-82c5-3c8e3424bb74",
         "07923530-e1f7-4497-8b26-99c8e71526e5",
         "4c199f1c-2402-4596-9423-ba8f1e6a147d",
         "4a96c0d6-427e-4598-8d87-09c99d6db667",
         "0edb3bdb-ce7e-4ab2-9d7c-6eab6687877e",
-        "8852e8c2-a442-477f-8a6f-edde0cefcd15",
-        "57ad01a6-9190-4d33-87cd-fe41997bf7c8",
+        "b991429b-0528-4382-9b52-6689c176a490",
         "bfb1b034-3512-4c62-9ae1-454a39b2f377",
         "6820ff69-6caf-4e38-b4b6-226e956874f1",
         "21d5f49a-813e-4557-8e23-01fe31800bbd",
+        "57ad01a6-9190-4d33-87cd-fe41997bf7c8",
         "70642391-84bb-4c62-9ce8-fc874cc0151e",
         "f38c17ca-0278-4670-88bf-e02d7b7851f0",
+        "aada8aa8-bbc8-42a8-9271-0dd01c079eec",
         "6eac7363-413e-4334-94eb-5dafbba18170",
         "f24891cb-8a44-4555-b2a0-14d2addb36e2",
         "39b84110-8f08-4a2a-8e72-3e2058f64734",
@@ -5810,9 +5864,13 @@
         "a4f3d700-ad26-49b6-9bcf-7da1b70436fd",
         "ce77036c-4b3b-4033-85c3-0988ee711d0b",
         "ccc43026-37ba-4344-8328-6e11346b2997",
+        "e43b9d2c-16e3-4718-9226-6f173449f4d8",
+        "a115a421-3bdc-4f74-8beb-298b523a0a31",
+        "41f8296f-73f4-4aa0-a6ee-d6addbaf8e24",
         "90d2cd33-225b-4719-816f-e9364e224ac6",
-        "4cf8c44e-fe31-49a4-927a-3d60ae9094da",
         "6ee3c0cb-6a69-48ea-b738-cd771c6bb061",
+        "e5e35235-c6a2-4a1d-8cae-8fb75705de34",
+        "10293c31-d5ee-4e8c-afb2-90f71bd2e675",
         "369d124c-d9df-4419-bd37-1d818310d2e4",
         "6b21038a-d18e-4b10-a99f-24c2126024ff",
         "1cfae1b0-9b62-4c06-8175-63b67422ca5c",

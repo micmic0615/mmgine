@@ -1,5 +1,6 @@
-var action_map_source = argument0;
+var action_name = argument0;
 var argument_array = argument1;
+var action_map_source = variable_instance_get(id, "action_" + action_name);
 
 var action_map = ds_map_create();
 ds_map_copy(action_map, action_map_source);
@@ -18,12 +19,12 @@ action_map[?"backswing_timer"] = 0;
 action_map[?"cooldown_value"] = argument_array[4];
 action_map[?"cooldown_timer"] = 0;
 
-action_map[?"sequence"] = 0;
-
 action_map[?"animation_cast"] = argument_array[5];
 action_map[?"animation_channel"] = argument_array[6];
 action_map[?"animation_backswing"] = argument_array[7];
 
+action_map[?"action_name"] = action_name;
+action_map[?"sequence"] = 0;
 action_map[?"target_entity"] = noone;
 action_map[?"target_point"] = [0,0];
 action_map[?"target_angle"] = 0;

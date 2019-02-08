@@ -22,7 +22,7 @@ action_strike[?"strike_angle"] = 0;
 
 action_strike[?"hitbox"] = noone;
 
-action_generic_create(action_strike, [
+action_generic_create("strike", [
 	/*free_action*/ false,
 	/*cast_value*/ argument_array[9],
 	/*channel_value*/ argument_array[10],

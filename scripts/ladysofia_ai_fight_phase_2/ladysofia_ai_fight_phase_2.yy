@@ -1,8 +1,8 @@
 {
-    "id": "feb5543c-a040-46bd-b7fd-81a25531bb90",
+    "id": "41f8296f-73f4-4aa0-a6ee-d6addbaf8e24",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "ladysofia_action_chase_trigger",
+    "name": "ladysofia_ai_fight_phase_2",
     "IsCompatibility": false,
     "IsDnD": false
 }

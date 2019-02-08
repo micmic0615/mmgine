@@ -17,10 +17,12 @@ while(bullet_total > 0){
 	var target_point = [
 		(cos(rad_active_angle)*INFINITY) + x,
 		(sin(rad_active_angle)*INFINITY) + y,
-	]	
+	]
 		
 	var bullet_type = action_map[?"bullet_type"];
 	var bullet = actor_spawn_bullet(target_point[0], target_point[1], bullet_x, bullet_y, bullet_type[0]);	
+	
+	
 		
 	var damage_factor = action_map[?"damage"];
 	var flinch_factor = action_map[?"flinch"];
@@ -37,6 +39,7 @@ while(bullet_total > 0){
 	bullet.status_movespeed_base = bullet_speed;
 	bullet.bullet_lifespan = bullet_range/bullet_speed;
 	bullet.status_movesnap_base = 0.1*SEC;
+	bullet.animation_angle = current_angle;
 	bullet.bullet_action_move_angle = current_angle + random_mirror(action_map[?"bullet_chaos_angle"]);
 	bullet.collision_impact_health_max = action_map[?"bullet_impact_health"];
 	bullet.collision_impact_health_current = action_map[?"bullet_impact_health"];

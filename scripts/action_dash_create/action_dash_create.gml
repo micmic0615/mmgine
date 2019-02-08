@@ -16,7 +16,7 @@ action_dash_cooldown_reset();
 action_dash[?"queue_active"] = false;
 action_dash[?"queue_angle"] = 0;
 
-action_generic_create(action_dash, [
+action_generic_create("dash", [
 	/*free_action*/ false,
 	/*cast_value*/ argument_array[4],
 	/*channel_value*/ argument_array[5],

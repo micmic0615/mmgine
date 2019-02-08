@@ -19,11 +19,6 @@ if (
 					var angle_y = y + (sin(rad_angle)*10);
 					
 					did_dodge = action_dash_trigger([angle_x, angle_y]);
-					
-					if (did_dodge){
-						my_dodge_timer = my_dodge_value;
-						action_chase[?"cooldown_timer"] = (action_chase[?"cooldown_timer"] + 0.5*SEC);
-					}
 				}
 			}
 		}
@@ -35,6 +30,6 @@ if(actor_buff_find("flinched") != undefined){
 }
 
 
-if (my_dodge_timer > 0){
+if (my_dodge_timer > 0 && actor_actions_idle == true){
 	my_dodge_timer -= TIMESPEED
 }
