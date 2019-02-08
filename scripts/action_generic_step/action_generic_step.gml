@@ -42,6 +42,7 @@ if (actor_actions_enabled){
 					
 					action_map[?"sequence"] = 2;
 				} else {
+					action_map[?"cast_timer"] = 0;
 					action_map[?"channel_timer"] = 0;
 					action_map[?"cooldown_timer"] = 0;
 					action_map[?"sequence"] = 0;

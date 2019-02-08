@@ -16,4 +16,3 @@ entity_run_type_scripts("action_shoot_cast_point", action_map);
 var target_point = action_map[?"target_point"];
 var target_angle = angle_between(target_point[0], target_point[1], x,y);
 action_generic_fire_bullet_trigger(action_map, target_angle)
-

@@ -1,8 +1,8 @@
-my_chase_distance = 240
+my_chase_distance = 360
 my_chase_movespeed_set = 240*PPS;
 my_chase_movesnap_set = 0.1*SEC;
-my_chase_channel_value = 6*SEC;
-my_chase_cooldown_value = 7*SEC;
+my_chase_channel_value = 10*SEC;
+my_chase_cooldown_value = 0*SEC;
 my_chase_color = make_color_rgb(255,80,80);
 
 my_chase_dash_timer = 0;

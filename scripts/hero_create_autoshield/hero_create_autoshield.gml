@@ -6,7 +6,7 @@ my_autoshield_cooldown_timer = my_autoshield_cooldown_value;
 
 my_autoshield_active_bank = 0;
 my_autoshield_active_timer = 0;
-my_autoshield_active_value = 1.5*SEC;
+my_autoshield_active_value = 3*SEC;
 my_autoshield_active_treshold = 0.15;
 
 my_autoshield_was_flinched = false;

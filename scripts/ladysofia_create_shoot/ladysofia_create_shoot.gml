@@ -1,3 +1,1 @@
-ladysofia_mod_shoot_toss();
-
-my_shoot_switch = "free";
+ladysofia_create_shoot_ranged();

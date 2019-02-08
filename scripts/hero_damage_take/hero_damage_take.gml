@@ -45,21 +45,21 @@ if (base_source != id){
 					my_autoshield_cooldown_timer = max(my_autoshield_cooldown_timer - (shield_gain*my_autoshield_cooldown_value), 0);
 				}
 			}
+		}
 		
-			if (status_health_current - base_value <= 0 && my_grit_cooldown_timer <= 0 && base_lethal){
-				ROOM.screen_cover_color = make_color_rgb(255,0,0)
-				ROOM.screen_cover_alpha = 0.35
-				entity_draw_text_following("grit!", [cos(degtorad(270))*25, sin(degtorad(270))*25], 1.5*SEC, c_white, 18);
-				my_grit_cooldown_timer = my_grit_cooldown_value;
-				actor_buff_apply("immortal", my_grit_duration, [], "autoshield");
-				actor_buff_apply("damage_bonus_percent", my_grit_duration*2.5, [100], "grit_attacc");
-				room_timespeed_temp(0.05, 1.5*SEC, true);
-				var bullet = hero_action_repel(2, 0, 780, 120);
-				bullet.draw_blend_temporary_style = "solid";
-				bullet.draw_blend_temporary_color = make_color_rgb(255,0,0);
-				bullet.draw_blend_temporary_duration = INFINITY;
-				base_lethal = false;
-			}
+		if (status_health_current - base_value <= 0 && my_grit_cooldown_timer <= 0 && base_lethal){
+			ROOM.screen_cover_color = make_color_rgb(255,0,0)
+			ROOM.screen_cover_alpha = 0.35
+			entity_draw_text_following("grit!", [cos(degtorad(270))*25, sin(degtorad(270))*25], 1.5*SEC, c_white, 18);
+			my_grit_cooldown_timer = my_grit_cooldown_value;
+			actor_buff_apply("immortal", my_grit_duration, [], "autoshield");
+			actor_buff_apply("damage_bonus_percent", my_grit_duration*2.5, [100], "grit_attacc");
+			room_timespeed_temp(0.05, 1.5*SEC, true);
+			var bullet = hero_action_repel(2, 0, 780, 120);
+			bullet.draw_blend_temporary_style = "solid";
+			bullet.draw_blend_temporary_color = make_color_rgb(255,0,0);
+			bullet.draw_blend_temporary_duration = INFINITY;
+			base_lethal = false;
 		}
 	}
 }

@@ -26,8 +26,8 @@ my_shoot_push = [25, 0];
 
 //my_shoot_combo_max = INFINITY;
 
-my_shoot_cast_value = 0.15*SEC;
-//my_shoot_channel_value = 0.2*SEC;
+my_shoot_cast_value = 0.05*SEC;
+my_shoot_channel_value = 0.3*SEC;
 my_shoot_backswing_value = 0.15*SEC;
 //my_shoot_cooldown_value = 0.05*SEC;
 

@@ -5,3 +5,7 @@ if (action_shoot[?"combo_timer"] > 0){
 } else {
 	action_shoot[?"combo_count"] = 0
 }
+
+if (action_shoot[?"sequence"] <= 0){
+	action_shoot[?"create_lock"] = 0
+}

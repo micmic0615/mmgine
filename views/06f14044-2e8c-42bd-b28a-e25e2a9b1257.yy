@@ -10,7 +10,8 @@
         "c4e5936d-7e06-4d88-b201-dd43917f42ba",
         "9865feeb-017b-4b9c-84a0-a8ef8583fd19",
         "07819f0d-9ce5-4cd0-ba5f-4b8e143b60a8",
-        "78226fe7-2351-41c3-81be-fb3cd3b26b21"
+        "78226fe7-2351-41c3-81be-fb3cd3b26b21",
+        "d55d5807-df81-4507-9b9a-62cc1730a5e1"
     ],
     "filterType": "GMScript",
     "folderName": "ActorActions",

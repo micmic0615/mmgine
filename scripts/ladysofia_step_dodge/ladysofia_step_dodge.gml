@@ -32,7 +32,6 @@ if (
 
 if(actor_buff_find("flinched") != undefined){
 	my_dodge_timer = 0;
-	my_shoot_switch = "free";
 }
 
 

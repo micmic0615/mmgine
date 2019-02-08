@@ -17,7 +17,7 @@ action_strike_create([
 	/*cast_value*/ my_strike_cast_value,
 	/*channel_value*/  my_strike_range/my_strike_speed,
 	/*backswing_value*/ 0.5*SEC,
-	/*cooldown_value*/ 1*SEC
+	/*cooldown_value*/ 0*SEC
 ]);
 
 action_strike[?"animation_cast"] = "channel_strike";

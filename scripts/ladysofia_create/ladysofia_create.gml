@@ -10,3 +10,4 @@ ladysofia_create_shoot();
 ladysofia_create_dash();
 ladysofia_create_dodge();
 ladysofia_create_strike();
+ladysofia_create_invoke();
