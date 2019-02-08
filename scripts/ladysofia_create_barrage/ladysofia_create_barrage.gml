@@ -15,9 +15,11 @@ my_barrage_interval = 0.15*SEC
 
 my_barrage_damage = [0.5,0];
 my_barrage_flinch = [0.25,0];
-my_barrage_push = [0,0];
+my_barrage_push = [50,0];
 
-my_barrage_particles = [];
+my_barrage_particles =  [
+	[game_particle_setup_basic(my_barrage_color, 1.75, 0.35, 0.25*SEC), 4, my_barrage_bullet_radius*0.5]
+];
 
 action_barrage_create([
 	/*color*/ my_barrage_color,

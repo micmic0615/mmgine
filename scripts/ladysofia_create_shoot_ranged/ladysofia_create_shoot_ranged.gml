@@ -15,11 +15,11 @@ my_shoot_bullet_angle_spread = 60;
 my_shoot_bullet_seek_range = 540;
 my_shoot_bullet_seek_turn_rate = 540*PPS;
 
-action_shoot_bullet_tile_phase = true;
+action_shoot_bullet_tile_phase = false;
 
 my_shoot_damage = [0.35,0];
 my_shoot_flinch = [0.5,0];
-my_shoot_push = [0, 0];
+my_shoot_push = [30, 0];
 
 
 my_shoot_combo_max = INFINITY;
@@ -38,7 +38,9 @@ switch (my_invoke_boss_phase){
 		my_shoot_bullet_speed = 1000*PPS;
 		my_shoot_cast_value = 0.25*SEC;
 		my_shoot_channel_value = 0.15*SEC;
-		my_shoot_bullet_particles = [];
+		my_shoot_bullet_particles = [
+			[game_particle_setup_basic(my_shoot_color, 2, 0.35, 0.25*SEC), 3, my_shoot_bullet_radius*0.5]
+		];
 		break
 		
 	case 1:
@@ -47,7 +49,10 @@ switch (my_invoke_boss_phase){
 		my_shoot_bullet_speed = 1100*PPS;
 		my_shoot_cast_value = 0.25*SEC;
 		my_shoot_channel_value = 0.1*SEC;
-		my_shoot_bullet_particles = [[game_particle_setup_basic(my_invoke_color_1, 1, 0.35, 0.25*SEC), 6, my_shoot_bullet_radius*0.5]];
+		my_shoot_bullet_particles = [
+			[game_particle_setup_basic(my_shoot_color, 1.5, 0.35, 0.25*SEC), 1, my_shoot_bullet_radius*0.5],
+			[game_particle_setup_basic(my_invoke_color_1, 2.5, 0.35, 0.25*SEC), 2, my_shoot_bullet_radius*0.5]
+		];
 		break
 		
 	case 2:
@@ -56,7 +61,10 @@ switch (my_invoke_boss_phase){
 		my_shoot_bullet_speed = 1200*PPS;
 		my_shoot_cast_value = 0.25*SEC;
 		my_shoot_channel_value = 0.05*SEC;
-		my_shoot_bullet_particles = [[game_particle_setup_basic(my_invoke_color_2, 1, 0.35, 0.25*SEC), 6, my_shoot_bullet_radius*0.5]];
+		my_shoot_bullet_particles = [
+			[game_particle_setup_basic(my_shoot_color, 1.75, 0.35, 0.25*SEC), 1, my_shoot_bullet_radius*0.5],
+			[game_particle_setup_basic(my_invoke_color_2, 3, 0.35, 0.25*SEC), 2, my_shoot_bullet_radius*0.5]
+		];
 		break
 }
 

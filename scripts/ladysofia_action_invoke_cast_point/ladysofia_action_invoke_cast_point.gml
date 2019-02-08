@@ -11,7 +11,10 @@ switch(my_invoke_boss_phase){
 		my_barrage_bullet_radius = 280;
 		my_barrage_bullet_speed = 1150*PPS;
 		my_barrage_bullet_range = 1050;
-		my_barrage_particles = [[game_particle_setup_basic(my_invoke_color_1, 1, 0.35, 0.25*SEC), 12, my_barrage_bullet_radius*0.5]];
+		my_barrage_particles = [
+			[game_particle_setup_basic(my_barrage_color, 1.25, 0.35, 0.25*SEC), 3, my_barrage_bullet_radius*0.5],
+			[game_particle_setup_basic(my_invoke_color_1, 1.75, 0.35, 0.25*SEC), 3, my_barrage_bullet_radius*0.5]
+		];
 		
 		my_strike_color = my_invoke_color_1;
 		my_strike_cast_aim_limit = 0.7*SEC;
@@ -23,7 +26,10 @@ switch(my_invoke_boss_phase){
 		my_barrage_bullet_radius = 320;
 		my_barrage_bullet_speed = 1400*PPS;
 		my_barrage_bullet_range = 1200;
-		my_barrage_particles = [[game_particle_setup_basic(my_invoke_color_2, 1, 0.35, 0.25*SEC), 12, my_barrage_bullet_radius*0.5]];
+		my_barrage_particles =  [
+			[game_particle_setup_basic(my_barrage_color, 1.5, 0.35, 0.25*SEC), 3, my_barrage_bullet_radius*0.5],
+			[game_particle_setup_basic(my_invoke_color_2, 2, 0.35, 0.25*SEC), 3, my_barrage_bullet_radius*0.5]
+		];
 		
 		my_strike_color = my_invoke_color_2;
 		my_strike_cast_aim_limit = 0.6*SEC;
