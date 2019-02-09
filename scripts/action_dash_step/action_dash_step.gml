@@ -15,3 +15,5 @@ if (action_dash[?"queue_active"] && action_dash_cooldown_check() <= 0){
 		
 	action_dash_trigger(target_point);
 }
+
+action_dash_auto_dodge();

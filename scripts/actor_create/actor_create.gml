@@ -27,7 +27,8 @@ status_armor_poise = 0;
 status_buff_list = ds_create("list");
 
 actor_actions_enabled = true;
-actor_actions_idle = true;
+actor_actions_idle_basic = true;
+actor_actions_idle_total = true;
 actor_actions_id = "none";
 actor_actions_module = ds_create("list");
 

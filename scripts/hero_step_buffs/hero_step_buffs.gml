@@ -29,10 +29,6 @@ for(var i = 0; i < ds_list_size(status_buff_list);i++){
 	if (type == "flinched"){
 		is_flinched = true
 	}
-	
-	if (buff_id == "dash_iframe"){
-		has_iframe = duration
-	}
 }
 
 var floor_age = floor(ROOM.room_age_game);
@@ -79,14 +75,6 @@ if (is_flinched){
 	my_charge_meter_2 = 0;
 } else {
 	my_autoshield_was_flinched = false
-}
-
-
-if (has_iframe){
-	draw_blend_temporary_style = "solid";
-	draw_blend_temporary_duration = has_iframe;
-	var black_number = (125 * (1 - (has_iframe/my_dash_iframe))) + 25
-	draw_blend_temporary_color = make_color_rgb(black_number, black_number, black_number);
 }
 
 

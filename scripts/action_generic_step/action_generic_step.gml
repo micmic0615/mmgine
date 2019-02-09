@@ -8,6 +8,7 @@ if (actor_actions_enabled){
 	switch(action_map[?"sequence"]){
 		case 1:
 			if (action_map[?"cast_timer"] > 0){
+				if (!action_map[?"free_action"]){actor_actions_idle_total = false};
 				var script_name = asset_get_index("action_" + action_name + "_cast_active");
 				if (script_name > -1){script_execute(script_name, action_map)};		
 				entity_run_type_scripts("action_generic_cast_active", action_map);
@@ -16,7 +17,7 @@ if (actor_actions_enabled){
 			} else {
 				if (actor_actions_id == action_name || action_map[?"free_action"]){	
 					if (!action_map[?"free_action"]){
-						actor_actions_idle = false;
+						actor_actions_idle_basic = false;
 						
 						for(var i = 0; i < ds_list_size(actor_actions_module);i++){
 							var p = ds_list_find_value(actor_actions_module, i);
@@ -60,7 +61,7 @@ if (actor_actions_enabled){
 				action_map[?"channel_timer"] -= TIMESPEED;
 				
 			} else {
-				if (!action_map[?"free_action"]){actor_actions_idle = true}
+				if (!action_map[?"free_action"]){actor_actions_idle_basic = true}
 				var script_name = asset_get_index("action_" + action_name + "_channel_point");
 				if (script_name > -1){script_execute(script_name, action_map)};
 				entity_run_type_scripts("action_generic_channel_point", action_map);
@@ -78,6 +79,7 @@ if (actor_actions_enabled){
 				animation_name = action_map[?"animation_backswing"];
 				action_map[?"backswing_timer"] -= TIMESPEED;
 			} else {
+				if (!action_map[?"free_action"]){actor_actions_idle_total = true};
 				var script_name = asset_get_index("action_" + action_name + "_backswing_point");
 				if (script_name > -1){script_execute(script_name, action_map)};
 				entity_run_type_scripts("action_generic_backswing_point", action_map);

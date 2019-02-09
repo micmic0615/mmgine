@@ -10,8 +10,7 @@ if (actor_actions_id == "shoot" && action_shoot[?"cast_timer"] > 0 ){
 
 action_dash[?"color"] = my_dash_color
 
-physics_gravity_current = 0;
-actor_buff_apply("iframe", my_dash_iframe, [], "dash_iframe")
+
 
 action_shoot[?"combo_count"] = 0;
 my_charge_meter_1 =  max(1, my_charge_meter_1 - my_dash_charge_cost);

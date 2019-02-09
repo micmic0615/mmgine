@@ -8,7 +8,8 @@
         "4c199f1c-2402-4596-9423-ba8f1e6a147d",
         "4a96c0d6-427e-4598-8d87-09c99d6db667",
         "0edb3bdb-ce7e-4ab2-9d7c-6eab6687877e",
-        "b991429b-0528-4382-9b52-6689c176a490"
+        "b991429b-0528-4382-9b52-6689c176a490",
+        "6eac7363-413e-4334-94eb-5dafbba18170"
     ],
     "filterType": "GMScript",
     "folderName": "Shoot",

@@ -10,7 +10,7 @@ if (
 	action_map[?"backswing_timer"] <= 0 && 
 	action_map[?"cooldown_timer"] <= 0 &&
 	action_map[?"sequence"] <= 1 && (
-	(!action_map[?"free_action"] && actor_actions_idle) ||
+	(!action_map[?"free_action"] && actor_actions_idle_basic) ||
 	(action_map[?"free_action"])
 	)
 ){

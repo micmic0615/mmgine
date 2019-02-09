@@ -1,8 +1,8 @@
 {
-    "id": "71108151-f494-43ad-a8d2-b627ffd9661d",
+    "id": "0acaa694-635f-4386-a354-9b02ca5c86f2",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "ladysofia_step_dodge",
+    "name": "action_dash_auto_dodge",
     "IsCompatibility": false,
     "IsDnD": false
 }
