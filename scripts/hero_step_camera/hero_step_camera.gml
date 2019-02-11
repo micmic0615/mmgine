@@ -39,13 +39,21 @@ with(ACTOR){
 var room_diagonal_size = sqrt(sqr(window_get_width()) + sqr(window_get_height()));
 var multiplier = min(1, ((max_distance*1) / room_diagonal_size));
 
-if (my_camera_cooldown_timer > 0){
-	my_camera_cooldown_timer -= 1;
-} else {
+var new_camera_zoom = my_camera_zoom_min + (multiplier*(my_camera_zoom_max - my_camera_zoom_min));
+
+if (new_camera_zoom < my_camera_zoom_current){
 	my_camera_cooldown_timer = my_camera_cooldown_value;
-	my_camera_zoom_current = my_camera_zoom_min + (multiplier*(my_camera_zoom_max - my_camera_zoom_min))
-	if (my_shoot_aim_mode == true && my_camera_zoom_current > my_camera_zoom_aim){my_camera_zoom_current = my_camera_zoom_aim}
+	my_camera_zoom_current = new_camera_zoom
+} else {
+	if (my_camera_cooldown_timer > 0){
+		my_camera_cooldown_timer -= 1;
+	} else {
+		my_camera_cooldown_timer = my_camera_cooldown_value;
+		my_camera_zoom_current = new_camera_zoom
+	}
 }
+
+if (my_shoot_aim_mode == true && my_camera_zoom_current > my_camera_zoom_aim){my_camera_zoom_current = my_camera_zoom_aim}
 
 
 

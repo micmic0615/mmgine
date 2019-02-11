@@ -37,13 +37,14 @@ if (abs(move_total_x) > 50*PPS || abs(move_total_y) > 50*PPS){
 			
 	if (physics_gravity_on){
 		var target_gravity = angle_clean(point_direction(x,y,x+gravity_x,y+gravity_y) + 90);	
+		
 		if (
 			(physics_gravity_angle > 45 && physics_gravity_angle <= 135 && collision_contact_y == "bottom") ||
 			(physics_gravity_angle > 135 && physics_gravity_angle <= 225 && collision_contact_x == "left") ||
 			(physics_gravity_angle > 225 && physics_gravity_angle <= 315 && collision_contact_y == "top") ||
 			((physics_gravity_angle > 315 || physics_gravity_angle <= 45) && collision_contact_x == "right")
-		) {
-			physics_gravity_current = 0;
+		) {			
+			physics_gravity_current = 1;
 			animation_name = "idle";
 			animation_angle = target_gravity;
 		} else {

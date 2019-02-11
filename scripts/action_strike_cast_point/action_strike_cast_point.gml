@@ -15,9 +15,6 @@ entity_motion_push(action_map[?"range"], action_map[?"range"]/action_map[?"speed
 var bullet = actor_spawn_bullet(0, 0, x, y, DefaultBullet);	
 
 bullet.animation_sprite = "HeroBulletClear";
-bullet.draw_blend_temporary_color = action_map[?"color"];
-bullet.draw_blend_temporary_style = "solid";
-bullet.draw_blend_temporary_duration = INFINITY;
 bullet.bullet_lifespan = action_map[?"channel_value"];
 bullet.collision_impact_health_max = INFINITY;
 bullet.collision_impact_health_current = INFINITY;

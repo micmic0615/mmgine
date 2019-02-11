@@ -36,21 +36,52 @@ if (entity_enabled()){
 	#endregion
 	
 	#region //TINT
-		if (draw_blend_temporary_duration >= 0){
-			draw_blend_temporary_duration--;
-			switch(draw_blend_temporary_style){
-				case "solid":
-					image_blend = draw_blend_temporary_color;
-					break;
-					
-				case "flicker":
-					image_blend = (ROOM.room_age_real % 2 == 1) ? draw_blend_temporary_color : c_white;
-					break;
+		if (ds_exists(draw_blend_temporary_list, ds_type_list)){
+			var blend_size = ds_list_size(draw_blend_temporary_list);
+			var blend_array = [draw_blend_permanent_color];
+			if (blend_size == 1){
+				
+				var p = ds_list_find_value(draw_blend_temporary_list, 0);
+				var color = p[0];
+				var style = p[1];
+				if (style == "solid"){
+					blend_array[0] = color
+				} else {
+					blend_array[1] = color
+				}
+			} else {
+				for(var i = 0; i < blend_size;i++){
+					var p = ds_list_find_value(draw_blend_temporary_list, i);
+					var color = p[0];
+					blend_array[i] = color;	
+				}
 			}
 			
-		} else {
-			image_blend = c_white;
+			for(var i = 0; i < ds_list_size(draw_blend_temporary_list);i++){
+				var p = ds_list_find_value(draw_blend_temporary_list, i);
+				ds_list_replace(draw_blend_temporary_list, i, [
+					p[0],
+					p[1],
+					(p[2] - TIMESPEED),
+					p[3],
+				]);
+			}
+			
+			for(var i = 0; i < ds_list_size(draw_blend_temporary_list);i++){
+				var p = ds_list_find_value(draw_blend_temporary_list, i);
+				if (p[2] <= 0){
+					ds_list_delete(draw_blend_temporary_list, i);
+				}
+			}
+		
+			var blend_array_length = array_length_1d(blend_array);
+			for(var i = 0; i < blend_array_length;i++){
+				if (floor(ROOM.room_age_real / (0.05*SEC)) % blend_array_length == i){
+					image_blend = blend_array[i];
+				}
+			}
 		}
+		
 	#endregion
 		
 	#region//HEALTH

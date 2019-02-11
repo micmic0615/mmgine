@@ -4,7 +4,6 @@ hero_create_init();
 hero_create_charge();
 hero_create_heal();
 hero_create_shoot();
-hero_create_strike();
 hero_create_dash();
 hero_create_beatdown();
 hero_create_frenzy();

@@ -75,8 +75,7 @@ if (status_health_current - base_value <= 0 && base_lethal){
 	bullet.bullet_death_spawn[?"explosion_lifespan_base"] = explosion_radius/(640*PPS);
 	bullet.bullet_death_spawn[?"explosion_lifespan_current"] = explosion_radius/(640*PPS);
 	bullet.bullet_death_spawn[?"collision_faction"] = "all";
-	bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = c_red;
-	bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
+	bullet.bullet_death_spawn[?"draw_blend_permanent_color"] = c_red;
 	bullet.bullet_death_spawn[?"status_immortal"] = true;
 	//bullet.bullet_death_spawn[?"animation_sprite"] = "ExplosionBulletAlt";
 

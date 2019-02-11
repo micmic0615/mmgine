@@ -11,7 +11,7 @@ if (deducted_flinch  <= 0 && base_target.status_health_current > 0){
 	with(base_target){if (actor_buff_find("flinched") != undefined){is_flinched = true}};
 
 	if (!is_flinched){
-		hero_action_beatdown(args);
+		hero_beatdown_trigger(args);
 		var over_flinch = min(abs(deducted_flinch)/base_target.status_poise_max, 1);
 		if (over_flinch < 0.5){over_flinch = 0};
 		

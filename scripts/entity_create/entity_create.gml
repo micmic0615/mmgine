@@ -91,6 +91,6 @@ status_health_current = status_health_max;
 status_movesnap_total = status_movesnap_base;
 status_movespeed_total = status_movespeed_base;
 
-draw_blend_temporary_color = c_white;
-draw_blend_temporary_style = "solid";
-draw_blend_temporary_duration = 0;
+draw_blend_temporary_list = ds_create("list");
+
+draw_blend_permanent_color = c_white;

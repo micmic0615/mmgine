@@ -18,10 +18,19 @@ var adjusted_source = is_array(adjusted_args) ? adjusted_args[0] : base_source;
 var adjusted_value = is_array(adjusted_args) ? adjusted_args[1] : base_value;
 var adjusted_lethal = is_array(adjusted_args) ? adjusted_args[2] : base_lethal;
 
-if (adjusted_value > -1){
-	draw_blend_temporary_color = make_color_rgb(255,0,0);
-	draw_blend_temporary_duration = 0.5*SEC;
-	draw_blend_temporary_style = "flicker";
+var readjusted_args = actor_action_module_run("damage_take", [adjusted_source, adjusted_value, adjusted_lethal, damage_id]);
+
+var readjusted_source = is_array(readjusted_args) ? readjusted_args[0] : adjusted_source;
+var readjusted_value = is_array(readjusted_args) ? readjusted_args[1] : adjusted_value;
+var readjusted_lethal = is_array(readjusted_args) ? readjusted_args[2] : adjusted_lethal;
+
+if (readjusted_value > -1){
+	entity_add_blend([
+		/*color*/ make_color_rgb(255,0,0),
+		/*style*/ "flicker",
+		/*duration*/ 0.5*SEC,
+		/*blend_id*/ "damage_blend_flicker"
+	])
 }
 
-return [adjusted_source, adjusted_value, adjusted_lethal, damage_id];
+return [readjusted_source, readjusted_value, readjusted_lethal, damage_id];

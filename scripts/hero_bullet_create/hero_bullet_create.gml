@@ -42,8 +42,7 @@ if (bullet_should_push){
 bullet.bullet_collision_tile_action = "die";
 
 bullet.bullet_death_spawn[?"explosion_radius_max"] = 50;
-bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
-bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = bullet_color;
+bullet.bullet_death_spawn[?"draw_blend_permanent_color"] = bullet_color;
 
 var bullet_damage_value = status_damage_total * bullet_damage_factor;
 

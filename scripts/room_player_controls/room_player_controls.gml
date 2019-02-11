@@ -9,19 +9,19 @@ if (player_controllable && global.replay_mode == "record"){
 		with(player_main_actor){
 			if (entity_enabled() ){
 				if (keyboard_check(global.key_up)){
-					actor_action_move_angle(270)
+					entity_move_angle(270)
 				}
 			
 				if (keyboard_check(global.key_down)){
-					actor_action_move_angle(90)
-				}
+					entity_move_angle(90)
+				} 
 			
 				if (keyboard_check(global.key_right)){
-					actor_action_move_angle(0)
+					entity_move_angle(0)
 				}
 			
 				if (keyboard_check(global.key_left)){
-					actor_action_move_angle(180)
+					entity_move_angle(180)
 				}
 				
 				if (keyboard_check(global.key_shift)){

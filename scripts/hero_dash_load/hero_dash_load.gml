@@ -25,8 +25,7 @@ if (hero_passive_find("load")){
 	bullet.bullet_death_spawn[?"explosion_radius_max"] = explosion_radius;
 	bullet.bullet_death_spawn[?"explosion_lifespan_base"] = explosion_radius/(640*PPS);
 	bullet.bullet_death_spawn[?"explosion_lifespan_current"] = explosion_radius/(640*PPS);;
-	bullet.bullet_death_spawn[?"draw_blend_temporary_color"] = my_shoot_color;
-	bullet.bullet_death_spawn[?"draw_blend_temporary_duration"] = INFINITY;
+	bullet.bullet_death_spawn[?"draw_blend_permanent_color"] = my_shoot_color;
 	bullet.bullet_death_spawn[?"status_immortal"] = true;
 	
 	bullet.bullet_death_spawn[?"bullet_collision_entity_actions"] = [

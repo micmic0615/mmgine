@@ -55,7 +55,7 @@ global.key_pause = vk_enter;
 global.key_replay_load = vk_escape;
 global.key_backspace = vk_backspace;
 
-global.next_room = LevelProto00;
+global.next_room = LevelArena;
 
 global.random_seed = ds_list_create();
 

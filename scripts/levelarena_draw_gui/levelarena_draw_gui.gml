@@ -1,0 +1,1 @@
+levelproto00_draw_gui();

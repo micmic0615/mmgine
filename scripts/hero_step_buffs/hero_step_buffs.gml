@@ -42,12 +42,12 @@ if (has_ping > 0){
 		entity_mirage_create(0.2*SEC + (duration_ratio*0.3*SEC), 0, 0, make_color_rgb(255,0,255), 0.35)
 	};
 	
-	draw_blend_temporary_style = "solid";
-	draw_blend_temporary_duration = has_ping;
-	var color_number = (230 * (1 - power(duration_ratio, 3))) + 25
-	draw_blend_temporary_color = make_color_rgb(255, color_number, 255);
-	
-	//draw_blend_temporary_color = make_color_rgb(255, 255, 255);
+	entity_add_blend([
+		/*color*/ make_color_rgb(255, 50, 255),
+		/*style*/ "solid",
+		/*duration*/ has_ping,
+		/*blend_id*/ "ping_speedboost"
+	])
 }
 
 if (has_autoshield > 0){
@@ -56,9 +56,19 @@ if (has_autoshield > 0){
 }
 
 if (has_grit_attacc > 0){
-	draw_blend_temporary_style = "flicker";
-	draw_blend_temporary_duration = has_grit_attacc;
-	draw_blend_temporary_color = c_red;
+	entity_add_blend([
+		/*color*/ make_color_rgb(255, 0, 0),
+		/*style*/ "flicker",
+		/*duration*/ has_grit_attacc,
+		/*blend_id*/ "grit_attacc_red"
+	])
+	
+	entity_add_blend([
+		/*color*/ make_color_rgb(0, 0, 0),
+		/*style*/ "flicker",
+		/*duration*/ has_grit_attacc,
+		/*blend_id*/ "grit_attacc_blec"
+	])	
 	var p_model_1 = game_particle_setup_basic(c_red, (2 + random(3)), 0.5, 0.5*SEC, pt_shape_flare);
 	hero_particles_create(100, p_model_1, 4);
 }

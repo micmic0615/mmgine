@@ -5,8 +5,8 @@ var base_value = args[1];
 var base_lethal = args[2];
 var damage_id = args[3];
 
-hero_action_beatdown_crash_attack([base_target, base_value, base_lethal, damage_id]);
-hero_action_bloodlust_attack([base_target, base_value, base_lethal, damage_id]);
+hero_beatdown_crash_attack([base_target, base_value, base_lethal, damage_id]);
+hero_bloodlust_attack([base_target, base_value, base_lethal, damage_id]);
 
 if (base_target != id){
 	
@@ -25,7 +25,7 @@ if (base_target != id){
 			var overflinch = flinch_buff[1] - base_target.status_flinch_duration
 			if (overflinch > 0){base_value *= 1.5}
 			//else {base_value *= 1.5}
-			hero_action_frenzy();
+			hero_frenzy_trigger();
 		}
 		
 		var total_heal = base_value*(my_rally_lifesteal_beatdown/100);

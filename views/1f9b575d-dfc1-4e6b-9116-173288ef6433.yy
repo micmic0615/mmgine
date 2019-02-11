@@ -14,7 +14,7 @@
         "cc2e6150-db3a-4251-8364-38e967b0d5d4"
     ],
     "filterType": "GMScript",
-    "folderName": "HeroBeatdown",
+    "folderName": "Beatdown",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
