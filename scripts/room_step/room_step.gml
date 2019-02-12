@@ -231,7 +231,7 @@ if (room_initiate){
 				global.replay_mode = "play";
 				global.random_index = 0;
 				global.actor_id_sequence = 0;
-				room_goto(global.next_room);
+				room_goto(global.room_current);
 			}
 		}
 	#endregion

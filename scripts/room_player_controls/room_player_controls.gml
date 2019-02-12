@@ -148,14 +148,14 @@ if (player_controllable && global.replay_mode == "record"){
 		//global.random_index = 0;
 		//global.actor_id_sequence = 0;
 		global.time_base = 1;
-		//room_goto(global.next_room);
+		//room_goto(global.room_current);
 		
 		global.replay_mode = "record";
 		global.random_index = 0;
 		global.actor_id_sequence = 0;
 		global.time_base = 1;
 		ds_clear();
-		room_goto(global.next_room);
+		room_goto(global.room_current);
 	}	
 } else {
 	if (keyboard_check_pressed(global.key_replay_load)){
@@ -164,7 +164,7 @@ if (player_controllable && global.replay_mode == "record"){
 		global.actor_id_sequence = 0;
 		global.time_base = 1;
 		ds_clear();
-		room_goto(global.next_room);
+		room_goto(global.room_current);
 	}
 	
 	if (keyboard_check_pressed(global.key_pause)){
@@ -172,6 +172,6 @@ if (player_controllable && global.replay_mode == "record"){
 		global.random_index = 0;
 		global.actor_id_sequence = 0;
 		global.time_base = 1;
-		room_goto(global.next_room);
+		room_goto(global.room_current);
 	}
 }

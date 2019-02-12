@@ -1,6 +1,6 @@
 
 {
-    "name": "LevelArena01",
+    "name": "RM3_ArenaOne_01",
     "id": "fe2637dd-26f0-4a13-bdcb-7195cd247702",
     "creationCodeFile": "",
     "inheritCode": true,
@@ -80,7 +80,7 @@
             "layers": [
 
             ],
-            "m_parentID": "92787da1-b3d9-4271-b320-29d58fd24d77",
+            "m_parentID": "a765ea68-4545-4a3d-9b12-73bec0b66364",
             "m_serialiseFrozen": false,
             "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
@@ -102,13 +102,13 @@
             "hspeed": 0,
             "htiled": false,
             "inheritLayerDepth": true,
-            "inheritLayerSettings": true,
+            "inheritLayerSettings": false,
             "inheritSubLayers": true,
             "inheritVisibility": true,
             "layers": [
 
             ],
-            "m_parentID": "da08e216-aebc-4a32-9cdb-40562bb91b5e",
+            "m_parentID": "bc5e313b-8c20-45cf-ad1a-c22879e033da",
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
@@ -124,7 +124,7 @@
         }
     ],
     "modelName": "GMRoom",
-    "parentId": "7a6f065e-0820-4cde-b56f-9e9f4925475c",
+    "parentId": "74224b90-d05e-41cc-ac60-a2560a283fd7",
     "physicsSettings":     {
         "id": "0032ed03-6f09-4e25-a009-1e3a1036610e",
         "inheritPhysicsSettings": true,

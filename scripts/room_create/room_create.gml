@@ -14,7 +14,9 @@ ds_inventory = ds_list_create();
 room_loop_x = true;
 room_loop_y = true;
 room_initiate = true;
-room_name_lower = string_lower(room_get_name(room));
+room_name_lower = string_lower(string_delete(room_get_name(room), 1, 4));
+
+
 
 room_age_real = 0;
 room_age_game = 0;
@@ -65,6 +67,18 @@ var center_y = camera_y - camera_height*0.5/camera_zoom;
 
 view_camera[0] = camera_create_view(center_x, center_y, camera_width/camera_zoom, camera_height/camera_zoom, camera_angle);
 
+if (room_name_lower != "game"){
+	var room_details = game_room_details(room);
+	
+	if (room_details[0] != undefined){		
+		var child_list = room_details[1]
+		global.room_class = room_details[0];
+		global.room_type = string_delete(room_get_name(room), 1, 4);
+		var child_room = ds_list_find_value(child_list, min(ds_list_size(child_list) - 1, floor(random(ds_list_size(child_list)))));
+		room_goto(asset_get_index(child_room));
+	}
+};
+
 global.random_index = 0;
 
 if (global.replay_mode == "record"){
@@ -89,5 +103,6 @@ with(ACTOR){
 	}
 }
 
-with(ENTITY){if (entity_type_lower == me.player_main_actor_type){me.player_main_actor = id}}
+with(ENTITY){if (entity_type_lower == me.player_main_actor_type){me.player_main_actor = id}};
+
 room_run_scripts("create");

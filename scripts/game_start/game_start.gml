@@ -1,4 +1,4 @@
-if (room_get_name(room) == "GameStart"){
+if (room_get_name(room) == "RM0_GAME"){
 	room_speed = 60;
 
 	#macro ACTIVE active
@@ -54,9 +54,9 @@ if (room_get_name(room) == "GameStart"){
 	global.key_replay_load = vk_escape;
 	global.key_backspace = vk_backspace;
 
-	global.parent_room = asset_get_index(room_get_name(room));
-	global.parent_loaded = false;
-	global.next_room = LevelArena;
+	global.room_class = undefined;
+	global.room_type = undefined;
+	global.room_current = RM2_ArenaOne;
 
 	global.random_seed = ds_list_create();
 
@@ -89,6 +89,39 @@ if (room_get_name(room) == "GameStart"){
 
 	ds_list_add(global.hero_passive_list, "none");
 	ds_list_add(global.hero_passive_list, "none");
+	
+	var current_room = room;
+	
+	global.room_heirarchy = ds_map_create();
+	var parent_one = "";
+	var parent_two = "";
+	
+	while(room_exists(current_room)){
+		var room_string = room_get_name(current_room);
+		var room_level = string_char_at(room_string, 3);
+		
+		switch(room_level){
+			case "1": 
+				ds_map_add(global.room_heirarchy, room_string, ds_map_create()); 
+				parent_one = room_string;
+				break
+				
+			case "2":
+				var parent_one_map = ds_map_find_value(global.room_heirarchy, parent_one);
+				ds_map_add(parent_one_map, room_string, ds_list_create());
+				parent_two = room_string;
+				break
+				
+			
+			case "3":
+				var parent_one_map = ds_map_find_value(global.room_heirarchy, parent_one);
+				var parent_two_map = ds_map_find_value(parent_one_map, parent_two);
+				ds_list_add(parent_two_map, room_string);
+				break
+		}
+		
+		current_room++;
+	}
 } 
 
 room_init();

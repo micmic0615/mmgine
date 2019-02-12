@@ -8,7 +8,7 @@
         "1fb616c0-29c0-422b-bbd0-ff5360ff8da6"
     ],
     "filterType": "GMScript",
-    "folderName": "RoomTypes",
+    "folderName": "RoomClasses",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

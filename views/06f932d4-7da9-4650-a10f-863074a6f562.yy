@@ -9,7 +9,7 @@
         "56acb8d4-1098-41c6-bfc1-1dc2695e9c7f"
     ],
     "filterType": "GMScript",
-    "folderName": "LevelArenaBasic",
+    "folderName": "ArenaBasics",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

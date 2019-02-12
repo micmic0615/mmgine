@@ -13,7 +13,8 @@
         "6e2a8e60-6b42-4b03-bb31-b72a52eb6dd2",
         "c8503200-213e-45d2-baed-2499761d8df0",
         "32fdd065-b427-4f54-a941-ee3a3e95a77c",
-        "d4393d8a-bc2b-4221-a78b-f3cff8b9b0ca"
+        "d4393d8a-bc2b-4221-a78b-f3cff8b9b0ca",
+        "8d863bb4-96e6-417e-8338-8e8b9056a75f"
     ],
     "filterType": "GMScript",
     "folderName": "RoomBasics",

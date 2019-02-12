@@ -343,14 +343,6 @@
             }
         },
         {
-            "Key": "0cda214a-a171-4110-8a26-37d09b7a10af",
-            "Value": {
-                "id": "b32cd470-2ffa-4aa3-91f3-0bb249bc7b80",
-                "resourcePath": "views\\0cda214a-a171-4110-8a26-37d09b7a10af.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "0d9068d5-f99b-4ddf-9052-a315a3eb4e51",
             "Value": {
                 "id": "12221c8d-912c-4bc7-bd97-8c155b9c0f10",
@@ -404,6 +396,14 @@
                 "id": "f36012ce-b4ea-41ce-9181-592a979a17ee",
                 "resourcePath": "scripts\\entity_step\\entity_step.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1065b8ef-e1a7-40c9-a610-d99c239921fb",
+            "Value": {
+                "id": "5aa46656-0eb6-47fe-a5ea-9b0874e22d00",
+                "resourcePath": "views\\5d105272-9961-4f68-9168-428b18aa7197-room.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -751,6 +751,14 @@
             }
         },
         {
+            "Key": "21f7981a-3423-45bb-b27e-7e17fd5d23eb",
+            "Value": {
+                "id": "1cd418bc-91da-4ca9-bdd9-5a70f3ad537f",
+                "resourcePath": "rooms\\RM3_RestOne_01\\RM3_RestOne_01.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "220e036f-d049-4422-b469-78ef3759dc29",
             "Value": {
                 "id": "f786742a-0d92-4a5f-a150-1abe2f781b3e",
@@ -871,22 +879,6 @@
             }
         },
         {
-            "Key": "269f6f63-90a9-41b5-ac0f-dfa90121e2a4",
-            "Value": {
-                "id": "ee2cea55-5f16-441d-86c0-22f4a977e5b8",
-                "resourcePath": "rooms\\LevelArena04\\LevelArena04.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
-            "Key": "26ed79f7-8f97-45d7-b9b8-0e05492a62df",
-            "Value": {
-                "id": "cf168782-8b22-43be-889c-761422900d9a",
-                "resourcePath": "rooms\\LevelArena02\\LevelArena02.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "270404a4-3e61-41b6-87db-cf3172fee9eb",
             "Value": {
                 "id": "58e1350c-ff52-4ba8-a472-057bdacd8713",
@@ -930,7 +922,7 @@
             "Key": "2a057227-5337-41b0-a5ab-42d4c209db4c",
             "Value": {
                 "id": "bff13a02-98a9-4521-abd4-bbbb810ef549",
-                "resourcePath": "rooms\\GameStart\\GameStart.yy",
+                "resourcePath": "rooms\\RM0_GAME\\RM0_GAME.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1143,6 +1135,14 @@
             }
         },
         {
+            "Key": "3396f74d-b4ee-444a-b696-422f069800a6",
+            "Value": {
+                "id": "1c6ea933-14d0-41dc-90dc-8a7cd5d759c0",
+                "resourcePath": "scripts\\game_room_details\\game_room_details.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "33aa865a-c930-4904-8424-bbf0a40e5c97",
             "Value": {
                 "id": "9ed4f7c9-a7d1-4855-a4e8-f423c0acb2fb",
@@ -1319,6 +1319,14 @@
             }
         },
         {
+            "Key": "39d9b417-41c3-43d1-b17c-f780ebbd5f9a",
+            "Value": {
+                "id": "ee35948e-18e8-4a4e-869b-1c2cd6e9d4e9",
+                "resourcePath": "rooms\\RM1_Rest\\RM1_Rest.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "3a642902-19d9-451f-b9d8-0015b49604c6",
             "Value": {
                 "id": "34fa4c45-c436-493a-9b33-9ffe8802b089",
@@ -1378,7 +1386,7 @@
             "Key": "3da9c21a-e217-424f-8b55-e454c0d39087",
             "Value": {
                 "id": "39202e19-595b-4dc7-b271-fd1370d191b0",
-                "resourcePath": "scripts\\levelarena_create\\levelarena_create.yy",
+                "resourcePath": "scripts\\arena_create\\arena_create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1927,18 +1935,10 @@
             }
         },
         {
-            "Key": "569f2742-bd89-4623-b09a-d3743a8c8e7f",
-            "Value": {
-                "id": "4c8af9b4-ba84-4b06-96c9-1aaea5dce33d",
-                "resourcePath": "rooms\\LevelProto00\\LevelProto00.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "56acb8d4-1098-41c6-bfc1-1dc2695e9c7f",
             "Value": {
                 "id": "7e998ce9-2ab8-46c7-9fcb-3291852267ca",
-                "resourcePath": "scripts\\levelarena_draw_gui\\levelarena_draw_gui.yy",
+                "resourcePath": "scripts\\arena_draw_gui\\arena_draw_gui.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2196,6 +2196,14 @@
                 "id": "f37e1425-bdfe-4bf6-a062-ba2613417e53",
                 "resourcePath": "scripts\\ds_clear\\ds_clear.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6413cad6-0196-4542-9aba-1c48d6be41a7",
+            "Value": {
+                "id": "e7dfef82-340c-467a-851e-8847ee46fe34",
+                "resourcePath": "rooms\\RM2_RestOne\\RM2_RestOne.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2583,6 +2591,14 @@
             }
         },
         {
+            "Key": "74224b90-d05e-41cc-ac60-a2560a283fd7",
+            "Value": {
+                "id": "91dbed3d-b4dc-4ab0-a73d-0f9c9631ff25",
+                "resourcePath": "rooms\\RM2_ArenaOne\\RM2_ArenaOne.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "7467117d-c010-4c25-b24f-0ea64dc349d1",
             "Value": {
                 "id": "21583e68-264c-4fea-a24a-cf81bfcf229b",
@@ -2730,7 +2746,7 @@
             "Key": "7a6f065e-0820-4cde-b56f-9e9f4925475c",
             "Value": {
                 "id": "785999ba-ec84-4f8e-9c5e-1a3652cfb092",
-                "resourcePath": "rooms\\LevelArena\\LevelArena.yy",
+                "resourcePath": "rooms\\RM1_Arena\\RM1_Arena.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -3106,7 +3122,7 @@
             "Key": "8d863bb4-96e6-417e-8338-8e8b9056a75f",
             "Value": {
                 "id": "02be6b07-c0b1-4e07-93fb-e7db06e1600f",
-                "resourcePath": "scripts\\levelarena_create_randomize_room_layout\\levelarena_create_randomize_room_layout.yy",
+                "resourcePath": "scripts\\room_randomize_layout\\room_randomize_layout.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3227,14 +3243,6 @@
             "Value": {
                 "id": "55bb1fcb-e148-4484-9af0-280783f59ffe",
                 "resourcePath": "views\\9247335e-6ef1-4e4c-895b-be48ae1ec667.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "92f5d6cf-de85-43a7-ae2b-5f043737b906",
-            "Value": {
-                "id": "a976d9d9-a0aa-4e85-bcd6-be7be5f5cce4",
-                "resourcePath": "views\\4485191f-e358-4a8f-9505-48fb25e4f4f4-room.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -3946,7 +3954,7 @@
             "Key": "b34fdb3f-5c31-473c-b876-3e2bc0ec63f5",
             "Value": {
                 "id": "0ffce230-8497-4851-ab44-64f6ad050715",
-                "resourcePath": "scripts\\levelarena_step\\levelarena_step.yy",
+                "resourcePath": "scripts\\arena_step\\arena_step.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3987,6 +3995,14 @@
             "Value": {
                 "id": "36b0e457-6868-4db2-a20e-8e75703806bc",
                 "resourcePath": "views\\b5310e79-b759-456e-9cdb-9ce4dccb658c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b539b9e4-bdb2-46b2-9303-759cd61af246",
+            "Value": {
+                "id": "1d69f221-68f2-4f8f-b95e-d8590bd4c4b7",
+                "resourcePath": "views\\74224b90-d05e-41cc-ac60-a2560a283fd7-room.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -4148,6 +4164,14 @@
                 "id": "11f9319b-1961-4c6b-bde9-f30e95f8c3b7",
                 "resourcePath": "scripts\\hero_create_autofire\\hero_create_autofire.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bce0dc8e-6cfe-4d9d-bede-873e289a5e32",
+            "Value": {
+                "id": "08a5ceed-e809-4ade-848b-dfbacf339b34",
+                "resourcePath": "views\\6413cad6-0196-4542-9aba-1c48d6be41a7-room.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4364,14 +4388,6 @@
                 "id": "cbc2d3da-b621-4480-8ddd-662dfefc9a29",
                 "resourcePath": "scripts\\action_chase_channel_active\\action_chase_channel_active.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "c5846c58-e4a2-47f0-b27f-2ccb7ee7d15d",
-            "Value": {
-                "id": "cd66bd8c-0da5-485e-8125-9bbe2e3ae9b6",
-                "resourcePath": "rooms\\LevelArena03\\LevelArena03.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -4655,6 +4671,14 @@
             }
         },
         {
+            "Key": "d4ff6033-3053-4bcd-ad73-52db9d7a941f",
+            "Value": {
+                "id": "f736d05a-9688-4b72-9416-c7dc9a8e2638",
+                "resourcePath": "views\\39d9b417-41c3-43d1-b17c-f780ebbd5f9a-room.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d52517e7-4845-4a43-b956-4ef54a007cef",
             "Value": {
                 "id": "26c1cacf-5768-42c5-80a0-d8c8f5993414",
@@ -4796,14 +4820,6 @@
                 "id": "d3f608c9-fa99-4dcc-93d9-ac63d66b37b2",
                 "resourcePath": "scripts\\saber_ai_create\\saber_ai_create.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "da1ab972-9938-4ce7-bb90-d27581996869",
-            "Value": {
-                "id": "b08fc8a6-db60-420f-9ff6-a013bddc7165",
-                "resourcePath": "views\\da1ab972-9938-4ce7-bb90-d27581996869.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -5271,14 +5287,6 @@
             }
         },
         {
-            "Key": "ed98e197-00b8-426b-9cd4-c8b9e47d070e",
-            "Value": {
-                "id": "7383b0ca-6a5c-45f9-9e29-34b219e0f99e",
-                "resourcePath": "views\\b126c5f5-3fcf-4367-abda-e1552d200e92-room.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "edb43e65-5bc1-4708-a093-7d330fbd8c72",
             "Value": {
                 "id": "fa383614-6e79-44ff-8bca-cbedca1d071b",
@@ -5602,7 +5610,7 @@
             "Key": "fe2637dd-26f0-4a13-bdcb-7195cd247702",
             "Value": {
                 "id": "6cc30367-9b8f-46c2-913a-e600edba52da",
-                "resourcePath": "rooms\\LevelArena01\\LevelArena01.yy",
+                "resourcePath": "rooms\\RM3_ArenaOne_01\\RM3_ArenaOne_01.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -6010,6 +6018,7 @@
         "c8503200-213e-45d2-baed-2499761d8df0",
         "32fdd065-b427-4f54-a941-ee3a3e95a77c",
         "d4393d8a-bc2b-4221-a78b-f3cff8b9b0ca",
+        "8d863bb4-96e6-417e-8338-8e8b9056a75f",
         "b49633e8-4a12-41da-9a8d-f3673393f47f",
         "083aa053-4858-4be0-9c87-9c6a0328dfcd",
         "f74b4bab-b5a0-47eb-a074-6b9f859263db",
@@ -6017,7 +6026,6 @@
         "3da9c21a-e217-424f-8b55-e454c0d39087",
         "b34fdb3f-5c31-473c-b876-3e2bc0ec63f5",
         "56acb8d4-1098-41c6-bfc1-1dc2695e9c7f",
-        "8d863bb4-96e6-417e-8338-8e8b9056a75f",
         "49bf6535-37cb-46d3-921d-a313e20d0a3a",
         "f4518aad-771d-4fee-9d75-b7e6f4f72123",
         "da9b5ffc-7571-4ea6-a016-7247fa042d08",
@@ -6028,7 +6036,8 @@
         "b3f4ccff-28ab-4d82-9c51-0e4e30be41b0",
         "df200ddc-c7c8-4a45-a8c0-d95b533c45f8",
         "a3bf054a-5a8b-48b0-9da6-1e5f7e5d1af3",
-        "acf54a30-8ad0-4def-bbed-c610b9d7263b"
+        "acf54a30-8ad0-4def-bbed-c610b9d7263b",
+        "3396f74d-b4ee-444a-b696-422f069800a6"
     ],
     "tutorial": ""
 }

@@ -11,10 +11,22 @@ var final_y_push = 0;
 		
 var move_steps_max = collision_persistent != true ? 1 : ((abs(movement_x) > abs(movement_y)) ? ceil(abs(movement_x) / sprite_width) :  ceil(abs(movement_y) / sprite_height));
 var move_steps_current = move_steps_max;
+
+switch(collision_contact_y){
+	case "top": if (movement_y < -1){movement_y = -1}; break
+	case "bottom": if (movement_y > 1){movement_y = 1}; break
+}
+
+switch(collision_contact_x){
+	case "left": if (movement_x < -1){movement_x = -1}; break
+	case "right": if (movement_x > 1){movement_x = 1}; break
+}
 	
 while(move_steps_current > 0){
 	base_x = x;
 	base_y = y;
+	
+	
 			
 	x = base_x + movement_x/move_steps_max;
 	y = base_y + movement_y/move_steps_max;

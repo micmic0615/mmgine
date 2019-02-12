@@ -1,6 +1,6 @@
 
 {
-    "name": "GameStart",
+    "name": "RM0_GAME",
     "id": "2a057227-5337-41b0-a5ab-42d4c209db4c",
     "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,

@@ -1,10 +1,12 @@
 var script_name = argument0;
 
-var room_parent = global.parent_room;
-var room_parent_name = room_get_name(room_parent);
+if (global.room_class != undefined){
+	var script_class = asset_get_index(string_lower(global.room_class) + "_" + script_name );
+	if (script_class > -1){script_execute(script_class)};
+} 
 
-if (room_parent > -1 && room_parent_name != "GameStart"){
-	var script_class = asset_get_index(string_lower(room_parent_name) + "_" + script_name );
+if (global.room_type != undefined){
+	var script_class = asset_get_index(string_lower(global.room_type) + "_" + script_name );
 	if (script_class > -1){script_execute(script_class)};
 } 
 
