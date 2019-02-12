@@ -34,8 +34,6 @@ with(ACTOR){
 	}
 }
 
-
-
 var room_diagonal_size = sqrt(sqr(window_get_width()) + sqr(window_get_height()));
 var multiplier = min(1, ((max_distance*1) / room_diagonal_size));
 
@@ -54,8 +52,6 @@ if (new_camera_zoom < my_camera_zoom_current){
 }
 
 if (my_shoot_aim_mode == true && my_camera_zoom_current > my_camera_zoom_aim){my_camera_zoom_current = my_camera_zoom_aim}
-
-
 
 var camera_snap_step = round(1/(abs(my_camera_zoom_max - my_camera_zoom_min)/6));
 var camera_snap_current = round(camera_snap_step*my_camera_zoom_current)/camera_snap_step;

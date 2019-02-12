@@ -50,10 +50,10 @@ if (has_ping > 0){
 	])
 }
 
-if (has_autoshield > 0){
-	actor_buff_remove("flinched");
-	status_poise_current = status_poise_max;
-}
+//if (has_autoshield > 0){
+//	actor_buff_remove("flinched");
+//	status_poise_current = status_poise_max;
+//}
 
 if (has_grit_attacc > 0){
 	entity_add_blend([

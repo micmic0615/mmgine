@@ -9,7 +9,7 @@ my_barrage_bullet_speed = 900*PPS;
 my_barrage_bullet_range = 900;
 
 my_barrage_cast_value = 0.65*SEC;
-my_barrage_channel_value = 2*SEC;
+my_barrage_channel_value = 2.5*SEC;
 my_barrage_cooldown_value = 0*SEC;
 my_barrage_interval = 0.15*SEC
 
@@ -36,9 +36,9 @@ action_barrage_create([
 	/*bullet_chaos_range*/ 0,
 	/*bullet_chaos_angle*/ 0,
 	/*bullet_angle_spread*/ 0,
-	/*bullet_seek_range*/ 0,
-	/*bullet_seek_turn_rate*/ 0,
-	/*bullet_seek_angle_limit*/ 0,
+	/*bullet_seek_range*/ 480,
+	/*bullet_seek_turn_rate*/ 320*PPS,
+	/*bullet_seek_angle_limit*/ 180,
 	/*bullet_seek_no_decay*/ false,
 	/*bullet_tile_phase*/ false,
 	/*damage*/ my_barrage_damage,

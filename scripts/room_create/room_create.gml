@@ -55,7 +55,7 @@ var me = id;
 draw_mirage_list = ds_create("list");
 draw_text_list = ds_create("list"); 
 
-room_run_scripts("create");
+
 
 view_visible[0] = true;
 view_enabled = true;
@@ -67,7 +67,7 @@ view_camera[0] = camera_create_view(center_x, center_y, camera_width/camera_zoom
 
 global.random_index = 0;
 
-if (global.replay_mode == "record" && room_get_name(room) != ROOM_BASE){
+if (global.replay_mode == "record"){
 	ds_map_destroy(global.replay_data);
 	global.replay_data = ds_map_create();
 	
@@ -88,3 +88,6 @@ with(ACTOR){
 		instance_destroy(id, false);
 	}
 }
+
+with(ENTITY){if (entity_type_lower == me.player_main_actor_type){me.player_main_actor = id}}
+room_run_scripts("create");

@@ -19,7 +19,6 @@ if (room_initiate){
 		}
 	#endregion
 	
-	room_player_setup();
 	room_player_controls();
 	room_run_scripts("step");
 	
@@ -42,6 +41,11 @@ if (room_initiate){
 	#endregion
 
 	#region //CAMERA
+		if (player_main_actor != noone && instance_exists(player_main_actor)){
+			camera_target_x = player_main_actor.x;
+			camera_target_y = player_main_actor.y;
+		}
+
 		var distance = distance_between(camera_x, camera_y, camera_target_x, camera_target_y);
 		if (distance > camera_target_speed*2){
 			var angle = arctan2(camera_target_y - camera_y, camera_target_x - camera_x);
