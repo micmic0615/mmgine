@@ -19,6 +19,8 @@ status_health_regen_base = 0;
 status_health_regen_bank = 0;
 status_poise_regen_base = 2*PPS;
 
+status_level = 1;
+
 status_iframe = false;
 
 status_armor_health = 0;
@@ -49,6 +51,7 @@ status_poise_current = status_poise_max;
 status_health_regen_total = status_health_regen_total;
 status_poise_regen_total = status_poise_regen_base;
 
+actor_upkeep_cost = 1;
 
 
 if (ai_enabled && global.replay_mode == "record"){entity_run_type_scripts("ai_create")}

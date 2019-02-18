@@ -24,7 +24,7 @@ if (base_target != id){
 		if (flinch_buff != undefined){
 			var overflinch = flinch_buff[1] - base_target.status_flinch_duration
 			if (overflinch > 0){base_value *= 1.5}
-			//else {base_value *= 1.5}
+			else {base_value *= 1.3}
 			hero_frenzy_trigger();
 		}
 		

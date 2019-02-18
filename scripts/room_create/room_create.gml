@@ -16,8 +16,6 @@ room_loop_y = true;
 room_initiate = true;
 room_name_lower = string_lower(string_delete(room_get_name(room), 1, 4));
 
-
-
 room_age_real = 0;
 room_age_game = 0;
 
@@ -57,6 +55,7 @@ var me = id;
 draw_mirage_list = ds_create("list");
 draw_text_list = ds_create("list"); 
 
+room_module_list = ds_create("list");
 
 
 view_visible[0] = true;

@@ -1,4 +1,5 @@
 room_run_scripts("draw_gui");
+room_run_modules("draw_gui");
 
 var screen_width = window_get_width()
 var screen_height = window_get_height()
@@ -39,4 +40,5 @@ if (screen_cover_alpha > 0){
 	draw_set_color(screen_cover_color);
 	draw_rectangle(0, 0, screen_width, screen_height, false);
 	draw_set_alpha(1)
+	screen_cover_alpha -= 1*PPS*TIMESPEED
 }
