@@ -18,6 +18,11 @@ if (distance > camera_target_speed*2){
 	camera_x += speed_x;
 	camera_y += speed_y;
 }
+
+var camera_view_x = camera_get_view_x(view_camera[0]);
+var camera_view_y = camera_get_view_y(view_camera[0]);
+var camera_size_w = camera_get_view_width(view_camera[0]);
+var camera_size_h = camera_get_view_height(view_camera[0]);
 		
 #region //LOOP
 	if (room_loop_x || room_loop_y){
@@ -44,13 +49,6 @@ if (distance > camera_target_speed*2){
 				camera_loop_snap = true;
 			}
 		}
-		
-			
-			
-		var camera_view_x = camera_get_view_x(view_camera[0]);
-		var camera_view_y = camera_get_view_y(view_camera[0]);
-		var camera_size_w = camera_get_view_width(view_camera[0]);
-		var camera_size_h = camera_get_view_height(view_camera[0]);
 		
 		if (camera_loop_snap){
 			with(ENTITY){

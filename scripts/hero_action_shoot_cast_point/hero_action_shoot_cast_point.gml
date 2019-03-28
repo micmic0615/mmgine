@@ -48,8 +48,6 @@ if (charge_value == 1){
 	}
 	
 	particle_holder[0] = [game_particle_setup_basic(my_shoot_color, max(2, 4*action_map[?"bullet_radius"]/150), 0.5, 0.3*SEC), ceil(6*charge_value), action_map[?"bullet_radius"]];
-	
-	
 } else if (charge_value > 0){
 	particle_holder[0] = [game_particle_setup_basic(my_shoot_color, max(1, 2*action_map[?"bullet_radius"]/150), 0.5, 0.3*SEC), ceil(4*charge_value), action_map[?"bullet_radius"]];
 } 
@@ -58,7 +56,7 @@ action_map[?"bullet_particles"] = particle_holder
 
 action_map[?"fire_recoil"] = my_shoot_fire_recoil*2
 if (charge_value < 1){
-	status_poise_current = max(0, (1 - my_shoot_poise_cost)*status_poise_current);
+	status_poise_current = max(1, (1 - my_shoot_poise_cost)*status_poise_current);
 	action_map[?"fire_recoil"] = my_shoot_fire_recoil * (1 + (charge_value*0.5))
 }
 	
@@ -99,4 +97,8 @@ if (hero_passive_find("focus")){
 		case 1: my_charge_meter_2 = my_charge_meter_2 < my_charge_max ? min(my_charge_meter_2 + 0.5*SEC, my_charge_max - TIMESPEED) : my_charge_max; break;
 		case 2: my_charge_meter_1 = my_charge_meter_1 < my_charge_max ? min(my_charge_meter_1 + 0.5*SEC, my_charge_max - TIMESPEED) : my_charge_max; break;
 	}
+}
+
+if(my_shoot_poise_cost > 0){
+	actor_buff_apply("regen_poise",1*SEC, [status_poise_regen_base*-1], "action_cost");
 }

@@ -16,7 +16,7 @@ with(spawned_actor){
 	ROOM = instance_find(ROOM_OBJECT, 0);
 	ACTIVE = true;
 	actor_id = spawn_id;
-	actor_record_replay_data("spawn_actor", [actor_type]);
+	//actor_record_replay_data("spawn_actor", [actor_type]);
 }	
 
 return spawned_actor;

@@ -1,6 +1,7 @@
 my_dash_speed = 580*PPS;
 my_dash_range = 340;
 my_dash_charge_cost = 0;
+my_dash_poise_cost = 0;
 my_dash_channel = 0.1*SEC;
 my_dash_cooldown_value = 1*SEC
 my_dash_combo_max = 2;
@@ -24,3 +25,9 @@ action_dash_create([
 	/*backswing_value*/ 0,
 	/*cooldown_value*/ my_dash_cooldown_value,
 ]);
+
+if (ROOM.player_main_actor != id){
+	my_dash_poise_cost = 0.2;
+	my_dash_speed = 480*PPS;
+	my_dash_range = 280;
+}

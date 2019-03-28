@@ -43,4 +43,23 @@ my_shoot_backswing_value = 0.25*SEC;
 //my_charge_divider_cast = 1;
 //my_charge_divider_channel = 1;
 
+if (ROOM.player_main_actor != id){
+	my_shoot_fire_recoil = 30;
+	
+	my_shoot_bullet_speed = 200*PPS;
+	my_shoot_bullet_range = 200;
+	
+	my_shoot_damage = [0.5, 2.5];
+	my_shoot_flinch = [0.25, 1.25];
+	my_shoot_push = [0, -120];
+	
+	my_shoot_cast_value = 0.5*SEC;
+	my_shoot_channel_value = 0.5*SEC;
+	my_shoot_backswing_value = 0.05*SEC;
+	
+	my_shoot_bullet_explosion_radius = 300;
+	
+	
+}
+
 if (skip_set != "skip"){hero_skill_set_shoot_mod_apply()};

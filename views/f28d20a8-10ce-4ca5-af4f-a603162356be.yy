@@ -18,7 +18,8 @@
         "e086db3f-038d-40dc-9bce-09408689679e",
         "1cc58714-3ca4-4fef-8bb9-862fad6d4e3a",
         "b4fc1ed5-6f5c-4174-9c83-6a0bee6f65d5",
-        "03ab14b9-f416-4848-a135-771ee955f2af"
+        "03ab14b9-f416-4848-a135-771ee955f2af",
+        "691d3fa3-e534-4b8f-bebb-11faed25cb40"
     ],
     "filterType": "GMScript",
     "folderName": "ActorBasics",

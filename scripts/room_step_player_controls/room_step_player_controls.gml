@@ -1,5 +1,7 @@
 var me = id;
 
+
+
 if (player_controllable && global.replay_mode == "record"){
 	if (player_main_actor != noone && instance_exists(player_main_actor)){
 		player_controls_move_dash_timer_up -= 1;

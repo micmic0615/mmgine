@@ -1,6 +1,7 @@
 hero_create_init();
 
 //ACTIONS
+hero_create_invoke();
 hero_create_charge();
 hero_create_heal();
 hero_create_shoot();

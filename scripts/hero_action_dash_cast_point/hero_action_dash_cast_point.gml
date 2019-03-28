@@ -21,3 +21,8 @@ hero_dash_split();
 hero_dash_ping();
 hero_dash_load();
 hero_dash_breach();
+
+if (my_dash_poise_cost > 0){
+	status_poise_current = max(1, status_poise_current - (my_dash_poise_cost*status_poise_max));
+	actor_buff_apply("regen_poise",1*SEC, [status_poise_regen_base*-1], "action_cost");
+}

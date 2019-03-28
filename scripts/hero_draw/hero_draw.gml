@@ -50,6 +50,13 @@ if (my_shoot_aim_mode == true){
 	draw_line_width_color(x + cos(angle_mouse)*120, y + sin(angle_mouse)*120, x + cos(angle_mouse)*my_shoot_bullet_range, y + sin(angle_mouse)*my_shoot_bullet_range, 1, my_shoot_color, my_shoot_color);
 }
 
+if (my_shoot_target_mode == true){
+	var angle_mouse = degtorad(angle_between(my_shoot_target_mode_x, my_shoot_target_mode_y, x, y));
+	draw_set_alpha(0.5)
+	draw_line_width_color(x + cos(angle_mouse)*120, y + sin(angle_mouse)*120, x + cos(angle_mouse)*my_shoot_bullet_range, y + sin(angle_mouse)*my_shoot_bullet_range, 1, my_shoot_color, my_shoot_color);
+	draw_set_alpha(1)
+}
+
 var me = id;
 var line_speed = 640*PPS;
 

@@ -33,6 +33,7 @@ while(bullet_count < bullet_max){
 	]);
 	
 	
+	
 	bullet.bullet_seek_range = INFINITY;
 	bullet.bullet_seek_turn_rate = 360*PPS;
 	bullet.bullet_seek_angle_limit = 360;
@@ -40,7 +41,9 @@ while(bullet_count < bullet_max){
 	
 	hero_beatdown_bullet_sfx(bullet, my_shoot_color, bullet_radius);
 	
-	
+	if (ROOM.player_main_actor != id){
+		bullet.collision_enabled_tiles = false;
+	}
 				
 	bullet_count++;
 }

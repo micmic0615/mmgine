@@ -6,6 +6,10 @@ my_shoot_aim_mode = false;
 my_shoot_aim_dash_disable_timer = 0;
 my_shoot_aim_dash_disable_value = 1.5*SEC;
 
+my_shoot_target_mode = false;
+my_shoot_target_mode_x = 0;
+my_shoot_target_mode_y = 0;
+
 my_shoot_mod_1 = global.hero_mod_1;
 my_shoot_mod_2 = global.hero_mod_2;
 

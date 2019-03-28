@@ -56,7 +56,7 @@ if (room_get_name(room) == "RM0_GAME"){
 
 	global.room_class = undefined;
 	global.room_type = undefined;
-	global.room_current = RM2_ArenaOne;
+	global.room_current = RM2_VersusOne;
 
 	global.random_seed = ds_list_create();
 
@@ -111,7 +111,6 @@ if (room_get_name(room) == "RM0_GAME"){
 				ds_map_add(parent_one_map, room_string, ds_list_create());
 				parent_two = room_string;
 				break
-				
 			
 			case "3":
 				var parent_one_map = ds_map_find_value(global.room_heirarchy, parent_one);

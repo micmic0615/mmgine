@@ -31,6 +31,7 @@ if (action_shoot[?"cast_timer"] <= 0 && action_shoot[?"channel_timer"] <= 0){
 			my_charge_accelerate_delay_timer -= TIMESPEED
 		} else {
 			charge_accelerator = 3;
+			
 			if (actor_actions_id == "none" && (my_charge_meter_1 < my_charge_max || my_charge_meter_2 < my_charge_max)){
 				animation_name = "charge";
 			}
